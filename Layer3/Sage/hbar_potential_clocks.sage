@@ -13,6 +13,7 @@
 #   that gap is the fork tested here.
 # Context: local_unit_of_action_cancellation (Eq 3.3 drift is potential-
 #   suppressed); future-work.txt s.1 (relax the GR-QM boundary).
+# Supplementary Materials: step [P6], Sec. S5 (code index: Sec. S6).
 # ---------------------------------------------------------------------------
 #
 # hbar_potential_clocks.sage                          [A] (assertion-hardened)

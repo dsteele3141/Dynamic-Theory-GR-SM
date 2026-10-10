@@ -15,6 +15,7 @@
 #   B ~ 3e8 G (mu ~ 3e23 A m^2). Upper limits: Moon < 1e16, Mars < 2e18,
 #   Venus < 1e19 A m^2. Earth paleointensity falls below ~20% of today's
 #   during reversals.
+# Supplementary Materials: step [P3], Sec. S5 (code index: Sec. S6).
 # ---------------------------------------------------------------------------
 #
 # blackett_coupling_bodies.sage                       [A] (assertion-hardened)

@@ -6,8 +6,7 @@
 #   dimensional manifold and ... the equations giving the curvature of this
 #   hyper-surface are Einstein's field equations."  u4 = dy4/dt = 0 is Eq 1.36
 #   / 10.6.  Report LA-8370-MS eqs 163-164 give the induced metric (T2.11).
-# Full derivation, context and provenance:
-#   Supplementary_Material.pdf -- §S3, §6.1 (layer boundary), Appendix A.
+# Supplementary Materials: step [G2], Sec. S3 (code index: Sec. S6).
 # --------------------------------------------------------------------------
 
 # ============================================================================

@@ -15,8 +15,7 @@
 #   -(2.398 +/- 0.004)e-12); LIGO/Virgo/Fermi/INTEGRAL, ApJL 848 (2017) L13
 #   (GW170817: -3e-15 < (c_gw - c)/c < +7e-16); GW150914, PRL 116 (2016)
 #   061102 (binary black hole, no electromagnetic counterpart).
-# Full derivation, context and provenance:
-#   Supplementary_Material.pdf -- §S3, §6.1 (layer boundary), Appendix A.
+# Supplementary Materials: step [G6], Sec. S3 (code index: Sec. S6).
 # --------------------------------------------------------------------------
 
 # ============================================================================

@@ -1,8 +1,7 @@
 # T2.11 — Hypersurface Metric Decomposition (Eqs 163-164)
 #
 # Source: Williams LA-8370-MS (LASL, 1980), eqs 163-164.
-# Full derivation, context and provenance:
-#   Supplementary_Material.pdf — §S3, Appendix A [C2].
+# Supplementary Materials: step [F6], Sec. S2 (code index: Sec. S6).
 
 from sage.all import *
 

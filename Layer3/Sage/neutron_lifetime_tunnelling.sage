@@ -10,6 +10,7 @@
 #   p.282          "a prediction of a half-life of something over 600 seconds"
 #   p.~520         "This ability to predict the lifetime of the neutron is new."
 #   The tunnelling calculation itself is NOT shown in the book.
+# Supplementary Materials: step [S8], Sec. S4 (code index: Sec. S6).
 # ---------------------------------------------------------------------------
 #
 # neutron_lifetime_tunnelling.sage                     [A] (assertion-hardened)

@@ -6,6 +6,7 @@
 # Context: weak_chirality_u4.sage (readings R1-R3; R3 = J^4 = 0 at gamma = 0
 #   gives one chiral zero mode), ledger Q3 (one 4x4 irrep) and Q4 (R3, so far
 #   an ASSUMED reading).
+# Supplementary Materials: step [S1], Sec. S4 (code index: Sec. S6).
 # ---------------------------------------------------------------------------
 #
 # noflux_boundary_derivation.sage                      [A] (assertion-hardened)

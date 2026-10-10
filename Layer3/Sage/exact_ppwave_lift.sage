@@ -8,8 +8,7 @@
 #   Einstein's Field Equations" (CUP, 2nd ed. 2003) Ch.24.
 # Builds on gravitational_radiation.sage (linear mode count) and
 #   kk_radion_g44.sage (the g_44 restriction).
-# Full derivation, context and provenance:
-#   Supplementary_Material.pdf -- §S3, Appendix A.
+# Supplementary Materials: step [G6], Sec. S3 (code index: Sec. S6).
 # --------------------------------------------------------------------------
 
 # ============================================================================

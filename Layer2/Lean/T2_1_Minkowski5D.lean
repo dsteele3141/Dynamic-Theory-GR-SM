@@ -2,8 +2,7 @@
   T2.1 — 5D Minkowski Metric and Equations of Motion
 
   Source: P. E. Williams, LA-8370-MS (LASL, 1980), Section III, eqs (58)-(63).
-  Full derivation, context and provenance:
-  Supplementary_Material.pdf — §S2, Appendix A [C1].
+  Supplementary Materials: step [F1], Sec. S2 (code index: Sec. S6).
 -/
 
 import Mathlib.Tactic

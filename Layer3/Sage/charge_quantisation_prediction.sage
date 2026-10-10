@@ -21,6 +21,7 @@
 #   [D] DT's q = Z e on free states: delta = -Z_n / (Z_e + Z_n), so
 #       delta = 0 unless |Z_e| ~ 1/|delta|
 #   [E] data: |delta| < ~2e-21, so Z_n = 0: delta = 0 EXACTLY
+# Supplementary Materials: step [P1], Sec. S5 (code index: Sec. S6).
 # ---------------------------------------------------------------------------
 
 from sage.all import *

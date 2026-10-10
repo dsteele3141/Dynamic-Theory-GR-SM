@@ -2,8 +2,7 @@
   T2.8 — 5D Dirac Equation with Fields (magnetic-moment coupling)
 
   Source: P. E. Williams, LA-8370-MS (LASL, 1980), Section III, eqs (116)-(121).
-  Full derivation, context and provenance:
-  Supplementary_Material.pdf — §S2, Appendix A [C8].
+  Supplementary Materials: step [F3], Sec. S2 (code index: Sec. S6).
 -/
 
 import Mathlib.Tactic

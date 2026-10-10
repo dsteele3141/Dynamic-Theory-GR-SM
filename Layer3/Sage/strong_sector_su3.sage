@@ -7,6 +7,7 @@
 #   (two positrons + one electron, book Ch. 9) is deliberately NOT used.
 # Context: weak_chirality_u4 (4x4 vs 8x8), weak_neutral_current (ledger Q6),
 #   mass_term_su2 (Q12/Q13), hydrogen_nonsingular_spectrum (Q7 lambda bound).
+# Supplementary Materials: step [S5], Sec. S4 (code index: Sec. S6).
 # ---------------------------------------------------------------------------
 #
 # strong_sector_su3.sage                               [A] (assertion-hardened)

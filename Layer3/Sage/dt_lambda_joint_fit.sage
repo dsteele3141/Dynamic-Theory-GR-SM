@@ -8,6 +8,7 @@
 #   DATA = Pantheon binned SN-Ia (Scolnic et al. 2018, ApJ 859:101):
 #   lcparam_DS17f.txt (40 bins) + sys_DS17f.txt (40x40 systematic covariance),
 #   github.com/dscolnic/Pantheon; local copy pantheon_sys_DS17f.txt.
+# Supplementary Materials: step [P5], Sec. S5 (code index: Sec. S6).
 # --------------------------------------------------------------------------
 
 # ============================================================================

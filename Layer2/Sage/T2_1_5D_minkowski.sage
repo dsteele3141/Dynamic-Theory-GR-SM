@@ -1,8 +1,7 @@
 # 5D Minkowski Metric & Force Density (T2.1, Eqs 58-63)
 #
 # Source: P. E. Williams, LA-8370-MS (LASL, 1980), eqs (58)-(63).
-# Full derivation, context and provenance:
-#   Supplementary_Material.pdf — §S2, Appendix A [C1].
+# Supplementary Materials: step [F1], Sec. S2 (code index: Sec. S6).
 
 from sage.all import *
 from sage.manifolds.all import *

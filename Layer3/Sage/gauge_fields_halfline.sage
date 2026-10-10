@@ -7,6 +7,7 @@
 #   one normalisable left-handed zero mode psi ~ exp(-M y)).
 # Gauge fields on an interval / half-line: standard boundary-condition pairing
 #   (e.g. Csaki, Grojean, Murayama, Pilo & Terning, PRD 69, 055006 (2004)).
+# Supplementary Materials: step [S6], Sec. S4 (code index: Sec. S6).
 # ---------------------------------------------------------------------------
 #
 # gauge_fields_halfline.sage                          [A] (assertion-hardened)

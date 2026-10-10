@@ -3,8 +3,7 @@
   library Physlib (leanprover-community/physlib, formerly PhysLean / HepLean).
 
   Source: P. E. Williams, LA-8370-MS (LASL, 1980), Section III, eqs (60), (108)-(112).
-  Full derivation, context and provenance:
-  Supplementary_Material.pdf — §S2, Appendix A [C1], [C6].
+  Supplementary Materials: steps [F1], [F3], Sec. S2 (code index: Sec. S6).
 
   Purpose. The DT Lean layer builds its 5D objects by hand. This file proves
   that they coincide with Physlib's independent, standard definitions:

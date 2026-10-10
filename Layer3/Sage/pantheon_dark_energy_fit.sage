@@ -5,6 +5,7 @@
 #   DATA = Pantheon binned Type-Ia supernovae (Scolnic et al. 2018,
 #   ApJ 859:101; Binned_data/lcparam_DS17f.txt), 40 bins (zcmb, mb, dmb),
 #   fetched from the public repository github.com/dscolnic/Pantheon.
+# Supplementary Materials: step [P5], Sec. S5 (code index: Sec. S6).
 # --------------------------------------------------------------------------
 
 # ============================================================================

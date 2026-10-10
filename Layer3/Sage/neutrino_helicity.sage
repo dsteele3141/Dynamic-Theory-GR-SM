@@ -11,6 +11,7 @@
 #                  until the hypothesis of the neutrino reinstated the
 #                  summation of particle spins"
 #   Eq 2.60        h'_e = 8.0517e-4 h, h'_p = 0.66586 h
+# Supplementary Materials: step [S7], Sec. S4 (code index: Sec. S6).
 # ---------------------------------------------------------------------------
 #
 # neutrino_helicity.sage                               [A] (assertion-hardened)

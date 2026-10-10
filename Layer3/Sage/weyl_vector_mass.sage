@@ -6,8 +6,7 @@
 #   The EM reading of the gauge vector is the corpus' London coupling
 #   phi = i (e/hbar) A  (gateway_london_quantisation.sage: alpha1 = i e^2/(hbar c);
 #   T1_8_weyl_integrability.sage part B).  London (1927), Weyl (1929).
-# Full derivation, context and provenance:
-#   Supplementary_Material.pdf -- §S1 (T1.8, T1.9), Appendix A.
+# Supplementary Materials: step [G1], Sec. S3 (code index: Sec. S6).
 # Companions: weyl_lambda_reading.sage (lambda is a constant, Lambda != 0),
 #   einstein_from_dt_action.sage (metric variation of Eq 67).
 # --------------------------------------------------------------------------

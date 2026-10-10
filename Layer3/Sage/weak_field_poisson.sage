@@ -8,6 +8,7 @@
 #   claims the linearisation "yields" Poisson's equation with Newton's sign and
 #   coefficient, in contrast to the Schwarzschild_4 x R embedding (T2.14) which
 #   only "admits" the general-relativistic solution.
+# Supplementary Materials: step [F6], Sec. S2 (code index: Sec. S6).
 # --------------------------------------------------------------------------
 
 # ============================================================================

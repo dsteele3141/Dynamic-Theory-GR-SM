@@ -16,6 +16,7 @@
 #        NON-TRANSVERSE 5D wave ("must travel at the speed of light")
 #   A text search of the whole book (15399 lines) finds NO discussion of
 #   parity, mirror symmetry, handedness, helicity, chirality or gamma^5.
+# Supplementary Materials: step [S1], Sec. S4 (code index: Sec. S6).
 # ---------------------------------------------------------------------------
 #
 # weak_parity.sage                                   [A]  (assertion-hardened)

@@ -4,6 +4,7 @@
 #   (weak/EM fields, each entering times a charge) and Ch.11 Eq 11.34 (phi_4).
 #   Williams never discusses a neutral weak current (no match for "neutral
 #   current", "Z boson", "Weinberg" or "electroweak" in the book).
+# Supplementary Materials: step [S4], Sec. S4 (code index: Sec. S6).
 # ---------------------------------------------------------------------------
 #
 # weak_neutral_current.sage                            [A] (assertion-hardened)

@@ -3,8 +3,7 @@
 #
 # Source: P. E. Williams, LA-8370-MS (LASL, 1980), eqs (108)-(109). The Eq-109
 #   literal A-matrix fails anticommutation; the corrected A is [[0,iI2],[-iI2,0]].
-# Full derivation, context and provenance:
-#   Supplementary_Material.pdf — §S2, Appendix A [C6].
+# Supplementary Materials: step [F3], Sec. S2 (code index: Sec. S6).
 
 from sage.all import *
 

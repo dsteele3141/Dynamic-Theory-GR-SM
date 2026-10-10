@@ -11,6 +11,7 @@
 #                  existence of neutrinos."
 #   p.253          "the decay of a neutron is accompanied by motion of the
 #                  center of mass. It must necessarily move in the decay."
+# Supplementary Materials: step [S7], Sec. S4 (code index: Sec. S6).
 # ---------------------------------------------------------------------------
 #
 # beta_spectrum_two_body.sage                          [A] (assertion-hardened)

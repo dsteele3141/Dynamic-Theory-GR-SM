@@ -11,8 +11,7 @@
 #   Same content in LA-8370-MS (1980) Eqs (68)-(70).
 # Data: Bertotti, Iess & Tortora, Nature 425 (2003) 374; planetary-ephemeris
 #   bound |beta_PPN - 1| < ~1e-4 (Mercury perihelion).
-# Full derivation, context and provenance:
-#   Supplementary_Material.pdf -- §S3, §6.1 (layer boundary), Appendix A.
+# Supplementary Materials: step [G5], Sec. S3 (code index: Sec. S6).
 # --------------------------------------------------------------------------
 
 # ============================================================================

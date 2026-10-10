@@ -17,6 +17,7 @@
 #   141101: first polarisation test; pure tensor favoured over pure scalar
 #   and pure vector. Mixed-polarisation amplitudes are bounded only at
 #   order 0.1-1 by current analyses (used here as an ORDER, not a number).
+# Supplementary Materials: step [P4], Sec. S5 (code index: Sec. S6).
 # ---------------------------------------------------------------------------
 #
 # u4_relaxation_bounds.sage                           [A] (assertion-hardened)

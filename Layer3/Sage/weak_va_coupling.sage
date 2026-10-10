@@ -7,6 +7,7 @@
 #            -- every field enters multiplied by a CHARGE e_theta, e_beta;
 #   Ch.11 Eqs 11.34-11.37: the neutrino is quantised through phi_4, "the
 #            gravitational potential".
+# Supplementary Materials: step [S2], Sec. S4 (code index: Sec. S6).
 # ---------------------------------------------------------------------------
 #
 # weak_va_coupling.sage                                [A] (assertion-hardened)

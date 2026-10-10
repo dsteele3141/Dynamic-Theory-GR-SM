@@ -4,8 +4,7 @@
   the object is an ADOPTED ANSATZ, not one of DT's postulates — see status note.)
 
   Source: P. E. Williams, LA-8370-MS (LASL, 1980), Section III.C, eqs (105)-(112).
-  Full derivation, context and provenance:
-  Supplementary_Material.pdf — §S2, Appendix A [C6].
+  Supplementary Materials: step [F3], Sec. S2 (code index: Sec. S6).
 
   Status (T2.7): Williams derives the quadratic 5D mass-shell relation (eq 105)
   from his three laws, but ADOPTS its first-order (Dirac) factorisation as an

@@ -9,8 +9,7 @@
 #   breaking of Weyl conformal geometry with applications to gravity",
 #   Phys. Rev. D 101 (2020) 045010, arXiv:1904.06596.  Precedent: L. Smolin,
 #   Nucl. Phys. B 160 (1979) 253 (Planck-mass Weyl field coupled to GR).
-# Full derivation, context and provenance:
-#   Supplementary_Material.pdf -- §S1 (T1.9), Appendix A.
+# Supplementary Materials: step [G1], Sec. S3 (code index: Sec. S6).
 # Companions: weyl_lambda_reading.sage (natural gauge, |Lambda| = lambda/4),
 #   weyl_vector_mass.sage (m^2 = 2k/a), einstein_from_dt_action.sage.
 # --------------------------------------------------------------------------

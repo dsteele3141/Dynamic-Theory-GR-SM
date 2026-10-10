@@ -5,6 +5,7 @@
 #   (Eq 112) are a DT representation; Williams' own choice is the 8x8 (4 + 4').
 # Context: su2_from_5d (8x8 -> native su(2)+u(1)), strong_sector_su3 (N_c odd
 #   derived, N_c = 3 selected; ledger Q14, Q15), noflux_boundary_derivation.
+# Supplementary Materials: step [S5], Sec. S4 (code index: Sec. S6).
 # ---------------------------------------------------------------------------
 #
 # su3_larger_rep.sage                                  [A] (assertion-hardened)

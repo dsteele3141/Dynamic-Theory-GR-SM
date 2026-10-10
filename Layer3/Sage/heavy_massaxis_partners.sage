@@ -8,6 +8,7 @@
 #   (Layer-3 script 18).
 # Collider bounds (imported, indicative): vector-like leptons excluded to
 #   ~1 TeV (CMS 2022), vector-like quarks to ~1.5 TeV (ATLAS/CMS 2022-23).
+# Supplementary Materials: step [P2], Sec. S5 (code index: Sec. S6).
 # ---------------------------------------------------------------------------
 #
 # heavy_massaxis_partners.sage                        [A] (assertion-hardened)

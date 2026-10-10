@@ -9,6 +9,7 @@
 #           g = diag(1,-1,-1,-1,-1),  x^4 = gamma/a0 (mass-density axis)
 #   u4 = dy4/dt = 0 is conservation of mass (Book Eq 1.36 / 10.6); on the
 #   Dirac side the corresponding statement is J^4 = psibar gamma^4 psi = 0.
+# Supplementary Materials: step [S1], Sec. S4 (code index: Sec. S6).
 # ---------------------------------------------------------------------------
 #
 # weak_chirality_u4.sage                               [A] (assertion-hardened)

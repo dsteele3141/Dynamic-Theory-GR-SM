@@ -4,6 +4,7 @@
 #   route fork P=0 / P!=0 (Layer 2, S2 sec.1) and the S3 mass-sector addendum
 #   (this session, "no absolute GR/QM boundary"). Constants a0, H0 as pinned
 #   in the corpus (P1_radiation_pressure_a0.sage, local_gdot_escape_candidates.sage).
+# Supplementary Materials: step [F5], Sec. S2 (code index: Sec. S6).
 # --------------------------------------------------------------------------
 
 # ============================================================================

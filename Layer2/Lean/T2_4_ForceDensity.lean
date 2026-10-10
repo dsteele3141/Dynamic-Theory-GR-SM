@@ -2,8 +2,7 @@
   T2.4 — Force Density Five-Vector  K = Div₅{T}
 
   Source: P. E. Williams, LA-8370-MS (LASL, 1980), Section III.
-  Full derivation, context and provenance:
-  Supplementary_Material.pdf — §S2, Appendix A [C5].
+  Supplementary Materials: step [F2], Sec. S2 (code index: Sec. S6).
 -/
 
 import Mathlib.Tactic

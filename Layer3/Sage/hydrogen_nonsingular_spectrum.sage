@@ -20,6 +20,7 @@
 #   VALUES (Williams' own: text of Figs 2.3 and 9.3, and near Eq 11.170):
 #     lambda_p ~ 1 fm  (from proton-proton scattering)
 #     lambda_e ~ 1e-3 fm (assumed, "consistent with" e-e scattering)
+# Supplementary Materials: step [S8], Sec. S4 (code index: Sec. S6).
 # ---------------------------------------------------------------------------
 #
 # hydrogen_nonsingular_spectrum.sage                [A]  (assertion-hardened)

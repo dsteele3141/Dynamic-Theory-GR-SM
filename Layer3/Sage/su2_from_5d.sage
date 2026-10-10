@@ -5,6 +5,7 @@
 #   5D equation (i gamma^j d_j + 1) psi = 0 on the mass axis x^4 = gamma/a0.
 # Context: noflux_boundary_derivation (chiral edge, ledger Q4),
 #   weak_neutral_current (N_nu), strong_sector_su3 (commutants, Q14).
+# Supplementary Materials: step [S3], Sec. S4 (code index: Sec. S6).
 # ---------------------------------------------------------------------------
 #
 # su2_from_5d.sage                                     [A] (assertion-hardened)

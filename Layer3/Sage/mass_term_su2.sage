@@ -6,6 +6,7 @@
 #   and the mass-axis derivative gamma^4 d_4.
 # Context: weak_chirality_u4 (zero modes, kappa), weak_neutral_current
 #   (ledger Q6 SU(2)_L x U(1)_Y couplings, Q12 doublet Higgs).
+# Supplementary Materials: step [S4], Sec. S4 (code index: Sec. S6).
 # ---------------------------------------------------------------------------
 #
 # mass_term_su2.sage                                   [A] (assertion-hardened)

@@ -7,8 +7,7 @@
 #   (the line under each equation) and never says what lambda is.
 #   Weyl's procedure: H. Weyl, Raum-Zeit-Materie (4th ed. 1921) / Space-Time-
 #   Matter (1922), the "natural gauge" of his R~^2 action.
-# Full derivation, context and provenance:
-#   Supplementary_Material.pdf -- §S1 (T1.9), Appendix A.
+# Supplementary Materials: step [G1], Sec. S3 (code index: Sec. S6).
 # Companion: einstein_from_dt_action.sage (the metric variation of Eq 67).
 # --------------------------------------------------------------------------
 

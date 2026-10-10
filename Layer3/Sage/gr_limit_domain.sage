@@ -9,8 +9,7 @@
 #   a GR-framework reduction, NOT re-derived through DT's drifting units).
 # Builds on dark_matter_rotation_curves.sage, G_variation_constraints.sage,
 #   black_hole_ringdown.sage (strong-field fork), matter_source_tab.sage.
-# Full derivation, context and provenance:
-#   Supplementary_Material.pdf -- §S3, Appendix A.
+# Supplementary Materials: step [G7], Sec. S3 (code index: Sec. S6).
 # --------------------------------------------------------------------------
 
 # ============================================================================
