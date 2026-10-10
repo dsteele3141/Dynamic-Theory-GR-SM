@@ -1,0 +1,212 @@
+========================================================================
+DYNAMIC THEORY -- SAGE LINTER  (linter.py)
+Run: 2026-10-10 15:07:34
+Scanned: /home/dsteele/lean/Dynamic-Theory-GR-SM
+Sage scripts: 43  (across Layer1, Layer2, Layer3; 0 plot_* skipped)
+Cadabra cross-checks: 0
+========================================================================
+
+### Layer2
+T2_1_5D_minkowski.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+T2_1_5D_minkowski.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+  [OK  ]:41 signature: g44 = -1 (spacelike mass).
+dirac_algebra.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+dirac_algebra.sage
+  [OK  ] dirac: corrected complex A-matrix [[0,iI],[-iI,0]] present.
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+  [OK  ]:58 signature list [1,-1,-1,-1,-1]: spacelike mass.
+dirac_with_fields.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+dirac_with_fields.sage
+  [OK  ] dirac: corrected complex A-matrix [[0,iI],[-iI,0]] present.
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+  [OK  ]:39 signature list [1,-1,-1,-1,-1]: spacelike mass.
+force_density.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+force_density.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+
+### Layer3
+T2_11_hypersurface_metric.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+T2_11_hypersurface_metric.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+T2_2_charge_conservation.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+T2_2_charge_conservation.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+beta_spectrum_two_body.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+beta_spectrum_two_body.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+black_hole_ringdown.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+black_hole_ringdown.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+blackett_coupling_bodies.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+blackett_coupling_bodies.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+charge_quantisation_prediction.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+charge_quantisation_prediction.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+dt_lambda_joint_fit.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+dt_lambda_joint_fit.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+einstein_equations_recovery.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+einstein_equations_recovery.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+  [OK  ]:95 signature list [1,-1,-1,-1,-1]: spacelike mass.
+einstein_from_dt_action.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+einstein_from_dt_action.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+exact_ppwave_lift.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+exact_ppwave_lift.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+gateway_london_quantisation.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+gateway_london_quantisation.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+gauge_fields_halfline.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+gauge_fields_halfline.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+  [OK  ]:117 signature list [1,-1,-1,-1,-1]: spacelike mass.
+gr_limit_domain.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+gr_limit_domain.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+gr_on_4d_surface.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+gr_on_4d_surface.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+  [OK  ]:116 signature: g44 = -1 (spacelike mass).
+  [OK  ]:198 signature: g44 = -1 (spacelike mass).
+  [OK  ]:222 signature: g44 = -1 (spacelike mass).
+gravitational_radiation.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+gravitational_radiation.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+  [OK  ]:196 signature list [1,-1,-1,-1,-1]: spacelike mass.
+  [OK  ]:230 signature list [1,-1,-1,-1,-1]: spacelike mass.
+hbar_potential_clocks.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+hbar_potential_clocks.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+heavy_massaxis_partners.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+heavy_massaxis_partners.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+hydrogen_nonsingular_spectrum.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+hydrogen_nonsingular_spectrum.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+kk_radion_g44.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+kk_radion_g44.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+  [OK  ]:123 signature list [1,-1,-1,-1,-1]: spacelike mass.
+mass_term_su2.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+mass_term_su2.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+matter_source_tab.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+matter_source_tab.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+  [OK  ]:163 signature list [1,-1,-1,-1,-1]: spacelike mass.
+neutrino_helicity.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+neutrino_helicity.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+neutron_lifetime_tunnelling.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+neutron_lifetime_tunnelling.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+noflux_boundary_derivation.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+noflux_boundary_derivation.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+  [OK  ]:48 signature list [1,-1,-1,-1,-1]: spacelike mass.
+pantheon_dark_energy_fit.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+pantheon_dark_energy_fit.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+strong_sector_su3.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+strong_sector_su3.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+  [OK  ]:69 signature list [1,-1,-1,-1,-1]: spacelike mass.
+su2_from_5d.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+su2_from_5d.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+  [OK  ]:53 signature list [1,-1,-1,-1,-1]: spacelike mass.
+su3_larger_rep.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+su3_larger_rep.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+  [OK  ]:45 signature list [1,-1,-1,-1,-1]: spacelike mass.
+test_body_motion.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+test_body_motion.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+u4_relaxation_bounds.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+u4_relaxation_bounds.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+u4_rest_mass_nonconservation.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+u4_rest_mass_nonconservation.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+weak_chirality_u4.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+weak_chirality_u4.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+  [OK  ]:53 signature list [1,-1,-1,-1,-1]: spacelike mass.
+weak_field_poisson.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+weak_field_poisson.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+  [OK  ]:90 signature: g44 = -1 (spacelike mass).
+weak_neutral_current.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+weak_neutral_current.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+weak_parity.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+weak_parity.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+weak_va_coupling.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+weak_va_coupling.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+weyl_ghilencea_comparison.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+weyl_ghilencea_comparison.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+weyl_lambda_reading.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+weyl_lambda_reading.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+weyl_vector_mass.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+weyl_vector_mass.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+
+### (corpus)
+(cross-file)
+  [OK  ] signature consistent: all 18 g44 definition(s) spacelike (g44 < 0).
+
+========================================================================
+SUMMARY    OK: 107    INFO: 0    WARN: 0    FAIL: 0
+RESULT: CLEAN -- no inconsistencies detected.
+========================================================================
