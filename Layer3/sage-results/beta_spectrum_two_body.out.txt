@@ -1,0 +1,61 @@
+==========================================================================
+beta_spectrum_two_body.sage -- can DT's 2-body decay give a continuous spectrum?
+==========================================================================
+
+[A] Identity: Newton-III violation moves the COM, nothing else
+  [PASS] d/dt [ mu rdot^2/2 + U(r) ] = 0 for ANY f_p, f_e: internal energy conserved
+  [PASS] total power = d/dt(M V^2/2) - dU/dt: the ONLY non-conserved energy is the centre-of-mass kinetic energy P^2/2M
+    (1D shown; for central forces the transverse parts are identical.)
+
+[B] Fixed relative speed => electron energy set by the COM boost alone
+    COM-frame electron: gamma = 2.5301, u = 0.9186 c
+    proton recoil <= 751 eV  =>  COM speed <= 1.27e-03 c
+    => DT electron energy confined to [780.4, 783.4] keV (width 3.0 keV)
+  [PASS] DT's electron is a LINE a few keV wide, for any Newton-III violation
+
+[C] Against the measured spectra
+    measured: continuous 0..782 keV, mean T_e = 301 keV
+    fraction of measured decays inside DT's line: 6.4e-08
+  [PASS] fewer than 1 decay in a million lands where DT's 2-body decay puts them
+    to give the MEAN electron (301 keV) DT needs proton recoil 5531.6 MeV
+    = 7e+06 x the measured 751 eV endpoint
+  [PASS] spreading the line via the COM needs recoil > 1e4 x measured
+    mean energy unaccounted for by p + e: 481 keV per decay
+  [PASS] photons carry it in < 1% of decays (RDK II): not radiation
+
+==========================================================================
+VERDICT
+  1. Williams' rescue cannot work, and the reason is general.  For ANY pair
+     of unequal central forces the internal energy is exactly conserved;
+     Newton-III violation only changes the centre-of-mass kinetic energy
+     ([A]).  So the electron's energy is fixed up to the COM boost, which
+     must appear as proton recoil.  The measured recoil (<= 751 eV) confines
+     DT's electron to a line ~3 keV wide at ~780 keV ([B]); 6e-8 of the
+     measured decays fall there, and the mean electron (~ 300 keV) would
+     need a proton recoil ~ 7e6 x the measured endpoint ([C]).
+  2. So a p + e final state is EXCLUDED by DT's own mechanics plus two
+     measured spectra.  ~ 0.48 MeV per decay must leave in something
+     neutral, not a photon, and nearly invisible.  "No need to postulate
+     neutrinos" is refuted -- by DT's own internal-energy conservation.
+  3. DT HAS candidates.  Williams' own (the phi_4 wave quantum, Ch.11 Eqs
+     11.34-37) is spin 0 and is EXCLUDED by angular momentum; the chiral
+     zero mode of DT's 5D Dirac field passes (neutrino_helicity.sage).
+     With it, neutron decay is p + e + (DT neutrino), and the spectrum
+     argument passes over to the SM's.
+  STANDING (assumption ledger: SHARED WITH SM, by data-selected reading).
+  Just as Pauli (1930) assumed a light neutral particle carries the missing
+  energy, if DT's neutron decay emits its 5D-Dirac zero mode, the spectrum is
+  consistent with the SM.  Williams' no-neutrino reading is EXCLUDED; DT
+  is not -- the data select the reading with a neutrino (selected, not
+  derived).  Ledger Q9.  Its spin and helicity: neutrino_helicity.sage
+  (Q10); its strength: Q5.
+  Bracket: (i) [A] is non-relativistic in the relative coordinate; the
+  proton is non-relativistic (v < 2e-3 c) and the electron enters only
+  through the exact radial term; (ii) the allowed shape is imported but
+  measured (Fierz b = 0.017(21)); (iii) if the bound state is not an energy
+  eigenstate the line broadens, but the neutron's width hbar/tau ~ 1e-18 eV
+  makes it sharp.
+
+==========================================================================
+ALL ASSERTIONS PASSED
+==========================================================================

@@ -1,0 +1,47 @@
+========================================================================
+weyl_ghilencea_comparison.sage -- Williams Eq 39/67 vs Ghilencea 2019
+========================================================================
+
+[1] Weyl scalar curvature: R~ = R - 2(n-1) div phi - (n-1)(n-2) phi.phi
+  [PASS] n=4: R~ = -6 div(phi) - 6 phi.phi on flat space (k = 6)
+  [PASS] n=5: R~ = -8 div(phi) - 12 phi.phi on flat space (k = 12)
+
+[2] Dictionary phi = (q/2) omega  ->  Ghilencea Eq (5)
+  [PASS] R - 6 D.phi - 6 phi.phi  ==  R - 3q D.omega - (3/2) q^2 omega.omega
+
+[3] Linearisation of R~^2: Ghilencea Eq (10) = Williams' 'R - lambda/2'
+  [PASS] phi0 equation gives phi0^2 = -R~
+  [PASS] on shell it returns (xi0/4!) R~^2
+  [PASS] normalised by its R~ coefficient: R~ + phi0^2/2
+  [PASS] Williams/corpus natural gauge R~ + lambda/2 (R~ = -lambda) <=> lambda = phi0^2
+  [PASS] R~^2 linearised and normalised: R~ + 1/2 lambda
+  [PASS] R~^3 linearised and normalised: R~ + 2/3 lambda  ([7] mutation: not Williams' 1/2)
+
+[4] Cosmological constant: Lambda = phi0^2/4 = lambda/4
+  [PASS] coefficient of R~ is -M^2/2 with M^2 = xi0 phi0^2/6
+  [PASS] V = (xi0/4!) phi0^4 = 3 M^4/(2 xi0)  (Ghilencea Eq 25)
+  [PASS] Lambda = V/M^2 = phi0^2/4
+  [PASS] with lambda = phi0^2: Lambda = lambda/4  (corpus |Lambda| = lambda/4)
+  [PASS] in terms of M: Lambda = 3 M^2/(2 xi0), > 0 for xi0 > 0 (Ghilencea's sign)
+
+[5] Weyl-vector mass: corpus m^2 = 2k/a vs Ghilencea m_omega^2
+  [PASS] F^2 normalisation in corpus form: a = 8/(q^2 M^2)
+  [PASS] Ghilencea's mass term gives m_omega^2 = (3/2) q^2 M^2
+  [PASS] corpus m^2 = 2k/a (k = 6) == Ghilencea m_omega^2
+  [PASS] 5D analogue (k = 12): m^2 = 3 q^2 M^2
+  [PASS] [7] mutation: dictionary phi = q omega would give m^2 = 6 q^2 M^2 (no match)
+
+[6] Integrable sector (phi = d ln f) = Ghilencea's Stueckelberg mode
+  [PASS] phi = d ln f is integrable: F = 0 (Report Eq 65)
+  [PASS] (eta, d ln f) ~ (f^2 eta, 0):  R~ = f^2 R[f^2 eta]  for arbitrary f
+  [PASS] so after the gauge s = ln f the vector is zero and the geometry Riemannian
+
+NET.  Williams' Eqs 39/67, read by Weyl's procedure, and Ghilencea's
+spontaneously broken Weyl quadratic gravity are the same calculation:
+same R~ (k = 6), same linearisation (lambda = phi0^2), same cosmological
+constant (Lambda = lambda/4), same Weyl-vector mass (m^2 = (3/2) q^2 M_P^2),
+and the same fate for the integrable vector (gauged away -> Riemannian).
+DT's own additions: Eq 67 carries the procedure to 5D (k = 12) and u4 = 0
+gives the 4D Einstein surface.  Not checked: Ghilencea's C~^2 term (absent
+in Williams), Weyl-weighted matter, and the sign of Lambda in Williams'
+conventions.

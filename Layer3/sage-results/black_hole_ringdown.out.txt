@@ -1,0 +1,62 @@
+==========================================================================
+black_hole_ringdown.sage -- does DT's non-singular black hole ring like Kerr?
+==========================================================================
+
+[A] Controls: Schwarzschild and the GW150914 remnant
+    Schwarzschild light ring(s) at r/M = [2.999]
+  [PASS] A1: Schwarzschild has one light ring, at r = 3M
+    eikonal: Omega_c M = 0.19245, lambda_L M = 0.19245  (1/(3 sqrt3) = 0.19245)
+  [PASS] A2: eikonal Omega_c = lambda_L = 1/(3 sqrt3 M) (Cardoso et al. 2009)
+    Kerr f_220 for GW150914 (M_det = 67.6 Msun, a = 0.67): 250 Hz
+  [PASS] A3: GR reading predicts the observed ~250 Hz ringdown
+
+[B] Closing Williams' potential into a metric: what the solar system allows
+    g_00 = -u^3 + 2*u^2 - 2*u + 1 + O(u^4)
+    AREAL reading:     gamma = 1, beta = 2, perihelion = 2/3 x GR
+  [PASS] B1: areal reading has beta = 2 -> perihelion 2/3 of GR (excluded by Mercury)
+    ISOTROPIC reading: beta = 1  (GR's u^2 term supplied by e^{-u})
+  [PASS] B2: isotropic reading has beta = 1
+    first departure from Schwarzschild: u^3 coefficient differs by 1/2 (2PN)
+  [PASS] B3: Williams' g_00 departs from GR only at 2PN (u^3)
+  [PASS] B4: closure B = 1/g00          has PPN gamma = 1 (Cassini)
+  [PASS] B4: closure B = 1 + 2u e^-u    has PPN gamma = 1 (Cassini)
+  [PASS] B4: closure B = exp(2u e^-u)   has PPN gamma = 1 (Cassini)
+
+[C] Horizon
+    min g_00 = 1 - 2/e = 0.2642 at r = lambda
+  [PASS] C1: g_00 > 0 everywhere -> no surface of infinite redshift (no horizon)
+
+[D] Light ring (the thing that rings)
+    isotropic, B = 1/g00          light rings: none
+  [PASS] D1: no light ring for closure B = 1/g00
+    isotropic, B = 1 + 2u e^-u    light rings: none
+  [PASS] D1: no light ring for closure B = 1 + 2u e^-u
+    isotropic, B = exp(2u e^-u)   light rings: none
+  [PASS] D1: no light ring for closure B = exp(2u e^-u)
+    areal (excluded anyway)          light rings: none
+  [PASS] D2: even the areal reading has no light ring
+    isotropic B=1/A: max of 2u(2-u)e^-u = 0.9223 < 1, so no root
+  [PASS] D3: analytic check -- the light-ring equation has no solution
+    (Schwarzschild in the same isotropic gauge has its ring at r = 1.866 M)
+  [PASS] D4: control -- the same finder locates Schwarzschild's isotropic ring
+
+[E] Is the non-singular metric a vacuum solution of the surface equations?
+  [PASS] E0: sign control -- G^t_t = +6k for a positive-density ball (k > 0)
+    G^t_t (closure B = 1/g00) = 4*u^5 - u^4 + ...   (u = lambda/r)
+  [PASS] E1: G^t_t != 0 outside the mass -> needs an exterior source (not vacuum)
+  [PASS] E2: the leading exterior density is NEGATIVE (-u^4): violates the weak energy condition
+    (vacuum surface equations + spherical symmetry -> Schwarzschild, Birkhoff)
+
+[VERDICT]
+  * GR reading of DT (vacuum surface equations): Schwarzschild/Kerr, light
+    ring at 3M, f_220 ~ 250 Hz for GW150914 -- matches LIGO and EHT.
+  * Williams' non-singular reading: no horizon (g_00 >= 0.264) and NO light
+    ring in any closure the solar system allows -> no Kerr ringdown, no
+    photon ring.  It also needs an exterior source of NEGATIVE energy
+    density, so it is not a solution of DT's own vacuum surface equations.
+  * Ringdown + EHT select the GR reading: a strong negative for the
+    non-singular black hole, not for DT.
+
+==========================================================================
+black_hole_ringdown COMPLETE.
+==========================================================================

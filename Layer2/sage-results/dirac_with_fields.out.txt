@@ -1,0 +1,17 @@
+======================================================================
+16_dirac_with_fields_adjudicated.sage
+======================================================================
+
+(A) Spin Tensor & Clifford Decomposition (Eq 117)
+  gamma^j * gamma^k = g^jk * I + sigma^jk for all 5D indices: PASS
+
+(B) Interaction Term Structure (Eq 119)
+  Theory: (iD_j)(iD_k) = -D_j D_k. Its antisymmetric part is -i/2 * F_jk.
+  Contracting with sigma^jk yields the interaction term -i/2 * F_jk * sigma^jk.
+  This matches the structural form of the spin-coupling term in Eq 119.
+
+(C) Field Tensor Consistency (Page 123)
+  Field Tensor F is antisymmetric: PASS
+
+Summary: 5D Dirac field coupling and spin tensor structure verified.
+======================================================================

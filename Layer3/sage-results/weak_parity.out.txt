@@ -1,0 +1,75 @@
+==========================================================================
+weak_parity.sage -- can DT's weak sector violate parity?
+==========================================================================
+
+[A] Every DT weak-sector ingredient is parity-even
+  [PASS] P = gamma^0 (x -> -x) is an involution on spinors
+  [PASS] phi = (k/r) e^{-lambda/r} depends on |x| only: P-even for every lambda (lambda_e != lambda_p changes nothing)
+  [PASS] gamma^0 gamma^mu gamma^0 = s_mu gamma^mu: gamma^mu A_mu is P-invariant
+  [PASS] Pauli term sigma^{mu nu} B_{mu nu} (Eq 2.31) is P-invariant
+  [PASS] two-particle I^theta structure (Eq 2.31) and three-body cyclic C = A^beta + A^gamma (Eq 2.32) are sums of the above: P-invariant
+    => DT's weak equation, as Williams writes it, commutes with parity.
+
+[B] Consequence: no spin-momentum asymmetry in beta decay
+  [PASS] W(theta) = W(pi - theta) for all theta forces A = 0
+    DT (parity-even) predicts A = 0;  60Co measures A = -1.014 +/- 0.020
+    => excluded at 51 sigma (Wu 1957 first, ~40% raw asymmetry)
+  [PASS] A = 0 excluded by > 40 sigma
+
+[C] What is missing: gamma^5
+  [PASS] gamma^5 is P-odd (pseudoscalar)
+  [PASS] axial current gamma^mu gamma^5 has the opposite parity to gamma^mu
+  [PASS] P maps V-A to V+A: the measured weak current is not P-covariant
+  [PASS] gamma^5 cannot be built from Eq 2.31's terms by P-even products (it anticommutes with every gamma^mu; it appears only as an INPUT)
+
+[D] DT's neutrino (non-transverse wave, Eq 11.34-37) has helicity 0
+  [PASS] E || k is invariant under rotation about k: helicity 0 (no handedness possible)
+  [PASS] contrast: transverse circular mode picks up e^{-i a}, helicity -1
+    Measured: neutrinos are left-handed, helicity -1/2 (Goldhaber 1958);
+    antineutrinos right-handed.  A helicity-0 quantum
+    cannot carry the spin 1/2 Williams needs for beta-decay spin balance
+    (p.255), and cannot distinguish left from right.
+
+[E] Defeater audit: the gamma^5 inside DT's 5D Dirac equation
+  [PASS] gamma^4 = i gamma^5 completes the 5D Clifford algebra (+,-,-,-,-)
+  [PASS] chiral rotation leaves every vector coupling psibar gamma^mu psi unchanged
+  [PASS] psibar psi -> cos2a psibar psi + i sin2a psibar g5 psi: an i gamma^5 (fifth-dimension) mass rotates into an ordinary mass
+  [PASS] Pauli term -> cos2a sigma.B + sin2a i sigma.B gamma^5: only an EDM-type (P-odd, T-odd) remnant, never a V-A current
+    So the 5D gamma^5 is removable for vector couplings and otherwise gives
+    an electric dipole moment (electron EDM < 4.1e-30 e cm, Roussy 2023),
+    not the left-handed charged current of beta decay.
+
+==========================================================================
+VERDICT
+  1. Neither the Report nor the book discusses parity.  Every term of
+     Williams' weak equation (Eq 2.31; forces 9.42-43) is parity-even ([A]),
+     so DT's weak sector, as written, predicts NO beta-decay asymmetry:
+     A = 0 against 60Co's A = -1.014(20), i.e. ~51 sigma ([B]).
+  2. The unequal-lambda (Newton-III-breaking) force is CENTRAL; it breaks the
+     symmetry between the two particles, not the mirror symmetry of space.
+     Those are different symmetries, so the source's mechanism cannot be the
+     origin of parity violation.
+  3. DT's neutrino (E || k mode) has helicity 0 ([D]); measured neutrinos are
+     purely left-handed.
+  4. The one place gamma^5 enters DT -- as the fifth Dirac matrix ([E]) -- is
+     either removable or yields an EDM-type term, not V-A.
+  STANDING (assumption ledger: SHARED WITH SM).  Just as the SM assumes
+  parity violation (left-handed doublets), if DT assumes it the result is
+  consistent with the SM -- not a DT-specific defect.
+  The SM does not derive parity violation either: it ASSIGNS left-handed
+  fermions to SU(2) doublets because Wu and Goldhaber demanded it (V-A was
+  fitted, not predicted).  So DT, like the SM, must take chirality from
+  experiment.  The DT-specific point is that its 5D form makes that input
+  NON-TRIVIAL: in 5D gamma^5 is used up as the fifth Dirac matrix, so 5D
+  fermions carry no handedness (the Kaluza-Klein chirality problem, Witten
+  1981).  Whether DT's own restriction u4 = 0 can supply it is tested in
+  weak_chirality_u4.sage.
+  Bracket (criminal bar): the arithmetic is decisive, the SCOPE is not.
+  Defeaters: (i) Williams never claims parity violation, so this is a gap
+  in coverage, not a wrong prediction he made; (ii) the 5D Dirac sector is
+  an adopted ansatz and could be extended chirally; (iii) the neutrino
+  identification (Ch.11) is interpretive in the source.
+
+==========================================================================
+ALL ASSERTIONS PASSED
+==========================================================================

@@ -1,0 +1,19 @@
+======================================================================
+13_force_density_adjudicated.sage
+======================================================================
+
+(A) Bianchi identity cancellation (Div T ~ J F)
+  Bianchi identity reduces Div(T) to divergence-only terms: PASS
+
+(B) Force Component Verification (Page 102)
+  K0 matches corrected Entropy force (i/c)(J.E + J4*V0): PASS
+  K1 matches corrected Lorentz + V-field force: PASS
+  K4 matches Mass force rho*V0 - (J.V)/c: PASS
+
+(C) GENERAL 5D divergence: Div(T) = F.J for ALL components, under dF=0
+  the 10 Bianchi substitutions are exactly the dF=0 3-form components (10/10): PASS
+  Div(T)_j = (1/c-scaled) F_jk J^k for ALL j=0..4 under dF=0 (full 5D): PASS
+
+Summary: force-density components AND the full 5D divergence reduction
+Div(T)=F.J (all 5 components, under verified dF=0) machine-verified.
+======================================================================

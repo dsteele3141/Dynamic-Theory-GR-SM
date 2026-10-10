@@ -1,0 +1,69 @@
+==========================================================================
+weak_va_coupling.sage -- V-A form and strength for DT's chiral mode
+==========================================================================
+
+[A] FORM: bilinears of a chiral (left-handed) field
+  [PASS] scalar  psibar_L psi_L = 0 (no Dirac mass: the mode is massless)
+  [PASS] pseudoscalar psibar_L g5 psi_L = 0
+  [PASS] tensor psibar_L sigma^{mu nu} psi_L = 0: Williams' Pauli weak term sigma.B (Eq 2.31) does NOT couple to a chiral mode
+  [PASS] axial = -vector on a left-handed field
+  [PASS] so every surviving coupling is gamma^mu (1 - g5)/2: V-A is AUTOMATIC
+    muon decay Michel rho: pure V-A 3/4; measured 0.74977(26)
+  [PASS] measured rho consistent with V-A
+
+[B] One chiral leg makes the whole current V-A
+  [PASS] psibar_e gamma^mu P_L nu = (P_L e)bar gamma^mu nu: only e_L takes part (electron helicity -v/c, as measured)
+
+[C] VERTEX: what in DT can couple to a NEUTRAL chiral mode?
+    vector  e_theta A^T_mu gamma^mu  (Eq 2.31)   strength factor at Q=0: 0
+    Pauli   e_beta sigma.B           (Eq 2.31)   strength factor at Q=0: 0
+    mass axis phi_4 (gravitational, Eq 11.34)    strength factor at Q=0: 1
+  [PASS] for Q = 0 the ONLY surviving DT coupling is the gravitational phi_4
+  [PASS] a neutral mode has no vector coupling to Williams' (neutral) A^T fields
+    And none of Williams' fields carries charge, so there is no e <-> nu
+    (charge-changing) vector vertex at all: DT has no W counterpart.
+
+[D] STRENGTH
+    gravitational / Fermi coupling  G_N/G_F = 5.75e-34
+    cross-section ratio (G_N/G_F)^2        = 3.3e-67
+    Neutrinos ARE detected at G_F strength (reactor inverse beta decay,
+    Reines-Cowan 1956; SNO neutral current 2002).
+  [PASS] a gravity-only neutrino interacts ~1e-67 too weakly: excluded
+    A CHARGED vector field of EM strength gives G_F if its range is
+    5.3e-03 fm (g = e)  --  ~ hbar/(M_W c) = 2.46e-03 fm, the W boson.
+  [PASS] the needed range is the W Compton wavelength (factor < 3)
+
+==========================================================================
+VERDICT
+  1. FORM -- YES.  If DT's u4 = 0 boundary leaves a chiral zero mode, its
+     couplings are AUTOMATICALLY V-A: scalar, pseudoscalar and tensor
+     bilinears vanish (Williams' Pauli weak term sigma.B drops out), axial =
+     -vector ([A]); and one chiral leg forces the partner electron to be
+     left-handed ([B]).  Michel rho = 3/4 follows.  The V-A form costs
+     nothing beyond the one sign already paid in weak_chirality_u4.
+  2. STRENGTH -- NO, as written.  Every field in Eq 2.31 enters times a
+     charge, the neutrino is neutral, and the Pauli term is killed by
+     chirality; the only coupling left is the gravitational phi_4, ~1e-33
+     of G_F in amplitude, ~1e-67 in cross-section ([C],[D]).  DT also has no
+     charge-changing vector field, so no e <-> nu vertex exists.
+  3. The measured strength needs a CHARGED vector field of range ~ hbar/M_W c
+     ~ 2.5e-3 fm -- i.e. re-adding the W boson.  (Curiously, that is the
+     same scale as the hydrogen bound lambda_p < 1.8e-3 fm in
+     hydrogen_nonsingular_spectrum.sage; noted, not used.)
+  STANDING (assumption ledger: SHARED WITH SM).  FORM follows; STRENGTH is
+  an input.  Just as the SM assumes a charged vector boson W with
+  M_W ~ 80 GeV (equivalently G_F), if DT assumes a charged short-range
+  vector field of range hbar/(M_W c), the weak strength is consistent with
+  the SM -- and the V-A form then comes for free from [A],[B].  Not a
+  DT-specific defect: an assumption the SM also makes, recorded in
+  ASSUMPTIONS.md.
+  Bracket: (i) the zero-mode neutrino is OUR identification; Williams'
+  neutrino is the helicity-0 phi_4 wave quantum (weak_parity [D]), which
+  faces the same strength problem; (ii) DT's beta decay is the breakup of a
+  proton-electron bound state (Book p.255), an EM process whose RATE has not
+  been computed -- the neutron lifetime (878 s) is the natural next test and
+  a possible defeater; (iii) the strength numbers are order-of-magnitude.
+
+==========================================================================
+ALL ASSERTIONS PASSED
+==========================================================================

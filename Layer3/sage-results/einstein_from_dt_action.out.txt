@@ -1,0 +1,52 @@
+========================================================================
+einstein_from_dt_action: varying the Report's Eq 67 action
+========================================================================
+
+[1] The constraint coefficients 6 (4D) and 12 (5D) are Weyl's (n-1)(n-2)
+  [PASS] hand-built Ricci scalar agrees with Sage's (conventions pinned)
+  [PASS] 4D: R~ = R - 2(n-1) div(phi) - 6 phi.phi   ((n-1)(n-2) = 6)
+  [PASS] 5D: R~ = R - 2(n-1) div(phi) - 12 phi.phi   ((n-1)(n-2) = 12)
+  [PASS] mutation: the 4D coefficient 6 is wrong in 5D
+  [PASS] mutation: the quadratic term is not optional (phi.phi != 0 here)
+    Eq 39 carries 6, Eq 67 carries 12: both are the Weyl-curvature
+    coefficient of the dimension in which Williams writes them.
+
+[2] The R term: its metric variation is the Einstein tensor
+  [PASS] 4D diagonal family (4 free functions of t, x): dL/du = -sqrt|g| G^ab dg_ab/du for every u
+  [PASS] mutation: Ricci in place of Einstein (R^ab) fails
+  [PASS] 5D diagonal family (5 free functions of t, x): dL/du = -sqrt|g| G^ab dg_ab/du for every u
+    off-diagonal instance: max residual 5.5e-89 against terms of size 14.8
+  [PASS] 4D with off-diagonal g_tx: identity holds for all five metric functions (explicit instance, 300-bit, 3 points)
+    The raw Euler-Lagrange expression contains third and fourth
+    derivatives; the identity shows they cancel: the field equations
+    of the R term are SECOND ORDER, as Lovelock's premise requires.
+
+[3] The F^2 and lambda terms (5D diagonal family)
+  [PASS] F^2 term: dL/du = sqrt|g| (-1/2 F^a_j F^bj + 1/8 g^ab F^2) dg_ab/du (the Maxwell stress)
+  [PASS] lambda term: dL/du = -sqrt|g| lam [12 phi^a phi^b + (1/2)(1/2 - 12 phi.phi) g^ab] dg_ab/du
+  [PASS] the g^ab part of the lambda stress is  -(lam/2)(1/2 - 12 phi.phi) g^ab
+  [PASS] multiplier reading: on the constraint phi.phi = 1/24 the cosmological term vanishes (Lambda = 0)
+  [PASS] constant reading (Weyl 1918): with no constraint, the phi-independent part is -lam/4 g^ab (Lambda != 0)
+    The Report does not say which reading is meant; T1.9 (corpus)
+    takes lambda as a multiplier (EL(lambda) => phi.phi = const).
+
+[4] Assembly
+    Eq 67, varied in the metric:
+        G_ab = T^F_ab + T^lambda_ab        (5D, local, second order;
+                                             R the only metric term)
+    + u4 = 0  =>  K = 0  =>  exact restriction to the 4D surface
+                                             (gr_on_4d_surface)
+    + Newtonian limit  =>  kappa = 8 pi G / c^4
+                                             (einstein_equations_recovery [4])
+    =>  G_ab + Lambda g_ab = (8 pi G/c^4) T_ab on the surface, with
+        Lambda = 0 on the multiplier reading of lambda.
+
+  NET: the premise 'the surface metric is dynamical, with local second-order
+  equations' is DT's own -- the Report's action Eq 67, whose metric variation
+  is shown here to be the Einstein operator.  Einstein's equations are DT's
+  mass-conserving (u4 = 0) sector.  Not derived from the three laws: the
+  choice of R as the Lagrangian (Weyl's procedure, adopted by Williams).
+  Open: the reading of lambda, which decides Lambda.
+========================================================================
+einstein_from_dt_action COMPLETE.
+========================================================================

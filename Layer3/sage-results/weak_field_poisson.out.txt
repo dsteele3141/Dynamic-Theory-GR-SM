@@ -1,0 +1,76 @@
+==========================================================================
+39_weak_field_poisson.sage  --  [C-wf] the yield half of the GR bridge
+==========================================================================
+
+[0] 5D manifold, signature (+,-,-,-,-), static Newtonian ansatz
+    g_00 = 1 + 2 eps Phi ; g_ij = -(1 - 2 eps Psi) d_ij ; g_44 = -1
+    Phi, Psi = Phi(x,y,z), Psi(x,y,z)  (static: no t, no q dependence)
+
+[A] The three linearised identities claimed by [C-wf]
+    R_00 = diff(Phi(x, y, z), x, x) + diff(Phi(x, y, z), y, y) + diff(Phi(x, y, z), z, z)
+  [PASS] A1: R_00 = lap(Phi).
+    R_44 = 0
+  [PASS] A2: R_44 = 0 (the fifth direction is an unsourced spectator at O(eps)).
+    G_00 = 2*diff(Psi(x, y, z), x, x) + 2*diff(Psi(x, y, z), y, y) + 2*diff(Psi(x, y, z), z, z)
+  [PASS] A3: G_00 = 2 lap(Psi).
+
+[B] The remaining linearised components
+    R_11 = -diff(Phi(x, y, z), x, x) + 2*diff(Psi(x, y, z), x, x) + diff(Psi(x, y, z), y, y) + diff(Psi(x, y, z), z, z)
+  [PASS] B1: R_ij = d_i d_j (Psi - Phi) + delta_ij lap(Psi)  [i=j=1 component].
+    R_12 = -diff(Phi(x, y, z), x, y) + diff(Psi(x, y, z), x, y)
+  [PASS] B2: off-diagonal R_12 = d_1 d_2 (Psi - Phi).
+    R    = 2*diff(Phi(x, y, z), x, x) + 2*diff(Phi(x, y, z), y, y) + 2*diff(Phi(x, y, z), z, z) - 4*diff(Psi(x, y, z), x, x) - 4*diff(Psi(x, y, z), y, y) - 4*diff(Psi(x, y, z), z, z)
+  [PASS] B3: Ricci scalar R = 2 lap(Phi) - 4 lap(Psi).
+    G_44 = diff(Phi(x, y, z), x, x) + diff(Phi(x, y, z), y, y) + diff(Phi(x, y, z), z, z) - 2*diff(Psi(x, y, z), x, x) - 2*diff(Psi(x, y, z), y, y) - 2*diff(Psi(x, y, z), z, z)
+  [PASS] B4: G_44 = lap(Phi) - 2 lap(Psi)  (NOT zero unless lap(Phi) = 2 lap(Psi)).
+
+[C] Branch A: impose Psi = Phi (the relation 4D GR itself satisfies)
+    kappa = 8 pi G / c^4 ; T_00 = rho c^2
+    lap(Phi) = 4*pi*G_newton*rho/c_light^2
+  [PASS] C1: Psi=Phi gives lap(Phi) = 4 pi G rho / c^2.
+    => lap(phi_N) = 4*pi*G_newton*rho   (phi_N = c^2 Phi)
+  [PASS] C2: NEWTON's sign AND coefficient recovered: lap(phi_N) = 4 pi G rho.
+    but G_44 = lap(Phi) - 2 lap(Phi) = -4*pi*G_newton*rho/c_light^2
+    => required mass-direction source T_44 = G_44/kappa = -1/2*c_light^2*rho
+  [PASS] C3: Psi=Phi FORCES a non-zero mass-direction source T_44 = -rho c^2/2.
+  [PASS] C4: that source is non-zero wherever rho > 0 (so Psi=Phi is an EXTRA assumption, not a consequence of T_00-only matter in 5D).
+
+[D] Branch B: impose T_44 = 0 (a genuinely unsourced fifth direction)
+    G_44 = 0  =>  lap(Phi) = 2 lap(Psi)  =>  Psi = Phi/2 (not Psi = Phi)
+    lap(Psi) = 4*pi*G_newton*rho/c_light^2
+    lap(Phi) = 8*pi*G_newton*rho/c_light^2
+    => lap(phi_N) = 8*pi*G_newton*rho
+  [PASS] D1: T_44=0 gives lap(phi_N) = 8 pi G rho, TWICE the Newtonian coefficient.
+  [PASS] D2: the two branches disagree by exactly a factor 2 in the sourced region.
+
+[E] Vacuum (rho = 0): the two branches coincide
+  [PASS] E1: rho=0 sends both branches to lap(phi_N) = 0 (Laplace, exterior Newton).
+  [PASS] E2: in vacuum G_44 = 0 is consistent with R_44 = 0 and R = 0.
+    => the Schwarzschild_4 x R embedding (T2.14) is the vacuum +
+       spectator corner of this problem, as mass_sector_note sec.1 (T4')
+       states; the sourced interior is where the derivational content is,
+       and that is where the extra relation Psi = Phi has to be supplied.
+
+[VERDICT]
+  [C-wf] CONFIRMED as stated: R_00 = lap(Phi), R_44 = 0, G_00 = 2 lap(Psi),
+  and with Psi = Phi the weak field reproduces Poisson's equation with
+  Newton's sign and coefficient, lap(phi_N) = 4 pi G rho.  The note's chain
+  is correct.
+
+  SCOPE the note does not state, established here:
+   (i) Psi = Phi is an ASSUMPTION, not a consequence.  In 5D it forces a
+       mass-direction source T_44 = -rho c^2/2, so a T_00-only source is
+       inconsistent with it.
+  (ii) Imposing T_44 = 0 instead forces Psi = Phi/2 and lap(phi_N) =
+       8 pi G rho, twice Newton (the 5D Kaluza-Klein deficit).
+ (iii) The two agree only in VACUUM, which is precisely the regime the
+       Schwarzschild x R embedding already covers.  So 'yield' improves on
+       'admit' only under the added relation Psi = Phi.
+  (iv) Throughout, sourced 5D Einstein equations are an ADDED assumption:
+       DT's mass sector derives phi_m as a gauge object of the extended
+       Maxwell set, with no Einstein equation.  This is a check of the
+       geometric correspondence, not a DT-native derivation.
+
+==========================================================================
+39_weak_field_poisson COMPLETE.
+==========================================================================

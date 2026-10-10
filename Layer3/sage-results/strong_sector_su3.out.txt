@@ -1,0 +1,94 @@
+==========================================================================
+strong_sector_su3.sage -- what of SU(3)_C does DT supply?
+==========================================================================
+
+[A] Internal symmetry room in DT's 5D Dirac field
+  [PASS] Williams' 8x8 satisfies the 5D Clifford algebra
+    4x4 irrep (Q3, our choice)   commutant dim 1 (abelian)  ->  internal group U(1)
+    Williams' 8x8 (Eq 109)       commutant dim 2 (abelian)  ->  internal group U(1) x U(1)
+    2 copies of the 4x4          commutant dim 4 (non-abelian)  ->  internal group U(2) > SU(2)
+    3 copies of the 4x4          commutant dim 9 (non-abelian)  ->  internal group U(3) > SU(3)
+  [PASS] one 5D Dirac irrep has only a U(1) phase: no colour
+  [PASS] Williams' 8x8 = 4 + 4' (inequivalent): abelian U(1)xU(1), no SU(N) at all
+  [PASS] an SU(3) needs THREE copies of one irrep: colour is an ADDED multiplicity
+    DT's spinor (either rep) has no room for colour; like the SM, DT would
+    have to postulate the 3-fold multiplicity.
+
+[B] Anomalies: DT's leptons + the imported SU(2)_L x U(1)_Y
+    leptons only (nu_L zero mode + e): SU(2)^2Y = -1/2, Y^3 = 3/4, grav = 0
+  [PASS] DT's leptons alone + imported SU(2)_L x U(1)_Y are ANOMALOUS: fermions must be added
+    add N_c copies of a doublet + two singlets: SU(2)^2Y = 0 forces Y_Q = 1/2/N
+  [PASS] the Y^3 and gravitational anomalies then cancel for EVERY N_c
+    charges: Q_u = 1/2*(N + 1)/N, Q_d = -1/2*(N - 1)/N
+  [PASS] for N_c > 1 the added fermions carry FRACTIONAL charge
+    Witten SU(2) anomaly: 1 lepton + N_c quark doublets must be even
+  [PASS] => N_c is ODD
+
+[C] DT's charge quantisation (q = Z e, Eqs 7.66-7.67) on these charges
+  [PASS] N_c = 3: a single quark (2/3 or -1/3) cannot be an isolated state
+  [PASS] q-qbar mesons and 3-quark baryons are integer: only composites may be free
+    So DT's quantisation REQUIRES confinement of fractional charge (a
+    selection rule) -- it does not supply the mechanism; see [E].
+
+[D] Data fix N_c
+    N_c = 1: Q_u = 1, Q_d = 0; three-constituent p, n charges = 2, 1
+    N_c = 3: Q_u = 2/3, Q_d = -1/3; three-constituent p, n charges = 1, 0
+    N_c = 5: Q_u = 3/5, Q_d = -2/5; three-constituent p, n charges = 4/5, -1/5
+  [PASS] nucleons = three valence constituents (GLS sum rule ~ 3) with charges +1, 0: only N_c = 3
+    N_c = 1:  R(u,d,s) = 1.11 (meas 2.2)   R_l(Z) = 8.27 (meas 20.767)
+    N_c = 3:  R(u,d,s) = 2.21 (meas 2.2)   R_l(Z) = 20.82 (meas 20.767)
+    N_c = 5:  R(u,d,s) = 3.76 (meas 2.2)   R_l(Z) = 33.97 (meas 20.767)
+  [PASS] R ratio below charm selects N_c = 3
+  [PASS] Z hadronic width selects N_c = 3 (tree x (1 + alpha_s/pi), < 1%)
+  [PASS] pi0 -> gamma gamma: N_c (Q_u^2 - Q_d^2) = 1 for EVERY N_c once anomalies fix the charges -- it does not count colours (Baer-Wiese)
+
+[E] DT's own short-range potential phi_0 as the colour force
+    fit lambda to alpha(M_Z)/alpha(m_tau): lambda = 9.72e-04 fm
+    predicted alpha(1 TeV) = -0.0096   measured ~ +0.088
+  [PASS] phi_0 running turns REPULSIVE by 1 TeV (core lam/r > 1): excluded
+    shape: phi_0 suppresses exponentially, e^{-lam Q}; QCD runs as 1/ln(Q^2/Lambda^2)
+    long range: phi_0 force ~ 1/r^2 -> separation energy FINITE (~ alpha hbar c / r)
+  [PASS] no string tension: phi_0 at 10 fm is < 1% of the measured confining force
+    => free fractional charges at finite energy, which [C] forbids:
+       DT's quantisation needs confinement that DT's potential cannot give.
+
+==========================================================================
+VERDICT
+  DERIVED (given the electroweak structure the data already forced, Q6/Q12/Q13):
+  1. DT's leptons alone make the imported SU(2)_L x U(1)_Y anomalous ([B]);
+     a doublet-pattern completion needs an N_c-fold multiplicity of fermions
+     with charges Q_u = 1/2 + 1/(2N_c), Q_d = -1/2 + 1/(2N_c), and N_c odd.
+     This is consistency (gauge anomalies), not DT physics -- the SM's own
+     argument -- but it holds for DT once DT adopts the electroweak group.
+  2. DT's charge quantisation (q = Z e) then forbids an isolated quark: only
+     integer-charge composites can be free ([C]).  DT therefore REQUIRES
+     confinement as a selection rule, and agrees with the null free-quark
+     searches.
+  SELECTED by data (not derived): N_c = 3 -- three-constituent nucleons with
+  charges +1, 0, the R ratio, and the Z hadronic width all pick 3 ([D]).
+  NOT SUPPLIED by DT:
+  3. Room for colour: one 5D Dirac irrep has only a U(1) phase; Williams' 8x8
+     is abelian U(1)xU(1).  SU(3) needs three copies of one irrep ([A]), so
+     the multiplicity must be postulated -- as in the SM.
+  4. The dynamics: DT's phi_0, used as the colour force, turns repulsive
+     before 1 TeV (measured alpha_s ~ 0.09) and has no string tension ([E]).
+     Gluons, the SU(3) gauge group and asymptotic freedom are imported.
+  STANDING (assumption ledger: SHARED WITH SM, by import, with two derived
+  constraints).  Just as the SM assumes quarks in the triplet of a gauged
+  SU(3)_C, if DT assumes the same, its hadronic sector is consistent with
+  the SM.  Ledger Q14 (colour multiplicity, N_c = 3: oddness and fractional
+  charges forced by consistency, the value selected, not derived) and Q15
+  (SU(3)_C gauge dynamics: imported; DT's phi_0 cannot serve).
+  Bracket: (i) [B] assumes the completion follows the doublet + two singlets
+  Yukawa pattern; other anomaly-free completions exist (e.g. vector-like
+  pairs), so 'quarks' are the minimal choice, not the only one; (ii) [C]
+  takes Williams' unit e (the electron's charge) as the quantum of Z e --
+  with a unit e/3 free quarks would be allowed and [C] is lost; (iii) [E]
+  applies Williams' NUCLEON potential to a role he never gave it (he does not
+  use colour), so it shows DT supplies no colour force, NOT that his nuclear
+  claim fails; Williams' e+e+e- proton is a separate, DT-specific test not
+  run here; (iv) [D] uses imported QCD corrections (1 + alpha_s/pi), ~4-10%.
+
+==========================================================================
+ALL ASSERTIONS PASSED
+==========================================================================

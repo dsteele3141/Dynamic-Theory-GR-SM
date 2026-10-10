@@ -1,0 +1,60 @@
+==========================================================================
+mass_term_su2.sage -- DT's 5D mass term vs imported SU(2)_L
+==========================================================================
+
+[A] Both 5D mass sources flip chirality
+  [PASS] bulk mass  psibar psi = psibar_L (.) psi_R + h.c. only (no L-L, no R-R part)
+  [PASS] mass axis  psibar g^4 d4 psi = psibar_L (.) psi_R + h.c. only (no L-L, no R-R part)
+
+[B] SU(2) invariance of an L-R bilinear
+    L doublet, R doublet (vector-like): 1 invariant mass coupling(s)
+    L doublet, R singlet (chiral, SM) : 0 invariant mass coupling(s)
+  [PASS] vector-like: DT's 5D mass IS SU(2)-invariant (one coupling, the identity)
+  [PASS] chiral: NO SU(2)-invariant mass term exists for L doublet x R singlet
+    A 5D field has ONE SU(2) rep for both chiralities: DT's native mass is
+    therefore the vector-like case.
+
+[C] The vector-like electron against data
+    chiral (SM)            g_A^e = -0.500 (pull  +0.2)   A_e = 0.1472 (pull   -2.3)
+    vector-like (DT mass)  g_A^e = +0.000 (pull +29.6)   A_e = 0.0000 (pull  -79.7)
+  [PASS] chiral assignment fits g_A^e (<2 sigma) and A_e (<3 sigma; the 2.3 sigma is the SM's own SLD-vs-LEP sin^2 tension, not DT's)
+  [PASS] vector-like electron EXCLUDED: g_A^e = 0 (~30 sigma), A_e = 0 (~80 sigma)
+    (and a W coupling to e_R would make beta electrons helicity 0, not -v/c)
+
+[D] Chiral option: two 5D fields, zero modes of opposite hand
+  [PASS] bulk mass gives each zero mode ZERO mass (within one field)
+  [PASS] mass axis gives each zero mode ZERO mass (within one field)
+  [PASS] the only L-R link is ACROSS the two fields, and it is SU(2)-forbidden ([B])
+  [PASS] psibar_L Phi psi_R with a DOUBLET scalar Phi: one invariant (the Yukawa)
+    Yukawa strength in 4D ~ overlap of the two zero-mode profiles = 1/2/M
+  [PASS] with the Higgs doublet the zero modes get m = y_e v x overlap
+
+==========================================================================
+VERDICT
+  1. DT's 5D mass (bulk "+1" and the mass-axis derivative) links psi_L to
+     psi_R ([A]).  Inside one 5D field both carry the same SU(2) charge, so
+     the mass is SU(2)-invariant ONLY for a vector-like electron ([B]).
+  2. The vector-like electron is EXCLUDED: g_A^e = 0 vs -0.503(17) (~30 sigma),
+     A_e = 0 vs 0.1515(19) (~80 sigma) ([C]).
+  3. The chiral electron (L doublet, R singlet) must be two 5D fields with
+     zero modes of opposite hand.  DT's 5D mass then gives each zero mode
+     ZERO mass, and the only L-R link is SU(2)-forbidden: the electron's mass
+     must come from a Yukawa coupling to the Higgs doublet ([D]).
+  So the tension flagged in Q12 resolves AGAINST DT's native mass for
+  elementary charged fermions.  DT's 5D mass survives only as the scale of
+  the heavy (vector-like) mass-axis modes and the zero-mode profiles.
+  STANDING (assumption ledger: SHARED WITH SM, by import).  Just as the SM
+  assumes Yukawa couplings of fermions to the Higgs doublet, if DT assumes
+  the same, the charged-lepton masses and couplings are consistent with the
+  SM.  Neutral, but plain: DT's own mass mechanism (mass as the fifth
+  coordinate, Report Eq 105) does NOT give the electron its mass once
+  SU(2)_L is imported.  Ledger Q13.
+  Bracket: (i) this follows from importing SU(2)_L (Q6), which the neutral
+  current forced; DT without SU(2) keeps its native mass but loses the
+  weak sector; (ii) the electron mass value (y_e) is an input, as in the
+  SM; (iii) the hydrogen tests used a massive non-chiral electron (reading
+  R1) -- unaffected in QED, where e_L and e_R carry the same charge.
+
+==========================================================================
+ALL ASSERTIONS PASSED
+==========================================================================

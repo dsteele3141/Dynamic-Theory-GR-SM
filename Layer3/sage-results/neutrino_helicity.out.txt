@@ -1,0 +1,64 @@
+==========================================================================
+neutrino_helicity.sage -- spin and helicity of DT's neutrino candidates
+==========================================================================
+
+[A] Angular momentum in n -> p + e + X (all in units of hbar)
+  [PASS] X with spin 0, 1, 2 (any boson): p + e + X cannot have J = 1/2
+  [PASS] X with spin 1/2: J = 1/2 reachable -- X must be a fermion
+  [PASS] no X at all (Williams' p + e): J = 1/2 unreachable
+
+[B] Williams' neutrino: the phi_4 wave quantum (Eqs 11.34-11.37)
+  [PASS] a phi_4-only gauge vector is invariant under 4D rotations: spin 0
+    spin: 0 (4D scalar); helicity along k: 0
+  [PASS] phi_4 quantum is a boson: EXCLUDED by angular momentum in neutron decay
+  [PASS] and its helicity 0 contradicts the measured -1 (Goldhaber; pi decay)
+
+[C] DT's other candidate: the 5D-Dirac chiral zero mode (u4 = 0 boundary)
+  [PASS] massless left-chiral solution moving along +z is unique
+    neutrino (left-chiral particle): helicity = -1
+  [PASS] zero-mode NEUTRINO has helicity -1, as measured (Goldhaber; pi decay)
+  [PASS] v_L = i gamma^2 u_R^* is left-chiral and solves the +z Dirac equation
+    antineutrino (in neutron decay): helicity = 1
+  [PASS] zero-mode ANTINEUTRINO has helicity +1 (neutron-decay B ~ 1: right-handed)
+  [PASS] and spin 1/2 satisfies [A]
+    NB: the zero mode is massless; oscillations need m_nu > 0 -- the
+    minimal SM is also massless, so this is shared, not DT-specific.
+
+[D] Williams' neutron: what angular momentum does Eq 2.57 give it?
+    signs (1, 1) give J_n = 1.00000 hbar (Eq 2.57 target: hbar = h/2 + h/2)
+  [PASS] Eq 2.57 sets the neutron's angular momentum to hbar
+  [PASS] J = hbar means 3 magnetic substates; the measured neutron (J = hbar/2) shows 2 Stern-Gerlach beams: Williams' neutron has the WRONG SPIN
+  [PASS] and two free spin-1/2 particles give J = 0 or hbar, never hbar/2: his p + e final state cannot come from a spin-1/2 neutron
+    (Internally consistent with his p + e decay -- J = 1 -> p + e needs no
+    neutrino -- which is exactly why the measured spin 1/2 forces one.)
+
+==========================================================================
+VERDICT
+  1. Williams' neutrino (the phi_4 wave quantum) is EXCLUDED twice: it is a
+     boson, and angular momentum in n -> p + e + X demands a fermion ([A],
+     [B]); its helicity 0 contradicts the measured -1.  So the neutral
+     fermion beta_spectrum_two_body requires (ledger Q9) is NOT his.
+  2. DT's 5D Dirac equation supplies a candidate that PASSES: the chiral zero
+     mode left by the u4 = 0 no-flux boundary (weak_chirality_u4) is spin
+     1/2 with neutrino helicity -1 and antineutrino helicity +1, exactly the
+     measured values ([C]).  It needs the same choices already logged: one
+     4x4 irrep (Q3, shared with the SM) and the boundary reading (Q4, ours).
+  3. Williams' own neutron (Eq 2.57) has J = hbar.  That is why his p + e
+     decay looked self-consistent; the measured neutron spin 1/2 breaks it
+     ([D]) -- a second, independent reason the no-neutrino reading fails.
+  STANDING (assumption ledger: SHARED WITH SM, SELECTED by data).  Just as
+  the SM assumes a massless left-handed Weyl neutrino, if DT's neutrino is
+  its 5D Dirac zero mode, its spin and helicity are consistent with the SM.
+  The data select the zero mode over Williams' phi_4 quantum (selected,
+  not derived).  Ledger Q10 neutrino identity; Q11 Williams'
+  neutron spin (DT-SPECIFIC model, negative candidate).
+  Bracket: (i) the zero-mode neutrino is OUR identification, built on our
+  boundary reading; (ii) "integer spin" for the phi_4 quantum follows from
+  it being a classical-field quantum -- Williams never states a spin; (iii)
+  [D]'s defeater is Williams' effective unit of action: he could argue J is
+  counted in h' inside the neutron, but a FREE neutron shows 2 states, so
+  the defeater must explain why it is spin 1/2 outside.
+
+==========================================================================
+ALL ASSERTIONS PASSED
+==========================================================================

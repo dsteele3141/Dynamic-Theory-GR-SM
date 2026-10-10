@@ -1,0 +1,59 @@
+==========================================================================
+su3_larger_rep.sage -- SU(3) in a larger DT representation?
+==========================================================================
+
+[A] Internal symmetry of every DT field  a*4 + b*4'
+    a=1 b=0 (N=1,  4x4 ): symmetry dim  1, derived dim  0  -> u(1)
+    a=0 b=1 (N=1,  4x4 ): symmetry dim  1, derived dim  0  -> u(1)
+    a=2 b=0 (N=2,  8x8 ): symmetry dim  4, derived dim  3  -> u(2)
+    a=1 b=1 (N=2,  8x8 ): symmetry dim  4, derived dim  3  -> u(2)
+    a=3 b=0 (N=3, 12x12): symmetry dim  9, derived dim  8  -> u(3)
+    a=2 b=1 (N=3, 12x12): symmetry dim  9, derived dim  8  -> u(3)
+    a=1 b=2 (N=3, 12x12): symmetry dim  9, derived dim  8  -> u(3)
+    a=2 b=2 (N=4, 16x16): symmetry dim 16, derived dim 15  -> u(4)
+  [PASS] symmetry = u(N), N = a + b, for every mix: 4' counts as a conjugate 4 (the 8x8 su(2) of su2_from_5d is the N = 2 case)
+
+[B] Survives the switch: N left-handed zero modes
+  [PASS] every u(N) commutes with i*gamma^4 (preserves the zero-mode space); one 2-component zero mode per block (handedness per block: su2_from_5d [D])
+
+[C] N = 3: colour
+  [PASS] su(3) (dim 8, simple part of u(3)) acts on the triplet
+  [PASS] a = 3, b = 0: the charge phase commutes with su(3) -- gluons neutral, triplet members carry EQUAL charge
+  [PASS] a = 2, b = 1: same su(3), but it mixes particle and antiparticle -- equal charges again require the conjugate assignment on the 4' block (as for Y in su2_from_5d)
+    The triplet charge itself (fractional, Q_u = (N+1)/2N, Q_d = -(N-1)/2N)
+    is fixed by the anomaly conditions, strong_sector_su3 [B].
+
+[D] What fixes N?
+    Eq 112 is satisfied by a*4 + b*4' for EVERY a, b: Clifford theory does
+    not fix N.  Williams' factorisation (Eqs 106-111) yields the 8x8, N = 2,
+    which is why SU(2) came out singled out: U(2) is all there is.
+  [PASS] the symmetry depends ONLY on N: nothing in the 5D structure prefers N = 3
+    For N = 3 DT supplies: odd N (Witten, given doublets) and fractional
+    charge with confinement as a selection rule -- DERIVED (strong_sector_su3).
+    N = 3 itself: SELECTED by data (nucleon charges, R = 2.21, R_l = 20.82).
+
+==========================================================================
+VERDICT
+  1. The internal symmetry of ANY DT Dirac field is exactly u(N), N = number
+     of 4x4 blocks ([A]), and it always survives u4 = 0, acting on N
+     left-handed zero modes ([B]).  So the FORM of colour is native: any DT
+     field with three blocks carries su(3), with neutral gluons and equal
+     charges across the triplet ([C]).
+  2. But N is not fixed by the 5D structure ([D]).  SU(2) was singled out
+     because Williams' own factorisation gives N = 2; nothing in DT gives a
+     12x12.  SU(3) is therefore AVAILABLE in DT, not SINGLED OUT: N = 3 is
+     selected by data, with N odd and fractional charge derived.
+  STANDING (ledger Q14).  Colour: the group FORM is DERIVED (u(N) on N zero
+  modes); the multiplicity N = 3 is SELECTED (odd N derived); the gauging
+  and the SU(3) dynamics remain SHARED-SM by import (Q15), just as the SM
+  assumes them.  One level weaker than SU(2), whose N came from Williams.
+  Bracket: (i) u(N) is the generic symmetry of N identical free Weyl
+  fields -- DT's contribution is that its 5D fields deliver exactly this
+  and nothing larger, and that it survives the switch; (ii) a quark
+  doublet would be N = 6, u(6) containing su(3) x su(2) x u(1) as the
+  (3,2) subgroup -- choosing that subgroup is an import; (iii) free-field
+  symmetry only; interactions must respect the gauged subgroup.
+
+==========================================================================
+ALL ASSERTIONS PASSED
+==========================================================================

@@ -1,0 +1,58 @@
+==========================================================================
+gravitational_radiation.sage -- DT's wave modes vs GR, pulsars, LIGO
+==========================================================================
+
+[A] Physical polarisations of a null plane wave along x1
+    4D: 2   free 5D: 5
+  [PASS] A1: 4D metric gravity has 2 polarisations (GR)
+  [PASS] A2: free 5D metric gravity has 5 = n(n-3)/2 polarisations
+  [PASS] A3: dropping g_a4 (a < 4) removes exactly 2 modes (the KK vector)
+
+[B] The g_44 mode is a breathing polarisation in 4D
+    a Ricci-flat amplitude with eps_44 != 0; transverse tidal tensor:
+    [-1  0]
+    [ 0  0]
+  [PASS] B1: the g_44 mode has a non-zero TRACE in the detector plane (breathing)
+
+[C] Under the restriction h_A4 = 0: only GR's plus and cross
+    restricted 5D: 2
+  [PASS] C1: exactly 2 polarisations survive the restriction
+  [PASS] C2: every surviving mode is traceless in the detector plane (no breathing)
+  [PASS] C3: the surviving tidal tensors span plus and cross (rank-2 traceless space)
+
+[D] Propagation speed of the surviving modes
+    Ricci_22 of the plus mode = (kx + w)*(kx - w)
+  [PASS] D1: Ricci-flatness requires w^2 = kx^2 (c_gw = c exactly)
+    so (c_gw - c)/c = 0, inside the GW170817 window [-3e-15, +7e-16]
+
+[E] Quadrupole power: PSR B1913+16 (Peters-Mathews)
+    GR/restricted-DT Pbdot = -2.4021e-12 ; observed = (-2.398 +/- 0.004)e-12
+    observed / predicted = 0.9983
+  [PASS] E1: quadrupole prediction matches the binary pulsar within 3 sigma
+
+[F] Williams' gauge picture of gravity with d_4 = 0
+  [PASS] F1: the four EM equations (i = 0..3) contain no phi_4
+  [PASS] F2: the fifth equation contains only phi_4
+  [PASS] F3: the fifth equation is the scalar wave operator on phi_4
+  [PASS] F4: V_mu = F_mu4 = d_mu phi_4 -- gravity in the gauge picture is a gradient field
+    EM-V coupling via e^{-K_g gamma}: K_g gamma ~ 2.0e-31 (gamma = 1e3 kg/m^3)
+  [PASS] F5: the static EM-gravity mixing is < 1e-29 at laboratory density
+
+[G] Williams: 'the gravity wave does not exist by itself'
+    The restricted metric sector [C] has free tensor waves sourced by
+    T_mu nu alone, with no electromagnetic partner required.
+    GW150914 (binary black holes, no counterpart) is such a wave, so the
+    remark is superseded by DT's own GR sector; read it as a statement
+    about the gauge sector at most.
+
+[VERDICT]
+  * Free 5D: 5 polarisations (2 tensor + 2 vector + 1 breathing scalar).
+  * Conservation of mass as a restriction leaves GR's plus and cross only,
+    at speed c, with quadrupole power matching PSR B1913+16 to 0.2%.
+  * The absent vector/breathing modes are a third test of the restriction.
+  * Williams' gauge gravity is a scalar gradient with d_4 = 0: no tensor
+    waves.  His 'no gravity wave by itself' is superseded by the metric sector.
+
+==========================================================================
+gravitational_radiation COMPLETE.
+==========================================================================

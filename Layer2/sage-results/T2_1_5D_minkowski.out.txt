@@ -1,0 +1,47 @@
+============================================================
+COMPUTATION 1: 5D Metric and Velocity Normalization
+============================================================
+
+5D Metric g_ij:
+[ 1  0  0  0  0]
+[ 0 -1  0  0  0]
+[ 0  0 -1  0  0]
+[ 0  0  0 -1  0]
+[ 0  0  0  0 -1]
+
+Velocity Normalization g_ij u^i u^j = u0^2 - u1^2 - u2^2 - u3^2 - u4^2
+  [PASS] (+,-,-,-,-) normalization: g_ij u^i u^j = u0^2 - u1^2 - u2^2 - u3^2 - u4^2.
+  [PASS] Mass dimension is spacelike: g44 = -1.
+
+============================================================
+COMPUTATION 2: 5D Force Density (Eq 62)
+============================================================
+
+Euler-Lagrange structure (NOT symbolically derived here):
+  LHS: gamma * f_i
+  RHS: d_gamma/dx^i - a0 * u4 * g_ij u^j
+  NOTE: structural description only -- no [PASS]. The Eq-62 Euler-Lagrange
+        derivation is verified rigorously in the Lean layer
+        (T2_4_ForceDensity) and the assertion-driven Layer-2 scripts.
+
+============================================================
+COMPUTATION 3: Audit of Page 86 Time Conversion Factors
+============================================================
+
+Correct conversion factor: gamma_sym/(sqrt(-beta^2 + 1)*c^2)
+  (Factor should be gamma / (c^2 * sqrt(1-beta^2)))
+Manuscript (Page 86) factor: c^2*gamma_sym/sqrt(-beta^2 + 1)
+  CONCLUSION: Source Error (dimensional / factor-of-c mismatch).
+  [PASS] Page-86 source error is real: corrected factor != manuscript factor.
+
+============================================================
+COMPUTATION 4: Special Relativity Limit (u4 = 0)
+============================================================
+
+Standard SR force density d/dt(gamma_rel v) = gamma_sym*diff(v_alpha_func(t), t)/sqrt(-beta^2 + 1)
+  NOTE: structural description only -- no [PASS]. The 5D force density is
+        not constructed here, so the u4->0 reduction is not symbolically
+        performed; the SR correspondence is documented in SI-6.2.3.
+
+Audit Complete: 11_5D_minkowski.sage
+============================================================

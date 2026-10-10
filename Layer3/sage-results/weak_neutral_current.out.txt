@@ -1,0 +1,65 @@
+==========================================================================
+weak_neutral_current.sage -- DT and the neutral weak current
+==========================================================================
+
+[A] DT's own fields
+    nu neutral coupling: gravitational phi_4 only (weak_va_coupling [C])
+    NC/CC from DT's own fields ~ (G_N/G_F)^2 = 3.3e-67  vs measured 0.31
+  [PASS] DT natively has NO neutrino neutral current: excluded (Gargamelle)
+    atomic parity violation: DT's weak sector is parity-even -> Q_W = 0
+  [PASS] Q_W(Cs) = 0 is excluded at > 100 sigma
+    So a neutral, parity-violating vector field must be ADDED (as for the W, Q5).
+
+[B] The SM's neutral sector: one parameter, sin^2 thW = 0.2315
+    R_nu (DIS NC/CC)   SM tree  +0.3082   measured  +0.3100   pull -0.2
+    g_V^e (nu_mu e)    SM tree  -0.0370   measured  -0.0350   pull -0.1
+    g_A^e (nu_mu e)    SM tree  -0.5000   measured  -0.5030   pull +0.2
+    Q_W(Cs) tree       SM tree -73.9300   measured -72.8000   pull -0.5
+  [PASS] one parameter reproduces all four NC observables (within 2 sigma / 3% tree)
+  [PASS] rho_0 = M_W^2/(M_Z^2 cos^2 thW) = 1 to 4e-4: the doublet-Higgs prediction
+
+[C] DT's native ingredient: neutrino chirality, counted at the Z
+    Gamma(nu nu)/Gamma(l l) per family, left-only nu: 1.989
+    => N_nu = 2.987  (3 families: an input, as in the SM)
+  [PASS] ONE 4x4 irrep (left-handed zero mode): 3 families fit the Z width
+    Williams' 8x8 (both blocks: an L AND an R zero mode, same coupling):
+    3 families would look like N_nu = 6.0  vs 2.9871(82): 367 sigma
+  [PASS] the doubled 8x8 (vector-like neutrino) is EXCLUDED by the Z width
+
+[D] If DT adds a neutral field WITHOUT the SM's SU(2)xU(1) structure
+    free couplings: {'nu': 1, 'e': 2, 'u': 2, 'd': 2, 'M_Z (rho)': 1}  -> 8 inputs (SM: 1, plus rho = 1 predicted)
+  [PASS] DT would need more inputs than the observables used here: no prediction
+
+==========================================================================
+VERDICT
+  1. DT has NO neutral weak current of its own: the neutrino couples only
+     gravitationally (NC/CC ~ 1e-67 vs 0.31) and the charged sector is
+     parity-even (Q_W(Cs) = 0 vs -72.8) ([A]).  As for the W (Q5), a
+     neutral, parity-violating vector field must be added.
+  2. The SM adds it with ONE parameter: sin^2 thW = 0.2315 reproduces R_nu,
+     g_V^e, g_A^e and Q_W(Cs) at tree level, and the doublet Higgs gives
+     rho = 1 ([B]).  Without that structure DT would need ~8 inputs for 4
+     observables ([D]) -- consistent but empty.  So DT must adopt the SM's
+     SU(2)_L x U(1)_Y couplings T3 - Q sin^2 thW, not merely "a Z".
+  3. DT's one native weak ingredient PASSES a precision test: the chiral
+     zero mode (one 4x4 irrep, left-handed) gives N_nu = 2.99 with three
+     families, while Williams' doubled 8x8 (an L and an R zero mode) would
+     show as N_nu ~ 6, excluded at > 300 sigma ([C]).  The data select the
+     4x4 irrep (Q3) over Williams' Eq 109 representation.
+  STANDING (assumption ledger: SHARED WITH SM, by import).  Just as the SM
+  assumes SU(2)_L x U(1)_Y with one mixing angle and a doublet Higgs, if
+  DT assumes the same neutral couplings (T3 - Q sin^2 thW, rho = 1), its
+  neutral current is consistent with the SM.  Neutral, but say plainly:
+  this IMPORTS the SM's electroweak structure; DT supplies none of it.
+  DT's own contribution here is the neutrino's chirality (Q3 + Q4), which
+  the Z width confirms (selected, not derived).  Ledger Q6 (couplings)
+  and Q12 (doublet Higgs, rho = 1 -- which brings the 125 GeV boson and
+  forbids a bare charged-fermion mass: open tension with DT's 5D mass).
+  Bracket: (i) tree level, ~2% radiative corrections (full SM Q_W(Cs) =
+  -73.2); (ii) three families are an input in both theories; (iii) DT has
+  no doublet pairing nu with e -- the zero mode and the electron are
+  separate DT fields -- so the SU(2) assignment is wholly imported.
+
+==========================================================================
+ALL ASSERTIONS PASSED
+==========================================================================

@@ -1,0 +1,58 @@
+========================================================================
+u4 -- REST-MASS NON-CONSERVATION and the FINITE-a0 GR/QM CROSSOVER
+========================================================================
+  H0 = 2.270e-18 /s     a0 = 3.650e+07 kg/m^4     c = 2.9980e+08 m/s
+  a0*c = 1.094e+16 kg/(m^3 s)   (the DT gauge suppression scale = u4=1 ceiling)
+
+[1] u4 across representative mass densities gamma (kg/m^3), secular rate
+    cosmic mean          gamma=2.70e-27  ->  u4 = 5.601e-61
+    air (STP)            gamma=1.20e+00  ->  u4 = 2.489e-34
+    water / lab solid    gamma=1.00e+03  ->  u4 = 2.074e-31
+    Earth (mean)         gamma=5.50e+03  ->  u4 = 1.141e-30
+    iron                 gamma=7.90e+03  ->  u4 = 1.639e-30
+    white dwarf (Ch.)    gamma=1.00e+09  ->  u4 = 2.074e-25
+    nuclear matter       gamma=2.30e+17  ->  u4 = 4.771e-17
+
+[2] Lab matter (gamma=1e3): u4 = 2.074e-31
+  [PASS] lab-matter u4 < 1e-25 (pure unitary QM safe to far below any decoherence bound).
+
+[3] Nuclear matter (gamma=2.3e17, the densest accessible): u4 = 4.771e-17
+  [PASS] nuclear-density u4 < 1e-10 (crossover still far below observable non-unitarity).
+
+[4] Structural properties of the crossover u4(gamma) = H0 gamma/(a0 c)
+  [PASS] u4 is LINEAR in density: u4(2 gamma) = 2 u4(gamma).
+  [PASS] u4 is MONOTONE increasing in gamma (denser -> larger crossover).
+  [PASS] clean-separation limit: u4 = H0 g/(A c) -> 0 as a0=A -> inf (pure QM recovered).
+
+[5] Why the continuous boundary is unobservable locally: DOUBLE suppression
+    cosmological factor H0        = 2.27e-18 /s
+    gauge factor 1/(a0 c)         = 9.14e-17 m^3 s/kg
+    product (per unit gamma)      = 2.07e-34 (m^3/kg)/s
+  [PASS] the two independently-pinned suppressions multiply to ~1e-34 per unit gamma.
+
+[6] u4 = dq4/dq0 is a VELOCITY RATIO, capped by the absolute velocity c
+    ceiling: d gamma/dt = a0 c = 1.094e+16 kg/(m^3 s)  <->  u4 = 1 (GR limit)
+  [PASS] at the ceiling d gamma/dt = a0 c the boost SATURATES: u4 = 1.
+    quasi-static lab matter uses fraction 2.07e-31 of the c-budget
+  [PASS] quasi-static lab matter uses a negligible fraction of the c-budget (u4 << 1).
+  [PASS] shared c-budget: raising spatial beta shrinks the mass budget (bs=0.99 -> bm<0.15).
+    FLAG (order-of-magnitude): SN core collapse dgamma/dt ~ 1e+20 -> naive u4 ~ 9e+03
+  [PASS] naive core-collapse rate EXCEEDS the cap (u4>1): DT must speed-limit it (lead, not claim).
+      => DT predicts the mass-densification rate SATURATES at a0 c (u4 -> 1):
+         a mass-sector 'cannot cross c'. Needs the LOCAL dq4/dt along a
+         worldline, not the bulk-mean estimate used here -- flagged as a lead.
+
+[VERDICT] The GR/QM boundary in DT is CONTINUOUS, not sharp -- and more
+  precisely it is a c-capped BOOST, not a soft knob: u4 = dq4/dq0 is a
+  velocity ratio in [0,1). u4=0 is the flat quantum sector; u4 -> 1 is the
+  fully mass-dynamical GR limit; the two are ends of ONE hyperbolic rotation,
+  with quantisation (the London condition) common to both -- so gravity is a
+  u4-boost away from the quantum sector, not a separate theory. a0 -> inf is
+  the hbar -> 0 analogue. At the real finite a0 the crossing is ~1e-31 for lab
+  matter, never exceeds ~1e-17 at nuclear density, and is hard-capped at
+  d gamma/dt = a0 c: real, definite, cosmological/extreme-density -- not a
+  laboratory signature. (Magnitude estimate on DT's secular rate, not a bound.)
+
+========================================================================
+u4_rest_mass_nonconservation COMPLETE.
+========================================================================

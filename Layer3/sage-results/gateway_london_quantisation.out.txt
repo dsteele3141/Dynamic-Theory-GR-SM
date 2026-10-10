@@ -1,0 +1,14 @@
+======================================================================
+15_london_quantisation_adjudicated.sage
+======================================================================
+
+(A) London Condition (Single-Valuedness)
+  exp(2*pi*i*n) = 1 for integer n (tested n=5): PASS
+  Forward holonomy: the quantised form 2pi*i*n gives single-valuedness.
+
+(B) Bohr Radii Derivation
+  Radius matches Bohr n^2*hbar^2/(m*e^2) = n^2 a_B (a_B != DT a0): PASS
+
+Summary: forward holonomy + Bohr-radius algebra (a_B), conditional on the
+London orbit relation; the converse and the length-transport bridge are open.
+======================================================================

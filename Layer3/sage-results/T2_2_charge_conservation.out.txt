@@ -1,0 +1,52 @@
+======================================================================
+T2.2 remainder — modified charge conservation (prediction P6)
+======================================================================
+
+----------------------------------------------------------------------
+(A) 5D continuity  d_i J^i = 0  =>  d rho/dt + div J + a0 dJ4/d gamma = 0
+----------------------------------------------------------------------
+  d_i J^i (x^0=ct, J^0=c rho, x^4=gamma/a0) equals eq(72): True
+  => eq (72):  d rho/dt + div J + a0 dJ4/d gamma = 0   [unpacked]
+
+----------------------------------------------------------------------
+(B) Charge conservation forced by antisymmetry: d_j d_i F^{ij} = 0
+----------------------------------------------------------------------
+  d_j d_i F^{ij} (antisymmetric F, arbitrary components) = 0
+  => with J^j = (c/4pi) d_i F^{ij}, d_j J^j = 0 identically: the modified
+     charge conservation (eq 72) is FORCED, exactly as Maxwell forces the
+     ordinary one. (Symmetric d_j d_i contracted with antisymmetric F = 0.)
+
+----------------------------------------------------------------------
+(C) Classical limit (mass density fixed): ordinary continuity
+----------------------------------------------------------------------
+  a0 -> 0 (or dJ4/d gamma = 0):  eq (72) -> d rho/dt + div J = diff(rho(t, x, y, z, g), t) + div J
+  i.e. the classical conservation of charge  d rho/dt + div J = 0.  [OK]
+
+----------------------------------------------------------------------
+(D) Alternate interpretation (eqs 73-77): classical conservation recovered
+----------------------------------------------------------------------
+  div J + d rho/dt - [-(a0 c/4pi) d(eq74)/d gamma] = 0
+  so with eq (74) (div V + (1/c)dV0/dt = 0):  div J + d rho/dt = 0  [classical].
+  => choosing d_i F^{ij}=0 keeps ordinary charge conservation, but the
+     current densities then originate in the thermodynamics (eqs 75-76).
+
+----------------------------------------------------------------------
+(E) Wave equation (eq 71): box V0 = (4pi/c^2) dJ4/dt + a0^2 d^2 V0/d gamma^2
+----------------------------------------------------------------------
+  box V0 = grad^2 V0 - (1/c^2) d^2V0/dt^2  (standard wave operator)
+  RHS = (4pi/c^2) dJ4/dt + a0^2 d^2V0/d gamma^2
+  a0 -> 0 (mass fixed): RHS -> (4pi/c^2) dJ4/dt = 4*pi*diff(J4(t, x, y, z, g), t)/c^2
+     i.e. the ordinary wave equation for V0 (sourced by dJ4/dt); the a0^2
+     term is the new mass-density (5th-dimension) propagation. [structure OK]
+
+======================================================================
+T2.2 REMAINDER SUMMARY (prediction P6 — modified charge conservation):
+  (A) d_i J^i = 0 unpacks to eq (72): d rho/dt + div J + a0 dJ4/d gamma = 0. [OK]
+  (B) eq (72) FORCED by antisymmetry of F (d_j d_i F^{ij}=0).               [OK]
+  (C) classical limit (mass fixed): ordinary d rho/dt + div J = 0.          [OK]
+  (D) alt. interpretation (eqs 73-77): source-free F + thermodynamic rho,J
+      => classical conservation (currents of thermodynamic origin).         [OK]
+  (E) eq (71) wave equation: V0 propagates; a0->0 gives ordinary wave eq.   [OK]
+  => P6: the J4 term modifies charge conservation; it is forced by the 5D
+     field structure and reduces to the classical law when mass is fixed.
+======================================================================

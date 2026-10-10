@@ -1,0 +1,53 @@
+==========================================================================
+charge_quantisation_prediction.sage -- does q = Ze fix the hypercharges?
+==========================================================================
+
+[A] SM + nu_R with Dirac Yukawas
+  [PASS] with yL = -3 yQ every anomaly cancels identically: yQ and yH both free
+    normalise yH = 1/2 (neutral Higgs component): yQ is a FREE parameter
+
+[B] SM without nu_R
+  [PASS] gravitational anomaly reduces to yH = 3 yQ
+  [PASS] so yQ = 1/6 and every anomaly cancels: hypercharge QUANTISED (standard result)
+
+[C] Physical charges on the nu_R family, yH = 1/2
+    q_p      = 3*t + 1/2
+    q_n      = 3*t - 1/2
+    q_e      = -3*t - 1/2
+    q_nu     = -3*t + 1/2
+    q_H atom = 0
+  [PASS] q_n = delta, q_nu = -delta, with delta = 3 yQ - 1/2 (the B-L direction)
+  [PASS] q_p + q_e = 0 for every delta: atom neutrality does NOT test delta, the neutron does
+  [PASS] the SM point yQ = 1/6 is delta = 0
+
+[D] DT: every free state carries Z e, Z integer, e universal
+    delta = -Zn/(Ze + Zn)
+  [PASS] Z_n = 0  =>  delta = 0
+  [PASS] delta = -Z_n / (Z_e + Z_n)
+  [PASS] with the electron as the unit (Z_e = -1), any Z_n != 0 gives |delta| >= 1/2
+    |delta| < x needs |Z_e| > ~1/x: the electron would have to carry
+    ~1/x elementary units
+
+[E] Data
+    |delta| = |q_n|/e < 1.8e-21 (2 sigma)
+  [PASS] SM + Dirac nu_R allows any |delta| < 2e-21; DT allows only 0
+  [PASS] a nonzero delta in DT needs |Z_e| > 5e20: excluded unless e is not the electron's unit
+
+NET.
+  * With right-handed neutrinos and Dirac masses the SM's charges carry a
+    free parameter delta along B-L: q_n = delta, q_nu = -delta, while atoms
+    (q_p + q_e = 0) stay neutral for every delta. The SM fits delta = 0; it
+    does not require it (Majorana masses would).
+  * DT's q = Z e holds for every free state whatever the field content, so
+    q_n = Z_n e with Z_n an integer. Given |q_n| < 2e-21 e, Z_n = 0 and
+    delta = 0 EXACTLY, independently of whether neutrinos are Dirac or
+    Majorana.
+  * PREDICTION: q_n = q_nu = 0 exactly; any nonzero neutron or neutrino
+    charge falsifies DT while being allowed by the SM with Dirac neutrinos.
+  * Bracket: this is the compactness of electromagnetic U(1). Dirac's
+    monopole argument and grand unification also give it; DT gets it from
+    the quantum condition without either. The prediction is a null one: it
+    is consistent with all data and falsifiable, but it cannot be confirmed
+    by a measurement, only bounded.
+
+ALL ASSERTIONS PASSED

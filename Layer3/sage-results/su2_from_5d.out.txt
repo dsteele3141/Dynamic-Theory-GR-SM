@@ -1,0 +1,71 @@
+==========================================================================
+su2_from_5d.sage -- is SU(2) in DT's 5D structure?
+==========================================================================
+  [PASS] 4x4: 5D Clifford algebra
+  [PASS] 8x8: 5D Clifford algebra
+
+[A] Geometry (Kaluza-Klein route)
+  [PASS] one extra dimension: isometry group of dim <= 1 < dim SU(2) = 3
+    (DT's mass axis is a half-line with an edge: not even the U(1) of a
+    circle.  DT's U(1) comes from the Weyl phase, not an isometry.)
+
+[B] One 4x4 irrep (ledger Q3)
+  [PASS] massive 5D Dirac, one irrep: internal symmetry u(1) only (the charge phase)
+  [PASS] massless-only extras exist (Pauli-Guersey type), but they flip the kinetic term relative to the mass: DT's '+1' (Eq 110) removes them
+
+[C] Williams' 8x8 (Eqs 109-111)
+  [PASS] internal symmetry dim 4 = u(1) + su(2): NON-ABELIAN, from DT's own representation
+  [PASS] generators antisymmetric (norm-preserving): compact, so su(2), not sl(2,R)
+  [PASS] su(2) does not commute with i: it mixes one block with the CONJUGATE of the other
+  [PASS] complex-linear symmetry alone is U(1) x U(1) (strong_sector_su3 [A]); su(2) needs the conjugation
+
+[D] Does it survive the switch?  (acts on the zero modes)
+  [PASS] Gamma = g0g1g2g3g4 is central, square 1: its eigenspaces are the blocks A, B
+  [PASS] the symmetry commutes with i*gamma^4: it preserves the zero-mode space V+
+  [PASS] commutant of (symmetry + 4D Lorentz) = 4 = 2 + 2: exactly two invariant edge subspaces, V+ and V-
+  [PASS] both are self-adjoint (J^4 = 0) edge conditions: the choice is the hand (Q3 sign)
+    block A zero modes: dim 2, gamma^5 = [-1]
+    block B zero modes: dim 2, gamma^5 = [1]
+  [PASS] block A zero mode LEFT, block B zero mode RIGHT (weak_chirality_u4 [C])
+  [PASS] su(2) maps the A zero mode into (the conjugate of) the B zero mode
+    conjugate of a right-handed Weyl field is left-handed, so the doublet
+    (psi_A,L , (psi_B,R)^c) is TWO LEFT-HANDED fields: a chiral doublet.
+
+[E] Where does electric charge sit?
+  [PASS] Williams' common phase (same e^{i alpha} on both blocks) lies INSIDE su(2): Q = T3, Y = 0, doublet charges (+q, -q) -- no neutral member
+  [PASS] charge 0 on A, 1 on B: Q = T3 + Y with T3 in su(2) and Y the native central u(1)
+  [PASS] Y = (1/2) x relative phase: Y(psi_A) = -1/2, Y(psi_B) = +1/2
+    doublet (psi_A, psi_B^c): Q = (0, -1), T3 = (+1/2, -1/2), Y = -1/2:
+    exactly (nu_L, e_L).  Given T3 = +-1/2, integer charge (q = Ze) with
+    one neutral member FORCES |Y| = 1/2 -- the SM lepton assignment.
+
+==========================================================================
+VERDICT
+  1. Geometry cannot supply SU(2): one extra dimension carries at most U(1)
+     ([A]); a single 4x4 irrep carries only the U(1) of charge ([B]).
+  2. Williams' OWN 8x8 representation (Eqs 109-111) carries a native
+     su(2) + u(1) internal symmetry ([C]).  It is NOT imported: it exists
+     because the two inequivalent blocks are related by charge conjugation.
+  3. It SURVIVES THE SWITCH ([D]): it acts on the zero modes, the edge
+     condition invariant under it (and 4D Lorentz) is unique up to the hand,
+     and the doublet it acts on is two LEFT-HANDED fields.  So this is
+     structure DT already has at u4 = 0, not a relaxation.
+  4. Charge ([E]): with Q = T3 + Y and Y the native u(1), one neutral member
+     plus integer charge gives (nu_L, e_L) with Y = -1/2.  Williams' common
+     phase puts Q inside SU(2) (Y = 0, no neutral member): a WILLIAMS
+     DISCREPANCY, the data-selected reading being the SM's.
+  STANDING.  The GLOBAL SU(2)_L x U(1)_Y of one lepton doublet, its
+  chirality (left-handed doublet) and |Y| = 1/2 are DERIVED from Williams'
+  8x8 with DT's chiral edge.  The 8x8 is then one lepton doublet, not a
+  doubled neutrino: the N_nu ~ 6 exclusion (weak_neutral_current [C])
+  applied only to the reading where both blocks are neutral.
+  Bracket: (i) GAUGING SU(2) x U(1) (W, Z) and sin^2 thW remain imported,
+  just as the SM assumes them (DT derives only its abelian Weyl gauge);
+  (ii) e_R needs a separate singlet field and its mass a Yukawa (Q13), as
+  in the SM; (iii) the charge assignment (0 on A, 1 on B) is SELECTED, not
+  derived -- the forcing is of |Y| given a neutral member; (iv) the symmetry
+  is of the free field; interactions must respect it (as in the SM).
+
+==========================================================================
+ALL ASSERTIONS PASSED
+==========================================================================

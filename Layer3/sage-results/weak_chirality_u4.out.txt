@@ -1,0 +1,58 @@
+==========================================================================
+weak_chirality_u4.sage -- can u4 = 0 make DT's fermions chiral?
+==========================================================================
+
+[A] Williams' 8x8 representation (Eq 109) is a DOUBLED one
+  [PASS] Eq 112 Clifford algebra holds
+  [PASS] C = gamma^0..gamma^4 is central with C^2 = 1 (odd dimension)
+  [PASS] C has eigenvalues +1 (x4) and -1 (x4): 8 = 4 (+) 4', BOTH inequivalent 5D irreps, once each
+  [PASS] gamma^4 = i kappa gamma^5 with kappa = C = +1 on one block, -1 on the other: no independent chirality in 5D
+    (The 4x4 PhysLib witness in PhyslibBridge.lean is ONE block, kappa = +1.)
+
+[B] Readings R1 and R2 give no chirality
+  [PASS] R1: d4 psi = 0 leaves (gamma.p + M) psi = 0, massive Dirac: L and R both present and mixed by M
+  [PASS] R2: J^4 = 0 is satisfied by EVERY pure-L and EVERY pure-R spinor
+  [PASS] R2: J^4 is P-odd, so the set {J^4 = 0} is mirror-symmetric: it cannot prefer a hand
+
+[C] Reading R3: no-flux boundary at gamma = 0 (half-line y >= 0)
+    constant M = 1 (Eq 110 '+1'): kappa=+1 keeps chi=[-1], kappa=-1 keeps chi=[1]
+  [PASS] constant M = 1 (Eq 110 '+1'): exactly ONE hand per block is normalisable
+  [PASS] constant M = 1 (Eq 110 '+1'): kappa=+1 block keeps L, kappa=-1 block keeps R
+    M = y (~ mass density): kappa=+1 keeps chi=[-1], kappa=-1 keeps chi=[1]
+  [PASS] M = y (~ mass density): exactly ONE hand per block is normalisable
+  [PASS] M = y (~ mass density): kappa=+1 block keeps L, kappa=-1 block keeps R
+  [PASS] the chiral boundary value has J^4(0) = 0: R3 IS a u4 = 0 condition
+  [PASS] Williams' 8x8 carries both blocks equally: one L + one R zero mode, i.e. NON-chiral (vector-like)
+  [PASS] dropping one block (the 4x4 rep, one sign of kappa) leaves a single hand: u4 = 0 then makes DT chiral
+
+==========================================================================
+VERDICT
+  1. u4 = 0 as a bulk statement (R1: no mass-axis dependence; R2: no current
+     along the mass axis) gives NO chirality: the first leaves a massive Dirac
+     field, the second is mirror-symmetric ([B]).
+  2. u4 = 0 as a NO-FLUX BOUNDARY at zero mass density (R3) CAN: the mass axis
+     is a half-line, the boundary leaves one normalisable zero mode, and its
+     hand is fixed by sign(kappa M) ([C]).  This is the orbifold/domain-wall
+     mechanism of Kaluza-Klein model building, realised by DT's OWN
+     restriction on DT's OWN half-line.  It holds for constant M and for
+     M ~ mass density alike.
+  3. BUT Williams' own 8x8 representation (Eq 109) contains both 5D irreps,
+     which leave OPPOSITE hands, so as written DT stays non-chiral ([A],[C]).
+     Choosing ONE 4x4 irrep -- a single sign, the counterpart of the SM's
+     left-doublet assignment -- makes it chiral.
+  STANDING (assumption ledger: SHARED WITH SM + one DT-SPECIFIC reading).
+  Just as the SM assumes left-handed fermions in doublets (one choice of
+  hand), if DT assumes one 4x4 irrep (one sign of kappa), the zero mode is
+  left-handed, consistent with the SM.  DT-specific: reading u4 = 0 as a
+  no-flux boundary at gamma = 0 -- needed only because DT is 5D; the SM,
+  being 4D, has no counterpart.  Recorded in ASSUMPTIONS.md.  The zero mode is massless in 4D, so the natural candidate is
+  the neutrino (left-handed and nearly massless), NOT the electron:
+  interpretive, not derived.
+  Bracket: (i) reading R3 is ours, not Williams' (he never imposes a
+  boundary at gamma = 0); (ii) the 8x8 vs 4x4 choice is Williams' (Eq 109)
+  vs PhysLib's; (iii) nothing here yet makes the chiral mode couple to the
+  Eq 2.31 weak fields with V-A strength; that is the next test.
+
+==========================================================================
+ALL ASSERTIONS PASSED
+==========================================================================

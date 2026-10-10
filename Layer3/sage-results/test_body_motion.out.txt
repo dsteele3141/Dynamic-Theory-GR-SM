@@ -1,0 +1,45 @@
+==========================================================================
+test_body_motion.sage -- DT's 5-force law vs 4D geodesic motion
+==========================================================================
+
+[A] Euler-Lagrange of L = gamma sqrt(g_ij u^i u^j), general 5D metric
+  [PASS] A1: EL_k = Q^-1/2 [gamma(g a + Gamma uu)_k + u_k dgamma/ds - Q d_k gamma] - (gamma u_k/2) Q^-3/2 dQ/ds, for all k, general metric
+    At arc-length (Q = 1, dQ/ds = 0) EL = 0 reads
+      gamma f_k = d_k gamma - u_k dgamma/ds,  f_k = (g a + Gamma uu)_k
+    and dgamma/ds = a0 u4 (q4 = gamma/a0) gives Eq 62 / manuscript Eq 6.
+
+[B] The u4 term is the space-time-matter fifth force
+  [PASS] B1: -a0 u4 u_mu / gamma = -(1/gamma)(dgamma/ds) u_mu (STM form, m -> gamma)
+  [PASS] B2: it vanishes identically at u4 = 0 (conservation of mass)
+
+[C] The K = 0 surface: 5D Christoffels reduce to 4D ones
+  [PASS] C1: Gamma5^mu_nu,lam = Gamma4^mu_nu,lam (mu,nu,lam = 0..3)
+  [PASS] C2: Gamma5^mu_nu4 = Gamma5^mu_44 = Gamma5^4_ij = 0 (no mass-axis coupling)
+  [PASS] C3: at u4 = 0 the 5D acceleration f^mu IS the 4D geodesic operator
+  [PASS] C4: the 4D equation f^mu = 0 contains no gamma, a0 or composition parameter (universal free fall)
+
+[D] The d_mu gamma term integrates to zero over a compact body
+  [PASS] D1: Int d_x gamma d^3x = 0 for a compact (Gaussian) body
+  [PASS] D2: Int d_0 gamma d^3x = dM/dq0 = 0 for a body whose density changes (breathing) while its mass is conserved
+    => Int gamma f_mu d^3x = 0: the centre of mass follows the 4D geodesic.
+
+[E] The mass equation: u4 = 0 needs a reaction
+    q4 equation at u4 = 0: du4/ds = -1/qq4
+  [PASS] E1: du4/ds = -1/q4 = -a0/gamma != 0: u4 = 0 is NOT preserved freely
+    aluminium: |du4/ds| = a0/gamma = 1.35e+04 per metre of proper path
+  [PASS] E2: the free drive is enormous (> 1e3 per metre): the restriction is not optional
+    => conservation of mass is held by a reaction gamma f_4 = a0 along the
+       mass axis -- the particle analogue of the T_44 reaction in kk_radion_g44.
+
+[VERDICT]
+  * Eq 62 derived from delta Int gamma ds on a general 5D metric.
+  * Its u4 term is the STM fifth force; u4 = 0 switches it off.
+  * On the K = 0 surface, compact bodies follow 4D geodesics with no
+    composition parameter: GR's motion law and weak equivalence.
+  * u4 = 0 is not dynamically preserved; it is a restriction with a
+    reaction along the mass axis -- the same one the field equations need.
+  * Not treated: strong EP / Nordtvedt, spin and tidal terms.
+
+==========================================================================
+test_body_motion COMPLETE.
+==========================================================================

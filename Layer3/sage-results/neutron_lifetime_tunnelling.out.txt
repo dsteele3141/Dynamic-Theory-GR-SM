@@ -1,0 +1,90 @@
+==========================================================================
+neutron_lifetime_tunnelling.sage -- DT's neutron lifetime by tunnelling
+==========================================================================
+
+[A] The COM barrier (Eq 2.42), lam_p = 1 F, lam_e = 1e-3 F
+    peak at r = 1.000e-03 F, height 529.7 MeV (Fig 2.5: ~500 MeV peak)
+  [PASS] peak height ~ k/(e lam_e): Fig 2.5 reproduced
+  [PASS] V_c -> 0 at r -> 0 and r -> oo: a single positive barrier, the 'well' is the region r < lam_e INSIDE it
+    trapped energy = Q = 0.7823 MeV; turning points 1.020e-04 F, 1.098 F
+  [PASS] the decaying state sits at r < lam_e = 1e-3 F
+    NB: Ch.9 places the proton orbit at ~10 F, OUTSIDE the barrier; only
+    r < 1e-04 F is trapped.  The two statements are inconsistent.
+
+[B] WKB lifetime  tau = exp(G)/nu,  G = (2/hbar' c) Int sqrt((V-E)(V-E+2mc^2)) dr
+    mass                   action             G  log10 tau/s
+    m_e (~ reduced mass)   hbar            0.09        -27.1
+    m_e (~ reduced mass)   hbar'_p         0.13        -27.1
+    m_e (~ reduced mass)   hbar'_e       106.68         19.2
+    m_p                    hbar            0.85        -25.4
+    m_p                    hbar'_p         1.28        -25.2
+    m_p                    hbar'_e      1061.48        435.2
+    M = m_p + m_e (COM)    hbar            0.85        -25.4
+    M = m_p + m_e (COM)    hbar'_p         1.28        -25.2
+    M = m_p + m_e (COM)    hbar'_e      1061.76        435.3
+    measured: log10(878.4) = 2.94
+  [PASS] the book's own choices span > 100 decades: the lifetime is not fixed by the theory as written
+    combinations within a factor 10 of 878 s: NONE
+  [PASS] no combination of the book's ingredients gives ~878 s
+
+[C] What hitting 878 s takes; inputs counted against the SM
+    m_e (~ reduced mass)   needs hbar'/hbar = 1.2404e-03
+    m_p                    needs hbar'/hbar = 1.2923e-02
+    M = m_p + m_e (COM)    needs hbar'/hbar = 1.2927e-02
+    sensitivity: d ln tau / d ln hbar' = -G = -107 for (m_e, hbar'_e)
+    i.e. a 1% change in hbar'_e moves tau by a factor e^1.1
+  [PASS] the lifetime is exponentially sensitive: a fitted hbar' fixes it, the theory does not
+    NEAR-MISS: the natural pairing (electron mass, electron hbar'_e) needs
+    hbar'/hbar = 1.240e-03; Williams' hbar'_e (fitted to mu_n, NOT to tau) is
+    8.052e-04 -- a factor 1.54 apart, 16 decades in tau.
+  [PASS] independently fitted hbar'_e is within a factor 2 of the value 878 s needs
+    SM: tau = 880 s from G_F + measured g_A, V_ud (+ radiative corr.)
+  [PASS] SM with measured g_A, V_ud gives 878 s to < 1%
+    DT inputs: lam_p, lam_e (assumed), hbar'_p, hbar'_e (fitted to mu_n,
+    spin), plus an unspecified mass and attempt rate.  The SM ALSO takes
+    g_A and V_ud from experiment -- so the honest comparison is: the SM
+    with 2 measured inputs lands at 878 s; DT with its 4 lands anywhere.
+
+[D] The hydrogen bound on lam_p (hydrogen_nonsingular_spectrum.sage)
+    hydrogen: lam_p < 1.8e-03 F (Williams 1 F).  With lam_p at that bound:
+    barrier peak 336.8 MeV, width 3.756e-02 F (was 1.098 F)
+  [PASS] the hydrogen bound shrinks the barrier > 10x: the 'something over 600 s' rests on the lam_p hydrogen excludes
+    log10 tau over the same 9 choices: -27.1 ... 0.1
+  [PASS] at the hydrogen bound EVERY one of the 9 choices decays faster than 878 s (hbar'_e included)
+
+==========================================================================
+VERDICT
+  1. The mechanism is real and reconstructible: V_c (Eq 2.42) is a single
+     positive barrier peaked at r ~ lam_e (~530 MeV, Fig 2.5), and a state
+     at r < lam_e with the decay energy Q = 0.782 MeV must tunnel out ([A]).
+  2. The number is NOT fixed.  The book never shows the calculation, and its
+     own ingredients (which mass, hbar vs hbar'_p vs hbar'_e) give lifetimes
+     spread over > 100 decades, none near 878 s ([B]).  The exponent is so
+     large that any fitted hbar' can be tuned to 878 s ([C]).  "Something
+     over 600 s" is therefore not a prediction we can reproduce.  One
+     fair near-miss: the natural pairing (electron mass with the electron's
+     hbar'_e, fitted to the magnetic moment, not to tau) needs hbar' only
+     1.54x larger than Williams' value -- suggestive, but the exponent turns
+     that 1.54x into 10^16 in tau, so it is not agreement.
+  3. The barrier rests on lam_p ~ 1 F, which hydrogen excludes (lam_p < 1.8e-3
+     F); at the bound the barrier is ~30x narrower and every choice decays
+     faster than 878 s, hbar'_e included ([D]).  The neutron model
+     also places the trapped state at r < 1e-3 F, not at the ~10 F orbit used
+     for the neutron mass (Ch.9) -- an internal inconsistency.
+  STANDING (assumption ledger).  The SM is not input-free either: just as the
+  SM takes g_A and V_ud from experiment and then gets 878 s, DT may take
+  inputs -- but with lam_p, lam_e, hbar'_p, hbar'_e and an unstated mass and
+  attempt rate it does not reproduce 878 s; it can be FITTED to it.  So:
+  NOT a postdiction (Williams' "this ability ... is new" is unsupported as
+  written), and NOT a falsification.  Ledger: Q7 (lam values, DT-SPECIFIC)
+  now also carries the neutron; new row Q8 (decay rate: SM 2 inputs, DT
+  unfixed).
+  Bracket: (i) WKB for a two-body state whose forces violate Newton's third
+  law is our reconstruction; Williams' own calculation may differ; (ii) the
+  energy is taken as Q (the observable release); (iii) a 2-body p+e final
+  state gives a MONOENERGETIC electron unless the field carries momentum --
+  the measured continuous beta spectrum is the sharper next test.
+
+==========================================================================
+ALL ASSERTIONS PASSED
+==========================================================================

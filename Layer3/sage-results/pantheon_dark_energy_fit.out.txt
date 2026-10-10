@@ -1,0 +1,39 @@
+======================================================================
+PANTHEON SN-Ia HUBBLE DIAGRAM -- DT vs LambdaCDM vs Einstein-de Sitter
+======================================================================
+    40 binned SNe, 0.014 < z < 1.61 (Scolnic+ 2018)
+
+[1] LambdaCDM (Om=0.3) vs Einstein-de Sitter (Om=1, NO dark energy)
+    chi2_LCDM = 51.3  (dof=39, chi2/dof=1.32)
+    chi2_EdS  = 1469.0  (dof=39, chi2/dof=37.67)
+    Delta chi2 (EdS - LCDM) = 1417.7  <- the dark-energy detection significance
+  [PASS] LambdaCDM is a good fit (chi2/dof < 1.5).
+  [PASS] Einstein-de Sitter (no dark energy) is strongly disfavoured (Delta chi2 > 25).
+
+[2] DT (log-z distance + evolving candle): scan the candle rate xi
+    DT, no candle (xi=0, pure log-z): chi2 = 324.8 (chi2/dof=8.33)
+    DT best fit: xi = 0.235 -> chi2 = 79.8 (dof=38, chi2/dof=2.10)
+  [PASS] DT best-fit candle rate xi is order 0.1-0.5 (consistent with scripts 24/25).
+  [PASS] the evolving candle is NEEDED: it improves DT's fit over pure log-z by >25 in chi2.
+
+[3] Verdict on the Hubble diagram
+    Delta chi2 (DT - LCDM)  = +28.5  (mild residual preference for LambdaCDM)
+    Delta chi2 (EdS - DT)   = +1389.2
+    DT absorbs 98.0% of the dark-energy chi2 excess (EdS->LCDM).
+  [PASS] DT fits FAR better than no-dark-energy EdS (by >1000 in chi2).
+  [PASS] DT absorbs >90% of the dark-energy chi2 excess (most of the acceleration signal).
+  [PASS] but a RESIDUAL mild preference for LambdaCDM remains (DT not a perfect fit).
+
+  NET: on the REAL Pantheon Hubble diagram, DT (its log-redshift distance
+  plus an evolving Chandrasekhar candle, xi~0.24) ABSORBS ~98% of the
+  dark-energy signal: it crushes the no-dark-energy Einstein-de Sitter fit
+  (chi2 1469 -> 80) and lands close to LambdaCDM (chi2 51). But a residual
+  Delta chi2 ~ 28 favours LambdaCDM, so dark energy does NOT vanish
+  completely -- DT is a near-miss, not an exact substitute, on current SN data.
+  And even this near-fit needs the |Gdot/G| question settled (script 26):
+  the candle rate xi~0.24 is a local-G drift (excluded) unless it is a gauge
+  effect (allowed, but then degenerate with the very data it fits here).
+
+======================================================================
+27 COMPLETE.
+======================================================================

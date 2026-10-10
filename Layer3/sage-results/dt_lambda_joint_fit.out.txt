@@ -1,0 +1,108 @@
+========================================================================
+JOINT FIT: DT drift (xi) + cosmological constant Lambda -- Pantheon SN-Ia
+========================================================================
+
+[0] Machinery
+  [PASS] x solver: L = 0 returns x = ln(1+z) exactly
+  [PASS] x solver: residual of ln(1+z) = x - 0.5 ln(1-2Lx^2) < 1e-12 at L=0.3
+  [PASS] Lambda > 0 adds redshift (x < ln(1+z)); Lambda < 0 removes it
+  [PASS] L = 0 reproduces pantheon_dark_energy_fit (stat-only chi2 79.8 at xi=0.235)
+  [PASS] L = 0 reproduces pantheon_systematic_covariance (full-cov chi2 47.1 at xi=0.230)
+    unit: Lambda = 3.436e-52 * L  m^-2   (H0 = 70 km/s/Mpc)
+    Planck-2018 Lambda = 1.10e-52 m^-2  <->  L = 0.320
+    NB 'Lambda = 0' below = the limit Lambda -> 0 (negligible Lambda);
+       exactly 0 is excluded by Weyl's constant reading (lambda != 0).
+
+[1] FULL covariance, all 40 bins (primary)
+    L      Lambda[m^-2]   best xi   chi2
+   -0.5   -1.72e-52     0.000    703.0
+   -0.4   -1.37e-52     0.000    344.6
+   -0.3   -1.03e-52     0.000    139.9
+   -0.2   -6.87e-53     0.000     54.7
+   -0.1   -3.44e-53     0.081     47.7
+   +0.0   +0.00e+00     0.229     47.1
+   +0.1   +3.44e-53     0.379     45.5
+   +0.2   +6.87e-53     0.528     43.7
+   +0.3   +1.03e-52     0.676     42.2
+   +0.4   +1.37e-52     0.821     41.0
+   +0.5   +1.72e-52     0.965     40.1
+    best: L = +0.50 (xi = 0.965, chi2 = 40.1) -- at the scan EDGE L = 0.5,
+          where 2 L x^2 -> 1 and the weak-field ansatz fails
+    Lambda = 0: chi2 = 47.1 (xi = 0.229);  Delta chi2 = 6.9
+    95% (dchi2 = 3.84): +0.19 <= L <= +0.50  ->  +6.5e-53 .. +1.7e-52 m^-2
+
+[2] STAT-only errors, all 40 bins
+    L      Lambda[m^-2]   best xi   chi2
+   -0.5   -1.72e-52     0.000   1927.0
+   -0.4   -1.37e-52     0.000    919.2
+   -0.3   -1.03e-52     0.000    339.2
+   -0.2   -6.87e-53     0.000    100.5
+   -0.1   -3.44e-53     0.086     82.5
+   +0.0   +0.00e+00     0.235     79.8
+   +0.1   +3.44e-53     0.386     74.5
+   +0.2   +6.87e-53     0.538     68.7
+   +0.3   +1.03e-52     0.688     63.4
+   +0.4   +1.37e-52     0.836     58.9
+   +0.5   +1.72e-52     0.982     55.3
+    best: L = +0.50 (xi = 0.982, chi2 = 55.3) -- at the scan EDGE L = 0.5,
+          where 2 L x^2 -> 1 and the weak-field ansatz fails
+    Lambda = 0: chi2 = 79.8 (xi = 0.235);  Delta chi2 = 24.5
+    95% (dchi2 = 3.84): +0.40 <= L <= +0.50  ->  +1.4e-52 .. +1.7e-52 m^-2
+
+[3] FULL covariance, top-2 high-z bins dropped (calibration-limited tail)
+    L      Lambda[m^-2]   best xi   chi2
+   -0.5   -1.72e-52     0.000    660.8
+   -0.4   -1.37e-52     0.000    312.8
+   -0.3   -1.03e-52     0.000    120.6
+   -0.2   -6.87e-53     0.000     46.5
+   -0.1   -3.44e-53     0.099     42.0
+   +0.0   +0.00e+00     0.247     41.4
+   +0.1   +3.44e-53     0.396     40.5
+   +0.2   +6.87e-53     0.543     39.7
+   +0.3   +1.03e-52     0.689     39.1
+   +0.4   +1.37e-52     0.834     38.6
+   +0.5   +1.72e-52     0.976     38.3
+    best: L = +0.50 (xi = 0.976, chi2 = 38.3) -- at the scan EDGE L = 0.5,
+          where 2 L x^2 -> 1 and the weak-field ansatz fails
+    Lambda = 0: chi2 = 41.4 (xi = 0.247);  Delta chi2 = 3.1
+    95% (dchi2 = 3.84): -0.12 <= L <= +0.50  ->  -4.1e-53 .. +1.7e-52 m^-2
+
+[4] The drift-Lambda DEGENERACY (primary case)
+    along the chi2 valley the best drift rate rises with Lambda:
+    xi ~ 0.23 + 1.49 L   (a faster G-drift dims more; Lambda > 0 brightens
+    by adding redshift at fixed distance -- the two trade off)
+  [PASS] valley: xi rises monotonically with L for L in [0, 0.5]
+  [PASS] valley is FLAT: chi2 varies by < 8 from Lambda = 0 to the Planck value (L=0.32)
+  [PASS] full covariance, all bins: Lambda = 0 is DISFAVOURED at 95% (Delta chi2 > 3.84)
+  [PASS] ... but that rests on the calibration-limited tail: drop the top-2 bins and Lambda = 0 is inside the 95% interval
+  [PASS] the Planck value (L = 0.32) is inside the 95% interval in both full-cov cases
+  [PASS] no upper bound inside the ansatz: every case's 95% interval reaches the L=0.5 edge, where the weak-field coupling fails
+  [PASS] but large NEGATIVE Lambda is excluded (L < -0.5 => Delta chi2 > 3.84)
+
+[5] Lambda is fixed only once the drift rate xi is fixed independently
+    xi = 0.229 [fitted drift alone (Lambda=0 best fit)]:
+        best L = +0.002 -> Lambda = +6.87e-55 m^-2 (0.01 x Planck), chi2 = 47.0
+    xi = 0.000 [no drift (e.g. if the LLR Gdot/G bound holds in DT units)]:
+        best L = -0.158 -> Lambda = -5.43e-53 m^-2 (-0.49 x Planck), chi2 = 47.3
+    xi = 1.000 [linearised Gdot/G = H0 (Williams' (1-H0 t), first order)]:
+        best L = +0.500 -> Lambda = +1.72e-52 m^-2 (1.56 x Planck), chi2 = 41.3
+  [PASS] fitted drift (xi=0.229) => Lambda consistent with ZERO (|L| < 0.02)
+  [PASS] no drift (xi=0) => Lambda NEGATIVE (L < 0)
+  [PASS] Gdot/G = H0 (xi=1) => Lambda pushed to the weak-field edge (L >= 0.45, ~Planck or more)
+
+  NET. The SN Hubble diagram does NOT separate DT's drift from Lambda: along
+  the valley xi ~ 0.23 + 1.5 L the fit changes by only a few in chi2. Within it
+  the data lean mildly TOWARD a positive Lambda of Planck size with a faster
+  drift (full covariance: Delta chi2 = 6.9 for Lambda = 0, ~2.6 sigma), but
+  that lean rests on the two calibration-limited high-z bins (drop them:
+  Delta chi2 = 3.1, Lambda = 0 allowed), and the best fit sits at the edge
+  where the weak-field coupling fails. So 'Lambda small' is NOT a fit result;
+  it follows only if the drift rate is fixed at its drift-alone value
+  (xi ~ 0.23). Lambda's size is tied to the drift rate, so an independent
+  measurement of xi -- Gdot/G, the open LLR question -- would fix Lambda.
+  Order-of-magnitude only (leading-order static-patch coupling; areal and
+  lensing terms omitted).
+
+========================================================================
+dt_lambda_joint_fit COMPLETE.
+========================================================================

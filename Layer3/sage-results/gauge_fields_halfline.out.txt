@@ -1,0 +1,82 @@
+==========================================================================
+gauge_fields_halfline.sage -- do the SM gauge fields fit DT's half-line?
+==========================================================================
+
+[A] Boundary variation of -1/4 F_MN F^MN on y >= 0
+    delta S|_edge = - int d^4x  F^{mu 4} delta A_mu |_{y=0}
+    F_{mu 4} = d_mu A_4 - d_4 A_mu (+ commutator). Gauge parameter alpha:
+    delta A_mu = D_mu alpha, delta A_4 = D_4 alpha.
+    (N,D): d_4 A_mu(0) = 0, A_4(0) = 0  -- residual alpha(x, 0) free
+    (D,N): A_mu(0) = 0, d_4 A_4(0) = 0  -- alpha(x, 0) = 0 at the edge
+  [PASS] the edge term vanishes for (N,D) [d4 A_mu = A_4 = 0 so F_{mu4} = 0] and (D,N) [delta A_mu = 0]
+  [PASS] Neumann A_mu alone, with A_4 free at the edge, leaves the edge term: A_4 must be Dirichlet
+
+[B] Kaluza-Klein modes on [0, L] (L -> oo later)
+  [PASS] f_N = cos(m y) is Neumann, f_D = sin(m y) Dirichlet at y = 0
+  [PASS] both solve -f'' = m^2 f
+    (N,D): m = 0 gives f = 1 (a massless 4D vector) and g = f'/m = 0:
+           NO A_4 zero mode; the massive A_4 modes are eaten
+    (D,N): f(0) = 0 kills the m = 0 vector; A_4 has g = 1, a massless
+           4D scalar in the ADJOINT (gauge-Higgs)
+  [PASS] massless vector only for (N,D); massless adjoint scalar only for (D,N)
+    The W, Z, photon and gluons exist, and a massless colour-octet or
+    weak-triplet scalar does not  =>  (N,D) is SELECTED (no light scalar).
+
+[C] Can the (N,D) zero mode be a BULK field on DT's half-line?
+  [PASS] flat half-line: int_0^L |f_0|^2 dy = L -> oo; g_4^2 = g_5^2 / L -> 0
+    The fermion zero mode is localised by its native mass:
+  [PASS] int_0^oo exp(-2 M y) dy = 1/(2M): fermion normalisable
+    The gauge field has no such mass. Spacing of the bulk modes on [0, L]:
+  [PASS] m_n = n pi / L: the spectrum becomes a continuum from m = 0
+    A continuum of light vectors gives a 5D force law, V(r) ~ 1/r^2, at
+    every distance; Coulomb's 1/r is measured to ~1e-16 in the exponent
+    (Williams, Faller & Hill 1971). A bulk SM gauge field on DT's FLAT
+    semi-infinite half-line is EXCLUDED.
+  [PASS] a measure weight exp(-K y) would give g_4^2 = g_5^2 K (finite)
+    DT's own gauge factor exp(-K_gamma gamma) has this form, but its
+    entry into the gauge kinetic term is NOT established: not adopted.
+
+[D] The consistent reading: mass-axis-independent gauge fields
+    Take d_4 A_mu = 0, A_4 = 0, alpha = alpha(x) (u4 = 0 read as R1 for
+    the bosons). The fermion sees D_mu = d_mu - i q A_mu(x), D_4 = d_4.
+  [PASS] Clifford algebra in 5D, g = diag(1,-1,-1,-1,-1)
+    The edge condition J^4(0) = psibar g4 psi |_0 = 0 is gauge invariant
+    (psi -> e^{i q alpha(x)} psi leaves psibar g4 psi unchanged), and D_4 = d_4
+    leaves the zero mode exp(-M y) and its chirality untouched.
+  [PASS] normalised zero-mode profile f = sqrt(2M) exp(-M y)
+    Coupling: int dy  q psibar g^mu psi A_mu(x) = q (int |f|^2 dy) psi4bar g^mu psi4 A_mu
+  [PASS] the 4D charge equals q for EVERY M: charges universal across fermions
+    (A gauge field confined to the edge alone would give couplings
+    proportional to |f(0)|^2 = 2M, non-universal, and would not be gauge
+    covariant in the bulk: excluded by charge universality.)
+
+[E] The fifth component A_4
+  [PASS] J^4 = psibar g4 psi = 0 identically on a chiral (left) spinor
+    So an abelian A_4 couples to J^4 only, and J^4 vanishes on every
+    light (chiral zero-mode) fermion: it DECOUPLES from light matter.
+    Abelian A_4 is gauge invariant (D_4 alpha = 0) and neutral: a sterile
+    scalar. This is where Williams' V_4 sits; it is not seen through EM.
+    Non-abelian A_4 transforms in the adjoint and couples to W and gluons
+    through D_mu A_4 = d_mu A_4 - i g [A_mu, A_4]: a light colour octet or
+    weak triplet would be produced at colliders and shift the rho
+    parameter, so A_4 = 0 (the (N,D) choice) is required for SU(2), SU(3).
+
+NET.
+  * The adopted SM gauge fields fit DT's half-line under one reading: they are
+    independent of the mass axis (d_4 A_mu = 0, gauge parameters alpha(x)),
+    with A_4 = 0 for SU(2) and SU(3). This is the (Neumann, Dirichlet) pairing
+    at y = 0, which data select. The W, Z, photon and gluons are the massless
+    4D modes; there is NO light adjoint scalar.
+  * The edge condition J^4(0) = 0, the zero mode exp(-M y) and its chirality
+    are untouched, and every fermion's 4D charge is the same q whatever its M.
+  * A BULK gauge field on the flat semi-infinite half-line is excluded (no
+    normalisable zero mode, a continuum, a 1/r^2 force law). So, unlike the
+    fermions, DT's gauge fields do not live in the mass dimension. This is a
+    statement of the reading, adopted, not a derivation; a measure weight such
+    as exp(-K_gamma gamma) could change it and is not established.
+  * The abelian A_4 (Williams' V_4) decouples from light matter because J^4 = 0
+    on chiral zero modes. It is sterile, not excluded, and gives no EM test.
+  * Verdict: CONSISTENT. The owed check closes with no clash and no new light
+    scalar. No prediction (the ~70% outcome).
+
+ALL ASSERTIONS PASSED

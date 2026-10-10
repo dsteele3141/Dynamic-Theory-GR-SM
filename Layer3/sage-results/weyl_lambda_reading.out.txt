@@ -1,0 +1,55 @@
+========================================================================
+weyl_lambda_reading: what lambda is in Report Eqs 39 / 67
+========================================================================
+
+[1] Gauge weight of R~ and of sqrt|g| R~^p
+  [PASS] 4D: g -> e^(2s) g, phi -> phi - ds  gives  R~ -> e^(-2s) R~
+    n = 4, p = 2: weight of sqrt|g| R~^p = 0  (invariant)
+  [PASS] 4D: sqrt|g| -> e^(4 s) sqrt|g|, so sqrt|g| R~^p is invariant only for p = n/2 = 2
+  [PASS] 5D: g -> e^(2s) g, phi -> phi - ds  gives  R~ -> e^(-2s) R~
+    n = 5, p = 2: weight of sqrt|g| R~^p = 1  (NOT invariant)
+    n = 5, p = 5/2: weight of sqrt|g| R~^p = 0  (invariant)
+  [PASS] 5D: sqrt|g| -> e^(5 s) sqrt|g|, so sqrt|g| R~^p is invariant only for p = n/2 = 5/2
+  [PASS] mutation: R~^2 is not gauge-invariant in 5D (weight 5 - 4 = 1)
+
+[2] Natural gauge R~ = -lambda: the linearised Lagrangian
+  [PASS] p = 2: f(R~) and its linearisation agree to first order at R~ = s
+  [PASS] p = 2: L / f'(-lambda) = R~ + c lambda with c = (p-1)/p = 1/2
+  [PASS] p = 5/2: f(R~) and its linearisation agree to first order at R~ = s
+  [PASS] p = 5/2: L / f'(-lambda) = R~ + c lambda with c = (p-1)/p = 3/5
+  [PASS] 4D, p = 2: R~ + lambda/2 = Eq 39's  R + lambda(1/2 - 6 phi^.phi^) (up to the divergence term)
+  [PASS] 5D, p = 2: R~ + lambda/2 = Eq 67's  R + lambda(1/2 - 12 phi^.phi^) (up to the divergence term)
+  [PASS] mutation: the 5D gauge-invariant parent (p = 5/2) gives c = 3/5, not Eq 67's 1/2
+    Eq 39 is Weyl's 4D natural-gauge Lagrangian exactly.  Eq 67 is the
+    same R~^2 procedure carried to 5D (c = 1/2), where the gauge-
+    invariant parent would be R~^(5/2) (c = 3/5).
+
+[3] Varying lambda the right way
+  [PASS] p = 2: d/ds [f(s) + f'(s)(R~ - s)] = f''(s) (R~ - s)
+  [PASS] p = 2: f''(s) != 0, so EL(lambda) is R~ = s = -lambda (the natural gauge), not a constraint on phi
+  [PASS] p = 5/2: d/ds [f(s) + f'(s)(R~ - s)] = f''(s) (R~ - s)
+  [PASS] p = 5/2: f''(s) != 0, so EL(lambda) is R~ = s = -lambda (the natural gauge), not a constraint on phi
+    The multiplier reading (EL(lambda) => phi^.phi^ = 1/(2k)) varies
+    lambda in the NORMALISED Lagrangian, where lambda also sits in the
+    dropped factor f'(-lambda) and inside phi^ = phi/sqrt(lambda); it
+    is not an independent variable there.  That reading is superseded.
+
+[4] lambda cannot vanish; the cosmological constant
+  [PASS] p = 2: f'(0) = 0, so the normalisation by f'(-lambda) needs lambda != 0
+  [PASS] p = 5/2: f'(0) = 0, so the normalisation by f'(-lambda) needs lambda != 0
+  [PASS] Eq 39/67 (c = 1/2): |Lambda| = lambda/4 != 0 for lambda != 0
+    The same lambda multiplies the phi^.phi^ (Proca-type mass) term:
+    one constant sets both Lambda and the Weyl-vector mass.
+
+  NET: on Weyl's procedure, which the Report invokes, lambda is a CONSTANT
+  -- the gauge-fixed value of the Weyl curvature scalar -- not a Lagrange
+  multiplier, and it cannot be zero.  DT's variational principle therefore
+  carries a non-zero cosmological constant, |Lambda| = lambda/4 (Eq 39/67 as
+  written; c lambda/2 in general), of UNFIXED magnitude.  Lambda = 0 is not
+  available.  The surface equations are G_ab + Lambda g_ab = (8 pi G/c^4) T_ab
+  with Lambda small but free.  Open: the Weyl-vector mass scale (needs the
+  F^2 normalisation alpha) and the effect of the imaginary London gauge.
+========================================================================
+weyl_lambda_reading COMPLETE.
+========================================================================
+rc=0

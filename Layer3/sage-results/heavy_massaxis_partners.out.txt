@@ -1,0 +1,70 @@
+==========================================================================
+heavy_massaxis_partners.sage -- does DT fix the heavy-partner scale M?
+==========================================================================
+
+[A] Spectrum of (i g^mu d_mu + i g^4 d_4 - M) psi = 0 on y >= 0
+    Chiral split psi = f_L(y) psi_L(x) + f_R(y) psi_R(x), 4D mass m:
+      (d_y + M) f_L = m f_R,  (-d_y + M) f_R = m f_L,  edge f_R(0) = 0
+  [PASS] m = 0: f_L = exp(-M y), normalisable; f_R = 0 meets the edge condition
+  [PASS] f_R = sin(k y) with m^2 = M^2 + k^2: bounded for every real k > 0
+    For m < M the solutions grow or decay as exp(+-sqrt(M^2 - m^2) y);
+  [PASS] sinh(q y) solves the f_R equation with m^2 = M^2 - q^2 < M^2
+  [PASS] the only m < M solution meeting f_R(0) = 0 is sinh, which diverges: no bound state
+    => one chiral zero mode, then a CONTINUUM of vector-like (L+R) states
+       from m = M. Not a Kaluza-Klein tower: the half-line is not compact.
+
+[B] Gauge couplings between zero mode and continuum
+  [PASS] continuum: m f_L = M sin(k y) - k cos(k y), and (d_y + M) f_L = m f_R closes
+  [PASS] int f_L^0 f_L^k dy = 0: a y-independent gauge field cannot turn a zero mode into a partner
+    So W, Z, photon and gluons produce partners only in PAIRS (threshold 2M);
+    single production needs Yukawa mixing, suppressed by (m_f / M)^2.
+
+[C] Candidate scales for M
+    (i) Williams' '+1' in Compton units: M = m_f for each fermion
+        e    partners from 0.000511 GeV
+        mu   partners from 0.106 GeV
+        tau  partners from 1.78 GeV
+  [PASS] M = m_e gives charged partners below M_Z/2: excluded by the Z width and LEP pair searches
+    (ii) M = a0 / gamma* for a physical mass density gamma* (x^4 = gamma/a0)
+        1/K_gamma (DT's own)   rho = 4.82e+33 kg/m^3  ->  M = 1.49e-33 eV
+        Planck                 rho = 5.16e+96 kg/m^3  ->  M = 1.40e-96 eV
+        nucleus                rho = 2.30e+17 kg/m^3  ->  M = 3.13e-17 eV
+        water                  rho = 1.00e+03 kg/m^3  ->  M = 7.20e-03 eV
+        air                    rho = 1.20e+00 kg/m^3  ->  M = 6.00e+00 eV
+        interstellar           rho = 1.00e-21 kg/m^3  ->  M = 7.20e+21 eV
+        critical               rho = 9.22e-27 kg/m^3  ->  M = 7.82e+26 eV
+  [PASS] DT's own density scale 1/K_gamma gives M = hbar H0 / c^2 ~ 1e-33 eV: excluded
+  [PASS] physical densities give M from 1e-96 eV to 1e27 eV: 1 TeV is inside, nothing selects it
+        (M at the critical density, ~8e17 GeV, is near the Planck scale;
+         a coincidence of H0, G and a0, not a derivation)
+    (iii) a0 with G, hbar, c: a0 enters only as a density per length, and
+          any further scale needs a second input; none in the source.
+
+[D] Data
+    M >~ 1 TeV  =>  zero-mode width 1/M <~ 2.0e-19 m along x^4
+               =>  gamma* = a0 / M <~ 7.2e-12 kg/m^3
+  [PASS] the zero mode sits within gamma* < 1e-11 kg/m^3 of the edge
+    So x^4 of a field mode cannot be the ambient density of the matter
+    the particle sits in (water is at x^4 = 2.7e-5 m, where exp(-M y) ~
+    exp(-1e14)). The edge reading (Q4) needs only gamma >= 0, not this.
+  [PASS] M y(water) > 1e13 for M = 1 TeV
+
+NET.
+  * DT's 5D field on the half-line has one chiral zero mode and, above it, a
+    CONTINUUM of vector-like partners from m = M. Gauge bosons produce them
+    only in pairs. These are DT's heavy mass-axis states.
+  * DT does not fix M. Williams' own normalisation (M = m_f) puts charged
+    partners at the fermion mass, excluded by LEP and the Z width (a Williams
+    discrepancy under the recovered, Yukawa-mass reading). DT's own density
+    scale 1/K_gamma gives M ~ hbar H0/c^2: excluded. Any other density
+    gamma* gives M = a0/gamma*, and physical densities span every M, so
+    picking one is choosing M.
+  * Data bound M >~ 1 TeV (indicative: the LHC bounds are for discrete
+    vector-like states; a continuum without a mass peak needs a recast).
+  * Consequence for the reading: x^4 of a field mode is not the ambient mass
+    density; the zero mode lives within ~1e-11 kg/m^3 of the edge.
+  * Verdict: NO PREDICTION. M is a free parameter with a lower bound. The
+    qualitative signature, a continuum rather than a tower, would distinguish
+    DT from compact extra dimensions if partners were ever seen.
+
+ALL ASSERTIONS PASSED

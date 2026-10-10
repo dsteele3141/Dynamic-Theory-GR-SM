@@ -1,0 +1,91 @@
+==========================================================================
+hydrogen_nonsingular_spectrum.sage -- DT non-singular potential vs H
+==========================================================================
+
+[A] The 1/r^2 tail of Williams' V + V_c (Eqs 9.16)
+  [PASS] V + V_c -> -k/r at large r (Coulomb recovered)
+  [PASS] 1/r^2 coefficient of V+V_c = k[(2m1+m2)l1 - m1 l2]/M  (Williams' lambda)
+  [PASS] V alone: 1/r^2 coefficient = k(m1 l1 + m2 l2)/M
+  [PASS] tail is NOT symmetric under relabelling: V_c is odd in (1<->2)
+
+[B] Frobenius solution (p.241) re-derived
+  [PASS] s = -1/2 + sqrt((l+1/2)^2 + lam) solves s(s+1) = l(l+1) + lam
+  [PASS] Williams' delta = s - l  (exact)
+  [PASS] delta = lam/(2l+1) + O(lam^2)
+  [PASS] E_n n^2/(n+delta)^2 and Williams' E_n/(1+2 delta/n) agree to 1st order
+    => Delta E(n,l) = -2 delta E_n / n = Lt/(n^3 (2l+1)), Lt = 4 Lambda Ry_red / a_red
+
+[C] Williams' Eq 9.19 number ('1 fm -> ~2e-5 from Bohr')
+    body 2 = electron, lambda_2 = 1 fm : 1.89e-05
+    body 2 = proton,   lambda_2 = 1 fm : 1.03e-08
+  [PASS] Williams' 2e-5 is reproduced only with lambda = 1 fm on the ELECTRON
+  [PASS] with lambda = 1 fm on the proton it is ~1e-8, not 2e-5
+    SOURCE INCONSISTENCY: elsewhere lambda_e = 1e-3 fm and lambda_p = 1 fm.
+    The 2e-5 illustration puts the proton's 1 fm on the electron.
+
+[D] Lambda for hydrogen under each reading (Williams' lambda values)
+    Lambda needed for the whole Lamb shift: 0.0511 fm
+    R1 e = body 1 (V+V_c) Lambda = +4.562e-04 fm   2S-2P =      +9.44 MHz  (0.00893 x Lamb)
+    R2 p = body 1 (V+V_c) Lambda = +1.998e+00 fm   2S-2P =  +41368.94 MHz  (39.1 x Lamb)
+    R3 V only (no COM)    Lambda = +9.995e-01 fm   2S-2P =  +20689.19 MHz  (19.6 x Lamb)
+  [PASS] R1: right sign, but < 5% of the Lamb shift
+  [PASS] R2: > 20x the Lamb shift
+  [PASS] R3: > 10x the Lamb shift
+
+[E] REPLACES reading: can a free Lambda (no QED) fit hydrogen?
+    fit to Lamb + 1S-2S: Lt = 12694 MHz, Rydberg shift eps = 5305 MHz
+    predicted 2S-4P misses by 521 MHz; measured to 2.3 kHz (Beyer 2017)
+  [PASS] REPLACES: 2S-4P misses by > 100 MHz (~1e5 sigma)
+    Why: QED's Lamb shift lives almost entirely in S states and scales
+    ~1/n^3; the 1/r^2 tail shifts P (and D) states by 1/(2l+1) of the S
+    shift, so the l-pattern is wrong whatever Lambda is.
+
+[F] SUPPLEMENTS reading: QED kept, Lambda bounded
+    |Lambda| < 9.66e-07 fm  (from |Lt|/24 < 10 kHz)
+    R1 e = body 1 (V+V_c) exceeds the bound by 472x
+    R2 p = body 1 (V+V_c) exceeds the bound by 2068447x
+    R3 V only (no COM)    exceeds the bound by 1034460x
+  [PASS] every reading with Williams' lambda values is excluded by > 100x
+    R1 with lambda_e -> 0: lambda_p < 1.8e-03 fm (Williams: 1 fm)
+
+    Mass-scaled lambda (lambda_i ~ m_i), R1: Lambda_H = 5.93e-07 fm, P-part 6.1 kHz
+  [PASS] mass-scaled lambda SURVIVES ordinary hydrogen
+
+[G] Muonic hydrogen (mu-p), Lamb shift 202.37 meV (Antognini 2013)
+    lambda_mu = lambda_e (lepton-universal): Lambda = -1.001e-01 fm, 2S-2P extra = -296.3 meV, P-part -148.2 meV
+  [PASS] muonic H excludes lambda_mu = lambda_e by > 100x
+    lambda_mu = lambda_p m_mu/m_p (mass-scaled): Lambda = +2.279e-02 fm, 2S-2P extra = +67.5 meV, P-part 33.7 meV
+  [PASS] muonic H excludes lambda_mu = lambda_p m_mu/m_p by > 100x
+    muonic bound |Lambda_mu-p| < 8.1e-05 fm
+
+==========================================================================
+VERDICT
+  1. Williams' algebra checks: the 1/r^2 tail of V + V_c, the Frobenius root,
+     delta and the first-order energy are all re-derived exactly ([A],[B]).
+     His 2e-5 illustration (Eq 9.19) uses 1 fm on the ELECTRON, inconsistent
+     with his own lambda_e = 1e-3 fm ([C]).  The tail also depends on which
+     particle is called '1' (V_c is odd under relabelling): an unresolved
+     ambiguity in the source ([A],[D]).
+  2. The non-singular potential gives a Lamb-TYPE shift by a non-QED route:
+     long-range 1/r^2, right sign on reading R1.  That is a genuine,
+     non-standard mechanism.
+  3. REPLACES reading: it cannot be the Lamb shift.  Its l-pattern (P states
+     shifted 1/3 as much as S) is wrong for any Lambda: fitting the Lamb shift
+     and 1S-2S, 2S-4P misses by ~521 MHz against a 2.3 kHz measurement ([E]).
+  4. SUPPLEMENTS reading: with Williams' lambda values every labelling is
+     excluded by > 100x; hydrogen needs |Lambda| < 9.7e-07 fm.  Mass-scaled
+     lambda (lambda_i ~ m_i) survives ordinary hydrogen but muonic hydrogen
+     excludes it, as it does the lepton-universal choice ([F],[G]).
+  STANDING: ordinary plus muonic hydrogen exclude every reading tried with
+  Williams' lambda_p ~ 1 fm (from p-p scattering).  The 1/r^2 tail survives
+  only if |Lambda| < ~1e-6 fm (e-p) and < ~1e-4 fm (mu-p).
+  Bracket (criminal bar): a NEGATIVE CANDIDATE, not a falsification of DT.
+  Defeaters: (i) Williams fixes lambda only roughly ('assumed'); (ii) the
+  COM energy V_c and its labelling are not settled in the source; (iii) the
+  e^{-lambda/r} form may hold only at nuclear range (a lambda that runs with
+  separation would evade [E]-[G]).  What survives: the Report's own content
+  -- London's condition -> Bohr/Schroedinger hydrogen -- is untouched.
+
+==========================================================================
+ALL ASSERTIONS PASSED
+==========================================================================

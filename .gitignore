@@ -1,0 +1,15 @@
+/.lake
+
+# Local-only Supplementary Information (all file types: .tex, .pdf, build
+# byproducts, Dropbox attr sidecars, etc.) — not part of the repo
+Supplementary_Material*
+
+# LaTeX build byproducts
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+

@@ -1,0 +1,50 @@
+==========================================================================
+exact_ppwave_lift.sage -- exact gravitational waves in DT's 5D manifold
+==========================================================================
+
+[A] Exact 4D pp-wave
+  [PASS] A1: the ONLY Ricci component is R_uu = (1/2) lap_perp H (exact, no linearisation)
+  [PASS] A2: plus/cross with ARBITRARY waveforms A(u), B(u) is an exact vacuum solution
+    curvature R^x_{u x u} = A(u)
+  [PASS] A3: the curvature is non-zero (a physical wave, not a gauge artefact)
+
+[B] Lift to DT's 5D manifold with g_44 = -1 (the restriction)
+  [PASS] B1: the lifted plus/cross wave is an exact 5D vacuum solution
+  [PASS] B2: for any H, the 5D Ricci equals the 4D Ricci (no mass-axis components)
+
+[C] Test bodies keep u^4 = 0 exactly
+  [PASS] C1: Gamma^4_{ab} = 0 identically, so d u^4/ds = 0 on every geodesic
+    (u^4 = 0 initially stays 0: conservation of mass survives the wave)
+
+[D] Exact propagation at c
+  [PASS] D1: d_v is null (g_vv = 0)
+  [PASS] D2: d_v is covariantly constant -> the wave front moves exactly on the light cone
+
+[E] Exact polarisation content (tidal tensor on test masses)
+    tidal tensor = [ A(u)  B(u)]
+                   [ B(u) -A(u)]
+  [PASS] E1: traceless at any amplitude -> plus and cross only, no breathing
+  [PASS] E2: in general the tidal trace is +-(1/2) lap_perp H, zero exactly by the vacuum equation
+
+[F] The exact breathing wave needs dependence on the mass coordinate
+  [PASS] F1: H = C(u)(x^2 + y^2 - 2w^2) is an exact 5D vacuum wave
+    tidal tensor on the surface = [Cb(u)     0]
+                                  [    0 Cb(u)]
+  [PASS] F2: on the surface it is a pure BREATHING wave (trace != 0)
+  [PASS] F3: without w-dependence the same breathing profile is NOT a vacuum solution
+  [PASS] F4: and it carries a tidal force ALONG THE MASS AXIS (Gamma^4 != 0 off w = 0), changing u^4 of neighbours
+
+[G] Exact nonlinear superposition
+  [PASS] G1: two arbitrary co-moving waves superpose exactly
+
+[VERDICT]
+  * Every exact GR plane wave (any amplitude, any waveform) lifts to an
+    exact 5D solution of DT under the conservation-of-mass restriction.
+  * It moves at exactly c, carries plus/cross only, and keeps u^4 = 0.
+  * The exact breathing wave exists only with mass-coordinate dependence,
+    and a tidal force along the mass axis (u^4 != 0) -- the excluded reading.
+  * Gap #3 holds exactly in the wave sector, not just to first order.
+
+==========================================================================
+exact_ppwave_lift COMPLETE.
+==========================================================================

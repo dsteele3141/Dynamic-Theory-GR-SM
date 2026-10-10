@@ -1,0 +1,68 @@
+==========================================================================
+blackett_coupling_bodies.sage -- Williams' mu = (beta/2) L against the bodies
+==========================================================================
+
+[A] beta: Eq 10.19 value 2.4309e-11, Eq 10.53 8.6173e-11 C/kg
+  [PASS] the book carries both values, a factor sqrt(4 pi) = 3.545 apart
+  [PASS] Coulomb(beta M, beta m) = Newton  <=>  beta = sqrt(4 pi eps0 G) (Eq 10.53)
+    So the self-consistent ratio is Eq 10.53; the Earth estimate used Eq 10.19.
+
+[B] Blackett's law, P = beta_B sqrt(G) U / (2c) (Gaussian), in SI:
+    mu = beta_B sqrt(4 pi eps0 G) L / 2. Williams: mu = sqrt(eps0 G) L / 2.
+  [PASS] Williams' law = Blackett's with beta_B = 1/sqrt(4 pi) = 0.282 (Blackett fitted beta_B ~ 0.3)
+    Blackett's 1952 null result tested a LOCAL law B ~ beta sqrt(G) rho v / c
+    for a gold cylinder carried by the Earth (prediction ~1e-13 T).
+    A Maxwellian version (rho_q = beta rho, Ampere's law) gives for the
+    cylinder's own rotation with the Earth B ~ 3.6e-20 T.
+  [PASS] Maxwellian prediction < 1e-18 T: far below the 1952 sensitivity; that test does not reach it
+
+[C] Read as a magnetometer field: mu_DT = (beta/2) C M R^2 omega
+    body               L  mu(10.19)   measured    ratio
+    Moon        2.32e+29   2.82e+18         <1.0e+16  2.8e+02
+    Mars        1.90e+32   2.32e+21         <2.0e+18  1.2e+03
+    Venus       1.76e+31   2.14e+20         <1.0e+19       21
+    Mercury     8.43e+29   1.02e+19          2.8e+19     0.37
+    Earth       5.85e+33   7.10e+22          8.0e+22     0.89
+    Saturn      6.69e+37   8.13e+26          4.6e+25       18
+    Jupiter     4.14e+38   5.04e+27          1.6e+27      3.2
+    Sun         1.92e+41   2.33e+30    1.7e+29       14
+    ms pulsar   2.09e+41   2.55e+30    3.0e+23  8.5e+06
+  [PASS] Earth (modern C = 0.3307): within ~10% with beta = sqrt(eps0 G)
+  [PASS] with the self-consistent beta (Eq 10.53) Earth is off by >3x
+  [PASS] Moon (>100x) and Mars (>500x) exceed their limits even with conservative limits
+  [PASS] Venus exceeds its limit by >10x
+  [PASS] millisecond pulsars: predicted moment >1e6 x the observed
+    Moon and Mars have no active dynamo, so nothing can cancel an always-on
+    contribution. The Sun's dipole reverses every ~11 yr, and Earth's
+    paleointensity drops below ~20% in reversals; a fixed contribution of
+    ~90% of today's moment, parallel to the spin, forbids both.
+  [PASS] Earth's fixed part (~89% of today) exceeds the <20% reversal minima
+    => As a field that magnetometers measure, the law is EXCLUDED, with
+       margins of 1e2-1e7 and no dynamo assumption (Moon, Mars, pulsars).
+
+[D] Read as the source says: the gravitational field of the 5D gauge field
+    beta (Eq 10.19): acceleration per unit v = 0.03979 x G J /(c^2 r^3)
+    beta (Eq 10.53): acceleration per unit v = 0.5 x G J /(c^2 r^3)
+  [PASS] with the self-consistent beta the field is G J / (2 c^2 r^3) per unit v: a gravitomagnetic dipole
+    No electromagnetic constant survives: it is gravitomagnetism (frame
+    dragging), the field GR gives for a spinning mass (Lense-Thirring),
+    whose normalisation the recovered metric (section 3) fixes and Gravity
+    Probe B and LAGEOS/LARES measure. It is not seen by a magnetometer.
+
+NET.
+  * Williams' moment mu = (beta/2) L is Blackett's 1947 law with beta_B =
+    1/sqrt(4 pi). Its ~6% Earth match uses beta = sqrt(eps0 G) (Eq 10.19);
+    the ratio that maps Coulomb onto Newton is sqrt(4 pi eps0 G) (Eq 10.53),
+    which puts Earth off by 3.5x. The book holds both: an internal slip.
+  * READ AS A MAGNETOMETER FIELD (Williams' comparison): EXCLUDED. The Moon
+    (>280x) and Mars (>1000x) have no dynamo to cancel it, millisecond
+    pulsars miss by ~1e7, and solar and geomagnetic reversals forbid a fixed
+    spin-aligned part. A WILLIAMS DISCREPANCY at the criminal standard.
+  * READ AS THE SOURCE SAYS (the fifth-dimensional, gravitational field):
+    with the self-consistent beta the field is G J/(2 c^2 r^3), the
+    gravitomagnetic dipole of a spinning mass. That is GR's frame dragging,
+    recovered, not a new coupling: NO PREDICTION.
+  * The 1952 laboratory null tested Blackett's local law; a Maxwellian
+    version predicts < 1e-18 T there, so that experiment decides nothing.
+
+ALL ASSERTIONS PASSED

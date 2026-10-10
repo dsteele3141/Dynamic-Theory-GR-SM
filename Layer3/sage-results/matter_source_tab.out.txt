@@ -1,0 +1,53 @@
+==========================================================================
+matter_source_tab.sage -- gap #4: is DT's T_ab GR's T_ab?
+==========================================================================
+
+[A] Coupling constant (restricted linearised surface equations)
+    L(Phi) = 1/2*kap*rho ; with kappa = 8 pi K: L(Phi) = 4*pi*Gn*rho
+  [PASS] A1: Williams' 8 pi K/c^2 gives Newton: lap Phi = 4 pi G rho
+
+[B] Bianchi identity -> conservation -> u^4 = 0
+  [PASS] B1: contracted Bianchi identity nabla_mu G^{mu r} = 0 (general static metric)
+  [PASS] B2: u_nu d_mu T^{mu nu} = d_mu(rho u^mu)  (timelike part = continuity)
+  [PASS] B3: the rest is rho u^mu d_mu u^nu (transverse part = geodesic/Euler)
+  [PASS] B4: to O(v) the continuity residual is Williams' u^4 = d_t y4 + div(y4 u) (Eq 1.36)
+    => surface Einstein equations + Williams' dust REQUIRE u^4 = 0
+
+[C] 5D dust with u^4 = 0 has no mass-axis components
+  [PASS] C1: T^{a4} = 0 for all a (no source for g_a4, g_44)
+
+[D] Williams' surface tensor (Eqs 1.32, 1.35, 1.37) with h = 0
+    T^00 = 1/2*B1^2 + 1/2*B2^2 + 1/2*B3^2 + 1/2*E1^2 + 1/2*E2^2 + 1/2*E3^2  +  -1/4*V0^2 + 1/4*V1^2 + 1/4*V2^2 + 1/4*V3^2
+  [PASS] D1: the EM part is the standard energy (E^2 + B^2)/2
+  [PASS] D2: Eq 1.37 leaves a V trace term (1/4)(|V|^2 - V0^2)
+
+[E] If V were the Newtonian field: the leftover gravitates
+    delta g_00 = 1/4*GM^2/(R^2*cl^4)  ->  delta beta = 1/8
+  [PASS] E1: the V^2 leftover would shift PPN beta by +1/8 (beta = 9/8)
+  [PASS] E2: excluded by Mercury (|beta - 1| < 1e-4) by more than 1e3
+
+[F] DT removes it: u^4 = 0 -> J^4 = 0 -> V unsourced
+  [PASS] F1: J^4 = sigma u^4 = 0
+  [PASS] F2: the 4D force F^nu_B J^B is the Lorentz force F^nu_mu J^mu (no V term)
+    fifth field equation box phi_4 = J^4 = 0 (gravitational_radiation [F]):
+    no source, so V = d phi_4 = 0 on the surface and T^ab = dust + Maxwell.
+  [PASS] F3: with V = 0 Williams' surface T^00 is exactly the Maxwell energy
+
+[G] Weyl weight of the Maxwell action: sqrt|g| g^.. g^.. ~ Omega^(n-4)
+    n = 4: sqrt|g| g^.. g^.. scales as Om^0
+    n = 5: sqrt|g| g^.. g^.. scales as Om^1
+  [PASS] G1: Maxwell is Weyl-invariant on the 4D surface (does not source the Weyl vector)
+  [PASS] G2: but not in the full 5D space (weight 1)
+
+[VERDICT]
+  * Williams' 8 pi K/c^2 is exactly Newton's coupling.
+  * Bianchi forces nabla T = 0, whose timelike part IS u^4 (Eq 1.36):
+    conservation of mass is REQUIRED by DT's surface equations.
+  * Matter does not source g_a4 / g_44; with u^4 = 0 the V field is
+    unsourced, so T_ab = dust + Maxwell: GR's source exactly.
+  * Williams' leftover V^2 trace term would give beta = 9/8 at Newtonian
+    strength (excluded) -- DT's own u^4 = 0 removes it.
+
+==========================================================================
+matter_source_tab COMPLETE.
+==========================================================================

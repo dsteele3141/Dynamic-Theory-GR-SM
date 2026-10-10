@@ -1,0 +1,53 @@
+========================================================================
+RECOVERING THE EINSTEIN EQUATIONS on the mass hypersurface (u4 = 0)
+========================================================================
+
+[1] Conservation of the surface source (flat local frame, d_4 = 0)
+  [PASS] 5D: d_i T^ij = -F^j_k J^k (force-density identity, C5)
+  [PASS] cylinder: 4D block of the 5D stress = Maxwell stress(F_ab) + scalar stress(phi = A_4)
+  [PASS] scalar energy density T_S^00 = (1/2)(phi_t^2 + |grad phi|^2) >= 0 (sign +)
+  [PASS] J^4 = -box(phi): the mass-direction current is the scalar's wave operator
+  [PASS] 4D current J^a (5D, d_4 = 0) equals the 4D Maxwell current
+  [PASS] d_a T_S^ab = box(phi) d^b phi  ->  conserved iff J^4 = 0, i.e. iff u4 = 0
+  [PASS] mutation: with u4 != 0 (J^4 != 0) the scalar stress is NOT conserved
+  [PASS] d_a T_EM^ab = -F^b_a J^a: the 4D Lorentz force, balanced by matter (DT force law)
+    => with J^k ~ u^k, u4 = 0 gives J^4 = 0: the A_4 sector is source-free on
+       the surface, so the Newtonian tail must come from the METRIC (curvature),
+       consistent with C10's assignment of -GM/r to curvature.
+
+[2] Uniqueness among a R_ab + b R g_ab + l g_ab (4D, explicit diagonal metric)
+  [PASS] contracted Bianchi: nabla^a R_ab = (1/2) d_b R
+  [PASS] R is not constant on this family (the test is non-trivial)
+  [PASS] divergence of a R_ab + b R g_ab + l g_ab = (a/2 + b) d_b R for any l
+  [PASS] divergence-free  <=>  b = -a/2 (the Einstein tensor), Lambda = l free
+  [PASS] mutation: b = -a/4 is not divergence-free
+
+[3] The Lovelock (Gauss-Bonnet) tensor H_ab in 4D, 5D, and on the K = 0 surface
+    4D curvature-squared contractions done
+  [PASS] the test metric has non-zero Gauss-Bonnet density (instance is non-trivial)
+  [PASS] 4D: H_ab = 0 identically (Gauss-Bonnet adds nothing to 4D field equations)
+  [PASS] mutation: a wrong coefficient in H_ab is not identically zero in 4D
+  [PASS] 5D: H_ab != 0 (FRW-type 5D metric) -> 5D second-order equations are NOT unique
+  [PASS] 5D: nabla^a H_ab = 0 (so it is a legitimate Lovelock term there)
+  [PASS] K = 0 product: the 4D block of the 5D Gauss-Bonnet tensor vanishes
+  [PASS] K = 0 product: H_a4 = 0 and H_44 = -(1/2) g_44 GB(4D) -- only the 44 constraint feels it
+
+[4] Coupling constant from the Newtonian limit (4D, linearised)
+  [PASS] G_xy = -d_x d_y (Phi - Psi): vacuum spatial equations force Psi = Phi (DERIVED in 4D)
+  [PASS] with Psi = Phi: G_00 = 2 lap(Phi)
+  [PASS] G_00 = kappa rho reproduces lap(Phi) = 4 pi G rho iff kappa = 8 pi G (c = 1)
+  [PASS] mutation guard: G_00 = 2 lap(Psi) depends on Psi ONLY -- perturbing g_00 alone (Psi = 0) sources nothing
+    (G_00 depends on Psi only: the g_00 perturbation alone sources nothing;
+     the 4D spatial equations supply Psi = Phi, and with it Newton.)
+    Williams writes G = -(8 pi K/c^2) T; the sign tracks the curvature
+    convention, the magnitude 8 pi G (per c^4 in SI) is what is checked.
+
+  NET: given u4 = 0 (=> K = 0, J^4 = 0), DT's force law, and Lovelock's
+  premises (local, second order, metric-only), the surface field equations are
+        G_ab + Lambda g_ab = (8 pi G / c^4) T_ab ,
+  with T_ab conserved, Psi = Phi derived, and any 5D Gauss-Bonnet term
+  confined to the 44 constraint.  Imported: Lovelock's theorem (restricted
+  form checked).  Open: Lambda (DT would set it to 0).
+========================================================================
+einstein_equations_recovery COMPLETE.
+========================================================================

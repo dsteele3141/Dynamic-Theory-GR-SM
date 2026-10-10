@@ -1,0 +1,71 @@
+==========================================================================
+hbar_potential_clocks.sage -- does hbar(Phi) predict a clock signal?
+==========================================================================
+
+[0] What a clock comparison actually sees
+  [PASS] observed shift = (hbar_e/hbar_r)^(p+1) for a clock nu ~ hbar^p
+  [PASS] p = 0 (clock frequency independent of hbar): GR redshift -- Williams' Eq 3.6
+  [PASS] p = -1 (clock nu = E/hbar, E fixed): the hbar shift CANCELS exactly
+
+[A] Reading A: hbar varies, e, m_e, m_p, c fixed  (alpha ~ 1/hbar)
+    optical gross (Rydberg m e^4/hbar^3)   p = -3 -> hbar shift -2 x GR
+    H maser / Cs hyperfine (~alpha^2 Ry)   p = -5 -> hbar shift -4 x GR
+    Compton-type (m c^2/hbar)              p = -1 -> hbar shift +0 x GR
+  [PASS] clocks have different p: redshift is NOT universal
+  [PASS] H-maser redshift off GR by 4 x vs GP-A 1.4e-4: excluded by > 1e4
+  [PASS] alpha tracks the potential, k_alpha = 1 vs bound ~3e-8: excluded by ~3e+07
+    (annual alpha modulation it would give: 3.3e-10 peak-to-peak)
+
+[B] Universal (LPI) readings: alpha and m_e/m_p fixed
+    B1: masses fixed   p for Rydberg, hyperfine, cavity, Compton = [-1, -1, -1, -1]
+  [PASS] B1: masses fixed every clock has p = -1 -> hbar shift 0 x GR, universal
+    B2: masses ~ hbar  p for Rydberg, hyperfine, cavity, Compton = [0, 0, 0, 0]
+  [PASS] B2: masses ~ hbar every clock has p = 0 -> hbar shift 1 x GR, universal
+    B1: the hbar shift cancels; the GR redshift must come from the METRIC
+        of DT's u4 = 0 GR sector (gr recovery scripts) -- exactly GR.
+    B2: the hbar shift IS the GR redshift (Williams' Eq 3.6); masses then
+        carry the potential (m ~ exp(-U)), and the metric must not add one.
+
+[C] One effect, not two
+  [PASS] metric + hbar shift together = 2x GR vs Galileo 5/6 2.5e-5: excluded
+    B1 and B2 differ only in which quantities are held fixed (units): every
+    dimensionless observable agrees.  So hbar(Phi) is a units convention for
+    the gravitational redshift, NOT an extra coupling between the sectors,
+    and cannot act as an independent lever (cf. local_unit_of_action_
+    cancellation, where it cancels nothing).
+
+[D] What is left when the boundary is relaxed
+    U^2 coefficient: Eq 3.3 exp form 1/2, Schwarzschild 3/2 (coordinate-
+    dependent; under B1 the metric, not Eq 3.3, sets this anyway)
+    second order, clock pair 1 m apart  : ~2e-25   (clocks ~1e-18)
+    secular H0*Phi/c^2 annual modulation: ~2e-20 /yr
+  [PASS] both relaxation residues are far below any present clock comparison
+
+==========================================================================
+VERDICT
+  1. A clock comparison sees (hbar_e/hbar_r)^(p+1) for a clock nu ~ hbar^p
+     ([0]).  Williams' Eq 3.6 silently assumes p = 0; a clock that scales
+     as 1/hbar sees NO hbar shift at all.  The redshift Eq 3.6 claims is
+     therefore not fixed by Eq 3.3 alone: it depends on how charge and mass
+     scale with hbar, which the source never states.
+  2. Reading A (e, masses fixed; alpha ~ 1/hbar): clocks disagree (p = -3,
+     -5, -1), the redshift is non-universal and alpha tracks the solar
+     potential.  EXCLUDED by GP-A (> 1e4) and annual clock comparisons
+     (~3e7).  A WILLIAMS DISCREPANCY if read this way, not a DT negative.
+  3. Data select alpha and m_e/m_p fixed.  Then either masses are fixed
+     (p = -1, hbar shift cancels, GR redshift from DT's metric) or masses
+     scale with hbar (p = 0, Eq 3.6 is the GR redshift, metric adds none).
+     Same physics in two unit conventions; counting both = 2x GR, excluded.
+  4. Relaxation residues: ~1e-25 (2nd order), ~2e-20/yr (secular).  This relaxation PREDICTS NOTHING
+     MEASURABLE: hbar(Phi) is the gravitational redshift re-expressed, not
+     a new GR-QM coupling.
+  STANDING.  Source gap (how e and m scale with hbar) closed by data.
+  Useful by-products: (i) the variable unit of action cannot be an
+  independent lever (e.g. on local Gdot/G); (ii) the GR-QM cross-couplings
+  worth testing must be dimensionless ones -- this one is not.
+  Bracket: imported clock bounds (GP-A, Galileo, Yb+), approximate;
+  first-order scaling; nuclear structure (g_I, m_q) not modelled.
+
+==========================================================================
+ALL ASSERTIONS PASSED
+==========================================================================

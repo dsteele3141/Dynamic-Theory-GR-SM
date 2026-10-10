@@ -1,0 +1,84 @@
+==========================================================================
+gr_limit_domain.sage -- gap #5: where does DT reduce to Newton/GR?
+==========================================================================
+
+[A] Eqs 3.24-3.27: Newton x (1 - H0 tau) x (1 - lambda/r)
+  [PASS] A1: tau solves Eq 3.25, tau'' = -H0 lambda / r
+    with tau0dot = 0 the fractional departure is 1/2*H0^2*lam*t^2/r
+  [PASS] A2: tau0dot = 0 leaves only H0^2 lambda t^2 / (2r)
+    size at Mercury over a century: 6.53e-25
+  [PASS] A3: that residual is negligible (< 1e-20) -- Newton/GR is exact at tau0dot = 0
+
+[B] One dial: the rotation-curve anomaly IS the secular drift
+    Eq 3.30 anomaly per unit radius kappa = H0*td/c
+  [PASS] B1: kappa = H0 tau0dot / c (Eq 3.30, lambda -> 0)
+    d ln(G_eff M)/dt at emission = -H0*td
+  [PASS] B2: d ln G_eff/dt = -H0 tau0dot, so kappa = |d ln G_eff/dt| / c
+
+[C] Perihelion advance of a = a_N (1 + kappa r)
+    precession per orbit = -pi*kap*r
+  [PASS] C1: delta omega = -pi kappa r per orbit (retrograde) to first order
+    numeric: Kepler -1.17e-09 rad, kappa=1e-3 gives -3.1358e-03 rad (formula -3.1416e-03)
+  [PASS] C2: numerical orbit reproduces -pi kappa r to 2% (Kepler control closes to 1e-6)
+
+[D] What flat rotation curves cost: the Milky Way
+    r_c = 2.58e+20 m (8.3 kpc), tau0dot = c/(r_c H0) = 5.13e+05
+    G_eff M changes by its own size every r_c/c = 2.72e+04 yr
+    (1 - H0 tau) reaches zero 2.72e+04 yr after the tau = 0 epoch
+  [PASS] D1: flat curves need tau0dot >> 1 for a galaxy (~5e5)
+  [PASS] D2: the galaxy's gravity must change by O(1) within ~3e4 yr, vs disk ages ~1e10 yr
+  [PASS] D3: on the flat part (r = 3 r_c) |H0 tau| = r/r_c = 3, outside |H0 tau| << 1
+
+[E] Eq 3.32-3.33: what sets tau0dot
+    Eq 3.32 on a circular orbit: tau0dot^2 = 2*E0/(c^2*m)
+  [PASS] E1: v^2/c^2 = lambda/r0 exactly, so the dropped term cancels the kept one: tau0dot^2 = 2E0/(m c^2)
+    -> tau0dot is a FREE initial condition (the initial tau-kinetic energy)
+    -> the Milky Way value needs 2E0/(m c^2) = 2.6e+11 rest energies
+  [PASS] E2: the galactic value needs an initial tau-energy > 1e10 x the rest energy
+
+[F] Solar-system domain
+    universal-a0 reading: r_c(Sun) = 1.05e+15 m, Mercury extra precession 1.48e+04 arcsec/cy
+    and solar G_eff e-folds every r_c/c = 40.6 days
+  [PASS] F1: universal-a0 reading is excluded by Mercury (> 1e6 x the MESSENGER bound)
+    Mercury (|d omega| < 0.0017"/cy, imported): tau0dot_sun < 1.4e+04
+    LLR |Gdot/G| < 1e-13/yr -> tau0dot < 0.0014   [IMPORTED bound: a GR-framework
+      reduction, not re-derived through DT's drifting units]
+  [PASS] F2: both solar bounds sit below the galactic requirement (Mercury x36, LLR x3.7e+08)
+
+[G] Domain map of the Newton/GR limit (one dial, tau0dot)
+    regime                             tau0dot
+    exact Newton/GR                    0
+    solar system, Mercury perihelion   < 1e+04  (DT-native kinematics)
+    solar system, LLR Gdot/G           < 0.001  (imported bound)
+    galaxy, flat rotation curve        ~ 5e+05  (Williams Eqs 3.35-3.36)
+  [PASS] G1: the GR limit and the MOND regime sit at opposite ends of the same dial
+
+[H] No compromise: the trade-off rule and the mass dependence
+  [PASS] H1: v_flat^2 x T_fade = GM/c for EVERY tau0dot (and independent of H0)
+    natural reading (Eq 3.19, tau0dot = 1): Milky Way v_flat = 0.245 km/s (observed ~200)
+  [PASS] H2: the natural reading gives a Milky Way floor of ~0.25 km/s
+    system                     M [Msun] tau0dot needed       r_c/c [yr]
+    dwarf galaxy                  1e+08        1.3e+07          1.1e+03
+    Milky Way                     6e+10        5.1e+05          2.7e+04
+    galaxy cluster                1e+15          4e+03          3.5e+06
+  [PASS] H3: every real system falls short, the smallest worst (shortfall falls as M^-1/2, > 1e3 even for clusters)
+    the shortfall closes (tau0dot = 1) only at M = 1.6e+22 Msun
+    mass inside the Hubble radius (critical density) = 4.5e+22 Msun
+  [PASS] H4: that closing mass is of order the mass inside the Hubble radius (a0 ~ c H0 restated)
+  [PASS] H5: with any FIXED tau0dot, v_flat^2 ~ M^1, not the Tully-Fisher M^(1/2): BTF needs tau0dot ~ M^(-1/2)
+
+[VERDICT]
+  * DT's Newton/GR limit is exact at tau0dot = 0; one initial condition
+    controls its domain (lambda/r is already settled by the metric reading).
+  * The galactic anomaly and the secular drift are the SAME parameter.
+  * Flat curves, taken at face value, need each galaxy's gravity to change by
+    O(1) every ~3e4 yr: an internal-consistency FLAG on the Ch. 3 dark-matter
+    postdiction, not a falsification of DT and not a negative for its GR
+    sector.  Defeater: Williams' 'two times' bookkeeping (Eqs 3.28-3.30).
+  * No compromise: v_flat^2 x T_fade = GM/c.  The natural reading gives the
+    right SHAPE at 1e-3..1e-7 of the size (worst for dwarfs); it is the
+    right size only for the universe as a whole.
+
+==========================================================================
+gr_limit_domain COMPLETE.
+==========================================================================

@@ -1,0 +1,71 @@
+==========================================================================
+noflux_boundary_derivation.sage -- is Q4 (no-flux edge) derivable?
+==========================================================================
+  [PASS] 5D Clifford algebra (Eq 112)
+
+[A] What is u4 for a Dirac particle?
+  [PASS] alpha^1..alpha^4 Hermitian with square 1: H is formally Hermitian
+  [PASS] [ -i d_y , y ] = -i  =>  dy/dt = i[H, y] = alpha^4  (Heisenberg)
+  [PASS] so psi^dag (dy/dt) psi = psi^dag g^0 g^4 psi = psibar g^4 psi = J^4
+    u4 = dy4/dt for a Dirac particle is the operator alpha^4; its
+    density is J^4.  J^4 = 0 IS u4 = 0 on the Dirac side (derived).
+
+[B] Current conservation on the half-line y >= 0
+  [PASS] g^0 (g^j)^dag g^0 = g^j for all five: the adjoint equation follows and d_j (psibar g^j psi) = 0 for any solution
+    integrate d_0 J^0 + d_k J^k + d_y J^4 = 0 over 3-space and y in [0, oo):
+    dN/dt = J^4(y=0) - J^4(oo) = J^4(0)   (normalisable: J^4(oo) = 0)
+    => the 4D particle number is conserved iff J^4(0) = 0, i.e. iff
+       u4 = 0 AT THE EDGE.  Conservation of mass, read on the half-line.
+
+[C] Unitarity: self-adjoint boundary conditions
+  [PASS] boundary form B = alpha^4 has signature (2,2): self-adjoint BCs exist
+    self-adjoint <=> psi(0) confined to a 2-dim subspace W with B(W,W) = 0;
+    these form a U(2) family (graphs of unitaries between the +-1 eigenspaces).
+    Every member has J^4(0) = psi(0)^dag alpha^4 psi(0) = 0.
+    => J^4(0) = 0 is FORCED by unitarity on DT's half-line, independent
+       of [B]: conservation of mass and unitarity give the same condition.
+
+[D] Which members respect 4D Lorentz invariance?
+    commutant of the 4D Lorentz generators: dimension 2
+  [PASS] commutant = span{1, gamma^5}: Dirac = (1/2,0) + (0,1/2), inequivalent
+  [PASS] so the only invariant 2-dim subspaces are L = range(P_L) and R = range(P_R)
+  [PASS] both are isotropic for B (J^4 = 0 on each): both are self-adjoint BCs
+  [PASS] e.g. W = graph(identity) is self-adjoint but NOT chiral -- and not Lorentz invariant, so it is excluded
+    => unitarity + 4D Lorentz invariance leave EXACTLY two boundary
+       conditions: P_R psi(0) = 0 or P_L psi(0) = 0.  The chiral BC is derived.
+
+[E] The zero mode
+    left  zero mode: normalisable True; allowed by BC 'P_R psi(0)=0': True
+    right zero mode: normalisable False; allowed by BC 'P_L psi(0)=0': True
+  [PASS] kappa M > 0: only the LEFT zero mode is normalisable
+  [PASS] BC P_R psi(0) = 0 keeps it (one massless left-handed fermion); BC P_L psi(0) = 0 removes it (no massless mode)
+    The remaining freedom is one sign (kappa, equivalently which BC):
+    the choice of hand, already ledger Q3 -- the SM makes the same one.
+
+==========================================================================
+VERDICT
+  1. J^4 IS the Dirac form of u4: by Heisenberg, dy/dt = alpha^4 = g^0 g^4,
+     whose density is psibar g^4 psi ([A]).  The identification is derived.
+  2. On DT's half-line (x^4 = gamma/a0, gamma >= 0) the 4D particle number is
+     conserved iff J^4(0) = 0 ([B]); unitarity INDEPENDENTLY forces the same
+     ([C]).  Conservation of mass and unitarity coincide at the edge.
+  3. Of the U(2) family of unitary boundary conditions, 4D Lorentz invariance
+     leaves exactly two, both CHIRAL: psi(0) left- or right-handed ([D]).
+  4. Together with the bulk mass (Eq 110 '+1') this leaves one massless
+     chiral fermion; its hand is the single remaining sign ([E]) -- ledger
+     Q3, the same one choice the SM makes.
+  STANDING.  Q4 is no longer an assumption: the no-flux chiral boundary at
+  gamma = 0 follows from DT's half-line + conservation of mass, and
+  equivalently from unitarity + 4D Lorentz invariance, both SHARED with
+  the SM.  Ledger Q4: DT-SPECIFIC -> DERIVED.
+  Bracket: (i) it rests on the fermion field living on the mass-density
+  axis with gamma >= 0 -- Williams' x^4 = gamma/a0 read literally, a
+  half-line with a physical edge; (ii) normalisability in y is assumed
+  (as for any localised mode); (iii) a LOCAL, linear boundary condition is
+  assumed (standard; non-local conditions are not considered); (iv) the
+  distinctive consequences -- heavy mass-axis partner modes, profile
+  overlaps -- remain untested, no scale for M being fixed yet.
+
+==========================================================================
+ALL ASSERTIONS PASSED
+==========================================================================

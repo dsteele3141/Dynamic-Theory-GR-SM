@@ -1,0 +1,55 @@
+==========================================================================
+u4_relaxation_bounds.sage -- relaxing u4 = 0: charge leak and breathing mode
+==========================================================================
+
+[A] 4D charge from Eq (72), integrated over space: d rho/dt + d J4/d y = 0
+    (y = x^4 = gamma/a0 >= 0, so a0 d/d gamma = d/d y). Q(t) = int_0^oo rho dy.
+  [PASS] the dilated profile rho = e^{Ht} f(y e^{Ht}) solves Eq (72) with u = -H y
+  [PASS] its flux through the edge y = 0 vanishes identically (the velocity is prop. to y)
+  [PASS] Q(t) = int f(s) ds after s = y e^{Ht}: 4D charge EXACTLY conserved under the drift
+    In general dQ/dt = -int_0^oo dJ4/dy dy = J4(0) - J4(oo) = J4(0).
+    So 4D charge can change ONLY through the edge. The no-flux edge (u4 = 0,
+    ledger Q4) closes it; DT's own u4 != 0 (the drift) has no edge flux either,
+    because zero mass density stays zero under a rescaling of mass density.
+    => P6 is a statement about the 5D distribution of charge along the mass
+       axis; it predicts NO 4D charge non-conservation.
+
+[B] A leak at the edge (velocity u4_edge * c at y = 0), if one were added
+    zero mode rho ~ e^{-2My}: Gamma = J4(0)/Q = 2 M c u4_edge
+    M = 1 TeV -> M = 5.068e+18 /m; tau_e > 6.6e28 yr -> u4_edge < 1.6e-64
+  [PASS] an edge leak is bounded below 1e-60 (tighter for larger M)
+    For comparison DT's drift has u4 ~ 2e-31 in the laboratory, but zero AT the
+    edge ([A]); a constant leak at the edge is NOT something DT supplies.
+  [PASS] a leak of the drift's size at the edge would be excluded by >1e30
+
+[C] Breathing mode: relax h_A4 = 0 by a fraction eps (eps = 1: the free radion)
+  [PASS] gamma_PPN = 1 - 2 alpha^2/(1+alpha^2) is Brans-Dicke (1+w)/(2+w)
+  [PASS] alpha^2 = 1/3 (w = 0, the KK radion) gives gamma = 1/2 (kk_radion_g44)
+    gamma - 1 = -2 eps/(3 + eps);  Cassini |gamma - 1| < 6.7e-05 -> eps < 1.0e-04
+    LIGO-Virgo polarisation tests: pure breathing excluded; mixed scalar
+    amplitude bounded only at O(0.1-1). Taking eps_LIGO ~ 0.1 (optimistic):
+  [PASS] on the SAME parameter Cassini is ~1e3 tighter than the polarisation tests
+
+[D] DT's native eps: the mass-coordinate coupling K_g gamma, K_g = H0/(a0 c)
+    laboratory (1e3 kg/m^3)      K_g gamma = 2.0e-31
+    neutron star (5e17 kg/m^3)   K_g gamma = 1.0e-16
+  [PASS] native eps: ~1e-31 in the laboratory, ~1e-16 in a neutron star
+  [PASS] even for a neutron-star merger the native breathing fraction is >1e10 below Cassini
+
+NET.
+  * P6 (Williams' modified continuity, Eq 72) moves charge along the mass
+    axis only. The 4D charge changes solely by flux through the edge
+    gamma = 0. The no-flux edge (u4 = 0) closes it, and DT's one native
+    u4 != 0, the secular drift, rescales gamma and so has zero velocity at
+    the edge. 4D charge is EXACTLY conserved: a null result, consistent with
+    the electron's stability. Any edge leak one might add is bounded by the
+    electron lifetime below ~1e-64 (M = 1 TeV): a BOUND, not a prediction.
+  * The breathing mode is the relaxed restriction h_A4 = 0. On one
+    parameter eps (eps = 1 the free radion, gamma_PPN = 1/2), Cassini gives
+    eps < ~1e-4 and is ~1e3 tighter than LIGO-Virgo polarisation tests. DT's
+    own eps is the mass-coordinate coupling, ~1e-31 in the lab and ~1e-16 in
+    a neutron star: far below both. No prediction within reach.
+  * Both relaxations are consistent with data and neither yields a
+    measurable signal: what relaxing u4 = 0 leaves in 4D is too small to see.
+
+ALL ASSERTIONS PASSED

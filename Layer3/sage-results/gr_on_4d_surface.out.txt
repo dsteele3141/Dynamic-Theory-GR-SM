@@ -1,0 +1,42 @@
+========================================================================
+GR ON A 4D SURFACE from u4 = 0 -- Gauss-Codazzi reduction (5D -> 4D)
+========================================================================
+
+Computing 5D and 4D Ricci tensors (generic family) ...
+
+(A) Gauss-Codazzi
+  [PASS] Gauss:  R5_ab = R4_ab + (d_y K_ab - 2 K_am K^m_b + K K_ab)
+  [PASS] mutation: the opposite sign of the K-terms fails
+  [PASS] mutation: dropping -2 K_am K^m_b fails
+  [PASS] R5_44 = -(d_y K + K_ab K^ab)
+  [PASS] Codazzi term is non-trivial on this family (sign test is meaningful)
+  [PASS] Codazzi: R5_a4 = +(nabla_b K^b_a - d_a K)
+
+(B) u4 = 0 under free fall
+  [PASS] Gamma^4_ab = -eps K_ab  (so d^2y/ds^2 = eps K_ab u^a u^b)
+  [PASS] Gamma^4_a4 = Gamma^4_44 = 0 (no other source of y-acceleration)
+  [PASS] K_ab u^a u^b = 0 on an open cone of timelike u forces all 10 K_ab = 0
+
+(C) K = 0 (mass conserved under free fall): the reduction is exact
+  [PASS] K = 0: R5_ab = R4_ab
+  [PASS] K = 0: R5_a4 = 0 and R5_44 = 0
+  [PASS] K = 0: R5 = R4, hence G5_ab = G4_ab (5D Einstein eqs restrict to 4D)
+  [PASS] K = 0: G5_44 = -(eps/2) R4, so T_44 = (eps/2) T^a_a (constraint, not a 4D eq)
+
+(D) K != 0: an induced source.  Ricci-flat 5D with de Sitter slices
+  [PASS] ds^2 = (y/L)^2[dt^2 - e^{2t/L} dx^2] - dy^2 is 5D Ricci-flat
+  [PASS] mutation: Hubble rate 2/L instead of 1/L is not Ricci-flat
+  [PASS] its extrinsic curvature is non-zero: K_tt = y/L^2
+  [PASS] induced metric on y = y0 has G_ab = +(3/y0^2) q_ab: a cosmological term with no 4D matter
+
+  NET: 'GR on a 4D surface' is DERIVED (not merely identified, as in Eq
+  1.38/10.8) under two stated conditions:
+    (i)  u4 = 0 for all free motion, which is equivalent to K_ab = 0;
+    (ii) Einstein-type 5D field equations (Ricci-flat in vacuum, as T2.14).
+  Then G5_ab = G4_ab exactly; T_a4 = 0 and T_44 = (eps/2) T^a_a are
+  constraints (dust: T_44 = -rho c^2/2, as in weak_field_poisson.sage).
+  If mass is conserved only under an imposed (non-geodesic) constraint,
+  K may be non-zero and the surface equations are Einstein's plus K-terms.
+========================================================================
+gr_on_4d_surface COMPLETE.
+========================================================================

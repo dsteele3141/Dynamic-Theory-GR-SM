@@ -1,0 +1,49 @@
+========================================================================
+weyl_vector_mass: the gauge-vector mass in Eqs 39 / 67
+========================================================================
+
+[1] R~ for constant phi on flat space
+  [PASS] 4D: R~ = -6 phi.phi  (k = (n-1)(n-2), sign fixed by geometry)
+  [PASS] 4D: imaginary phi = i c flips it: R~ = +6 c.c
+  [PASS] 5D: R~ = -12 phi.phi  (k = (n-1)(n-2), sign fixed by geometry)
+  [PASS] 5D: imaginary phi = i c flips it: R~ = +12 c.c
+  [PASS] 4D: imaginary non-constant phi = (0, i A1, 0, 0) gives the complex R~ = -6 A1^2 + 6 i d_x A1  (Im R~ = -6 div phi_I)
+
+[2] Dispersion of the gauge vector (flat space, transverse mode)
+  [PASS] Omega^2 = K^2 + 2k/a, i.e. m^2 = 2k/a
+
+[3] Physical sign of a (convention fixed by the Newtonian limit)
+  [PASS] weak field: G_00 = 2 lap(Phi) in this Ricci convention, so Newton (lap Phi = 4 pi G rho) is G = +kappa T
+  [PASS] real field: S^00 = +E^2/4 > 0, so G^00 = a S^00 = kappa T^00 needs a > 0
+  [PASS] imaginary field F = i q F_A: S^00 = -q^2 E^2/4 < 0, so a < 0
+  [PASS] hence m^2 = 2k/a is TACHYONIC for the imaginary (London) gauge vector and healthy for a real one (k = 6 > 0 fixed by [1]): Omega^2(K=0) < 0 for a < 0, > 0 for a > 0
+
+[4] London coupling q = e/hbar fixes a, hence the mass
+  [PASS] a = -2 kappa/(mu0 q^2) reproduces kappa T_Maxwell
+  [PASS] m^2 = -k mu0 e^2/(kappa hbar^2) = -k alpha_fs/(2 l_P^2)  (kappa = 8 pi G/c^4), independent of lambda
+    Eq 39 (4D)                   k =  6: |m| = 0.148 / l_P,  M c^2 = 0.148 E_P = 1.81e+18 GeV, range 1.09e-34 m
+    Eq 67 on the u4 = 0 surface  k = 12: |m| = 0.209 / l_P,  M c^2 = 0.209 E_P = 2.55e+18 GeV, range 7.72e-35 m
+  [PASS] both are Planck-scale (0.1 < |m| l_P < 0.3)
+    So the London phase cannot sit inside the Eq 39/67 connection: the
+    'photon' would be a Planck-mass tachyon and R~ complex ([1]).  It is
+    consistent only as the Weyl-1929 phase on matter fields.
+
+[5] Real Weyl-integrable sector: the vector vanishes on shell
+  [PASS] phi = d ln f^(1/2) (Report Eq 65) has F = 0
+  [PASS] with F = 0 the phi equation reads 2k phi = 0, so phi = 0 for k != 0: Weyl geometry collapses to Riemannian
+    With phi = 0 the metric equations of Eq 39/67 are exactly
+    G_ab + Lambda g_ab = kappa T_ab (weyl_lambda_reading: Lambda != 0,
+    free; einstein_from_dt_action: the operator; gr_on_4d_surface: the
+    u4 = 0 restriction).
+  [PASS] mutation: a real NON-integrable vector is a healthy Proca field, m^2 = +k mu0 q^2/kappa > 0 (q unfixed: Weyl 1918)
+
+  NET: the gauge vector of Eqs 39/67 is Planck-heavy whatever lambda is.
+  Gravity: the real integrable vector vanishes on shell, so the u4 = 0
+  surface carries exactly G + Lambda g = kappa T -- Weyl's structure drops
+  out dynamically.  EM: the London phase i(e/hbar)A cannot be the same phi
+  (complex R~, Planck-mass tachyonic photon); it must be Weyl-1929's phase
+  on matter, with Maxwell's F^2 separate.
+========================================================================
+weyl_vector_mass COMPLETE.
+========================================================================
+rc=0
