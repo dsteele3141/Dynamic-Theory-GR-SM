@@ -62,7 +62,7 @@
 # and the surface equations are Einstein's plus K-terms (D).  Type-I
 # structural result about the reduction step; it does not test DT's physics.
 #
-# RUN: /home/dsteele/miniconda3/envs/sage/bin/sage gr_on_4d_surface.sage
+# RUN: sage gr_on_4d_surface.sage
 # ============================================================================
 
 from sage.all import *

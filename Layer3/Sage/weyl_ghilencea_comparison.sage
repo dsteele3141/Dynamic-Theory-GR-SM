@@ -64,7 +64,7 @@
 # Lambda is set by a free constant (xi0 there, lambda here); Ghilencea's
 # xi0 > 0 makes Lambda > 0, a sign not re-derived in Williams' conventions.
 #
-# RUN: /home/dsteele/miniconda3/envs/sage/bin/sage weyl_ghilencea_comparison.sage
+# RUN: sage weyl_ghilencea_comparison.sage
 # ============================================================================
 
 from sage.all import *

@@ -60,7 +60,7 @@
 # alpha), and how Williams' imaginary (London) gauge vector changes the sign
 # of the phi^.phi^ term.
 #
-# RUN: /home/dsteele/miniconda3/envs/sage/bin/sage weyl_lambda_reading.sage
+# RUN: sage weyl_lambda_reading.sage
 # ============================================================================
 
 from sage.all import *

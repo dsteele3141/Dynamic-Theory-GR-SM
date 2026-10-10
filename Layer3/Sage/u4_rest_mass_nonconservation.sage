@@ -47,7 +47,7 @@
 # uses MORE of the fixed budget, up to the ceiling it cannot exceed -- the
 # mass-sector analogue of "cannot cross c".
 #
-# RUN: /home/dsteele/miniconda3/envs/sage/bin/sage u4_rest_mass_nonconservation.sage
+# RUN: sage u4_rest_mass_nonconservation.sage
 # ============================================================================
 
 from sage.all import *

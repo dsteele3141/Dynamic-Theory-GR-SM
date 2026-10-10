@@ -61,7 +61,7 @@
 # equations are the full Einstein equations (gr_on_4d_surface), not
 # re-solved here.
 #
-# RUN: /home/dsteele/miniconda3/envs/sage/bin/sage exact_ppwave_lift.sage
+# RUN: sage exact_ppwave_lift.sage
 # ============================================================================
 
 from sage.all import *

@@ -78,7 +78,7 @@
 # the surviving GR sector does NOT carry the dark-matter result.  Unlike
 # Cassini or ringdown, this is a cost, not only a selection.
 #
-# RUN: /home/dsteele/miniconda3/envs/sage/bin/sage gr_limit_domain.sage
+# RUN: sage gr_limit_domain.sage
 # ============================================================================
 
 from sage.all import *

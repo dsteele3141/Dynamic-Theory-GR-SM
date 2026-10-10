@@ -75,7 +75,7 @@
 # theory; the radiation reaction beyond quadrupole order is inherited from
 # GR, not recomputed.
 #
-# RUN: /home/dsteele/miniconda3/envs/sage/bin/sage gravitational_radiation.sage
+# RUN: sage gravitational_radiation.sage
 # ============================================================================
 
 from sage.all import *

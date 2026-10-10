@@ -8,8 +8,6 @@ and checks that the manuscript relies on.
 
 - **SageMath** (`Layer*/Sage/*.sage`): assertion-driven derivations; every check
   prints PASS or the script stops. Stored output in `Layer*/sage-results/`.
-- **Cadabra2** (`Layer*/Cadabra/*.cdb`): independent tensor-algebra cross-checks;
-  output in `Layer*/cadabra-results/`.
 - **Lean 4 + Mathlib + PhysLib** (`Layer*/Lean/*.lean`): machine-checked theorems.
   `AxiomCheck.lean` reports the axiom footprint of every `DTWilliams` declaration.
 

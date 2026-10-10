@@ -55,7 +55,7 @@
 # curved version follows by minimal coupling.  Structural result about the
 # recovery step; it does not test DT's physics.
 #
-# RUN: /home/dsteele/miniconda3/envs/sage/bin/sage einstein_equations_recovery.sage
+# RUN: sage einstein_equations_recovery.sage
 # ============================================================================
 
 from sage.all import *

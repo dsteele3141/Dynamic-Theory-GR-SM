@@ -69,7 +69,7 @@
 # T); convective current assumed; h^ab terms set to zero in (D); dust's Weyl
 # coupling assumed, not derived.
 #
-# RUN: /home/dsteele/miniconda3/envs/sage/bin/sage matter_source_tab.sage
+# RUN: sage matter_source_tab.sage
 # ============================================================================
 
 from sage.all import *

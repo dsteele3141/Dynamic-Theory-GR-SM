@@ -63,7 +63,7 @@
 # field view of gravity (Williams' universal beta = sqrt(4 pi eps0 G) is set
 # by matching Newton, so EP there is by construction).
 #
-# RUN: /home/dsteele/miniconda3/envs/sage/bin/sage test_body_motion.sage
+# RUN: sage test_body_motion.sage
 # ============================================================================
 
 from sage.all import *

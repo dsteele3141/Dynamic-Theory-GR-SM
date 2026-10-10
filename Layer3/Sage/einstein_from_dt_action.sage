@@ -69,7 +69,7 @@
 # functions, diagonal 4D and 5D, plus an off-diagonal 4D instance), the same
 # "restricted form" standard as the Lovelock check.
 #
-# RUN: /home/dsteele/miniconda3/envs/sage/bin/sage einstein_from_dt_action.sage
+# RUN: sage einstein_from_dt_action.sage
 # ============================================================================
 
 from sage.all import *

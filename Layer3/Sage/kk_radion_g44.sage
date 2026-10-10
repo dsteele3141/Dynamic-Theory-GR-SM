@@ -67,7 +67,7 @@
 # reading DT is excluded by Cassini.  So Cassini SELECTS the reading; it does
 # not derive it.  Linear order for gamma; beta via the exact K = 0 reduction.
 #
-# RUN: /home/dsteele/miniconda3/envs/sage/bin/sage kk_radion_g44.sage
+# RUN: sage kk_radion_g44.sage
 # ============================================================================
 
 from sage.all import *

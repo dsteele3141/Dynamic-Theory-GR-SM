@@ -51,7 +51,7 @@
 # ways. The offset (absolute magnitude + H0) is marginalised, so the fit is
 # H0-independent in L; converting to Lambda in m^-2 uses H0 = 70 km/s/Mpc.
 #
-# RUN: /home/dsteele/miniconda3/envs/sage/bin/sage dt_lambda_joint_fit.sage
+# RUN: sage dt_lambda_joint_fit.sage
 # ============================================================================
 
 from sage.all import *

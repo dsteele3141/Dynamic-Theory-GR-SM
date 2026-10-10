@@ -53,7 +53,7 @@
 # conditional on that relation, and that condition should be stated wherever
 # the weak-field result is cited.
 #
-# RUN: /home/dsteele/miniconda3/envs/sage/bin/sage 39_weak_field_poisson.sage
+# RUN: sage weak_field_poisson.sage
 # ============================================================================
 
 from sage.all import *

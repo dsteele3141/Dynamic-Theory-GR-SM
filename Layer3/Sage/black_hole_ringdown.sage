@@ -70,7 +70,7 @@
 #   analysis; the metric closure is ours (Williams gives only V_g); the
 #   2PN-and-beyond spatial part is not fixed by the solar system.
 #
-# RUN: /home/dsteele/miniconda3/envs/sage/bin/sage black_hole_ringdown.sage
+# RUN: sage black_hole_ringdown.sage
 # ============================================================================
 
 from sage.all import *

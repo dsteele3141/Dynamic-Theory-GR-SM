@@ -25,7 +25,7 @@
 #   shape_DT(z,xi)  = 5 log10[(1+z) ln(1+z)]  +  (15/4) xi ln(1+z)/ln10
 #                     \___ DT redshift distance (Eq 3.6) ___/  \__ evolving candle __/
 #
-# RUN: /home/dsteele/miniconda3/envs/sage/bin/sage 27_pantheon_dark_energy_fit.sage
+# RUN: sage pantheon_dark_energy_fit.sage
 # ============================================================================
 
 from sage.all import *

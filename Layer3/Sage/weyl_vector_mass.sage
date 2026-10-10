@@ -59,7 +59,7 @@
 # settled: matter that carries Weyl weight would source the real phi; the
 # 5D (k = 12) number uses the 4D kappa of the u4 = 0 surface.
 #
-# RUN: /home/dsteele/miniconda3/envs/sage/bin/sage weyl_vector_mass.sage
+# RUN: sage weyl_vector_mass.sage
 # ============================================================================
 
 from sage.all import *
