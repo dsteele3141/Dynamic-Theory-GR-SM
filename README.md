@@ -1,7 +1,7 @@
-# Dynamic Theory: General Relativity and the Standard Model
+# Dynamic Theory: the gravitational and particle sectors
 
-Code accompanying the manuscript *Dynamic Theory: recovery of General Relativity
-and the Standard Model from conservation of mass*. It contains only the derivations
+Code accompanying the manuscript *Dynamic Theory: recovery of the gravitational
+and particle sectors*. It contains only the derivations
 and checks that the manuscript relies on.
 
 ## Tools
