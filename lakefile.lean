@@ -5,7 +5,7 @@ package «Dynamic_Theory» where
 
 require mathlib from git "https://github.com/leanprover-community/mathlib4" @ "v4.34.1"
 
--- PhysLib (formerly PhysLean/HepLean): theoretical-physics library on the same Mathlib pin.
+-- Physlib (formerly PhysLean/HepLean): theoretical-physics library on the same Mathlib pin.
 require physlib from git "https://github.com/leanprover-community/physlib" @ "53dfa9d61ceac38fac97fdc9c45cf65cfa8c5fc4"
 
 @[default_target]

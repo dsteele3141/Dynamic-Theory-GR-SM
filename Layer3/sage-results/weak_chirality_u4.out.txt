@@ -7,7 +7,7 @@ weak_chirality_u4.sage -- can u4 = 0 make DT's fermions chiral?
   [PASS] C = gamma^0..gamma^4 is central with C^2 = 1 (odd dimension)
   [PASS] C has eigenvalues +1 (x4) and -1 (x4): 8 = 4 (+) 4', BOTH inequivalent 5D irreps, once each
   [PASS] gamma^4 = i kappa gamma^5 with kappa = C = +1 on one block, -1 on the other: no independent chirality in 5D
-    (The 4x4 PhysLib witness in PhyslibBridge.lean is ONE block, kappa = +1.)
+    (The 4x4 Physlib witness in PhyslibBridge.lean is ONE block, kappa = +1.)
 
 [B] Readings R1 and R2 give no chirality
   [PASS] R1: d4 psi = 0 leaves (gamma.p + M) psi = 0, massive Dirac: L and R both present and mixed by M
@@ -50,7 +50,7 @@ VERDICT
   interpretive, not derived.
   Bracket: (i) reading R3 is ours, not Williams' (he never imposes a
   boundary at gamma = 0); (ii) the 8x8 vs 4x4 choice is Williams' (Eq 109)
-  vs PhysLib's; (iii) nothing here yet makes the chiral mode couple to the
+  vs Physlib's; (iii) nothing here yet makes the chiral mode couple to the
   Eq 2.31 weak fields with V-A strength; that is the next test.
 
 ==========================================================================

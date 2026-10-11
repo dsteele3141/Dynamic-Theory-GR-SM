@@ -24,7 +24,7 @@ and checks that the manuscript relies on.
 
 - **SageMath** (`Layer*/Sage/*.sage`): assertion-driven derivations; every check
   prints PASS or the script stops. Stored output in `Layer*/sage-results/`.
-- **Lean 4 + Mathlib + PhysLib** (`Layer*/Lean/*.lean`): machine-checked theorems.
+- **Lean 4 + Mathlib + Physlib** (`Layer*/Lean/*.lean`): machine-checked theorems.
   `AxiomCheck.lean` reports the axiom footprint of every `DTWilliams` declaration.
 
 ## Running
@@ -45,7 +45,7 @@ Assumptions beyond the three laws are tabulated in `ASSUMPTIONS.md`.
 
 - `Layer2/Sage/T2_1_5D_minkowski.sage` [F1]: 5D metric of signature (+,-,-,-,-) from the arc length; unit 5-velocity; equations of motion
 - `Layer2/Lean/T2_1_Minkowski5D.lean` [F1]: the same steps in Lean: signature, determinant, velocity normalisation
-- `Layer2/Lean/PhyslibBridge.lean` [F1, F3]: the 5D metric, Dirac matrices and Pauli matrices identified with PhysLib's definitions
+- `Layer2/Lean/PhyslibBridge.lean` [F1, F3]: the 5D metric, Dirac matrices and Pauli matrices identified with Physlib's definitions
 - `Layer2/Sage/force_density.sage` [F2]: the five-force density as the divergence of the 5D energy-momentum tensor, Div(T) = F.J
 - `Layer2/Lean/T2_4_ForceDensity.lean` [F2]: the force-density algebra in Lean
 - `Layer2/Sage/dirac_algebra.sage` [F3]: Clifford algebra of the five gamma matrices; the first-order factorisation of the 5D mass shell

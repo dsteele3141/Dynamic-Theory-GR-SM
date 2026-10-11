@@ -67,7 +67,7 @@ g5 = I * G[0] * G[1] * G[2] * G[3]
 check(G[4] == I * C * g5,
       "gamma^4 = i kappa gamma^5 with kappa = C = +1 on one block, -1 on the "
       "other: no independent chirality in 5D")
-print("    (The 4x4 PhysLib witness in PhyslibBridge.lean is ONE block, kappa = +1.)")
+print("    (The 4x4 Physlib witness in PhyslibBridge.lean is ONE block, kappa = +1.)")
 
 # ============================================================ [B]
 print("\n[B] Readings R1 and R2 give no chirality")
@@ -148,7 +148,7 @@ print("""VERDICT
   interpretive, not derived.
   Bracket: (i) reading R3 is ours, not Williams' (he never imposes a
   boundary at gamma = 0); (ii) the 8x8 vs 4x4 choice is Williams' (Eq 109)
-  vs PhysLib's; (iii) nothing here yet makes the chiral mode couple to the
+  vs Physlib's; (iii) nothing here yet makes the chiral mode couple to the
   Eq 2.31 weak fields with V-A strength; that is the next test.
 """)
 print("=" * 74)
