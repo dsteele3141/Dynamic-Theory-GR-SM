@@ -13,3 +13,6 @@ Supplementary_Material*
 *.fdb_latexmk
 *.synctex.gz
 
+
+# Local working notes (not part of the repo)
+CLAUDE.md
