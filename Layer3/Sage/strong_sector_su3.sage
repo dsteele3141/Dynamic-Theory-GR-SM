@@ -1,7 +1,7 @@
 #!/usr/bin/env sage
 # ---------------------------------------------------------------------------
 # SOURCE: Report (LA-8370-MS) Eqs 105-112 (5D Dirac, Williams' 8x8 rep, Eq
-#   109 A-matrix corrected); master chart route 3 "charge quantisation";
+#   109 A-matrix corrected); master chart case 3 "charge quantisation";
 #   book (2011) Eqs 7.66-7.67 (q = Z e, Z = N0 - N1 an integer) and the
 #   non-singular potential phi_0 = k e^{-lambda/r}/r.  Williams' own proton
 #   (two positrons + one electron, book Ch. 9) is deliberately NOT used.

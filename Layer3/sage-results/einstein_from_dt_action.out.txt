@@ -15,7 +15,7 @@ einstein_from_dt_action: varying the Report's Eq 67 action
   [PASS] 4D diagonal family (4 free functions of t, x): dL/du = -sqrt|g| G^ab dg_ab/du for every u
   [PASS] mutation: Ricci in place of Einstein (R^ab) fails
   [PASS] 5D diagonal family (5 free functions of t, x): dL/du = -sqrt|g| G^ab dg_ab/du for every u
-    off-diagonal instance: max residual 5.5e-89 against terms of size 14.8
+    off-diagonal instance: max residual 9.4e-89 against terms of size 14.8
   [PASS] 4D with off-diagonal g_tx: identity holds for all five metric functions (explicit instance, 300-bit, 3 points)
     The raw Euler-Lagrange expression contains third and fourth
     derivatives; the identity shows they cancel: the field equations
@@ -27,7 +27,7 @@ einstein_from_dt_action: varying the Report's Eq 67 action
   [PASS] the g^ab part of the lambda stress is  -(lam/2)(1/2 - 12 phi.phi) g^ab
   [PASS] multiplier reading: on the constraint phi.phi = 1/24 the cosmological term vanishes (Lambda = 0)
   [PASS] constant reading (Weyl 1918): with no constraint, the phi-independent part is -lam/4 g^ab (Lambda != 0)
-    The Report does not say which reading is meant; T1.9 (corpus)
+    The Report does not say which reading is meant; the Layer-1 check
     takes lambda as a multiplier (EL(lambda) => phi.phi = const).
 
 [4] Assembly

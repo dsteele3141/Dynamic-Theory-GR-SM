@@ -1,5 +1,5 @@
 ======================================================================
-02_dirac_algebra_adjudicated.sage
+dirac_algebra.sage
 ======================================================================
 
 (A) Diagnostic: Literal Manuscript A-matrix [[0,I],[I,0]]

@@ -1,7 +1,6 @@
 /-
   The 5D Dirac ansatz — first-order factorisation of the 5D mass-shell relation
-  ("Axiom X" and the "fourth postulate" are historical internal nicknames for it;
-  the object is an ADOPTED ANSATZ, not one of DT's postulates — see status note.)
+  (the object is an ADOPTED ANSATZ, not one of DT's postulates — see status note.)
 
   Source: P. E. Williams, LA-8370-MS (LASL, 1980), Section III.C, eqs (105)-(112).
   Supplementary Materials: step [F3], Sec. S2 (code index: Sec. S6).
@@ -24,9 +23,7 @@ import Mathlib.Basic.Complex.Basic
 import Mathlib.LinearAlgebra.Matrix.Kronecker
 import Mathlib.LinearAlgebra.Matrix.Reindex
 
--- `FourthPostulate` is a HISTORICAL NICKNAME retained as a stable code identifier;
--- the object is the 5D Dirac ansatz (see header), NOT one of DT's postulates.
-namespace DTWilliams.FourthPostulate
+namespace DTWilliams.DiracFactorisation
 
 /-! ## The 5D metric  (signature +,−,−,−,−)
 
@@ -428,4 +425,4 @@ theorem theorem1_sufficiency (D : DiracData R) :
     (∀ i j, D.γ i * D.γ j + D.γ j * D.γ i = 2 * gMetric R i j) :=
   fun i j => gamma_clifford D i j
 
-end DTWilliams.FourthPostulate
+end DTWilliams.DiracFactorisation

@@ -51,12 +51,12 @@
 #       exactly as in kk_radion_g44 (E): conservation of mass is a
 #       RESTRICTION in the particle equations too, not a consequence.
 #
-# VERDICT (honest bracket).  Given conservation of mass imposed as a
-# restriction, DT's own motion law reduces to GR's: compact bodies move on 4D
+# VERDICT.  Given conservation of mass imposed as a
+# condition, DT's own motion law reduces to GR's: compact bodies move on 4D
 # geodesics of the surface metric, composition-independently, and the
 # space-time-matter fifth force that 5D theories generically carry is
-# switched off.  Without the restriction, the mass coordinate is driven at a
-# huge rate, so the restriction is not optional.  The same restriction
+# removed.  Without the condition, the mass coordinate is driven at a
+# huge rate, so the condition is not optional.  The same condition
 # carried the field equations in kk_radion_g44; this is one assumption, used
 # twice, not two.  Not treated: the strong equivalence principle (Nordtvedt
 # effect, self-gravitating bodies), spin/tidal corrections, and the gauge-
@@ -212,7 +212,7 @@ print("       mass axis -- the particle analogue of the T_44 reaction in kk_radi
 # ---------------------------------------------------------------------------
 print("\n[VERDICT]")
 print("  * Eq 62 derived from delta Int gamma ds on a general 5D metric.")
-print("  * Its u4 term is the STM fifth force; u4 = 0 switches it off.")
+print("  * Its u4 term is the STM fifth force; u4 = 0 removes it.")
 print("  * On the K = 0 surface, compact bodies follow 4D geodesics with no")
 print("    composition parameter: GR's motion law and weak equivalence.")
 print("  * u4 = 0 is not dynamically preserved; it is a restriction with a")

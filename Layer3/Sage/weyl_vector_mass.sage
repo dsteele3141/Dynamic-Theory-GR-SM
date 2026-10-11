@@ -3,9 +3,9 @@
 # SOURCE (primary): P. E. Williams, LA-8370-MS (LASL, 1980), Eq (39) (4D) and
 #   Eq (67) (5D):  delta INT [R + (1/4) alpha F^ F^ - lambda(1/2 - k phi^.phi^)]
 #   sqrt(-g) = 0, k = 6 / 12, "Weyl's procedure in his unified field theory".
-#   The EM reading of the gauge vector is the corpus' London coupling
+#   The EM reading of the gauge vector is the London coupling
 #   phi = i (e/hbar) A  (gateway_london_quantisation.sage: alpha1 = i e^2/(hbar c);
-#   T1_8_weyl_integrability.sage part B).  London (1927), Weyl (1929).
+#   T1_8_weyl_integrability.sage part B, full repository).  London (1927), Weyl (1929).
 # Supplementary Materials: step [G1], Sec. S3 (code index: Sec. S6).
 # Companions: weyl_lambda_reading.sage (lambda is a constant, Lambda != 0),
 #   einstein_from_dt_action.sage (metric variation of Eq 67).
@@ -45,7 +45,7 @@
 #       vector (F != 0) is a healthy Proca field with m^2 = +k mu0 q^2/kappa,
 #       q unfixed -- Weyl's 1918 situation.
 #
-# VERDICT (honest bracket).  On Weyl's procedure the gauge vector in Eqs
+# VERDICT.  On Weyl's procedure the gauge vector in Eqs
 # 39/67 carries a Planck-scale mass whatever lambda is.  For DT's gravitational
 # sector this is good news: the integrable real Weyl vector vanishes on shell
 # and the u4 = 0 surface carries exactly Einstein + Lambda -- the Weyl
@@ -54,7 +54,7 @@
 # phi = i(e/hbar)A cannot be the same phi as in Eq 39/67's R~ (that gives a
 # complex action and a Planck-mass tachyonic photon); it is consistent only
 # as the Weyl-1929 phase on matter fields, with Maxwell's F^2 added
-# separately.  The corpus' T1.8 split (real integrable / imaginary EM) is
+# separately.  The T1.8 split (real integrable / imaginary EM) is
 # compatible with this IF the imaginary part is kept out of Eq 39/67.  Not
 # settled: matter that carries Weyl weight would source the real phi; the
 # 5D (k = 12) number uses the 4D kappa of the u4 = 0 surface.

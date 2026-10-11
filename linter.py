@@ -283,10 +283,10 @@ def main():
     if g44_records:
         timelike = [r for r in g44_records if not r[4]]
         if timelike:
-            add("(corpus)", SEV_FAIL, "(cross-file)", None,
+            add("(repository)", SEV_FAIL, "(cross-file)", None,
                 "signature DRIFT: %d g44 assignment(s) not spacelike." % len(timelike))
         else:
-            add("(corpus)", SEV_OK, "(cross-file)", None,
+            add("(repository)", SEV_OK, "(cross-file)", None,
                 "signature consistent: all %d g44 definition(s) spacelike (g44 < 0)." % len(g44_records))
 
     n_ok = sum(1 for f in findings if f[1] == SEV_OK)
@@ -299,12 +299,13 @@ def main():
     out.append("=" * 72)
     out.append("DYNAMIC THEORY -- SAGE LINTER  (linter.py)")
     out.append("Run: %s" % datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
-    out.append("Scanned: %s" % ROOT)
-    out.append("Sage scripts: %d  (across Layer1, Layer2, Layer3; %d plot_* skipped)" % (n_files, n_skipped))
+    present = [l for l in LAYERS if os.path.isdir(os.path.join(ROOT, l, CODE_SUBDIR))]
+    out.append("Scanned: %s (repository root)" % os.path.basename(ROOT))
+    out.append("Sage scripts: %d  (across %s; %d plot_* skipped)" % (n_files, ", ".join(present), n_skipped))
     out.append("Cadabra cross-checks: %d" % n_cdb)
     out.append("=" * 72)
 
-    for layer in LAYERS + ["(corpus)"]:
+    for layer in LAYERS + ["(repository)"]:
         layer_findings = [f for f in findings if f[0] == layer]
         if not layer_findings:
             continue

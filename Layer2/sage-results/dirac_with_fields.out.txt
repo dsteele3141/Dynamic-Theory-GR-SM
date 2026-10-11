@@ -1,5 +1,5 @@
 ======================================================================
-16_dirac_with_fields_adjudicated.sage
+dirac_with_fields.sage
 ======================================================================
 
 (A) Spin Tensor & Clifford Decomposition (Eq 117)

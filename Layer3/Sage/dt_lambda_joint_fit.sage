@@ -2,7 +2,7 @@
 # --------------------------------------------------------------------------
 # SOURCE: model = P. E. Williams, "The Dynamic Theory" Ch. 3 (DT redshift
 #   relation Eq 3.6 + the evolving Chandrasekhar candle, Eqs 3.52-3.55), as fitted
-#   in pantheon_dark_energy_fit.sage / pantheon_systematic_covariance.sage, PLUS a
+#   in pantheon_dark_energy_fit.sage (systematic covariance: full repository), PLUS a
 #   cosmological-constant term (Report Eq 67 on Weyl's constant reading of lambda,
 #   |Lambda| = lambda/4 != 0: weyl_lambda_reading.sage).
 #   DATA = Pantheon binned SN-Ia (Scolnic et al. 2018, ApJ 859:101):
@@ -43,7 +43,7 @@
 # the reference point for the LIMIT Lambda -> 0: any |Lambda| << 1e-53 m^-2 gives
 # a fit indistinguishable from it, so it stands for "negligible Lambda".
 #
-# HONEST BRACKET. The Lambda coupling is a LEADING-ORDER static-patch ansatz
+# CAVEATS. The Lambda coupling is a LEADING-ORDER static-patch ansatz
 # (gravitational redshift of the Lambda term composed with DT's drift redshift);
 # Williams gives no Lambda term in his redshift law. Lambda's lensing / areal-
 # distance corrections are the same order and are NOT included, so the bound is
@@ -83,7 +83,7 @@ DATA = [
 ]
 NALL = len(DATA)
 
-# --- systematic covariance (same file as pantheon_systematic_covariance) ----
+# --- systematic covariance (Pantheon DS17f, pantheon_sys_DS17f.txt) ----
 HERE = os.path.dirname(os.path.abspath(__file__)) if "__file__" in globals() else "."
 vals = None
 for p in [os.path.join(HERE, "pantheon_sys_DS17f.txt"), "Sage/pantheon_sys_DS17f.txt", "Layer3/Sage/pantheon_sys_DS17f.txt",
@@ -203,7 +203,7 @@ full = Fit(list(range(NALL)), "full")
 stat = Fit(list(range(NALL)), "stat")
 ok("L = 0 reproduces pantheon_dark_energy_fit (stat-only chi2 79.8 at xi=0.235)",
    abs(stat.chi2(shape(stat.z, 0.235, 0.0)) - 79.8) < 0.1)
-ok("L = 0 reproduces pantheon_systematic_covariance (full-cov chi2 47.1 at xi=0.230)",
+ok("L = 0 reproduces the full-covariance Lambda = 0 fit (full-cov chi2 47.1 at xi=0.230)",
    abs(full.chi2(shape(full.z, 0.230, 0.0)) - 47.1) < 0.1)
 print("    unit: Lambda = %.3e * L  m^-2   (H0 = 70 km/s/Mpc)" % UNIT)
 print("    Planck-2018 Lambda = %.2e m^-2  <->  L = %.3f" % (LAM_OBS, LAM_OBS / UNIT))

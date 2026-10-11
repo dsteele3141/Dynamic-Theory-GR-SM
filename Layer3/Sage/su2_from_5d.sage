@@ -11,7 +11,7 @@
 # su2_from_5d.sage                                     [A] (assertion-hardened)
 #
 # PURPOSE.  Can SU(2) be DERIVED from DT's 5D structure, and does it survive
-# the switch u4 = 0 (i.e. is it in the recovered 4D sector, not a relaxation)?
+# the condition u4 = 0 (i.e. is it in the recovered 4D sector, not a departure from it)?
 #
 #   [A] geometry: one extra dimension cannot carry SU(2) (Kaluza-Klein route
 #       closed)
@@ -19,7 +19,7 @@
 #       particle-antiparticle mixings are included); DT's mass kills the
 #       massless-only extras
 #   [C] Williams' 8x8: internal symmetry su(2) + u(1) -- NATIVE, non-abelian
-#   [D] it survives the switch: it acts on the zero modes; the edge condition
+#   [D] it survives u4 = 0: it acts on the zero modes; the edge condition
 #       invariant under it and 4D Lorentz is unique up to the hand; the
 #       doublet is (block-A zero mode, conjugate of block-B zero mode), both
 #       LEFT-handed: a chiral doublet
@@ -109,7 +109,7 @@ check(len(norm_preserving(rcomm([realify(i_ * x) for x in G8] + [Ii8]))) == 2,
       "complex-linear symmetry alone is U(1) x U(1) (strong_sector_su3 [A]); su(2) needs the conjugation")
 
 # ============================================================ [D]
-print("\n[D] Does it survive the switch?  (acts on the zero modes)")
+print("\n[D] Does it survive u4 = 0?  (acts on the zero modes)")
 I8 = identity_matrix(K, 8)
 Gam = G8[0] * G8[1] * G8[2] * G8[3] * G8[4]
 check(Gam * Gam == I8 and all(Gam * x == x * Gam for x in G8),
@@ -169,10 +169,10 @@ print("""VERDICT
   2. Williams' OWN 8x8 representation (Eqs 109-111) carries a native
      su(2) + u(1) internal symmetry ([C]).  It is NOT imported: it exists
      because the two inequivalent blocks are related by charge conjugation.
-  3. It SURVIVES THE SWITCH ([D]): it acts on the zero modes, the edge
+  3. It SURVIVES u4 = 0 ([D]): it acts on the zero modes, the edge
      condition invariant under it (and 4D Lorentz) is unique up to the hand,
      and the doublet it acts on is two LEFT-HANDED fields.  So this is
-     structure DT already has at u4 = 0, not a relaxation.
+     structure DT already has at u4 = 0, not a departure from it.
   4. Charge ([E]): with Q = T3 + Y and Y the native u(1), one neutral member
      plus integer charge gives (nu_L, e_L) with Y = -1/2.  Williams' common
      phase puts Q inside SU(2) (Y = 0, no neutral member): a WILLIAMS

@@ -1,5 +1,5 @@
 ==========================================================================
-gr_limit_domain.sage -- gap #5: where does DT reduce to Newton/GR?
+gr_limit_domain.sage -- where does DT reduce to Newton/GR?
 ==========================================================================
 
 [A] Eqs 3.24-3.27: Newton x (1 - H0 tau) x (1 - lambda/r)
@@ -48,7 +48,7 @@ gr_limit_domain.sage -- gap #5: where does DT reduce to Newton/GR?
 [G] Domain map of the Newton/GR limit (one dial, tau0dot)
     regime                             tau0dot
     exact Newton/GR                    0
-    solar system, Mercury perihelion   < 1e+04  (DT-native kinematics)
+    solar system, Mercury perihelion   < 1e+04  (DT kinematics)
     solar system, LLR Gdot/G           < 0.001  (imported bound)
     galaxy, flat rotation curve        ~ 5e+05  (Williams Eqs 3.35-3.36)
   [PASS] G1: the GR limit and the MOND regime sit at opposite ends of the same dial

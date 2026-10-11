@@ -32,7 +32,7 @@ import Layer2.Lean.T2_7_DiracFactorisation
 
 namespace DTWilliams.PhyslibBridge
 
-open Matrix DTWilliams.FourthPostulate
+open Matrix DTWilliams.DiracFactorisation
 
 /-! ## (1) The 5D metric is Physlib's Minkowski matrix at `d = 4` -/
 

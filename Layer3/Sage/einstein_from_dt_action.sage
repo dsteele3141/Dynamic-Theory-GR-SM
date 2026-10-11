@@ -55,7 +55,7 @@
 #       the 4D surface (gr_on_4d_surface); kappa = 8 pi G from the Newtonian
 #       limit (einstein_equations_recovery [4]).
 #
-# VERDICT (honest bracket).  The Lovelock premises are SUPPLIED BY DT: the
+# VERDICT.  The Lovelock premises are SUPPLIED BY DT: the
 # Report's own action, Eq 67, is local, its gravitational part is R alone,
 # and its metric variation is second order (shown here).  The Einstein
 # equations are therefore DT's mass-conserving (u4 = 0) sector, on Williams'
@@ -63,7 +63,7 @@
 # choice of Lagrangian.  DT derives the Weyl geometry (T1.8); taking R (rather
 # than R~^2, or adding Gauss-Bonnet) as the Lagrangian follows Weyl, in
 # Williams' words "we may follow Weyl's procedure".  Lambda is zero on the
-# multiplier reading of lambda (the corpus' reading) and non-zero on Weyl's
+# multiplier reading of lambda (the reading of the original treatment) and non-zero on Weyl's
 # constant reading; the Report does not settle which.  The variation is
 # checked on function-parametrised metric families (generic 2-variable
 # functions, diagonal 4D and 5D, plus an off-diagonal 4D instance), the same
@@ -354,7 +354,7 @@ ok("multiplier reading: on the constraint phi.phi = 1/24 the cosmological "
 ok("constant reading (Weyl 1918): with no constraint, the phi-independent "
    "part is -lam/4 g^ab (Lambda != 0)",
    z(coef_g.subs({a_: 0 for a_ in A}) + lam / 4))
-print("    The Report does not say which reading is meant; T1.9 (corpus)")
+print("    The Report does not say which reading is meant; the Layer-1 check")
 print("    takes lambda as a multiplier (EL(lambda) => phi.phi = const).")
 
 # ==========================================================================

@@ -8,6 +8,7 @@
 import Mathlib.Tactic
 import Mathlib.Analysis.Calculus.Deriv.Mul
 import Mathlib.Analysis.SpecialFunctions.Sqrt
+import Mathlib.LinearAlgebra.Matrix.Determinant.Basic
 
 namespace DTWilliams.Minkowski5
 
@@ -36,10 +37,12 @@ theorem Q5_spacelike_x3 : Q5 0 0 0 1 0 < 0 := by unfold Q5; norm_num
     coordinate enters the metric with a minus sign, like the spatial ones. -/
 theorem Q5_mass_spacelike : Q5 0 0 0 0 1 < 0 := by unfold Q5; norm_num
 
-/-- **Determinant of the 5D Minkowski metric = +1** (the product of the diagonal
-    `diag(1,−1,−1,−1,−1)`). Contrast 4D Lorentzian (det = −1): the even number
-    (four) of spacelike directions makes the 5D determinant positive. -/
-theorem minkowski5_det : (1 : ℝ) * (-1) * (-1) * (-1) * (-1) = 1 := by norm_num
+/-- **Determinant of the 5D Minkowski metric = +1**: `det diag(1,−1,−1,−1,−1) = 1`.
+    Contrast 4D Lorentzian (det = −1): the even number (four) of spacelike
+    directions makes the 5D determinant positive. -/
+theorem minkowski5_det :
+    (Matrix.diagonal ![(1 : ℝ), -1, -1, -1, -1]).det = 1 := by
+  simp [Matrix.det_diagonal, Fin.prod_univ_five]
 
 /-! ## (2) Velocity normalisation `g_{ij}uⁱuʲ = 1` -/
 

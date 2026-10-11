@@ -22,7 +22,7 @@
 #
 # u4_relaxation_bounds.sage                           [A] (assertion-hardened)
 #
-# QUESTION (manuscript item 5). Relaxing u^4 = 0 is where DT should predict.
+# QUESTION. A departure from u^4 = 0 is where DT should predict.
 # Two consequences can be confronted with data:
 #   (i)  P6: charge may move along the mass axis. Does the electron's
 #        stability (tau > 6.6e28 yr) bound it, and what does DT itself give?
@@ -49,7 +49,7 @@ def check(cond, label):
     assert cond, "ASSERTION FAILED: " + label
 
 print("=" * 74)
-print("u4_relaxation_bounds.sage -- relaxing u4 = 0: charge leak and breathing mode")
+print("u4_relaxation_bounds.sage -- departures from u4 = 0: charge leak and breathing mode")
 print("=" * 74)
 
 hbar, c, eV = 1.054571817e-34, 2.99792458e8, 1.602176634e-19
@@ -102,7 +102,7 @@ check(u4_drift_lab / u4_edge_max > 1e30,
       "a leak of the drift's size at the edge would be excluded by >1e30")
 
 # ============================================================ [C]
-print("\n[C] Breathing mode: relax h_A4 = 0 by a fraction eps (eps = 1: the free radion)")
+print("\n[C] Breathing mode: depart from h_A4 = 0 by a fraction eps (eps = 1: the free radion)")
 al2 = var('al2', domain='positive'); eps = var('eps', domain='positive')
 gam = 1 - 2 * al2 / (1 + al2)
 omega = (1 / al2 - 3) / 2
@@ -141,12 +141,12 @@ NET.
     the edge. 4D charge is EXACTLY conserved: a null result, consistent with
     the electron's stability. Any edge leak one might add is bounded by the
     electron lifetime below ~1e-64 (M = 1 TeV): a BOUND, not a prediction.
-  * The breathing mode is the relaxed restriction h_A4 = 0. On one
+  * The breathing mode is the departure from h_A4 = 0. On one
     parameter eps (eps = 1 the free radion, gamma_PPN = 1/2), Cassini gives
     eps < ~1e-4 and is ~1e3 tighter than LIGO-Virgo polarisation tests. DT's
     own eps is the mass-coordinate coupling, ~1e-31 in the lab and ~1e-16 in
     a neutron star: far below both. No prediction within reach.
-  * Both relaxations are consistent with data and neither yields a
-    measurable signal: what relaxing u4 = 0 leaves in 4D is too small to see.
+  * Both departures are consistent with data and neither yields a
+    measurable signal: what a departure from u4 = 0 leaves in 4D is too small to see.
 """)
 print("ALL ASSERTIONS PASSED")

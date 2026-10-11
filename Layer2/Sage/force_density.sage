@@ -18,7 +18,7 @@ c = var('c', domain='real')
 assume(c > 0)
 
 print("="*70)
-print("13_force_density_adjudicated.sage")
+print("force_density.sage")
 print("="*70)
 
 print("\n(A) Bianchi identity cancellation (Div T ~ J F)")

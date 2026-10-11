@@ -43,8 +43,10 @@ theorem arc_element_ode (dσ0 : ℝ) (Φ : ℝ → ℝ) (τ : ℝ) (hΦ : Differ
 
 /-- **London quantisation / closed-loop holonomy (p.71).** When the loop integral
     is `∮φ_k dx^k = 2πin` (n ∈ ℤ), the holonomy is trivial — `exp(∮φ_k dx^k)=1` —
-    so the arc element returns to itself. This is the London condition, here
-    DERIVED from the geometry (Weyl length-change + equilibrium null trajectory). -/
+    so the arc element returns to itself. This is the FORWARD direction only, and
+    it is Mathlib's `Complex.exp_int_mul_two_pi_mul_I`; it is stated here to fix
+    the form used below. The converse and the bridge from Weyl length transport
+    to the loop integral are not formalised. -/
 theorem london_holonomy (n : ℤ) :
     Complex.exp ((n : ℂ) * (2 * Real.pi * Complex.I)) = 1 :=
   Complex.exp_int_mul_two_pi_mul_I n
@@ -61,7 +63,9 @@ theorem circular_orbit_v2 (m e r v : ℝ) (hm : m ≠ 0) (hr : r ≠ 0)
 
 /-- **Bohr radii (p.72).** With `α¹ = ie²/ℏ` (c = 1), so `(α¹)² = −e⁴/ℏ²`, the
     London-quantised circular-orbit radius `r = −n²e²/((α¹)²m)` reduces to the
-    Bohr radius `n²ℏ²/(me²) = n²a₀`. -/
+    Bohr radius `n²ℏ²/(me²) = n²a₀`. The radius formula is the hypothesis `hr`
+    (the Sage script `gateway_london_quantisation.sage` solves for it); this
+    theorem checks the algebraic reduction. -/
 theorem bohr_radius (n e ℏ m r α1sq : ℝ) (hm : m ≠ 0) (he : e ≠ 0) (hℏ : ℏ ≠ 0)
     (hα : α1sq = -(e ^ 4 / ℏ ^ 2))
     (hr : r = -(n ^ 2 * e ^ 2) / (α1sq * m)) :

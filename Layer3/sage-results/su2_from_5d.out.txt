@@ -19,7 +19,7 @@ su2_from_5d.sage -- is SU(2) in DT's 5D structure?
   [PASS] su(2) does not commute with i: it mixes one block with the CONJUGATE of the other
   [PASS] complex-linear symmetry alone is U(1) x U(1) (strong_sector_su3 [A]); su(2) needs the conjugation
 
-[D] Does it survive the switch?  (acts on the zero modes)
+[D] Does it survive u4 = 0?  (acts on the zero modes)
   [PASS] Gamma = g0g1g2g3g4 is central, square 1: its eigenspaces are the blocks A, B
   [PASS] the symmetry commutes with i*gamma^4: it preserves the zero-mode space V+
   [PASS] commutant of (symmetry + 4D Lorentz) = 4 = 2 + 2: exactly two invariant edge subspaces, V+ and V-
@@ -46,10 +46,10 @@ VERDICT
   2. Williams' OWN 8x8 representation (Eqs 109-111) carries a native
      su(2) + u(1) internal symmetry ([C]).  It is NOT imported: it exists
      because the two inequivalent blocks are related by charge conjugation.
-  3. It SURVIVES THE SWITCH ([D]): it acts on the zero modes, the edge
+  3. It SURVIVES u4 = 0 ([D]): it acts on the zero modes, the edge
      condition invariant under it (and 4D Lorentz) is unique up to the hand,
      and the doublet it acts on is two LEFT-HANDED fields.  So this is
-     structure DT already has at u4 = 0, not a relaxation.
+     structure DT already has at u4 = 0, not a departure from it.
   4. Charge ([E]): with Q = T3 + Y and Y the native u(1), one neutral member
      plus integer charge gives (nu_L, e_L) with Y = -1/2.  Williams' common
      phase puts Q inside SU(2) (Y = 0, no neutral member): a WILLIAMS

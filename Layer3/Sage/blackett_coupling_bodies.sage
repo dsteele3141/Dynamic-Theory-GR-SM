@@ -6,8 +6,8 @@
 #   Eq 10.53 (beta = sqrt(4 pi eps G) = 8.6127e-11), the Earth moment
 #   mu = (q_eff / 2M) I omega = 8.6e22 A m^2 (Book p.295), and Ch. 6 / p.437:
 #   the moment of a neutral spinning body comes from "the fifth dimensional
-#   field, being the gravitational field". Builds on Layer-3 script 20
-#   (20_earth_magnetic_moment.sage, frozen corpus).
+#   field, being the gravitational field". Extends an earlier Earth-only check
+#   (in the full repository).
 # Blackett, Nature 159, 658 (1947); Phil. Trans. A 245, 309 (1952).
 # Data (imported; limits taken CONSERVATIVELY, i.e. looser than published):
 #   moments: Earth 8.0e22, Mercury 2.8e19 (MESSENGER), Jupiter 1.56e27 (Juno),
@@ -20,7 +20,7 @@
 #
 # blackett_coupling_bodies.sage                       [A] (assertion-hardened)
 #
-# QUESTION (manuscript item 4). Williams gives a spinning neutral mass the
+# QUESTION. Williams gives a spinning neutral mass the
 # magnetic moment mu = (beta/2) L with beta = sqrt(eps0 G): Blackett's 1947
 # conjecture, Earth to ~6%. Is it a real magnetic moment, and does it survive
 # the bodies that magnetometers have measured?
@@ -145,7 +145,7 @@ NET.
   * READ AS A MAGNETOMETER FIELD (Williams' comparison): EXCLUDED. The Moon
     (>280x) and Mars (>1000x) have no dynamo to cancel it, millisecond
     pulsars miss by ~1e7, and solar and geomagnetic reversals forbid a fixed
-    spin-aligned part. A WILLIAMS DISCREPANCY at the criminal standard.
+    spin-aligned part. The original treatment is revised here.
   * READ AS THE SOURCE SAYS (the fifth-dimensional, gravitational field):
     with the self-consistent beta the field is G J/(2 c^2 r^3), the
     gravitomagnetic dipole of a spinning mass. That is GR's frame dragging,

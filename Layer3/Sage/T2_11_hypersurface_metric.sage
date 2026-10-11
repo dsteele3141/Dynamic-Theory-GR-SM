@@ -93,5 +93,5 @@ all_h_pass = all((h_comp[a][b] - expected_h(a,b)).simplify_full().is_zero()
                  for a in range(4) for b in range(4))
 ok("h_ab = A_ab - gh_ab matches the expected f-derivative structure (Eq 164).", all_h_pass)
 
-print("\nAudit Complete: 05_hypersurface_metric.sage")
+print("\nAudit Complete: T2_11_hypersurface_metric.sage")
 print("="*60)

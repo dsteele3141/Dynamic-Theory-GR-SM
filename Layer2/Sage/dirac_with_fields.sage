@@ -42,7 +42,7 @@ def get_sigma(j, k):
     return 1/2 * (gammas[j]*gammas[k] - gammas[k]*gammas[j])
 
 print("="*70)
-print("16_dirac_with_fields_adjudicated.sage")
+print("dirac_with_fields.sage")
 print("="*70)
 
 print("\n(A) Spin Tensor & Clifford Decomposition (Eq 117)")

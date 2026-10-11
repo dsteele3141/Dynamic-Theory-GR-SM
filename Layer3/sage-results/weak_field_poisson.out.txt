@@ -1,5 +1,5 @@
 ==========================================================================
-39_weak_field_poisson.sage  --  [C-wf] the yield half of the GR bridge
+weak_field_poisson.sage  --  the weak-field (Poisson) limit of the 5D field equations
 ==========================================================================
 
 [0] 5D manifold, signature (+,-,-,-,-), static Newtonian ansatz
@@ -69,8 +69,8 @@
   (iv) Throughout, sourced 5D Einstein equations are an ADDED assumption:
        DT's mass sector derives phi_m as a gauge object of the extended
        Maxwell set, with no Einstein equation.  This is a check of the
-       geometric correspondence, not a DT-native derivation.
+       geometric correspondence, not a derivation within DT.
 
 ==========================================================================
-39_weak_field_poisson COMPLETE.
+weak_field_poisson COMPLETE.
 ==========================================================================

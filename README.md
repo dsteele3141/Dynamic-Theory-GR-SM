@@ -4,6 +4,21 @@ Code accompanying the manuscript *Recovery of the gravitational and particle
 sectors in Dynamic Theory*. It contains only the derivations
 and checks that the manuscript relies on.
 
+## How to read this
+
+- `Layer2/` holds the five-dimensional foundations: the 5D metric, the five-force,
+  the 5D Dirac ansatz and its coupling to fields.
+- `Layer3/` holds the four-dimensional sectors reached under conservation of mass
+  (u4 = 0) and the quantum condition: general relativity, the Standard Model, the
+  comparison with data, and the predictions and bounds.
+- The three laws themselves are adopted, as in the manuscript, and are not coded here.
+- The Lean files check algebraic steps and the consistency of the adopted ansatz
+  (for example, that the 5D Dirac factorisation has a matrix realisation and none
+  in a commutative ring). They do not test the physics; comparison with experiment
+  is done in the Sage scripts.
+- Each script header names the manuscript step it supports, as a tag such as `[G3]`,
+  with the corresponding section of the Supplementary Materials.
+
 ## Tools
 
 - **SageMath** (`Layer*/Sage/*.sage`): assertion-driven derivations; every check
@@ -37,7 +52,7 @@ Assumptions beyond the three laws are tabulated in `ASSUMPTIONS.md`.
 - `Layer2/Sage/dirac_with_fields.sage`
 - `Layer2/Lean/T2_8_DiracWithFields.lean`
 
-### Layer boundary and Layer 3 inputs: quantum condition, u4 = 0, 4D surface, weak field (manuscript Sec. 2.3, 3)
+### Conservation of mass, quantum condition, 4D surface, weak field (manuscript Sec. 2.3, 3)
 
 - `Layer3/Sage/gateway_london_quantisation.sage`
 - `Layer3/Lean/T2_10_London.lean`
@@ -78,7 +93,7 @@ Assumptions beyond the three laws are tabulated in `ASSUMPTIONS.md`.
 - `Layer3/Sage/neutron_lifetime_tunnelling.sage`
 - `Layer3/Sage/hydrogen_nonsingular_spectrum.sage`
 
-### Predictions and bounds from departures from the restrictive assumptions (manuscript Sec. 6)
+### Predictions and bounds from departures from conservation of mass and the quantum condition (manuscript Sec. 6)
 
 - `Layer3/Sage/charge_quantisation_prediction.sage`
 - `Layer3/Sage/heavy_massaxis_partners.sage`
@@ -87,7 +102,7 @@ Assumptions beyond the three laws are tabulated in `ASSUMPTIONS.md`.
 - `Layer3/Sage/u4_relaxation_bounds.sage`
 - `Layer3/Sage/pantheon_dark_energy_fit.sage`
 - `Layer3/Sage/dt_lambda_joint_fit.sage`
-- `Layer3/Sage/pantheon_sys_DS17f.txt`
+- `Layer3/Sage/pantheon_sys_DS17f.txt` (data, not a script: Pantheon DS17f systematic covariance, Scolnic et al. 2018, https://github.com/dscolnic/Pantheon)
 - `Layer3/Sage/hbar_potential_clocks.sage`
 
 ## Licence

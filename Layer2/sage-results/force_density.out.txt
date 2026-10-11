@@ -1,5 +1,5 @@
 ======================================================================
-13_force_density_adjudicated.sage
+force_density.sage
 ======================================================================
 
 (A) Bianchi identity cancellation (Div T ~ J F)

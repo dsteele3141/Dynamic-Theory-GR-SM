@@ -22,13 +22,13 @@
 # Ghilencea (2019) shows that Weyl's R~^2 gravity, after gauge fixing, IS the
 # Einstein-Hilbert action with a positive cosmological constant plus a Proca
 # action for the Weyl vector, whose mass is Planck-scale; below that mass the
-# vector decouples and Weyl geometry becomes Riemannian.  The corpus reached
+# vector decouples and Weyl geometry becomes Riemannian.  This repository reached
 # the same three statements from Williams' Eqs 39/67.  This script checks,
 # term by term and in one convention, that the two are the SAME calculation:
 #
 #   [1] Weyl scalar curvature, computed here from the Weyl connection in
 #       signature (+,-,...):  R~ = R - 2(n-1) div(phi) - (n-1)(n-2) phi.phi,
-#       i.e. k = 6 (4D), 12 (5D) -- the corpus' k.
+#       i.e. k = 6 (4D), 12 (5D) -- the k used here.
 #   [2] Dictionary phi = (q/2) omega maps it onto Ghilencea Eq (5),
 #       R~ = R - 3q D.omega - (3/2) q^2 omega.omega.
 #   [3] Linearisation.  Ghilencea Eq (10): (xi0/4!)[-2 phi0^2 R~ - phi0^4];
@@ -38,18 +38,18 @@
 #       is Ghilencea's phi0^2 = -R~).  Only p = 2 gives Williams' "1/2".
 #   [4] Cosmological constant.  M^2 = xi0 phi0^2/6 reproduces Ghilencea's
 #       V = 3 M^4/(2 xi0), and Lambda = V/M^2 = phi0^2/4 = lambda/4 -- the
-#       corpus' |Lambda| = lambda/4, reached independently.
-#   [5] Weyl-vector mass.  The corpus' m^2 = 2k/a, with Ghilencea's field
+#       |Lambda| = lambda/4, reached independently.
+#   [5] Weyl-vector mass.  The m^2 = 2k/a found here, with Ghilencea's field
 #       normalisation (-1/4 F_omega^2), gives m^2 = (3/2) q^2 M^2 -- his
 #       m_omega exactly; the 5D (k = 12) analogue is 3 q^2 M^2.
 #   [6] Stueckelberg mode = DT's integrable sector.  For phi = d ln f
 #       (Report Eq 65, F = 0) the Weyl gauge s = ln f removes phi and turns
 #       (eta, d ln f) into the Riemannian (f^2 eta, 0):  R~ = f^2 R[f^2 eta],
-#       checked for an arbitrary f.  So the vector the corpus finds vanishing
+#       checked for an arbitrary f.  So the vector found here to vanish
 #       on shell is Ghilencea's "eaten" dilaton; both end in Riemannian GR.
 #   [7] Mutations: phi = q omega breaks [2]; p = 3 gives 2/3, not 1/2.
 #
-# VERDICT (honest bracket).  The GR step DT takes (Eq 39/67 -> Einstein +
+# VERDICT.  The GR step DT takes (Eq 39/67 -> Einstein +
 # Lambda + a heavy, decoupled Weyl vector) is the gauge-fixed Weyl-quadratic-
 # gravity result published by Ghilencea, with the same Lambda = lambda/4 and
 # the same mass formula.  So DT's GR recovery inherits a peer-reviewed
@@ -60,7 +60,7 @@
 # Differences, NOT checked here: Ghilencea's F^2 comes with the Weyl-tensor
 # term C~^2 = C^2 + (3/2) q^2 F^2 (his Eq 9), so his action also carries the
 # Riemannian C^2; Williams has F^2 alone.  Ghilencea's matter (a Higgs) has
-# Weyl weight; the corpus assumes matter without it.  In both, the SIZE of
+# Weyl weight; matter here carries none.  In both, the SIZE of
 # Lambda is set by a free constant (xi0 there, lambda here); Ghilencea's
 # xi0 > 0 makes Lambda > 0, a sign not re-derived in Williams' conventions.
 #
@@ -144,7 +144,7 @@ coefR = L10.coefficient(Rt)
 ok("normalised by its R~ coefficient: R~ + phi0^2/2",
    z(L10 / coefR - (Rt + P / 2)))
 lam = var('lam')
-ok("Williams/corpus natural gauge R~ + lambda/2 (R~ = -lambda) <=> lambda = phi0^2",
+ok("natural gauge R~ + lambda/2 (R~ = -lambda) <=> lambda = phi0^2",
    z((Rt + lam / 2).subs(lam == P) - L10 / coefR))
 for p, cp in ((2, QQ(1) / 2), (3, QQ(2) / 3)):
     s = var('s')
@@ -167,24 +167,24 @@ ok("V = (xi0/4!) phi0^4 = 3 M^4/(2 xi0)  (Ghilencea Eq 25)",
    z(V.subs(P == Psol) - 3 * M ** 4 / (2 * xi0)))
 Lam = V / M2                                 # -M^2/2 (R + 2 Lambda) form
 ok("Lambda = V/M^2 = phi0^2/4", z(Lam - P / 4))
-ok("with lambda = phi0^2: Lambda = lambda/4  (corpus |Lambda| = lambda/4)",
+ok("with lambda = phi0^2: Lambda = lambda/4  (|Lambda| = lambda/4 as found here)",
    z(Lam.subs(P == lam) - lam / 4))
 ok("in terms of M: Lambda = 3 M^2/(2 xi0), > 0 for xi0 > 0 (Ghilencea's sign)",
    z(Lam.subs(P == Psol) - 3 * M ** 2 / (2 * xi0)))
 
 # ---------------------------------------------------------------- [5] -----
-print("\n[5] Weyl-vector mass: corpus m^2 = 2k/a vs Ghilencea m_omega^2")
+print("\n[5] Weyl-vector mass: m^2 = 2k/a vs Ghilencea m_omega^2")
 # Ghilencea: -M^2/2 R~ - 1/4 F_omega^2.  Divide by -M^2/2:
 #   R~ + (1/(2 M^2)) F_omega^2,  F_omega = (2/q) F_phi
 #   => (1/4) a F_phi^2 with a = 4 * (1/(2 M^2)) * (2/q)^2
 a = 4 * (1 / (2 * M ** 2)) * (2 / q) ** 2
-ok("F^2 normalisation in corpus form: a = 8/(q^2 M^2)", z(a - 8 / (q ** 2 * M ** 2)))
+ok("F^2 normalisation in this form: a = 8/(q^2 M^2)", z(a - 8 / (q ** 2 * M ** 2)))
 m2_ours = {k: 2 * k / a for k in (6, 12)}
 # direct: -M^2/2 * (-(3/2) q^2 omega^2) = +(1/2) m^2 omega^2
 m2_ghil = 2 * (-M ** 2 / 2) * (-QQ(3) / 2 * q ** 2)
 ok("Ghilencea's mass term gives m_omega^2 = (3/2) q^2 M^2",
    z(m2_ghil - QQ(3) / 2 * q ** 2 * M ** 2))
-ok("corpus m^2 = 2k/a (k = 6) == Ghilencea m_omega^2", z(m2_ours[6] - m2_ghil))
+ok("m^2 = 2k/a (k = 6) == Ghilencea m_omega^2", z(m2_ours[6] - m2_ghil))
 ok("5D analogue (k = 12): m^2 = 3 q^2 M^2", z(m2_ours[12] - 3 * q ** 2 * M ** 2))
 ok("[7] mutation: dictionary phi = q omega would give m^2 = 6 q^2 M^2 (no match)",
    not z(2 * 6 / (4 * (1 / (2 * M ** 2)) * (1 / q) ** 2) - m2_ghil))

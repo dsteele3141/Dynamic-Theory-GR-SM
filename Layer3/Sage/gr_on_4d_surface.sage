@@ -24,7 +24,7 @@
 # Setting: Gaussian-normal 5D metric (the general local form near any
 # hypersurface whose normal is the mass direction)
 #       ds^2 = g_ab(x, y) dx^a dx^b + eps dy^2 ,   eps = -1  (y = y4 spacelike,
-#       signature (+,-,-,-,-) as everywhere in the corpus),
+#       signature (+,-,-,-,-) as everywhere in this repository),
 # extrinsic curvature  K_ab = (1/2) d_y g_ab.
 #
 # WHAT THE SCRIPT ESTABLISHES
@@ -51,7 +51,7 @@
 #       has K != 0 and induces on y = y0 a 4D G_ab proportional to the
 #       metric with |Lambda| = 3/y0^2: curvature with no 4D matter.
 #
-# VERDICT (honest bracket).  Williams' sentence holds exactly under two
+# VERDICT.  Williams' sentence holds exactly under two
 # conditions, of which u4 = 0 supplies one:
 #   * u4 = 0 for all free motion  <=>  K_ab = 0 on the surface;
 #   * the 5D field equations are Einstein-type (G5 = kappa T5).  DT does not
@@ -59,7 +59,7 @@
 #     sector); the Ricci-flat vacuum case is the one DT uses (T2.14).
 # Given both, GR on the 4D surface is DERIVED, not identified.  If mass is
 # conserved only by a non-geodesic (fifth-force) constraint, K may be non-zero
-# and the surface equations are Einstein's plus K-terms (D).  Type-I
+# and the surface equations are Einstein's plus K-terms (D).  A
 # structural result about the reduction step; it does not test DT's physics.
 #
 # RUN: sage gr_on_4d_surface.sage

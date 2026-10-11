@@ -64,7 +64,7 @@ VERDICT
   fermions carry no handedness (the Kaluza-Klein chirality problem, Witten
   1981).  Whether DT's own restriction u4 = 0 can supply it is tested in
   weak_chirality_u4.sage.
-  Bracket (criminal bar): the arithmetic is decisive, the SCOPE is not.
+  Bracket: the arithmetic is decisive, the SCOPE is not.
   Defeaters: (i) Williams never claims parity violation, so this is a gap
   in coverage, not a wrong prediction he made; (ii) the 5D Dirac sector is
   an adopted ansatz and could be extended chirally; (iii) the neutrino

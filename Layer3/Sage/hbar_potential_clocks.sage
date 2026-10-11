@@ -12,13 +12,13 @@
 #   electric charge or the masses scale with hbar (alpha is never mentioned):
 #   that gap is the fork tested here.
 # Context: local_unit_of_action_cancellation (Eq 3.3 drift is potential-
-#   suppressed); future-work.txt s.1 (relax the GR-QM boundary).
+#   suppressed, full repository).
 # Supplementary Materials: step [P6], Sec. S5 (code index: Sec. S6).
 # ---------------------------------------------------------------------------
 #
 # hbar_potential_clocks.sage                          [A] (assertion-hardened)
 #
-# QUESTION.  Relaxing the GR-QM boundary: Eq 3.3 couples a QUANTUM constant
+# QUESTION.  A departure at the GR-QM boundary: Eq 3.3 couples a QUANTUM constant
 # (hbar) to the GRAVITATIONAL potential at full strength (coefficient 1 in
 # Phi/c^2).  Does that predict anything for precision atomic clocks?
 #
@@ -39,7 +39,7 @@
 #             (Williams' Eq 3.6); then the metric must not add a second one.
 #   [C] B1 and B2 are the same physics in two unit conventions: counting both
 #       gives 2x GR (excluded).
-#   [D] Relaxation residues (second order, secular H0*Phi/c^2): unmeasurable.
+#   [D] Residues of the departure (second order, secular H0*Phi/c^2): unmeasurable.
 # ---------------------------------------------------------------------------
 
 from sage.all import *
@@ -139,7 +139,7 @@ print("    and cannot act as an independent lever (cf. local_unit_of_action_")
 print("    cancellation, where it cancels nothing).")
 
 # ============================================================ [D]
-print("\n[D] What is left when the boundary is relaxed")
+print("\n[D] What is left of the departure")
 U2_dt = taylor(exp(U), U, 0, 2).coefficient(U, 2)
 U2_gr = taylor(1 / sqrt(1 - 2 * U), U, 0, 2).coefficient(U, 2)
 d2 = abs(U2_dt - U2_gr)
@@ -152,7 +152,7 @@ drift = H0 * dU_annual * 3.156e7           # secular hbar drift across the orbit
 print("    second order, clock pair 1 m apart  : ~%.0e   (clocks ~1e-18)" % res2_lab)
 print("    secular H0*Phi/c^2 annual modulation: ~%.0e /yr" % drift)
 check(res2_lab < 1e-20 and drift < 1e-19,   # best clock drift bounds ~1e-18/yr
-      "both relaxation residues are far below any present clock comparison")
+      "both residues are far below any present clock comparison")
 
 print("\n" + "=" * 74)
 print("""VERDICT
@@ -164,12 +164,12 @@ print("""VERDICT
   2. Reading A (e, masses fixed; alpha ~ 1/hbar): clocks disagree (p = -3,
      -5, -1), the redshift is non-universal and alpha tracks the solar
      potential.  EXCLUDED by GP-A (> 1e4) and annual clock comparisons
-     (~3e7).  A WILLIAMS DISCREPANCY if read this way, not a DT negative.
+     (~3e7).  The original treatment is revised if read this way; not a DT negative.
   3. Data select alpha and m_e/m_p fixed.  Then either masses are fixed
      (p = -1, hbar shift cancels, GR redshift from DT's metric) or masses
      scale with hbar (p = 0, Eq 3.6 is the GR redshift, metric adds none).
      Same physics in two unit conventions; counting both = 2x GR, excluded.
-  4. Relaxation residues: ~1e-25 (2nd order), ~2e-20/yr (secular).  This relaxation PREDICTS NOTHING
+  4. Residues: ~1e-25 (2nd order), ~2e-20/yr (secular).  This departure PREDICTS NOTHING
      MEASURABLE: hbar(Phi) is the gravitational redshift re-expressed, not
      a new GR-QM coupling.
   STANDING.  Source gap (how e and m scale with hbar) closed by data.

@@ -9,7 +9,7 @@
 # --------------------------------------------------------------------------
 
 # ============================================================================
-# 27_pantheon_dark_energy_fit.sage              [A]  (assertion-hardened)
+# pantheon_dark_energy_fit.sage                 [A]  (assertion-hardened)
 #
 # THE LIVE, FALSIFIABLE TEST: does DT (log-redshift distance + evolving candle)
 # fit the REAL SN-Ia Hubble diagram as well as LambdaCDM, and far better than a

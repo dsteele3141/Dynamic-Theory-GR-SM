@@ -1,8 +1,8 @@
 ========================================================================
 DYNAMIC THEORY -- SAGE LINTER  (linter.py)
-Run: 2026-10-10 16:45:19
-Scanned: /home/dsteele/lean/Dynamic-Theory-GR-SM
-Sage scripts: 43  (across Layer1, Layer2, Layer3; 0 plot_* skipped)
+Run: 2026-10-11 11:17:44
+Scanned: Dynamic-Theory-GR-SM (repository root)
+Sage scripts: 43  (across Layer2, Layer3; 0 plot_* skipped)
 Cadabra cross-checks: 0
 ========================================================================
 
@@ -11,7 +11,7 @@ T2_1_5D_minkowski.out.txt
   [OK  ] runtime: no traceback/Error/FAIL in result output.
 T2_1_5D_minkowski.sage
   [OK  ] path: stdout-capture convention (no self-managed output path).
-  [OK  ]:41 signature: g44 = -1 (spacelike mass).
+  [OK  ]:40 signature: g44 = -1 (spacelike mass).
 dirac_algebra.out.txt
   [OK  ] runtime: no traceback/Error/FAIL in result output.
 dirac_algebra.sage
@@ -95,8 +95,8 @@ gravitational_radiation.out.txt
   [OK  ] runtime: no traceback/Error/FAIL in result output.
 gravitational_radiation.sage
   [OK  ] path: stdout-capture convention (no self-managed output path).
-  [OK  ]:196 signature list [1,-1,-1,-1,-1]: spacelike mass.
-  [OK  ]:230 signature list [1,-1,-1,-1,-1]: spacelike mass.
+  [OK  ]:195 signature list [1,-1,-1,-1,-1]: spacelike mass.
+  [OK  ]:229 signature list [1,-1,-1,-1,-1]: spacelike mass.
 hbar_potential_clocks.out.txt
   [OK  ] runtime: no traceback/Error/FAIL in result output.
 hbar_potential_clocks.sage
@@ -202,7 +202,7 @@ weyl_vector_mass.out.txt
 weyl_vector_mass.sage
   [OK  ] path: stdout-capture convention (no self-managed output path).
 
-### (corpus)
+### (repository)
 (cross-file)
   [OK  ] signature consistent: all 18 g44 definition(s) spacelike (g44 < 0).
 

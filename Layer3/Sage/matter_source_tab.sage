@@ -17,7 +17,7 @@
 # ============================================================================
 # matter_source_tab.sage                           [A]  (assertion-hardened)
 #
-# GAP #4: IS DT'S MATTER SOURCE GR'S MATTER SOURCE?
+# IS DT'S MATTER SOURCE GR'S MATTER SOURCE?
 #
 # Einstein's equations need a source T_mu nu with three properties: the right
 # coupling constant, conservation (nabla_mu T^mu nu = 0, forced by the Bianchi
@@ -38,7 +38,7 @@
 #       surface equations.  (Keeping it, given the 5D drive of
 #       test_body_motion, still costs a reaction.)
 #   (C) No mass-axis source: with u^4 = 0, T^{a4} = 0, so matter does not
-#       source g_a4 or g_44 -- consistent with gaps #1 and #3.
+#       source g_a4 or g_44 -- consistent with kk_radion_g44 and the surface equations.
 #   (D) Williams' surface tensor, evaluated: its EM part is the standard
 #       energy (E^2 + B^2)/2 (validating his + 1/4 sign convention), but Eq
 #       1.37 removes only the F^a_4 F^4b stress and LEAVES a trace term
@@ -57,12 +57,12 @@
 #       Weyl vector (weyl_vector_mass).  Dust is not Weyl-invariant; it is
 #       assumed to couple in the Einstein gauge (Ghilencea), not derived.
 #
-# VERDICT (honest bracket).  Williams' T^ab, with conservation of mass,
+# VERDICT.  Williams' T^ab, with conservation of mass,
 # is GR's matter source: the right constant, conserved, and with no
 # mass-axis or V-field pieces.  The headline: conservation of mass is FORCED
 # by the Bianchi identity of the surface equations -- the step from "a
 # restriction that the data select" to "a condition the equations require"
-# for u^4 (the g_44 part of gaps #1/#3 is still selected by Cassini).  The one
+# for u^4 (the g_44 part is still selected by Cassini, kk_radion_g44).  The one
 # leftover in Williams' Eq 1.37, a V^2 trace term, would give beta = 9/8 if
 # taken at Newtonian strength; DT's own u^4 = 0 removes it.  Scope: dust plus
 # EM (pressure is the standard perfect-fluid extension, not in Williams'
@@ -82,7 +82,7 @@ def ok(label, cond):
 
 
 print("=" * 74)
-print("matter_source_tab.sage -- gap #4: is DT's T_ab GR's T_ab?")
+print("matter_source_tab.sage -- is DT's T_ab GR's T_ab?")
 print("=" * 74)
 
 # ---------------------------------------------------------------------------

@@ -79,7 +79,7 @@ VERDICT
   STANDING: ordinary plus muonic hydrogen exclude every reading tried with
   Williams' lambda_p ~ 1 fm (from p-p scattering).  The 1/r^2 tail survives
   only if |Lambda| < ~1e-6 fm (e-p) and < ~1e-4 fm (mu-p).
-  Bracket (criminal bar): a NEGATIVE CANDIDATE, not a falsification of DT.
+  Bracket: a NEGATIVE CANDIDATE, not a falsification of DT.
   Defeaters: (i) Williams fixes lambda only roughly ('assumed'); (ii) the
   COM energy V_c and its labelling are not settled in the source; (iii) the
   e^{-lambda/r} form may hold only at nuclear range (a lambda that runs with

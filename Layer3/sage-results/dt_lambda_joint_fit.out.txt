@@ -7,7 +7,7 @@ JOINT FIT: DT drift (xi) + cosmological constant Lambda -- Pantheon SN-Ia
   [PASS] x solver: residual of ln(1+z) = x - 0.5 ln(1-2Lx^2) < 1e-12 at L=0.3
   [PASS] Lambda > 0 adds redshift (x < ln(1+z)); Lambda < 0 removes it
   [PASS] L = 0 reproduces pantheon_dark_energy_fit (stat-only chi2 79.8 at xi=0.235)
-  [PASS] L = 0 reproduces pantheon_systematic_covariance (full-cov chi2 47.1 at xi=0.230)
+  [PASS] L = 0 reproduces the full-covariance Lambda = 0 fit (full-cov chi2 47.1 at xi=0.230)
     unit: Lambda = 3.436e-52 * L  m^-2   (H0 = 70 km/s/Mpc)
     Planck-2018 Lambda = 1.10e-52 m^-2  <->  L = 0.320
     NB 'Lambda = 0' below = the limit Lambda -> 0 (negligible Lambda);

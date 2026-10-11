@@ -86,7 +86,7 @@ check(all(len(L) == len(k)**2 and len(D) == len(k)**2 - 1 for k, (G, L, D) in re
       "(the 8x8 su(2) of su2_from_5d is the N = 2 case)")
 
 # ============================================================ [B]
-print("\n[B] Survives the switch: N left-handed zero modes")
+print("\n[B] Survives u4 = 0: N left-handed zero modes")
 ok = True
 for kap, (G, L, D) in res.items():
     n = G[0].nrows()
@@ -140,7 +140,7 @@ print("""VERDICT
   assumes them.  One level weaker than SU(2), whose N came from Williams.
   Bracket: (i) u(N) is the generic symmetry of N identical free Weyl
   fields -- DT's contribution is that its 5D fields deliver exactly this
-  and nothing larger, and that it survives the switch; (ii) a quark
+  and nothing larger, and that it survives u4 = 0; (ii) a quark
   doublet would be N = 6, u(6) containing su(3) x su(2) x u(1) as the
   (3,2) subgroup -- choosing that subgroup is an import; (iii) free-field
   symmetry only; interactions must respect the gauged subgroup.

@@ -57,7 +57,7 @@ NET.
   * READ AS A MAGNETOMETER FIELD (Williams' comparison): EXCLUDED. The Moon
     (>280x) and Mars (>1000x) have no dynamo to cancel it, millisecond
     pulsars miss by ~1e7, and solar and geomagnetic reversals forbid a fixed
-    spin-aligned part. A WILLIAMS DISCREPANCY at the criminal standard.
+    spin-aligned part. The original treatment is revised here.
   * READ AS THE SOURCE SAYS (the fifth-dimensional, gravitational field):
     with the self-consistent beta the field is G J/(2 c^2 r^3), the
     gravitomagnetic dipole of a spinning mass. That is GR's frame dragging,

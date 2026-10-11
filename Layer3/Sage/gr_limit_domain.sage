@@ -7,7 +7,7 @@
 #   AJ 153 (2017) 121: beta-1 = (-2.7 +- 3.9)e-5); Gdot/G from lunar laser
 #   ranging (Hofmann & Mueller, CQG 35 (2018) 035015: (7.1 +- 7.6)e-14 /yr --
 #   a GR-framework reduction, NOT re-derived through DT's drifting units).
-# Builds on dark_matter_rotation_curves.sage, G_variation_constraints.sage,
+# Builds on earlier rotation-curve and G-variation checks (full repository),
 #   black_hole_ringdown.sage (strong-field fork), matter_source_tab.sage.
 # Supplementary Materials: step [G7], Sec. S3 (code index: Sec. S6).
 # --------------------------------------------------------------------------
@@ -15,7 +15,7 @@
 # ============================================================================
 # gr_limit_domain.sage                             [A]  (assertion-hardened)
 #
-# GAP #5: THE DOMAIN OF DT'S GR (NEWTONIAN) LIMIT.
+# THE DOMAIN OF DT'S GR (NEWTONIAN) LIMIT.
 #
 # Williams' weak-field mass sector (Eqs 3.24-3.27) is Newton's law times two
 # factors:  (1 - lambda/r)  and  (1 - H0 tau).
@@ -51,7 +51,7 @@
 #       tau0dot_sun < ~1.4e4; LLR (imported bound) < ~1.4e-3.
 #   (G) Domain map: Newton/GR holds where tau0dot H0 r/c and tau0dot H0 t are
 #       below the test precision.  Solar system: tau0dot <~ 1e-3 (LLR,
-#       imported) / 1.4e4 (Mercury, DT-native kinematics).  Galaxies (to be
+#       imported) / 1.4e4 (Mercury, DT kinematics).  Galaxies (to be
 #       flat): ~5e5.
 #   (H) No compromise.  v_flat^2 x T_fade = GM/c for every tau0dot, so speed
 #       is bought only with faster fading.  The natural reading (Eq 3.19,
@@ -61,7 +61,7 @@
 #       a0 ~ c H0 coincidence restated).  Any fixed tau0dot gives v^2 ~ M, not
 #       Tully-Fisher: BTF itself needs the per-system tuning.
 #
-# VERDICT (honest bracket).  DT's GR limit is EXACT at tau0dot = 0, and its
+# VERDICT.  DT's GR limit is EXACT at tau0dot = 0, and its
 # domain is controlled by that single initial condition (plus lambda/r, which
 # the data already settle in favour of the metric reading).  The solar
 # system bounds it.  But Williams' flat-rotation-curve mechanism, taken at
@@ -91,7 +91,7 @@ def ok(label, cond):
 
 
 print("=" * 74)
-print("gr_limit_domain.sage -- gap #5: where does DT reduce to Newton/GR?")
+print("gr_limit_domain.sage -- where does DT reduce to Newton/GR?")
 print("=" * 74)
 
 G, M, r, H0, c, t, td, lam, kap = var('G M r H0 c t td lam kap', domain='positive')
@@ -210,7 +210,7 @@ ok("F2: both solar bounds sit below the galactic requirement (Mercury x%.0f, LLR
 print("\n[G] Domain map of the Newton/GR limit (one dial, tau0dot)")
 print("    %-34s %s" % ("regime", "tau0dot"))
 print("    %-34s %s" % ("exact Newton/GR", "0"))
-print("    %-34s < %.1g  (DT-native kinematics)" % ("solar system, Mercury perihelion", td_merc))
+print("    %-34s < %.1g  (DT kinematics)" % ("solar system, Mercury perihelion", td_merc))
 print("    %-34s < %.1g  (imported bound)" % ("solar system, LLR Gdot/G", td_llr))
 print("    %-34s ~ %.1g  (Williams Eqs 3.35-3.36)" % ("galaxy, flat rotation curve", td_mw))
 ok("G1: the GR limit and the MOND regime sit at opposite ends of the same dial",

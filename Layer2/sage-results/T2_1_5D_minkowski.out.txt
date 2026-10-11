@@ -43,5 +43,5 @@ Standard SR force density d/dt(gamma_rel v) = gamma_sym*diff(v_alpha_func(t), t)
         not constructed here, so the u4->0 reduction is not symbolically
         performed; the SR correspondence is documented in SI-6.2.3.
 
-Audit Complete: 11_5D_minkowski.sage
+Audit Complete: T2_1_5D_minkowski.sage
 ============================================================

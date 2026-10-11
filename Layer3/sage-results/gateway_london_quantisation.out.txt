@@ -1,9 +1,10 @@
 ======================================================================
-15_london_quantisation_adjudicated.sage
+gateway_london_quantisation.sage
 ======================================================================
 
 (A) London Condition (Single-Valuedness)
-  exp(2*pi*i*n) = 1 for integer n (tested n=5): PASS
+  exp(2*pi*i*k) = 1 for symbolic integer k: PASS
+  mutation: exp(2*pi*i*k) = 1 NOT provable for real k: PASS
   Forward holonomy: the quantised form 2pi*i*n gives single-valuedness.
 
 (B) Bohr Radii Derivation

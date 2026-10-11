@@ -20,16 +20,17 @@ c = var('c', domain='real')
 assume(c > 0)
 
 print("="*70)
-print("15_london_quantisation_adjudicated.sage")
+print("gateway_london_quantisation.sage")
 print("="*70)
 
 print("\n(A) London Condition (Single-Valuedness)")
-# Verify that exp(2*pi*i*n) is 1 for any integer n.
-# Sage symbolic engine doesn't always automatically simplify exp(2*pi*I*n) == 1
-# unless n is explicitly an integer and we use the right simplification.
-n_val = 5
-ok(f"exp(2*pi*i*n) = 1 for integer n (tested n={n_val})", bool(exp(2*pi*I*n_val) == 1))
-# SCOPE (finding L3-01): this checks the FORWARD holonomy only -- the quantised
+# Verify symbolically that exp(2*pi*i*k) = 1 for a symbol k of integer domain,
+# and (mutation) that it fails for a real k.
+k_int = var('k_int', domain='integer')
+k_real = var('k_real', domain='real')
+ok("exp(2*pi*i*k) = 1 for symbolic integer k", bool(exp(2*pi*I*k_int) == 1))
+ok("mutation: exp(2*pi*i*k) = 1 NOT provable for real k", not bool(exp(2*pi*I*k_real) == 1))
+# SCOPE: this checks the FORWARD holonomy only -- the quantised
 # form 2pi*i*n gives trivial holonomy. It does NOT prove the converse
 # (exp(integral)=1 => integral=2pi*i*n) nor the DT bridge from length-transport
 # to the loop integral. So single-valuedness is shown CONSISTENT with the London

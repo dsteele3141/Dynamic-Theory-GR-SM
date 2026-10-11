@@ -13,7 +13,7 @@ su3_larger_rep.sage -- SU(3) in a larger DT representation?
     a=2 b=2 (N=4, 16x16): symmetry dim 16, derived dim 15  -> u(4)
   [PASS] symmetry = u(N), N = a + b, for every mix: 4' counts as a conjugate 4 (the 8x8 su(2) of su2_from_5d is the N = 2 case)
 
-[B] Survives the switch: N left-handed zero modes
+[B] Survives u4 = 0: N left-handed zero modes
   [PASS] every u(N) commutes with i*gamma^4 (preserves the zero-mode space); one 2-component zero mode per block (handedness per block: su2_from_5d [D])
 
 [C] N = 3: colour
@@ -49,7 +49,7 @@ VERDICT
   assumes them.  One level weaker than SU(2), whose N came from Williams.
   Bracket: (i) u(N) is the generic symmetry of N identical free Weyl
   fields -- DT's contribution is that its 5D fields deliver exactly this
-  and nothing larger, and that it survives the switch; (ii) a quark
+  and nothing larger, and that it survives u4 = 0; (ii) a quark
   doublet would be N = 6, u(6) containing su(3) x su(2) x u(1) as the
   (3,2) subgroup -- choosing that subgroup is an import; (iii) free-field
   symmetry only; interactions must respect the gauged subgroup.

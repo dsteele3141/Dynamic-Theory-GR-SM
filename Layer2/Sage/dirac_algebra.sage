@@ -58,7 +58,7 @@ gammas_correct = get_gammas(alphaTilde4_correct)
 g_signature = [1, -1, -1, -1, -1]
 
 print("="*70)
-print("02_dirac_algebra_adjudicated.sage")
+print("dirac_algebra.sage")
 print("="*70)
 
 print("\n(A) Diagnostic: Literal Manuscript A-matrix [[0,I],[I,0]]")

@@ -32,7 +32,6 @@ print("COMPUTATION 1: 5D Metric and Velocity Normalization")
 print("="*60)
 
 # 5D Minkowski g_ij = diag(1, -1, -1, -1, -1)
-# Note: g44 = -1 as requested.
 g = M.metric()
 g[0,0] = 1
 g[1,1] = -1
@@ -97,5 +96,5 @@ print("  NOTE: structural description only -- no [PASS]. The 5D force density is
 print("        not constructed here, so the u4->0 reduction is not symbolically")
 print("        performed; the SR correspondence is documented in SI-6.2.3.")
 
-print("\nAudit Complete: 11_5D_minkowski.sage")
+print("\nAudit Complete: T2_1_5D_minkowski.sage")
 print("="*60)

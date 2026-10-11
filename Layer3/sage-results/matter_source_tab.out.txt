@@ -1,5 +1,5 @@
 ==========================================================================
-matter_source_tab.sage -- gap #4: is DT's T_ab GR's T_ab?
+matter_source_tab.sage -- is DT's T_ab GR's T_ab?
 ==========================================================================
 
 [A] Coupling constant (restricted linearised surface equations)

@@ -43,7 +43,7 @@ exact_ppwave_lift.sage -- exact gravitational waves in DT's 5D manifold
   * It moves at exactly c, carries plus/cross only, and keeps u^4 = 0.
   * The exact breathing wave exists only with mass-coordinate dependence,
     and a tidal force along the mass axis (u^4 != 0) -- the excluded reading.
-  * Gap #3 holds exactly in the wave sector, not just to first order.
+  * The vacuum surface equations hold exactly in the wave sector, not just to first order.
 
 ==========================================================================
 exact_ppwave_lift COMPLETE.

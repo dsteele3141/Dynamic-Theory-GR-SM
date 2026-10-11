@@ -12,7 +12,7 @@
 # --------------------------------------------------------------------------
 
 # ============================================================================
-# 39_weak_field_poisson.sage                     [A]  (assertion-hardened)
+# weak_field_poisson.sage                        [A]  (assertion-hardened)
 #
 # THE "YIELD" HALF OF THE GR CORRESPONDENCE, CHECKED.  [C-wf]
 #
@@ -27,7 +27,7 @@
 # equation enters" (mass_sector_note sec.2).  What is checked here is therefore
 # the GEOMETRIC correspondence only: IF the 5D system is governed by sourced
 # Einstein equations G_ij = kappa T_ij, THEN what does the weak field give?
-# The Ricci-flat vacuum case IS DT-operative (it is the equation the T2.14
+# The Ricci-flat vacuum case IS used by DT (it is the equation the T2.14
 # Schwarzschild_4 x R embedding solves); the sourced case is an added
 # assumption, flagged as such in the verdict.
 #
@@ -66,7 +66,7 @@ def ok(label, cond):
 
 
 print("=" * 74)
-print("39_weak_field_poisson.sage  --  [C-wf] the yield half of the GR bridge")
+print("weak_field_poisson.sage  --  the weak-field (Poisson) limit of the 5D field equations")
 print("=" * 74)
 
 # ---------------------------------------------------------------------------
@@ -231,8 +231,8 @@ print("       'admit' only under the added relation Psi = Phi.")
 print("  (iv) Throughout, sourced 5D Einstein equations are an ADDED assumption:")
 print("       DT's mass sector derives phi_m as a gauge object of the extended")
 print("       Maxwell set, with no Einstein equation.  This is a check of the")
-print("       geometric correspondence, not a DT-native derivation.")
+print("       geometric correspondence, not a derivation within DT.")
 
 print("\n" + "=" * 74)
-print("39_weak_field_poisson COMPLETE.")
+print("weak_field_poisson COMPLETE.")
 print("=" * 74)

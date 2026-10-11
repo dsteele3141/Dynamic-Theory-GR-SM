@@ -5,8 +5,7 @@
 #   weyl_ghilencea_comparison.sage) and Eqs (68)-(70) (the 5D gauge field
 #   F_ij = d_i phi_j - d_j phi_i and its field equations); Book (2011) Eqs
 #   (1.32)-(1.39) and Ch.11 "Five Dimensional Waves".  Williams' own remark
-#   on gravity waves, "Against the Odds" (2009) p.170, as quoted in
-#   nontransverse_pressure_rederivation.sage: "there is no gravity wave
+#   on gravity waves, "Against the Odds" (2009) p.170: "there is no gravity wave
 #   independent of electromagnetic waves ... the gravity wave does not exist
 #   by itself ... a good reason the gravity wave experiments have come up
 #   negative."
@@ -24,8 +23,8 @@
 # GRAVITATIONAL RADIATION IN DT: WHICH WAVES, HOW MANY, HOW FAST, HOW STRONG.
 #
 # A 5D metric theory radiates more than GR does.  This script counts DT's
-# metric wave modes, applies the restriction that carried gaps #1 and #2
-# (conservation of mass: g_44 and g_a4 held, kk_radion_g44 /
+# metric wave modes, applies the condition used for the field equations
+# and test-body motion (conservation of mass: g_44 and g_a4 held, kk_radion_g44 /
 # test_body_motion), and checks what survives against the binary pulsar,
 # GW170817 and the polarisation content.  It then asks what Williams' OWN
 # gauge-field picture of gravity can radiate.
@@ -61,7 +60,7 @@
 #       So the GR recovery SUPERSEDES that remark; it is not a prediction of
 #       DT once the Weyl action is taken seriously.
 #
-# VERDICT (honest bracket).  Under the same single restriction that fixed
+# VERDICT.  Under the same single condition that fixed
 # light bending and free fall, DT's gravitational radiation is GR's: two
 # tensor polarisations, speed c, quadrupole power, matching the binary pulsar
 # to 0.2%.  The extra 5D modes (two vector, one breathing scalar) are exactly
@@ -70,8 +69,8 @@
 # Williams' "no gravity wave by itself" is superseded by the metric sector.
 # What stays DT-specific is the gauge-sector non-transverse ("electrogravitic")
 # mode, which needs dependence on the mass coordinate (d_4 != 0) and is a
-# separate, electromagnetic-band question (nontransverse_pressure_
-# rederivation.sage), not gravitational radiation in GR's sense.  Linear
+# separate, electromagnetic-band question (treated in the
+# full repository), not gravitational radiation in GR's sense.  Linear
 # theory; the radiation reaction beyond quadrupole order is inherited from
 # GR, not recomputed.
 #

@@ -33,7 +33,7 @@ test_body_motion.sage -- DT's 5-force law vs 4D geodesic motion
 
 [VERDICT]
   * Eq 62 derived from delta Int gamma ds on a general 5D metric.
-  * Its u4 term is the STM fifth force; u4 = 0 switches it off.
+  * Its u4 term is the STM fifth force; u4 = 0 removes it.
   * On the K = 0 surface, compact bodies follow 4D geodesics with no
     composition parameter: GR's motion law and weak equivalence.
   * u4 = 0 is not dynamically preserved; it is a restriction with a

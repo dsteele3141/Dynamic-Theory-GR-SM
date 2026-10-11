@@ -3,7 +3,7 @@
 # SOURCE (primary): P. E. Williams, "The Dynamic Theory" (2011), Ch.13 "Black
 #   Holes" (p.452) and Ch.10 (perihelion, Eq 10.36): the non-singular
 #   gravitational potential V_g = -(GM/r) e^{-lambda/r}, lambda = GM/c^2, as
-#   used by nonsingular_black_holes.sage.  The vacuum surface equations
+#   used for non-singular black holes (full repository).  The vacuum surface equations
 #   G_mu nu = 0 are DT's recovered GR sector (gr_on_4d_surface,
 #   kk_radion_g44, gravitational_radiation).
 # Data: Bertotti, Iess & Tortora, Nature 425 (2003) 374 (gamma - 1 =
@@ -52,8 +52,8 @@
 #       for the closure B = 1/g_00 only).  The vacuum surface equations
 #       that DT recovers force Schwarzschild instead (Birkhoff).
 #
-# VERDICT (honest bracket).  DT contains a FORK at strong field.
-#   * GR reading (the vacuum surface equations recovered in gaps #1-#3):
+# VERDICT.  DT contains a FORK at strong field.
+#   * GR reading (the vacuum surface equations recovered earlier):
 #     Schwarzschild/Kerr, horizon, light ring at 3M, the Kerr ringdown --
 #     consistent with GW150914 and the EHT rings.
 #   * Williams' non-singular reading (e^{-lambda/r} promoted to the metric):
@@ -63,8 +63,8 @@
 #     ringdown it would show is set by an interior DT does not specify, so
 #     it cannot even be predicted -- but it is not the observed Kerr one.
 #   Ringdown and EHT therefore select the GR reading, as Cassini selected
-#   the restricted reading in kk_radion_g44.  This is a strong NEGATIVE for
-#   the non-singular-black-hole claim of nonsingular_black_holes.sage, but
+#   g_44 = -1 in kk_radion_g44.  This is a strong NEGATIVE for
+#   the non-singular-black-hole claim (full repository), but
 #   not a falsification of DT, whose own vacuum sector predicts the observed
 #   ringdown.  Scope: static, non-rotating, eikonal (geometric-optics)
 #   analysis; the metric closure is ours (Williams gives only V_g); the

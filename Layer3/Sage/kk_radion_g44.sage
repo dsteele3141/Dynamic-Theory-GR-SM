@@ -20,7 +20,7 @@
 # Every 5D theory that recovers 4D gravity must dispose of the two extra
 # metric fields.  A free g_44 is a Brans-Dicke scalar coupled to matter; it
 # gives the PPN parameter gamma = 1/2, excluded by Cassini by ~10^4.  The
-# corpus so far held g_44 = -1 fixed (weak_field_poisson, gr_on_4d_surface)
+# earlier scripts held g_44 = -1 fixed (weak_field_poisson, gr_on_4d_surface)
 # without justification.  This script asks what in DT fixes it.
 #
 # Setting: linearised 5D metric about eta = diag(+,-,-,-,-), static source,
@@ -57,7 +57,7 @@
 #       stress; it is not a consistent dust solution.  The consistent
 #       "unsourced fifth direction" result is (B), gamma = 1/2.
 #
-# VERDICT (honest bracket).  The radion does not go away by itself, and u4 = 0
+# VERDICT.  The radion does not go away by itself, and u4 = 0
 # along worldlines does not remove it.  DT recovers GR's PPN gamma = 1 iff
 # conservation of mass is a restriction on the variation (Williams' word, and
 # his practice: he writes only the surface equations 1.38), not a dynamical

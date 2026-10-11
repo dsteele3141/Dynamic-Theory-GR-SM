@@ -2,8 +2,8 @@
 # --------------------------------------------------------------------------
 # SOURCE: Williams (2011), The Dynamic Theory, 5D structure of Ch.2; the
 #   route fork P=0 / P!=0 (Layer 2, S2 sec.1) and the S3 mass-sector addendum
-#   (this session, "no absolute GR/QM boundary"). Constants a0, H0 as pinned
-#   in the corpus (P1_radiation_pressure_a0.sage, local_gdot_escape_candidates.sage).
+#   ("no absolute GR/QM boundary"). Constants a0, H0 as fixed elsewhere
+#   in the full repository.
 # Supplementary Materials: step [F5], Sec. S2 (code index: Sec. S6).
 # --------------------------------------------------------------------------
 
@@ -11,8 +11,8 @@
 # u4_rest_mass_nonconservation.sage              [A]  (assertion-hardened)
 #
 # QUANTIFYING THE GR/QM CROSSOVER.
-# In DT the charge/particle (QM) sector is route 3, P=0, i.e. u4=0 (constant
-# rest mass, pure unitary 4D). The mass/gravity (GR) sector is route 2, P!=0,
+# In DT the charge/particle (QM) sector is case 3, P=0, i.e. u4=0 (constant
+# rest mass, pure unitary 4D). The mass/gravity (GR) sector is case 2, P!=0,
 # with the fifth (mass-density) velocity component u4 live. The 4D<->5D divide
 # is thus the SINGLE restrictive assumption u4=0, with the clean-separation
 # limit a0 -> inf playing the exact role of DT's hbar -> 0. There is NO
@@ -30,7 +30,7 @@
 # sector; u4 -> 1 is the fully mass-dynamical GR limit; the two are ends of one
 # hyperbolic rotation, with QUANTISATION (the London condition) common to both.
 #
-# The DT-native rate of rest-mass non-conservation is the secular (1 - H0 t)
+# DT's own rate of rest-mass non-conservation is the secular (1 - H0 t)
 # factor (b = H0; the SAME drift that drives the dark-energy candidate), so
 # for quasi-static matter  d gamma/dt ~ H0 gamma  and  u4 ~ H0 gamma/(a0 c).
 #
@@ -59,9 +59,9 @@ def ok(label, cond):
     assert cond, "ASSERTION FAILED: " + label
 
 
-# --- pinned corpus constants -------------------------------------------------
-H0 = 2.27e-18     # s^-1     Hubble rate      (local_gdot_escape_candidates.sage)
-a0 = 3.65e7       # kg/m^4   DT gauge constant (P1_radiation_pressure_a0.sage)
+# --- pinned constants ------- -------------------------------------------------
+H0 = 2.27e-18     # s^-1     Hubble rate      (full repository)
+a0 = 3.65e7       # kg/m^4   DT gauge constant (full repository)
 c  = 2.998e8      # m/s
 
 print("=" * 72)

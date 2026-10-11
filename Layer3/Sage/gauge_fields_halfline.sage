@@ -12,7 +12,7 @@
 #
 # gauge_fields_halfline.sage                          [A] (assertion-hardened)
 #
-# QUESTION (the "A4 edge check", future-work 2a). DT adopts the SM's gauge
+# QUESTION (the "A4 edge check"). DT adopts the SM's gauge
 # fields. Do they sit consistently on DT's 5D half-line y = x^4 >= 0? What
 # does their fifth component A_4 do at y = 0, and are the 4D zero modes the
 # massless W, Z, photon and gluons? This is the one place where adopting the

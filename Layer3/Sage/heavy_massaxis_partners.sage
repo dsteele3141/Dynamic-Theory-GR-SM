@@ -13,7 +13,7 @@
 #
 # heavy_massaxis_partners.sage                        [A] (assertion-hardened)
 #
-# QUESTION (future-work 4). Above each chiral zero mode, DT's 5D field has
+# QUESTION. Above each chiral zero mode, DT's 5D field has
 # heavy vector-like partners whose scale is the native mass M. Does DT fix M?
 # With a scale this is a collider prediction; without one it is untestable.
 # Odds before computing: a usable scale ~10%.

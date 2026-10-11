@@ -34,12 +34,12 @@ hbar_potential_clocks.sage -- does hbar(Phi) predict a clock signal?
     and cannot act as an independent lever (cf. local_unit_of_action_
     cancellation, where it cancels nothing).
 
-[D] What is left when the boundary is relaxed
+[D] What is left of the departure
     U^2 coefficient: Eq 3.3 exp form 1/2, Schwarzschild 3/2 (coordinate-
     dependent; under B1 the metric, not Eq 3.3, sets this anyway)
     second order, clock pair 1 m apart  : ~2e-25   (clocks ~1e-18)
     secular H0*Phi/c^2 annual modulation: ~2e-20 /yr
-  [PASS] both relaxation residues are far below any present clock comparison
+  [PASS] both residues are far below any present clock comparison
 
 ==========================================================================
 VERDICT
@@ -51,12 +51,12 @@ VERDICT
   2. Reading A (e, masses fixed; alpha ~ 1/hbar): clocks disagree (p = -3,
      -5, -1), the redshift is non-universal and alpha tracks the solar
      potential.  EXCLUDED by GP-A (> 1e4) and annual clock comparisons
-     (~3e7).  A WILLIAMS DISCREPANCY if read this way, not a DT negative.
+     (~3e7).  The original treatment is revised if read this way; not a DT negative.
   3. Data select alpha and m_e/m_p fixed.  Then either masses are fixed
      (p = -1, hbar shift cancels, GR redshift from DT's metric) or masses
      scale with hbar (p = 0, Eq 3.6 is the GR redshift, metric adds none).
      Same physics in two unit conventions; counting both = 2x GR, excluded.
-  4. Relaxation residues: ~1e-25 (2nd order), ~2e-20/yr (secular).  This relaxation PREDICTS NOTHING
+  4. Residues: ~1e-25 (2nd order), ~2e-20/yr (secular).  This departure PREDICTS NOTHING
      MEASURABLE: hbar(Phi) is the gravitational redshift re-expressed, not
      a new GR-QM coupling.
   STANDING.  Source gap (how e and m scale with hbar) closed by data.

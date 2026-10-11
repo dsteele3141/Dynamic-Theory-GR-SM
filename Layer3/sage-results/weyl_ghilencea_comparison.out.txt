@@ -13,7 +13,7 @@ weyl_ghilencea_comparison.sage -- Williams Eq 39/67 vs Ghilencea 2019
   [PASS] phi0 equation gives phi0^2 = -R~
   [PASS] on shell it returns (xi0/4!) R~^2
   [PASS] normalised by its R~ coefficient: R~ + phi0^2/2
-  [PASS] Williams/corpus natural gauge R~ + lambda/2 (R~ = -lambda) <=> lambda = phi0^2
+  [PASS] natural gauge R~ + lambda/2 (R~ = -lambda) <=> lambda = phi0^2
   [PASS] R~^2 linearised and normalised: R~ + 1/2 lambda
   [PASS] R~^3 linearised and normalised: R~ + 2/3 lambda  ([7] mutation: not Williams' 1/2)
 
@@ -21,13 +21,13 @@ weyl_ghilencea_comparison.sage -- Williams Eq 39/67 vs Ghilencea 2019
   [PASS] coefficient of R~ is -M^2/2 with M^2 = xi0 phi0^2/6
   [PASS] V = (xi0/4!) phi0^4 = 3 M^4/(2 xi0)  (Ghilencea Eq 25)
   [PASS] Lambda = V/M^2 = phi0^2/4
-  [PASS] with lambda = phi0^2: Lambda = lambda/4  (corpus |Lambda| = lambda/4)
+  [PASS] with lambda = phi0^2: Lambda = lambda/4  (|Lambda| = lambda/4 as found here)
   [PASS] in terms of M: Lambda = 3 M^2/(2 xi0), > 0 for xi0 > 0 (Ghilencea's sign)
 
-[5] Weyl-vector mass: corpus m^2 = 2k/a vs Ghilencea m_omega^2
-  [PASS] F^2 normalisation in corpus form: a = 8/(q^2 M^2)
+[5] Weyl-vector mass: m^2 = 2k/a vs Ghilencea m_omega^2
+  [PASS] F^2 normalisation in this form: a = 8/(q^2 M^2)
   [PASS] Ghilencea's mass term gives m_omega^2 = (3/2) q^2 M^2
-  [PASS] corpus m^2 = 2k/a (k = 6) == Ghilencea m_omega^2
+  [PASS] m^2 = 2k/a (k = 6) == Ghilencea m_omega^2
   [PASS] 5D analogue (k = 12): m^2 = 3 q^2 M^2
   [PASS] [7] mutation: dictionary phi = q omega would give m^2 = 6 q^2 M^2 (no match)
 

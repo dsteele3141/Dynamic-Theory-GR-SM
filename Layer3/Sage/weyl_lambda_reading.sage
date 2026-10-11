@@ -47,12 +47,12 @@
 #       same lambda multiplies the phi^.phi^ term, a Proca-type mass for the
 #       gauge vector: one constant sets both.
 #
-# VERDICT (honest bracket).  On Weyl's procedure -- the one the Report cites
+# VERDICT.  On Weyl's procedure -- the one the Report cites
 # -- lambda is a CONSTANT (the gauge-fixed value of the Weyl curvature
 # scalar), not a Lagrange multiplier, and it cannot be zero.  So DT's
 # variational principle carries a NON-ZERO cosmological constant,
 # |Lambda| = lambda/4, whose MAGNITUDE is a free constant: DT does not fix it,
-# and does not force Lambda = 0.  The corpus' multiplier reading
+# and does not force Lambda = 0.  The earlier multiplier reading
 # (T1_9_weyl_strengthening, phi.phi = 1/12) is a misreading and is superseded.
 # Side finding: Eq 67's "1/2" is the 4D (R~^2) value; the 5D gauge-invariant
 # parent gives 3/5 -- same conclusion, different coefficient.  Not settled

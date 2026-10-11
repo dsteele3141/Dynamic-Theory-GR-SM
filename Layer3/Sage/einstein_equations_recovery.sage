@@ -45,7 +45,7 @@
 #       extra assumption, C12), and G_00 = kappa rho gives Newton's
 #       lap(Phi) = 4 pi G rho iff kappa = 8 pi G/c^4.
 #
-# VERDICT (honest bracket).  Given u4 = 0 (=> K = 0 and J^4 = 0), DT's force
+# VERDICT.  Given u4 = 0 (=> K = 0 and J^4 = 0), DT's force
 # law, and the Lovelock premises -- field equations LOCAL, SECOND ORDER, with
 # the metric as the only gravitational field -- the surface field equations
 # are G_ab + Lambda g_ab = (8 pi G/c^4) T_ab.  Imported, not re-proven:

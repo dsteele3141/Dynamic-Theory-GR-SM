@@ -30,7 +30,7 @@
 #       waveforms A(u), B(u) of any amplitude, is an exact vacuum solution
 #       with non-zero curvature (a real wave, not a coordinate artefact).
 #   (B) Lift to DT: adding the mass coordinate with g_44 = -1 (the
-#       restriction of gaps #1-#4) gives an exact 5D vacuum solution.  The
+#       conservation-of-mass condition used throughout) gives an exact 5D vacuum solution.  The
 #       5D Ricci tensor equals the 4D one, with no mass-axis components.
 #   (C) Test bodies: on the lifted wave Gamma^4 = 0 identically, so u^4 = 0
 #       is preserved exactly -- conservation of mass survives the full
@@ -49,7 +49,7 @@
 #   (G) Exact nonlinear superposition: two different waveforms travelling
 #       the same way add exactly (Ricci is linear in H for this class).
 #
-# VERDICT (honest bracket).  The wave sector of DT's GR recovery holds
+# VERDICT.  The wave sector of DT's GR recovery holds
 # EXACTLY, not only to first order: every exact GR plane gravitational wave
 # lifts to an exact 5D solution of DT's space-time-mass manifold under the
 # conservation-of-mass restriction, travels at exactly c, carries only plus
@@ -203,7 +203,7 @@ print("    exact 5D solution of DT under the conservation-of-mass restriction.")
 print("  * It moves at exactly c, carries plus/cross only, and keeps u^4 = 0.")
 print("  * The exact breathing wave exists only with mass-coordinate dependence,")
 print("    and a tidal force along the mass axis (u^4 != 0) -- the excluded reading.")
-print("  * Gap #3 holds exactly in the wave sector, not just to first order.")
+print("  * The vacuum surface equations hold exactly in the wave sector, not just to first order.")
 print("\n" + "=" * 74)
 print("exact_ppwave_lift COMPLETE.")
 print("=" * 74)

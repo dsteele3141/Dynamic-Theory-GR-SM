@@ -36,7 +36,7 @@
 #     Delta E(n,l) = Lt / (n^3 (2l+1)),   Lt = 4 Lambda Ry (mu/m_e)^2 / a0,
 # where Lambda (a length) is the 1/r^2 coefficient divided by k.
 #
-# TWO READINGS (Williams never says which, same species as the phat photon):
+# TWO READINGS (the source does not say which):
 #   REPLACES   -- DT has no QED radiative corrections; the Lambda term must
 #                 supply the WHOLE Lamb shift.
 #   SUPPLEMENTS -- QED is kept and the Lambda term is extra; the data then
@@ -237,7 +237,7 @@ print("""VERDICT
   STANDING: ordinary plus muonic hydrogen exclude every reading tried with
   Williams' lambda_p ~ 1 fm (from p-p scattering).  The 1/r^2 tail survives
   only if |Lambda| < ~1e-6 fm (e-p) and < ~1e-4 fm (mu-p).
-  Bracket (criminal bar): a NEGATIVE CANDIDATE, not a falsification of DT.
+  Bracket: a NEGATIVE CANDIDATE, not a falsification of DT.
   Defeaters: (i) Williams fixes lambda only roughly ('assumed'); (ii) the
   COM energy V_c and its labelling are not settled in the source; (iii) the
   e^{-lambda/r} form may hold only at nuclear range (a lambda that runs with
