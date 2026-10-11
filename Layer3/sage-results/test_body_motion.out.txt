@@ -6,7 +6,7 @@ test_body_motion.sage -- DT's 5-force law vs 4D geodesic motion
   [PASS] A1: EL_k = Q^-1/2 [gamma(g a + Gamma uu)_k + u_k dgamma/ds - Q d_k gamma] - (gamma u_k/2) Q^-3/2 dQ/ds, for all k, general metric
     At arc-length (Q = 1, dQ/ds = 0) EL = 0 reads
       gamma f_k = d_k gamma - u_k dgamma/ds,  f_k = (g a + Gamma uu)_k
-    and dgamma/ds = a0 u4 (q4 = gamma/a0) gives Eq 62 / manuscript Eq 6.
+    and dgamma/ds = a0 u4 (q4 = gamma/a0) gives report Eq 62.
 
 [B] The u4 term is the space-time-matter fifth force
   [PASS] B1: -a0 u4 u_mu / gamma = -(1/gamma)(dgamma/ds) u_mu (STM form, m -> gamma)

@@ -55,7 +55,7 @@ print("=" * 74)
 hbar, c, eV = 1.054571817e-34, 2.99792458e8, 1.602176634e-19
 yr = 3.15576e7
 H0 = 2.2e-18                    # s^-1 (~68 km/s/Mpc)
-a0 = 3.65e7                     # kg/m^4 (Layer-3 script 18)
+a0 = 3.65e7                     # kg/m^4 (calibrated from shock data; full repository)
 
 # ============================================================ [A]
 print("\n[A] 4D charge from Eq (72), integrated over space: d rho/dt + d J4/d y = 0")

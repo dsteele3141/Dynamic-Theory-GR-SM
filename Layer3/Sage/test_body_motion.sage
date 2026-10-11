@@ -128,7 +128,7 @@ ok("A1: EL_k = Q^-1/2 [gamma(g a + Gamma uu)_k + u_k dgamma/ds - Q d_k gamma]"
    " - (gamma u_k/2) Q^-3/2 dQ/ds, for all k, general metric", allok)
 print("    At arc-length (Q = 1, dQ/ds = 0) EL = 0 reads")
 print("      gamma f_k = d_k gamma - u_k dgamma/ds,  f_k = (g a + Gamma uu)_k")
-print("    and dgamma/ds = a0 u4 (q4 = gamma/a0) gives Eq 62 / manuscript Eq 6.")
+print("    and dgamma/ds = a0 u4 (q4 = gamma/a0) gives report Eq 62.")
 
 # ---------------------------------------------------------------------------
 print("\n[B] The u4 term is the space-time-matter fifth force")
@@ -201,7 +201,7 @@ du4ds = (-f4_required).simplify_full()
 print("    q4 equation at u4 = 0: du4/ds = %s" % du4ds)
 ok("E1: du4/ds = -1/q4 = -a0/gamma != 0: u4 = 0 is NOT preserved freely",
    is_zero(du4ds + 1 / qq4))
-a0num, gAl = 3.65e7, 2.70e3                   # kg m^-4 (Layer-3 script 18); Al density
+a0num, gAl = 3.65e7, 2.70e3                   # kg m^-4 (shock calibration, full repository); Al density
 rate = a0num / gAl
 print("    aluminium: |du4/ds| = a0/gamma = %.2e per metre of proper path" % rate)
 ok("E2: the free drive is enormous (> 1e3 per metre): the restriction is not optional",

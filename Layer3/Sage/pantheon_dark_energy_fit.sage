@@ -115,7 +115,7 @@ print("    DT, no candle (xi=0, pure log-z): chi2 = %.1f (chi2/dof=%.2f)"
       % (chi2_DT_nocandle, chi2_DT_nocandle / (N - 1)))
 print("    DT best fit: xi = %.3f -> chi2 = %.1f (dof=%d, chi2/dof=%.2f)"
       % (xi_best, chi2_DT, N - 2, chi2_DT / (N - 2)))
-ok("DT best-fit candle rate xi is order 0.1-0.5 (consistent with scripts 24/25).",
+ok("DT best-fit candle rate xi is order 0.1-0.5 (consistent with the earlier estimates in the full repository).",
    0.1 < xi_best < 0.5)
 ok("the evolving candle is NEEDED: it improves DT's fit over pure log-z by >25 in chi2.",
    (chi2_DT_nocandle - chi2_DT) > 25)
@@ -140,7 +140,7 @@ print("  dark-energy signal: it crushes the no-dark-energy Einstein-de Sitter fi
 print("  (chi2 1469 -> 80) and lands close to LambdaCDM (chi2 51). But a residual")
 print("  Delta chi2 ~ %.0f favours LambdaCDM, so dark energy does NOT vanish" % (chi2_DT - chi2_LCDM))
 print("  completely -- DT is a near-miss, not an exact substitute, on current SN data.")
-print("  And even this near-fit needs the |Gdot/G| question settled (script 26):")
+print("  And even this near-fit needs the |Gdot/G| question settled (full repository):")
 print("  the candle rate xi~0.24 is a local-G drift (excluded) unless it is a gauge")
 print("  effect (allowed, but then degenerate with the very data it fits here).")
 

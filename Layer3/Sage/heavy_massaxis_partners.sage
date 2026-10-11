@@ -5,7 +5,7 @@
 #   weak_chirality_u4 / noflux_boundary_derivation (zero mode exp(-M y)),
 #   mass_term_su2 (the native mass survives only in the heavy modes) and
 #   gauge_fields_halfline (gauge fields independent of y). a0 = 3.65e7 kg/m^4
-#   (Layer-3 script 18).
+#   (calibrated from shock data; full repository).
 # Collider bounds (imported, indicative): vector-like leptons excluded to
 #   ~1 TeV (CMS 2022), vector-like quarks to ~1.5 TeV (ATLAS/CMS 2022-23).
 # Supplementary Materials: step [P2], Sec. S5 (code index: Sec. S6).

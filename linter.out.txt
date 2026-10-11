@@ -1,6 +1,6 @@
 ========================================================================
 DYNAMIC THEORY -- SAGE LINTER  (linter.py)
-Run: 2026-10-11 11:23:42
+Run: 2026-10-11 11:37:54
 Scanned: Dynamic-Theory-GR-SM (repository root)
 Sage scripts: 43  (across Layer2, Layer3; 0 plot_* skipped)
 Cadabra cross-checks: 0
@@ -210,3 +210,5 @@ weyl_vector_mass.sage
 SUMMARY    OK: 107    INFO: 0    WARN: 0    FAIL: 0
 RESULT: CLEAN -- no inconsistencies detected.
 ========================================================================
+
+Report written to: /home/dsteele/lean/Dynamic-Theory-GR-SM/linter.out.txt

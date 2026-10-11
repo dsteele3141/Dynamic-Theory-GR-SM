@@ -6,14 +6,14 @@ Verifying A_ab matches the correct pullback formula (Eq 131 expansion):
   [PASS] All A_ab components match the correct Eq-131 pullback.
 
 ============================================================
-COMPUTATION 2: Audit of Manuscript Eq (163) Literal Entries
+COMPUTATION 2: Audit of Report Eq (163) Literal Entries
 ============================================================
 
-Manuscript Eq (163) entry A_01: gh44(u0, u1, u2, u3)*diff(f(u0, u1, u2, u3), u0)*diff(f(u0, u1, u2, u3), u1) + 2*gh04(u0, u1, u2, u3)*diff(f(u0, u1, u2, u3), u1) + gh01(u0, u1, u2, u3)
+Report Eq (163) entry A_01: gh44(u0, u1, u2, u3)*diff(f(u0, u1, u2, u3), u0)*diff(f(u0, u1, u2, u3), u1) + 2*gh04(u0, u1, u2, u3)*diff(f(u0, u1, u2, u3), u1) + gh01(u0, u1, u2, u3)
 Pullback result A_01: gh14(u0, u1, u2, u3)*d(f)/du0 + (gh44(u0, u1, u2, u3)*d(f)/du0 + gh04(u0, u1, u2, u3))*d(f)/du1 + gh01(u0, u1, u2, u3)
-  Residual (correct - manuscript) = gh14(u0, u1, u2, u3)*diff(f(u0, u1, u2, u3), u0) - gh04(u0, u1, u2, u3)*diff(f(u0, u1, u2, u3), u1)
+  Residual (correct - report) = gh14(u0, u1, u2, u3)*diff(f(u0, u1, u2, u3), u0) - gh04(u0, u1, u2, u3)*diff(f(u0, u1, u2, u3), u1)
   (Printed entry duplicates gh_04*f_1 instead of using gh_04*f_1 + gh_14*f_0)
-  [PASS] Eq-163 source error is real: manuscript A_01 differs from the correct pullback.
+  [PASS] Eq-163 source error is real: report A_01 differs from the correct pullback.
 
 ============================================================
 COMPUTATION 3: Decomposition Analysis (Eq 164)

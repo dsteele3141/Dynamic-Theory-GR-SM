@@ -17,7 +17,8 @@ charge_quantisation_prediction.sage -- does q = Ze fix the hypercharges?
     q_nu     = -3*t + 1/2
     q_H atom = 0
   [PASS] q_n = delta, q_nu = -delta, with delta = 3 yQ - 1/2 (the B-L direction)
-  [PASS] q_p + q_e = 0 for every delta: atom neutrality does NOT test delta, the neutron does
+  [PASS] q_p + q_e = 0 for every delta: hydrogen is neutral and does NOT test delta
+  [PASS] an atom with N neutrons carries N delta: neutrality of matter (SF6) tests delta
   [PASS] the SM point yQ = 1/6 is delta = 0
 
 [D] DT: every free state carries Z e, Z integer, e universal
@@ -29,25 +30,26 @@ charge_quantisation_prediction.sage -- does q = Ze fix the hypercharges?
     ~1/x elementary units
 
 [E] Data
-    |delta| = |q_n|/e < 1.8e-21 (2 sigma)
+    |delta| = |q_n|/e < 1.8e-21 (2 sigma; PDG average of the neutron beam and SF6)
   [PASS] SM + Dirac nu_R allows any |delta| < 2e-21; DT allows only 0
   [PASS] a nonzero delta in DT needs |Z_e| > 5e20: excluded unless e is not the electron's unit
 
 NET.
   * With right-handed neutrinos and Dirac masses the SM's charges carry a
-    free parameter delta along B-L: q_n = delta, q_nu = -delta, while atoms
-    (q_p + q_e = 0) stay neutral for every delta. The SM fits delta = 0; it
-    does not require it (Majorana masses would).
+    free parameter delta along B-L: q_n = delta, q_nu = -delta, while
+    q_p + q_e = 0, so hydrogen is neutral for every delta and an atom with
+    N neutrons carries N delta. The SM fits delta = 0; it does not require
+    it (Majorana masses would).
   * DT's q = Z e holds for every free state whatever the field content, so
     q_n = Z_n e with Z_n an integer. Given |q_n| < 2e-21 e, Z_n = 0 and
     delta = 0 EXACTLY, independently of whether neutrinos are Dirac or
     Majorana.
   * PREDICTION: q_n = q_nu = 0 exactly; any nonzero neutron or neutrino
     charge falsifies DT while being allowed by the SM with Dirac neutrinos.
-  * Bracket: this is the compactness of electromagnetic U(1). Dirac's
+  * Caveat: this is the compactness of electromagnetic U(1). Dirac's
     monopole argument and grand unification also give it; DT gets it from
-    the quantum condition without either. The prediction is a null one: it
-    is consistent with all data and falsifiable, but it cannot be confirmed
-    by a measurement, only bounded.
+    the quantum condition without either. It is an exact prediction of zero
+    charge: consistent with all data and falsifiable, but a measurement can
+    only bound it, not confirm it.
 
 ALL ASSERTIONS PASSED

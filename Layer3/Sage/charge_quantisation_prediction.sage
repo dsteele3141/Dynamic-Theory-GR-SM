@@ -12,12 +12,14 @@
 # SOURCE (primary): Williams, The Dynamic Theory (2011), Eqs 7.66-7.67.
 # Dequantisation with nu_R: Babu & Mohapatra, PRL 63, 938 (1989); Foot, Lew &
 # Volkas, J. Phys. G 19, 361 (1993).
-# Data (PDG): neutron charge q_n = (-0.2 +- 0.8) x 1e-21 e (Baumann et al.
-# 1988); |q_p + q_e| < 1e-21 e (Bressi et al. 2011).
+# Data (PDG average): neutron charge q_n = (-0.2 +- 0.8) x 1e-21 e, from the
+# free-neutron beam (Baumann et al. 1988) and the neutrality of SF6 (Bressi et
+# al. 2011; a molecule with N neutrons carries N q_n when q_p + q_e = 0).
 #
 #   [A] SM + nu_R, Dirac Yukawas: anomalies leave a ONE-parameter family
 #   [B] SM without nu_R: the same conditions QUANTISE (the known result)
-#   [C] physical charges of p, n, e, nu, H on the family: q_n = delta
+#   [C] physical charges of p, n, e, nu, atoms on the family: q_n = delta,
+#       and an atom with N neutrons carries N delta
 #   [D] DT's q = Z e on free states: delta = -Z_n / (Z_e + Z_n), so
 #       delta = 0 unless |Z_e| ~ 1/|delta|
 #   [E] data: |delta| < ~2e-21, so Z_n = 0: delta = 0 EXACTLY
@@ -79,7 +81,11 @@ for name, q in [("p", qp), ("n", qn), ("e", qe), ("nu", qnu), ("H atom", qp + qe
 check(bool((qn - delta).simplify_full() == 0) and bool((qnu + delta).simplify_full() == 0),
       "q_n = delta, q_nu = -delta, with delta = 3 yQ - 1/2 (the B-L direction)")
 check(bool((qp + qe).simplify_full() == 0),
-      "q_p + q_e = 0 for every delta: atom neutrality does NOT test delta, the neutron does")
+      "q_p + q_e = 0 for every delta: hydrogen is neutral and does NOT test delta")
+Zat, Nat = var('Zat Nat')
+q_atom = Zat * (qp + qe) + Nat * qn
+check(bool((q_atom - Nat * delta).simplify_full() == 0),
+      "an atom with N neutrons carries N delta: neutrality of matter (SF6) tests delta")
 check(bool(delta.subs(t=QQ(1)/6) == 0), "the SM point yQ = 1/6 is delta = 0")
 
 # ============================================================ [D]
@@ -101,26 +107,27 @@ print("    ~1/x elementary units")
 print("\n[E] Data")
 qn_meas, qn_err = -0.2e-21, 0.8e-21
 bound = abs(qn_meas) + 2 * qn_err
-print("    |delta| = |q_n|/e < %.1e (2 sigma)" % bound)
+print("    |delta| = |q_n|/e < %.1e (2 sigma; PDG average of the neutron beam and SF6)" % bound)
 check(bound < 1e-20, "SM + Dirac nu_R allows any |delta| < 2e-21; DT allows only 0")
 check(1 / bound > 1e20,
       "a nonzero delta in DT needs |Z_e| > 5e20: excluded unless e is not the electron's unit")
 print("""
 NET.
   * With right-handed neutrinos and Dirac masses the SM's charges carry a
-    free parameter delta along B-L: q_n = delta, q_nu = -delta, while atoms
-    (q_p + q_e = 0) stay neutral for every delta. The SM fits delta = 0; it
-    does not require it (Majorana masses would).
+    free parameter delta along B-L: q_n = delta, q_nu = -delta, while
+    q_p + q_e = 0, so hydrogen is neutral for every delta and an atom with
+    N neutrons carries N delta. The SM fits delta = 0; it does not require
+    it (Majorana masses would).
   * DT's q = Z e holds for every free state whatever the field content, so
     q_n = Z_n e with Z_n an integer. Given |q_n| < 2e-21 e, Z_n = 0 and
     delta = 0 EXACTLY, independently of whether neutrinos are Dirac or
     Majorana.
   * PREDICTION: q_n = q_nu = 0 exactly; any nonzero neutron or neutrino
     charge falsifies DT while being allowed by the SM with Dirac neutrinos.
-  * Bracket: this is the compactness of electromagnetic U(1). Dirac's
+  * Caveat: this is the compactness of electromagnetic U(1). Dirac's
     monopole argument and grand unification also give it; DT gets it from
-    the quantum condition without either. The prediction is a null one: it
-    is consistent with all data and falsifiable, but it cannot be confirmed
-    by a measurement, only bounded.
+    the quantum condition without either. It is an exact prediction of zero
+    charge: consistent with all data and falsifiable, but a measurement can
+    only bound it, not confirm it.
 """)
 print("ALL ASSERTIONS PASSED")

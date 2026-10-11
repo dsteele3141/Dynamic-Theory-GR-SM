@@ -55,20 +55,20 @@ all_match = all((A[a,b].expr() - correct_pullback_formula(a,b)).simplify_full().
                 for a in range(4) for b in range(4))
 ok("All A_ab components match the correct Eq-131 pullback.", all_match)
 
-# 5. AUDIT MANUSCRIPT EQ (163)
+# 5. AUDIT REPORT EQ (163)
 print("\n" + "="*60)
-print("COMPUTATION 2: Audit of Manuscript Eq (163) Literal Entries")
+print("COMPUTATION 2: Audit of Report Eq (163) Literal Entries")
 print("="*60)
 
-# The manuscript's erroneous A_01 entry: gh01 + 2*gh04*f_1 + gh44*f_0*f_1
-A01_manuscript = gh[0,1].expr() + 2*gh[0,4].expr()*f_derivs[1] + gh[4,4].expr()*f_derivs[0]*f_derivs[1]
-diff_01 = (A[0,1].expr() - A01_manuscript).simplify_full()
+# The report's erroneous A_01 entry: gh01 + 2*gh04*f_1 + gh44*f_0*f_1
+A01_report = gh[0,1].expr() + 2*gh[0,4].expr()*f_derivs[1] + gh[4,4].expr()*f_derivs[0]*f_derivs[1]
+diff_01 = (A[0,1].expr() - A01_report).simplify_full()
 
-print(f"\nManuscript Eq (163) entry A_01: {A01_manuscript}")
+print(f"\nReport Eq (163) entry A_01: {A01_report}")
 print(f"Pullback result A_01: {A[0,1]}")
-print(f"  Residual (correct - manuscript) = {diff_01}")
+print(f"  Residual (correct - report) = {diff_01}")
 print("  (Printed entry duplicates gh_04*f_1 instead of using gh_04*f_1 + gh_14*f_0)")
-ok("Eq-163 source error is real: manuscript A_01 differs from the correct pullback.",
+ok("Eq-163 source error is real: report A_01 differs from the correct pullback.",
    not diff_01.is_zero())
 
 # 6. DECOMPOSITION A_ab = gh_ab + h_ab (Eq 164)
