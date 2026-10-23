@@ -17,7 +17,8 @@ heavy_massaxis_partners.sage -- does DT fix the heavy-partner scale M?
   [PASS] continuum: m f_L = M sin(k y) - k cos(k y), and (d_y + M) f_L = m f_R closes
   [PASS] int f_L^0 f_L^k dy = 0: a y-independent gauge field cannot turn a zero mode into a partner
     So W, Z, photon and gluons produce partners only in PAIRS (threshold 2M);
-    single production needs Yukawa mixing, suppressed by (m_f / M)^2.
+    with one M for every field the Yukawa overlaps vanish too, so single
+    production needs block-dependent M (see partner_stability.sage).
 
 [C] Candidate scales for M
     (i) Williams' '+1' in Compton units: M = m_f for each fermion

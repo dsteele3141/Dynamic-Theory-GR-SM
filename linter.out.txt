@@ -1,8 +1,8 @@
 ========================================================================
 DYNAMIC THEORY -- SAGE LINTER  (linter.py)
-Run: 2026-10-11 12:48:07
+Run: 2026-10-23 22:35:46
 Scanned: Dynamic-Theory-GR-SM (repository root)
-Sage scripts: 43  (across Layer2, Layer3; 0 plot_* skipped)
+Sage scripts: 44  (across Layer2, Layer3; 0 plot_* skipped)
 Cadabra cross-checks: 0
 ========================================================================
 
@@ -140,6 +140,10 @@ pantheon_dark_energy_fit.out.txt
   [OK  ] runtime: no traceback/Error/FAIL in result output.
 pantheon_dark_energy_fit.sage
   [OK  ] path: stdout-capture convention (no self-managed output path).
+partner_stability.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+partner_stability.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
 strong_sector_su3.out.txt
   [OK  ] runtime: no traceback/Error/FAIL in result output.
 strong_sector_su3.sage
@@ -207,6 +211,6 @@ weyl_vector_mass.sage
   [OK  ] signature consistent: all 18 g44 definition(s) spacelike (g44 < 0).
 
 ========================================================================
-SUMMARY    OK: 107    INFO: 0    WARN: 0    FAIL: 0
+SUMMARY    OK: 109    INFO: 0    WARN: 0    FAIL: 0
 RESULT: CLEAN -- no inconsistencies detected.
 ========================================================================

@@ -99,6 +99,7 @@ Assumptions beyond the three laws are tabulated in `ASSUMPTIONS.md`.
 
 - `Layer3/Sage/charge_quantisation_prediction.sage` [P1]: q = Ze fixes the neutron and neutrino charges at exactly zero, also with right-handed neutrinos
 - `Layer3/Sage/heavy_massaxis_partners.sage` [P2]: heavy partners along the mass axis: a continuum above a free scale M, bounded at about 1 TeV
+- `Layer3/Sage/partner_stability.sage` [P2]: the pair rule is exact, so the lightest partner is stable: excluded as the dark matter, so M exceeds the reheating temperature or differs between fields
 - `Layer3/Sage/blackett_coupling_bodies.sage` [P3]: the magnetic moment of a spinning neutral body: excluded as a magnetic field, read as GR frame dragging
 - `Layer3/Sage/T2_2_charge_conservation.sage` [P4]: the modified charge-conservation law with the fifth current component J4
 - `Layer3/Sage/u4_relaxation_bounds.sage` [P4]: departures from u4 = 0: 4D charge conserved exactly; the breathing mode bounded by Cassini

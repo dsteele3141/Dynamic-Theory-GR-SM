@@ -78,7 +78,8 @@ ov = integrate(exp(-M * y) * fLk, y, 0, oo)
 check(bool(ov.simplify_full() == 0),
       "int f_L^0 f_L^k dy = 0: a y-independent gauge field cannot turn a zero mode into a partner")
 print("    So W, Z, photon and gluons produce partners only in PAIRS (threshold 2M);")
-print("    single production needs Yukawa mixing, suppressed by (m_f / M)^2.")
+print("    with one M for every field the Yukawa overlaps vanish too, so single")
+print("    production needs block-dependent M (see partner_stability.sage).")
 
 # ============================================================ [C]
 print("\n[C] Candidate scales for M")
