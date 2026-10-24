@@ -1,0 +1,45 @@
+======================================================================
+Weyl objection (second clock effect) — two-sector escape, verified
+======================================================================
+
+----------------------------------------------------------------------
+(A) Gravitational sector INTEGRABLE: phi_i = d_i ln f^{1/2} exact => F=0
+----------------------------------------------------------------------
+  F_ij = d_i phi_j - d_j phi_i = 0 for ALL i,j (any f): True
+  closed-loop check (concrete f = 1 + x^2 + y^2, unit circle):
+    ∮ phi_i dx^i = 0   (=0 ⇒ length integrable; no second clock effect)
+  => gravitational/conformal sector is Weyl-Integrable (WIST). [VERIFIED]
+
+----------------------------------------------------------------------
+(B) EM sector: imaginary alpha^1 = i*alpha  =>  Weyl factor is a U(1) phase
+----------------------------------------------------------------------
+  Re(phi_i) = [0, 0, 0, 0]   (=> d ln|ell| = 0, magnitude path-independent)
+  |exp(∫phi)|^2 = |exp(i*theta)|^2 = 1   (pure phase, no length rescaling)
+  => observable length |ell| is UNCHANGED; only an EM/U(1) phase transports.
+     (London 1927 / Weyl 1929 reinterpretation.)  [VERIFIED]
+
+----------------------------------------------------------------------
+(C) Single-valued phase: London quantisation exp(∮phi)=exp(2*pi*i*n)=1
+----------------------------------------------------------------------
+  exp(2*pi*i*n) = 1 for n in {1,2,3,-1,-5}: True
+  (proved generally for integer n in Lean: T2_10_London.london_holonomy.)
+  => the EM phase is single-valued around closed loops: wavefunction well-
+     defined, no history dependence — exactly Bohr-Sommerfeld quantisation.
+
+======================================================================
+SUMMARY — the Dynamic Theory escapes Einstein's second-clock objection:
+  (A) gravity sector: exact phi (eq 65) => curl F = 0, ∮phi = 0 (WIST,
+      integrable) — no length non-integrability.                       [OK]
+  (B) EM sector: imaginary coupling (alpha^1=i alpha) => Weyl factor is a
+      pure U(1) phase, |ell| path-independent (London/Weyl-1929).       [OK]
+  (C) London quantisation => exp(∮phi)=1, phase single-valued.          [OK]
+
+  => the genuinely non-integrable part is the EM field, carried by an
+     imaginary coupling as an unobservable phase; the metric sector is
+     integrable. No REAL, observable second clock effect.
+
+  RESIDUAL CHECK (done in T1_8_conformal_gauge.sage): confirm the conformal
+  gauge ĝ -> f·ĝ introduces no real rescaling of physical lengths, and that
+  the exact piece (gravity) and non-exact F (EM) split is exactly Williams'
+  decomposition. Reality structure here is consistent with that reading.
+======================================================================

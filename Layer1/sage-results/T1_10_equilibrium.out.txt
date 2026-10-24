@@ -1,0 +1,33 @@
+============================================================
+COMPUTATION 1: Equilibrium Inequality (Eq 12)
+============================================================
+
+Restoration Process (Spontaneous):
+  LHS: -delta_S*phi
+  RHS: F*delta_q - delta_U
+  Condition: LHS >= RHS
+
+Rearranged Virtual Displacement form (Eq 12 LHS): -F*delta_q - delta_S*phi + delta_U
+  [PASS] Eq 12 LHS is the (sign-flipped) restoration margin (restoration_lhs - restoration_rhs).
+  NOTE: Williams uses strict '>' for true equilibrium (irreversibility).
+
+============================================================
+COMPUTATION 2: Free Energy Maximum (Eq 13)
+============================================================
+
+Free Energy A_max (Eq 13): F*delta_q + delta_S*phi - delta_U
+  [PASS] Eq 13: A_max = -(Eq 12 LHS).
+
+Least work delta_A_min: -F*delta_q - delta_S*phi + delta_U
+  [PASS] Least-work form delta_A_min equals Eq 12 LHS.
+
+============================================================
+COMPUTATION 3: Connection to Helmholtz function K
+============================================================
+
+Equilibrium condition: -delta_S*phi + delta_U - F*delta_q >= 0
+  => delta(K - Fq) >= 0 at constant dot{q}
+  [PASS] Mechanical equilibrium minimizes (K - Fq): delta_K - F*delta_q = Eq 12 LHS.
+
+Audit Complete: T1_10_equilibrium.sage
+============================================================

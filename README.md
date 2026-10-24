@@ -6,19 +6,24 @@ and checks that the manuscript relies on.
 
 ## How to read this
 
+- `Layer1/` holds the thermodynamic foundations: the first law with the mechanical
+  work term, the integrating factor and entropy, the stability conditions, the
+  Lorentzian stability metric and the Weyl gauge vector.
 - `Layer2/` holds the five-dimensional foundations: the 5D metric, the five-force,
   the 5D Dirac ansatz and its coupling to fields.
 - `Layer3/` holds the four-dimensional sectors reached under conservation of mass
   (u4 = 0) and the quantum condition: general relativity, the Standard Model, the
   comparison with data, and the predictions and bounds.
-- The three laws themselves are adopted, as in the manuscript, and are not coded here.
+- The three laws are premises. The code checks the mathematics that follows from
+  them; the physical identifications (the empirical velocity factor, the stability
+  form as a metric, entropy as the time coordinate) are stated as assumptions.
 - The Lean files check algebraic steps and the consistency of the adopted ansatz
   (for example, that the 5D Dirac factorisation has a matrix realisation and none
   in a commutative ring). They do not test the physics; comparison with experiment
   is done in the Sage scripts.
 - Each script header names the step it supports in the Supplementary Materials,
   e.g. `Supplementary Materials: step [G2], Sec. S3`. The same tag is shown after
-  each file below (F = Sec. S2, G = S3, S = S4, P = S5; code index in Sec. S6).
+  each file below (L, F = Sec. S2, G = S3, S = S4, P = S5; code index in Sec. S6).
 
 ## Tools
 
@@ -32,6 +37,7 @@ and checks that the manuscript relies on.
 ```
 lake build                          # Lean (toolchain pinned in lean-toolchain)
 lake env lean AxiomCheck.lean       # axiom footprint: 0 sorry, standard axioms only
+cd Layer1 && sage Sage/<name>.sage > sage-results/<name>.out.txt   # Layer1 scripts
 cd Layer2 && sage Sage/<name>.sage > sage-results/<name>.out.txt   # Layer2 scripts
 cd Layer3 && sage Sage/<name>.sage > sage-results/<name>.out.txt   # Layer3 scripts
 python3 linter.py                   # consistency sweep over all stored outputs
@@ -40,6 +46,28 @@ python3 linter.py                   # consistency sweep over all stored outputs
 Assumptions beyond the three laws are tabulated in `ASSUMPTIONS.md`.
 
 ## Contents
+
+### Thermodynamic foundations: the three laws to the Weyl gauge vector (manuscript Sec. 2.1)
+
+- `Layer1/Sage/T1_4_maxwell_relations.sage` [L1]: first law with the mechanical work term; exact differentials of the potentials H, K, G; the four Maxwell relations
+- `Layer1/Lean/T1_4_MaxwellRelations.lean` [L1]: the potentials' differentials, Maxwell relations as Clairaut symmetry, and the energy-capacity relations in Lean
+- `Layer1/Sage/T1_1-3_integrating_factor.sage` [L2, L4]: separable integrating factor phi(qdot) f(sigma); energy ratio; Eq 6 Euler-Lagrange equations are d(dE/phi) = 0
+- `Layer1/Lean/T1_1_IntegratingFactor.lean` [L2]: velocity-independent ratios force the product form phi(qdot) f(sigma)
+- `Layer1/Lean/T1_1_Universality.lean` [L2]: the velocity factor is universal: one phi for all systems
+- `Layer1/Lean/T1_2_AbsoluteVelocity.lean` [L3]: energy ratios depend only on phi; no exchange at the absolute velocity; the empirical phi vanishes at c
+- `Layer1/Lean/T1_3_Entropy.lean` [L4]: dE/phi exact, entropy a state function, entropy increase from the Clausius bound
+- `Layer1/Sage/T1_10_equilibrium.sage` [L4]: equilibrium inequality, free-energy maximum and least work, connection to K
+- `Layer1/Lean/T1_10_Equilibrium.lean` [L4]: the same equilibrium conditions in Lean
+- `Layer1/Sage/T1_5_stability_conditions.sage` [L5]: second-order stability: the Hessian of U in (q, S) is positive definite
+- `Layer1/Lean/T1_5_Sylvester.lean` [L5]: Sylvester's criterion (both directions) for the stability quadratic
+- `Layer1/Sage/T1_6_stability_metric.sage` [L6]: solving the stability arc length for the entropy coordinate gives the (+,-,-,-) metric; Minkowski in the flat limit
+- `Layer1/Sage/T1_6_general_lorentzian_necessity.sage` [L6]: with cross-terms: the Schur complement keeps positive definiteness, so the signature stays (1,n)
+- `Layer1/Lean/T1_6_StabilityMetric.lean` [L6]: the signature flip, determinants and the Minkowski limit in Lean
+- `Layer1/Lean/T1_6_SignatureNecessity.lean` [L6]: a Euclidean signature is impossible; the Lorentzian split is forced
+- `Layer1/Lean/T1_6_SignatureInertia.lean` [L6]: the (1,n) signature is basis-independent (Sylvester inertia)
+- `Layer1/Lean/T1_7_8_Connection.lean` [L7]: symmetric metric-compatible connection; conformal rescaling gives the Weyl connection and gauge vector
+- `Layer1/Sage/T1_8_conformal_gauge.sage` [L7]: the Weyl gauge freedom changes only the length unit: field strength and observables invariant
+- `Layer1/Sage/T1_8_weyl_integrability.sage` [L7]: the gravitational gauge vector is a gradient (no second-clock effect); the electromagnetic one is a pure U(1) phase
 
 ### The 5D manifold, five-force and 5D Dirac ansatz (manuscript Sec. 2.2, 4.1)
 

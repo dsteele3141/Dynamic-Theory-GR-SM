@@ -1,0 +1,29 @@
+============================================================
+COMPUTATION 1: Form A Stability (Eq 14-15)
+============================================================
+
+Taylor Expansion (Eq 14) Audit:
+  Correct 2nd Order: 1/2*U_SS*delta_S^2 + U_qS*delta_S*delta_q + 1/2*U_qq*delta_q^2
+  Manuscript 2nd Order: U_SS*delta_S^2 + 2*U_qS*delta_S*delta_q + 1/2*U_qq*delta_q^2
+  AUDIT: Manuscript coefficients are wrong (doubled).
+  CONCLUSION: Source Error in Eq 14 coefficients confirmed.
+  [PASS] Eq 14 source error is real: manuscript 2nd-order form differs from the correct one.
+
+Stability Quadratic (Form A): 1/2*U_SS*delta_S^2 + U_qS*delta_S*delta_q + 1/2*U_qq*delta_q^2
+  [PASS] First-order terms cancel exactly: stability margin = the 2nd-order form.
+
+Hessian Determinant Condition: -U_qS^2 + U_SS*U_qq > 0
+  [PASS] Hessian determinant of the stability quadratic equals U_qq U_SS - U_qS^2 (Page 32).
+
+============================================================
+COMPUTATION 2: Form B Stability (Velocity Variables)
+============================================================
+
+Form B Cross-term Cancellation (delta q * delta qdot):
+  From ∂²K/∂qdot∂q: -dU_dq_mF*phi_p/phi
+  From phi' * delta S: dU_dq_mF*phi_p/phi
+  Total: 0
+  [PASS] Form B cross-terms (delta q * delta qdot) cancel exactly (diagonal stability).
+
+Audit Complete: T1_5_stability_conditions.sage
+============================================================

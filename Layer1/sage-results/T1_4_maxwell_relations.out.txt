@@ -1,0 +1,45 @@
+============================================================
+COMPUTATION 1: Differentials and Source Errors
+============================================================
+
+Eq 7 (dU): F*dq + dS*phi [BASE]
+Eq 8 (dH): dS*phi - dF*q [EXACT]
+  (∂H/∂S)_F = phi
+  (∂H/∂F)_S = -q
+  [PASS] Eq 8: (dH/dS)_F = phi and (dH/dF)_S = -q.
+
+Eq 9 (dK) Corrected: -S*dqdot*phi_p + F*dq
+  (∂K/∂dqdot)_q = -S*phi_p
+  (∂K/∂q)_dqdot = F
+  AUDIT: Manuscript Eq 9 prints '-F dq' and partial 'phi*F'.
+  CONCLUSION: Confirmed Source Errors in signs and factors.
+  [PASS] Eq 9 CORRECTED: (dK/dq)_qdot = F (not phi*F) and (dK/dqdot)_q = -S*phi_p.
+
+Eq 10 (dG) Corrected: -S*dqdot*phi_p - dF*q
+  (∂G/∂dqdot)_F = -S*phi_p
+  (∂G/∂F)_dqdot = -q
+  AUDIT: Manuscript Eq 10 prints '+q dF'.
+  CONCLUSION: Confirmed Source Error in sign.
+  [PASS] Eq 10 CORRECTED: (dG/dF)_qdot = -q (not +q) and (dG/dqdot)_F = -S*phi_p.
+
+============================================================
+COMPUTATION 2: Maxwell Relation Identities (Schwarz Symmetry)
+============================================================
+  [PASS] Maxwell 1 (from dU): residual = 0.
+  [PASS] Maxwell 2 (from dH): residual = 0.
+  [PASS] Maxwell 3 (from dK): residual = 0.
+  [PASS] Maxwell 4 (from dG): residual = 0.
+
+AUDIT: Relation 2 in Eq 11 prints 'phi'(q)'.
+CONCLUSION: Source Error confirmed. Correct term is 'phi'(dot q)'.
+
+============================================================
+COMPUTATION 3: Energy Capacity Formulas (Page 27)
+============================================================
+
+Cq - CF LHS (substituted): -dF_dqdot^2*phi/(dF_dq*phi_p)
+Cq - CF RHS: -dF_dqdot^2*phi/(dF_dq*phi_p)
+  [PASS] Energy-capacity identity Cq - CF matches (phi/phi') (dq/dqdot)_F (dF/dqdot)_q.
+
+Audit Complete: T1_4_maxwell_relations.sage
+============================================================

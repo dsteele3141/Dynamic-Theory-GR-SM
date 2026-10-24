@@ -1,0 +1,55 @@
+======================================================================
+Weyl objection residual — conformal gauge: no real length rescaling
+======================================================================
+
+----------------------------------------------------------------------
+(1) F_ij = d_i phi_j - d_j phi_i is GAUGE-INVARIANT (phi -> phi + dLambda)
+----------------------------------------------------------------------
+  F[phi+dLambda] - F[phi] = 0 for all i,j: True
+  => the observable field strength does NOT depend on the conformal gauge.
+
+----------------------------------------------------------------------
+(2) Holonomy ∮ phi is GAUGE-INVARIANT: ∮ dLambda = 0 on a closed loop
+----------------------------------------------------------------------
+  ∮ dLambda (unit circle, representative Lambda) = 0
+  => the gauge change of the holonomy vanishes: ∮phi is gauge-invariant
+     (and equals ∬F by Stokes — fixed by the observable field).
+
+----------------------------------------------------------------------
+(3) Open-path gauge piece ∫ dLambda is PATH-INDEPENDENT (= unit change)
+----------------------------------------------------------------------
+  ∫dLambda(straight) - ∫dLambda(parabola), same endpoints = 0
+  ∫dLambda = Lambda(B) - Lambda(A) = 1 (depends only on endpoints)
+  => the gauge rescaling factor exp(∫dLambda) depends only on endpoints:
+     it is a position-dependent change of the local length UNIT, NOT a
+     path/history-dependent (second-clock) effect.
+
+----------------------------------------------------------------------
+(4a) Length RATIOS at a point invariant under ell^2 -> f·ell^2
+----------------------------------------------------------------------
+  (f l1^2)/(f l2^2) - l1^2/l2^2 = 0
+  => only the overall unit changes; relative (measured) lengths are fixed.
+
+----------------------------------------------------------------------
+(4b) Weyl term is LINEAR in phi => connection invariant under eq 37
+----------------------------------------------------------------------
+  W(phi+psi) - W(phi) - W(psi) = 0 for all k,i,j: True
+  => combined transform: Gamma_Weyl[f g, phi + (1/2)d ln f]
+       = (Gamma2[g] + W((1/2)d ln f))  -  (W(phi) + W((1/2)d ln f))
+       = Gamma2[g] - W(phi) = Gamma_Weyl[g, phi].   (eq 37)
+     [conformal shift Gamma2[f g] = Gamma2[g] + W((1/2)d ln f): Lean
+      T2_… weyl_connection; here we supply the linearity that closes it.]
+
+======================================================================
+SUMMARY — conformal gauge introduces NO real rescaling (eq 37):
+  (1) field strength F gauge-invariant.                                 [OK]
+  (2) closed-loop holonomy ∮phi gauge-invariant.                        [OK]
+  (3) open-path gauge piece path-independent (= local unit change only). [OK]
+  (4) length ratios invariant; Weyl connection invariant (eq 37).       [OK]
+  => the conformal/Weyl gauge changes only the local length UNIT; all
+     observables (F, holonomy, ratios, connection/parallel transport) are
+     gauge-invariant. No real, history-dependent second-clock effect from
+     the gauge freedom. This closes the last residual of the Weyl escape
+     (the residual check); together with T1_8_weyl_integrability.sage the
+     two-sector escape is fully verified.
+======================================================================

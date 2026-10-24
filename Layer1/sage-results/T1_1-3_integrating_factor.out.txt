@@ -1,0 +1,33 @@
+============================================================
+COMPUTATION 1: T1.1 Integrating Factor (Eq 5)
+============================================================
+
+Ratio lambda/lambda_c = f(sigma)/g(sigma, sigmahat)
+  ∂(Ratio)/∂qdot = 0
+  [PASS] Product form: d(ratio)/dqdot vanishes (independence condition).
+
+Mixed partial ∂²ln(λ)/∂σ∂q̇ = 0
+  [PASS] Mixed partial d^2 ln(lambda)/dsigma dqdot vanishes (separable form).
+
+============================================================
+COMPUTATION 2: T1.2 Absolute Velocity
+============================================================
+
+Energy ratio ΔE/ΔE3 = phi(qdot)/phi(qdot3)
+  Expected: phi(qdot)/phi(qdot3)
+  [PASS] Energy ratio = phi(qdot)/phi(qdot3) (depends only on the velocity factor).
+
+============================================================
+COMPUTATION 3: T1.3 Variational Principle (Eq 6)
+============================================================
+
+Verifying Manuscript Eq 6 (Euler-Lagrange Equations):
+  D_tau(∂G/∂x') - ∂G/∂x residual: -(vp*phi(v)*diff(F(x, v), v) - vp*F(x, v)*diff(phi(v), v) + vp*diff(U(x, v), x)*diff(phi(v), v))/phi(v)^2
+  D_tau(∂G/∂v') - ∂G/∂v residual: (phi(v)*diff(F(x, v), v) - F(x, v)*diff(phi(v), v) + diff(U(x, v), x)*diff(phi(v), v))*xp/phi(v)^2
+  [PASS] d(dE/phi) = -C/phi^2 with C = phi F_v + (U_x - F) phi'.
+  [PASS] E-L residuals = C (-v', x')/phi^2: the Eq 6 equations are d(dE/phi) = 0.
+  [PASS] Closed case (F = dU1/dx): both E-L residuals vanish identically.
+  [PASS] Dissipative case (F = dU1/dx + k v, k != 0): the E-L residual is nonzero.
+
+Audit Complete: T1_1-3_integrating_factor.sage
+============================================================

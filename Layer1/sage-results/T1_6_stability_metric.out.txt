@@ -1,0 +1,27 @@
+============================================================
+COMPUTATION 1: Diagonal Case & Signature Flip
+============================================================
+
+Solution for (dq0)^2: (c^2*dt^2 - dq1^2*h11 - dq2^2*h22 - dq3^2*h33)/f
+In spacetime coordinates (x0=ct => dx0^2 = c^2 dt^2): c^2*dt^2 - dx1^2*h11 - dx2^2*h22 - dx3^2*h33
+  [PASS] Lorentzian signature (+,-,-,-) emerges: dt^2 coeff = +c^2; dx1^2,dx2^2,dx3^2 coeffs = -h11,-h22,-h33 (sign-flipped vs the time term).
+
+============================================================
+COMPUTATION 2: Audit of 'A' Definition (Eq 18)
+============================================================
+  [PASS] Quadratic solution for dot_q0 satisfies Eq-17 (1+1D) exactly.
+
+Algebraically correct A: (h01*v1 + sqrt(c^2*f + (h01^2 - f*h11)*v1^2))/f
+Manuscript A radicand (approx): c^2*h11*v1^2/f^2 + h01*v1^2/f
+  AUDIT: The manuscript A formula radicand multiplies terms where it should subtract.
+  CONCLUSION: Source Error in Eq 18 definition of A confirmed.
+
+============================================================
+COMPUTATION 3: Minkowski Flat Limit
+============================================================
+Flat limit (dq0)^2 = (c^2*dt^2 - dx1^2 - dx2^2 - dx3^2)/f
+  => (1/f) * [ (dx0)^2 - (dx1)^2 - (dx2)^2 - (dx3)^2 ]
+  [PASS] Flat limit recovers Minkowski: f*(dq0)^2 = c^2 dt^2 - dx1^2 - dx2^2 - dx3^2.
+
+Audit Complete: T1_6_stability_metric.sage
+============================================================

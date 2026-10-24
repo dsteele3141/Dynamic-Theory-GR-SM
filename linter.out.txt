@@ -1,10 +1,44 @@
 ========================================================================
 DYNAMIC THEORY -- SAGE LINTER  (linter.py)
-Run: 2026-10-23 22:35:46
+Run: 2026-10-24 20:39:40
 Scanned: Dynamic-Theory-GR-SM (repository root)
-Sage scripts: 44  (across Layer2, Layer3; 0 plot_* skipped)
+Sage scripts: 52  (across Layer1, Layer2, Layer3; 0 plot_* skipped)
 Cadabra cross-checks: 0
 ========================================================================
+
+### Layer1
+T1_1-3_integrating_factor.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+T1_1-3_integrating_factor.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+T1_10_equilibrium.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+T1_10_equilibrium.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+T1_4_maxwell_relations.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+T1_4_maxwell_relations.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+T1_5_stability_conditions.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+T1_5_stability_conditions.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+T1_6_general_lorentzian_necessity.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+T1_6_general_lorentzian_necessity.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+T1_6_stability_metric.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+T1_6_stability_metric.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+T1_8_conformal_gauge.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+T1_8_conformal_gauge.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+T1_8_weyl_integrability.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+T1_8_weyl_integrability.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
 
 ### Layer2
 T2_1_5D_minkowski.out.txt
@@ -211,6 +245,6 @@ weyl_vector_mass.sage
   [OK  ] signature consistent: all 18 g44 definition(s) spacelike (g44 < 0).
 
 ========================================================================
-SUMMARY    OK: 109    INFO: 0    WARN: 0    FAIL: 0
+SUMMARY    OK: 125    INFO: 0    WARN: 0    FAIL: 0
 RESULT: CLEAN -- no inconsistencies detected.
 ========================================================================
