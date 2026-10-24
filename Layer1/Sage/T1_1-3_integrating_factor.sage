@@ -1,7 +1,7 @@
 # T1.1-T1.3 - Integrating factor, absolute velocity, mechanical entropy
 #
 # Source: P. E. Williams, LA-8370-MS (LASL, 1980), Eqs 2-6.
-# Supplementary Materials: steps [L2], [L4], Sec. S2 (code index: Sec. S6).
+# Supplementary Materials: steps [L1], [L3], Sec. S2 (code index: Sec. S6).
 from sage.all import *
 
 # Symbolic DEMONSTRATION of T1.1-T1.3, not an independent derivation:

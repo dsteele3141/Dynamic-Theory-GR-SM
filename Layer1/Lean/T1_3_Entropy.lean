@@ -2,7 +2,7 @@
   T1.3 — Mechanical Entropy and the Clausius Inequality
 
   Source: P. E. Williams, LA-8370-MS (LASL, 1980), §II, eq (6) and the Clausius theorem.
-  Supplementary Materials: step [L4], Sec. S2 (code index: Sec. S6).
+  Supplementary Materials: step [L3], Sec. S2 (code index: Sec. S6).
 -/
 
 import Mathlib.Tactic

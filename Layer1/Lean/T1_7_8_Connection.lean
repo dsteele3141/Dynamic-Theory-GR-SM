@@ -2,7 +2,7 @@
   T1.7 / T1.8 — Riemannian Connection and Weyl Geometry
 
   Source: P. E. Williams, LA-8370-MS (LASL, 1980), §II, eqs (20)–(37).
-  Supplementary Materials: step [L7], Sec. S2 (code index: Sec. S6).
+  Supplementary Materials: step [L6], Sec. S2 (code index: Sec. S6).
 -/
 
 import Mathlib.Tactic

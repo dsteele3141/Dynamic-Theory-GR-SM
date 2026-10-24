@@ -2,7 +2,7 @@
 # T1.8 - Weyl objection (second clock effect): two-sector escape
 #
 # Source: P. E. Williams, LA-8370-MS (LASL, 1980), eq 65; T2.10.
-# Supplementary Materials: step [L7], Sec. S2 (code index: Sec. S6).
+# Supplementary Materials: step [L6], Sec. S2 (code index: Sec. S6).
 #
 # The Dynamic Theory is a Weyl theory (T1.8), so Einstein's 1918 objection
 # applies prima facie: in Weyl geometry length transports as

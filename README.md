@@ -49,25 +49,25 @@ Assumptions beyond the three laws are tabulated in `ASSUMPTIONS.md`.
 
 ### Thermodynamic foundations: the three laws to the Weyl gauge vector (manuscript Sec. 2.1)
 
-- `Layer1/Sage/T1_4_maxwell_relations.sage` [L1]: first law with the mechanical work term; exact differentials of the potentials H, K, G; the four Maxwell relations
-- `Layer1/Lean/T1_4_MaxwellRelations.lean` [L1]: the potentials' differentials, Maxwell relations as Clairaut symmetry, and the energy-capacity relations in Lean
-- `Layer1/Sage/T1_1-3_integrating_factor.sage` [L2, L4]: separable integrating factor phi(qdot) f(sigma); energy ratio; Eq 6 Euler-Lagrange equations are d(dE/phi) = 0
-- `Layer1/Lean/T1_1_IntegratingFactor.lean` [L2]: velocity-independent ratios force the product form phi(qdot) f(sigma)
-- `Layer1/Lean/T1_1_Universality.lean` [L2]: the velocity factor is universal: one phi for all systems
-- `Layer1/Lean/T1_2_AbsoluteVelocity.lean` [L3]: energy ratios depend only on phi; no exchange at the absolute velocity; the empirical phi vanishes at c
-- `Layer1/Lean/T1_3_Entropy.lean` [L4]: dE/phi exact, entropy a state function, entropy increase from the Clausius bound
-- `Layer1/Sage/T1_10_equilibrium.sage` [L4]: equilibrium inequality, free-energy maximum and least work, connection to K
-- `Layer1/Lean/T1_10_Equilibrium.lean` [L4]: the same equilibrium conditions in Lean
-- `Layer1/Sage/T1_5_stability_conditions.sage` [L5]: second-order stability: the Hessian of U in (q, S) is positive definite
-- `Layer1/Lean/T1_5_Sylvester.lean` [L5]: Sylvester's criterion (both directions) for the stability quadratic
-- `Layer1/Sage/T1_6_stability_metric.sage` [L6]: solving the stability arc length for the entropy coordinate gives the (+,-,-,-) metric; Minkowski in the flat limit
-- `Layer1/Sage/T1_6_general_lorentzian_necessity.sage` [L6]: with cross-terms: the Schur complement keeps positive definiteness, so the signature stays (1,n)
-- `Layer1/Lean/T1_6_StabilityMetric.lean` [L6]: the signature flip, determinants and the Minkowski limit in Lean
-- `Layer1/Lean/T1_6_SignatureNecessity.lean` [L6]: a Euclidean signature is impossible; the Lorentzian split is forced
-- `Layer1/Lean/T1_6_SignatureInertia.lean` [L6]: the (1,n) signature is basis-independent (Sylvester inertia)
-- `Layer1/Lean/T1_7_8_Connection.lean` [L7]: symmetric metric-compatible connection; conformal rescaling gives the Weyl connection and gauge vector
-- `Layer1/Sage/T1_8_conformal_gauge.sage` [L7]: the Weyl gauge freedom changes only the length unit: field strength and observables invariant
-- `Layer1/Sage/T1_8_weyl_integrability.sage` [L7]: the gravitational gauge vector is a gradient (no second-clock effect); the electromagnetic one is a pure U(1) phase
+- `Layer1/Sage/T1_1-3_integrating_factor.sage` [L1, L3]: separable integrating factor phi(qdot) f(sigma); energy ratio; Eq 6 Euler-Lagrange equations are d(dE/phi) = 0
+- `Layer1/Lean/T1_1_IntegratingFactor.lean` [L1]: velocity-independent ratios force the product form phi(qdot) f(sigma)
+- `Layer1/Lean/T1_1_Universality.lean` [L1]: the velocity factor is universal: one phi for all systems
+- `Layer1/Lean/T1_2_AbsoluteVelocity.lean` [L2]: energy ratios depend only on phi; no exchange at the absolute velocity; the empirical phi vanishes at c
+- `Layer1/Lean/T1_3_Entropy.lean` [L3]: dE/phi exact, entropy a state function, entropy increase from the Clausius bound
+- `Layer1/Sage/T1_4_maxwell_relations.sage` [L3]: first law with the mechanical work term; exact differentials of the potentials H, K, G; the four Maxwell relations
+- `Layer1/Lean/T1_4_MaxwellRelations.lean` [L3]: the potentials' differentials, Maxwell relations as Clairaut symmetry, and the energy-capacity relations in Lean
+- `Layer1/Sage/T1_10_equilibrium.sage` [L3]: equilibrium inequality, free-energy maximum and least work, connection to K
+- `Layer1/Lean/T1_10_Equilibrium.lean` [L3]: the same equilibrium conditions in Lean
+- `Layer1/Sage/T1_5_stability_conditions.sage` [L4]: second-order stability: the Hessian of U in (q, S) is positive definite
+- `Layer1/Lean/T1_5_Sylvester.lean` [L4]: Sylvester's criterion (both directions) for the stability quadratic
+- `Layer1/Sage/T1_6_stability_metric.sage` [L5]: solving the stability arc length for the entropy coordinate gives the (+,-,-,-) metric; Minkowski in the flat limit
+- `Layer1/Sage/T1_6_general_lorentzian_necessity.sage` [L5]: with cross-terms: the Schur complement keeps positive definiteness, so the signature stays (1,n)
+- `Layer1/Lean/T1_6_StabilityMetric.lean` [L5]: the signature flip, determinants and the Minkowski limit in Lean
+- `Layer1/Lean/T1_6_SignatureNecessity.lean` [L5]: a Euclidean signature is impossible; the Lorentzian split is forced
+- `Layer1/Lean/T1_6_SignatureInertia.lean` [L5]: the (1,n) signature is basis-independent (Sylvester inertia)
+- `Layer1/Lean/T1_7_8_Connection.lean` [L6]: symmetric metric-compatible connection; conformal rescaling gives the Weyl connection and gauge vector
+- `Layer1/Sage/T1_8_conformal_gauge.sage` [L6]: the Weyl gauge freedom changes only the length unit: field strength and observables invariant
+- `Layer1/Sage/T1_8_weyl_integrability.sage` [L6]: the gravitational gauge vector is a gradient (no second-clock effect); the electromagnetic one is a pure U(1) phase
 
 ### The 5D manifold, five-force and 5D Dirac ansatz (manuscript Sec. 2.2, 4.1)
 

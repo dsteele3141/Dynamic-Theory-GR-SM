@@ -1,7 +1,7 @@
 # T1.6 - Stability metric and Lorentzian emergence (Eqs 16-19)
 #
 # Source: P. E. Williams, LA-8370-MS (LASL, 1980), Eqs 16-19.
-# Supplementary Materials: step [L6], Sec. S2 (code index: Sec. S6).
+# Supplementary Materials: step [L5], Sec. S2 (code index: Sec. S6).
 from sage.all import *
 #
 # Signature flip: solving the Riemannian stability quadratic

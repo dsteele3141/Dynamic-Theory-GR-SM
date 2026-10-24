@@ -2,7 +2,7 @@
   T1.6 (necessity) — the Lorentzian signature is FORCED, not chosen
 
   Source: P. E. Williams, LA-8370-MS (LASL, 1980), §II, eqs (16)–(19).
-  Supplementary Materials: step [L6], Sec. S2 (code index: Sec. S6).
+  Supplementary Materials: step [L5], Sec. S2 (code index: Sec. S6).
 -/
 
 import Mathlib.Tactic

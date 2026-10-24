@@ -2,7 +2,7 @@
   T1.5 — Stability Conditions → Positive-Definite Quadratic Form
 
   Source: P. E. Williams, LA-8370-MS (LASL, 1980), §II, eqs (14)–(15).
-  Supplementary Materials: step [L5], Sec. S2 (code index: Sec. S6).
+  Supplementary Materials: step [L4], Sec. S2 (code index: Sec. S6).
 -/
 
 import Mathlib.Algebra.Order.Field.Basic

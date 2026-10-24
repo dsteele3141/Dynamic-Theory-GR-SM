@@ -2,7 +2,7 @@
 # T1.8 - Weyl conformal gauge: no real rescaling of physical lengths
 #
 # Source: P. E. Williams, LA-8370-MS (LASL, 1980), eq 37.
-# Supplementary Materials: step [L7], Sec. S2 (code index: Sec. S6).
+# Supplementary Materials: step [L6], Sec. S2 (code index: Sec. S6).
 #
 # Weyl objection residual check: the conformal gauge introduces NO real
 # (observable) rescaling of physical lengths.

@@ -2,7 +2,7 @@
   T1.1 — Universal Integrating Factor  λ = φ(q̇)·f(σ)
 
   Source: P. E. Williams, LA-8370-MS (LASL, 1980), §II, eqs (3)–(5).
-  Supplementary Materials: step [L2], Sec. S2 (code index: Sec. S6).
+  Supplementary Materials: step [L1], Sec. S2 (code index: Sec. S6).
 -/
 
 import Mathlib.Tactic

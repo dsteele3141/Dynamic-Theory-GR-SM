@@ -1,7 +1,7 @@
 # T1.10 - Equilibrium conditions (Eqs 12-13)
 #
 # Source: P. E. Williams, LA-8370-MS (LASL, 1980), Eqs 12-13.
-# Supplementary Materials: step [L4], Sec. S2 (code index: Sec. S6).
+# Supplementary Materials: step [L3], Sec. S2 (code index: Sec. S6).
 from sage.all import *
 #
 # Verifies the equilibrium inequality dU - F dq - phi dS >= 0 (Eq 12), the

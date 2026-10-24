@@ -1,7 +1,7 @@
 # T1.5 - Stability conditions (Eqs 14-15)
 #
 # Source: P. E. Williams, LA-8370-MS (LASL, 1980), Eqs 14-15.
-# Supplementary Materials: step [L5], Sec. S2 (code index: Sec. S6).
+# Supplementary Materials: step [L4], Sec. S2 (code index: Sec. S6).
 from sage.all import *
 #
 # Source error (Eq 14): manuscript prints the second-order Taylor coefficients

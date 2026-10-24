@@ -1,7 +1,7 @@
 # T1.4 - Mechanical Maxwell relations (Eqs 7-11)
 #
 # Source: P. E. Williams, LA-8370-MS (LASL, 1980), Eqs 7-11.
-# Supplementary Materials: step [L1], Sec. S2 (code index: Sec. S6).
+# Supplementary Materials: step [L3], Sec. S2 (code index: Sec. S6).
 from sage.all import *
 #
 # Source errors corrected and enforced by the asserts below:
