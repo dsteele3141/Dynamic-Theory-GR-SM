@@ -1,0 +1,84 @@
+========================================================================
+gr_projection_audit -- is the 5D -> 4D projection complete?
+========================================================================
+
+Computing the polynomial instance (general lapse, y-dependent q) ...
+  [PASS] residual G5_ab - G4_ab is non-zero in general (the question is real)
+
+[A] Contracted Gauss equation with general lapse
+  [PASS] fit is determined (basis independent over the sample points)
+  [PASS] fit is consistent (residual zero on every component at every point)
+    G5_ab - G4_ab = (1)[K K_ab - K_ac K^c_b] + (-1) E_ab
+                    + q_ab[(-1/2)(K^2 - K.K) + (1) E]
+    (eps = -1)
+
+[B] Normal curvature E_ab with general lapse
+  [PASS] fit is determined (basis independent over the sample points)
+  [PASS] fit is consistent (residual zero on every component at every point)
+    E_ab = (-1)(1/N) d_y K_ab + (0) K K_ab + (1) K_ac K^c_b + (1)(1/N) D_a D_b N
+  [PASS] the lapse Hessian enters E_ab with non-zero weight
+  [PASS] d_y K enters E_ab with non-zero weight
+
+Abstract family (functions of t, x, y; non-diagonal; general lapse) ...
+  [PASS] [A] holds identically on the abstract family: the residual is EXACTLY K-terms + normal-curvature terms
+  [PASS] [B] holds identically on the abstract family
+  [PASS] mutation: flipping the sign of the E_ab term fails
+
+    => with K = 0 at a point, the residual there is
+       (1)(1/N)[d_y K_ab + ...] + Hessian terms -- E_ab, not K, decides.
+
+[C] Sufficiency: K = 0 on every slice, zero shift, g_44 constant
+  [PASS] K = 0 on every slice (q independent of y)
+  [PASS] E_ab = 0 (no normal curvature: d_y K = 0, lapse constant)
+  [PASS] G5_ab = G4_ab identically for ARBITRARY q_ab(x): the projection is complete
+
+[D] Necessity: drop one condition at a time
+  [PASS] (D1) K_ab = 0 on the slice y = 0
+  [PASS] (D1) but d_y K != 0 there, so E_ab != 0
+  [PASS] (D1) and the residual G5_ab - G4_ab != 0 on that slice: K = 0 on ONE slice is not enough
+  [PASS] (D1) residual there = (-1) E_ab + (1) q_ab E, as [A] predicts
+  [PASS] (D2) K = 0 on every slice, yet
+  [PASS] (D2) residual = (-1)(D_a D_b N)/N + (1) q_ab (box N)/N exactly
+  [PASS] (D2) ... which is non-zero for a generic N(x): a free g_44 spoils the reduction
+    (it vanishes iff D_a D_b N = 0: tracing (DDN - q box N) gives box N = 0.)
+    DT holds g_44 fixed (kk_radion_g44: Cassini selects it), so N = 1.
+  [PASS] (D3) a generic shift g_a4 = A_a(x): Gamma^4_ab != 0, so free fall leaves the slice (u4 = 0 violated, K != 0)
+  [PASS] (D3) a Killing shift (rotation, dA != 0): Gamma^4_ab = 0, u4 = 0 holds
+  [PASS] (D3) ... but G5_ab - G4_ab != 0: g_a4 = 0 is an INDEPENDENT condition
+  [PASS] (D3) a constant shift (dA = 0) leaves no residual: the field strength, not the gauge, is what survives
+
+[E] The other components under the conditions (class [C])
+  [PASS] G5_a4 = R5_a4 = 0: the Codazzi constraint T_a4 = 0
+  [PASS] G5_44 = -(eps/2) R4: the T_44 constraint
+  [PASS] R5 = R4 on the class
+
+VERDICT
+  1. For a general 5D metric the projected Einstein tensor differs from the
+     surface's by K-terms AND the normal curvature E_ab ([A], identically on
+     an abstract non-diagonal family with general lapse).  E_ab carries
+     d_y K and the lapse Hessian ([B]).  So the review's point is right:
+     K_ab = 0 by itself does not give the reduction.
+  2. The reduction is complete for EVERY metric with
+       (i)   K_ab = 0 on EVERY slice x4 = const (u4 = 0 for all free motion
+             at every mass density, not on one surface),
+       (ii)  g_a4 = 0,
+       (iii) g_44 constant (or, more weakly, D_a D_b N = 0),
+     with q_ab(x) arbitrary ([C]).  These are the conditions the recovery
+     states: (i) from u4 = 0, (ii)-(iii) from the restriction that holds
+     g_a4 and g_44 fixed.  G2 therefore holds for the full class DT admits
+     under them, not only for an ansatz.
+  3. Each condition is necessary ([D]): K = 0 on one slice leaves d_y K;
+     a free g_44 leaves a radion Hessian; a Killing g_a4 with dA != 0
+     satisfies u4 = 0 yet leaves a residual, so g_a4 = 0 is not implied by
+     K = 0 and must come from the restriction.
+  4. Wording: the manuscript's 'for all free motion' should say 'on every
+     surface x4 = const' (condition (i) is about all slices), and the
+     reduction should name (ii)-(iii) where Gauss is invoked.
+  Bracket: the 5D field equations are taken Einstein-type (as in
+  gr_on_4d_surface); the identities are checked on abstract families of
+  functions of (t, x, y) (two coordinates kept symbolic for cost), and the
+  general Gauss-Codazzi theorem is standard, not re-proven.
+
+========================================================================
+ALL ASSERTIONS PASSED
+========================================================================

@@ -94,6 +94,7 @@ Assumptions beyond the three laws are tabulated in `ASSUMPTIONS.md`.
 
 - `Layer3/Sage/gr_on_4d_surface.sage` [G2]: Gauss-Codazzi reduction: with u4 = 0 the 4D surface obeys Einstein's equations
 - `Layer3/Sage/einstein_equations_recovery.sage` [G2]: Lovelock's theorem applied: the surface field equations are Einstein's
+- `Layer3/Sage/gr_projection_audit.sage` [G2]: audit: for a general 5D metric the projection leaves no residual iff K = 0 on every slice, g_a4 = 0, g_44 fixed
 - `Layer3/Sage/einstein_from_dt_action.sage` [G1]: variation of the Weyl-type action gives Einstein's equations plus a cosmological term
 - `Layer3/Sage/weyl_lambda_reading.sage` [G1]: the cosmological constant on Weyl's procedure: |Lambda| = lambda/4, magnitude free
 - `Layer3/Sage/weyl_vector_mass.sage` [G1]: the Weyl vector acquires a large mass and decouples, leaving G + Lambda g = kappa T
@@ -111,6 +112,7 @@ Assumptions beyond the three laws are tabulated in `ASSUMPTIONS.md`.
 - `Layer3/Sage/weak_parity.sage` [S1]: a 5D Dirac sector without a boundary is parity-even (the Kaluza-Klein chirality problem)
 - `Layer3/Sage/weak_chirality_u4.sage` [S1]: u4 = 0 as a no-flux edge on the half-line leaves a single chiral zero mode
 - `Layer3/Sage/noflux_boundary_derivation.sage` [S1]: the no-flux edge condition derived from unitarity and 4D Lorentz invariance
+- `Layer3/Sage/boundary_classification_audit.sage` [S1]: audit: the chiral edge conditions are self-adjoint and the only Lorentz-invariant ones; zero mode and mass profile
 - `Layer3/Sage/weak_va_coupling.sage` [S2]: the V-A form of the charged current follows from the chiral zero modes
 - `Layer3/Sage/su2_from_5d.sage` [S3]: the 8x8 representation carries su(2) + u(1), giving the lepton doublet with Y = -1/2
 - `Layer3/Sage/weak_neutral_current.sage` [S4]: the neutral current: adopted from the SM, consistent with the data

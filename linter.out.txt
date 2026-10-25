@@ -1,8 +1,8 @@
 ========================================================================
 DYNAMIC THEORY -- SAGE LINTER  (linter.py)
-Run: 2026-10-24 20:46:35
+Run: 2026-10-25 08:43:10
 Scanned: Dynamic-Theory-GR-SM (repository root)
-Sage scripts: 52  (across Layer1, Layer2, Layer3; 0 plot_* skipped)
+Sage scripts: 54  (across Layer1, Layer2, Layer3; 0 plot_* skipped)
 Cadabra cross-checks: 0
 ========================================================================
 
@@ -84,6 +84,11 @@ blackett_coupling_bodies.out.txt
   [OK  ] runtime: no traceback/Error/FAIL in result output.
 blackett_coupling_bodies.sage
   [OK  ] path: stdout-capture convention (no self-managed output path).
+boundary_classification_audit.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+boundary_classification_audit.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+  [OK  ]:62 signature list [1,-1,-1,-1,-1]: spacelike mass.
 charge_quantisation_prediction.out.txt
   [OK  ] runtime: no traceback/Error/FAIL in result output.
 charge_quantisation_prediction.sage
@@ -125,6 +130,11 @@ gr_on_4d_surface.sage
   [OK  ]:116 signature: g44 = -1 (spacelike mass).
   [OK  ]:198 signature: g44 = -1 (spacelike mass).
   [OK  ]:222 signature: g44 = -1 (spacelike mass).
+gr_projection_audit.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+gr_projection_audit.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+  [OK  ]:88 signature: g44 = -SR(N)**2 (spacelike mass).
 gravitational_radiation.out.txt
   [OK  ] runtime: no traceback/Error/FAIL in result output.
 gravitational_radiation.sage
@@ -242,9 +252,9 @@ weyl_vector_mass.sage
 
 ### (repository)
 (cross-file)
-  [OK  ] signature consistent: all 18 g44 definition(s) spacelike (g44 < 0).
+  [OK  ] signature consistent: all 20 g44 definition(s) spacelike (g44 < 0).
 
 ========================================================================
-SUMMARY    OK: 125    INFO: 0    WARN: 0    FAIL: 0
+SUMMARY    OK: 131    INFO: 0    WARN: 0    FAIL: 0
 RESULT: CLEAN -- no inconsistencies detected.
 ========================================================================
