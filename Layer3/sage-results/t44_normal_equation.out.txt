@@ -1,0 +1,39 @@
+==========================================================================
+t44_normal_equation.sage -- the 44 component of the 5D equations
+==========================================================================
+
+[A] G5_44 and R5 on product metrics (g_a4 = 0, g_44 = -1)
+  [PASS] static: R5_44 = 0
+  [PASS] static: R5 = R4
+  [PASS] static: G5_44 = R4/2
+  [PASS] flrw: R5_44 = 0
+  [PASS] flrw: R5 = R4
+  [PASS] flrw: G5_44 = R4/2
+
+[B] The 44 equation with the 4D trace
+  [PASS] T_44 = Lambda/kappa - T/2 for any matter and any Lambda
+
+[C] Perfect fluid
+    T_44 = -1/2*((c^2*rho - 3*p)*kappa - 2*Lambda)/kappa
+  [PASS] dust, Lambda = 0: T_44 = -rho c^2/2 (the weak-field value)
+  [PASS] radiation (T = 0): T_44 = Lambda/kappa
+  [PASS] the Lambda term is < 1e-25 of the dust term at laboratory density
+
+[D] The 44 equation imposes nothing on the matter
+  [PASS] the 44 equation fixes the multiplier uniquely
+  [PASS] it depends only on (R, Lambda, kappa): no condition on (rho, p), so any 4D solution lifts
+  [PASS] mutation guard: the multiplier is not a fixed constant
+
+[E] Bianchi component along the mass axis
+  [PASS] G5_a4 = 0, so nabla_i T^i_4 = 0 reduces to d_4 T^4_4 = 0: holds (no x4 dependence)
+
+VERDICT
+  The 44 equation holds for any matter: with g_44 = -1, G5_44 = R4/2, and
+  with the 4D trace, T_44 = Lambda/kappa - T/2.  For dust with Lambda = 0
+  this is the weak-field value -rho c^2/2.  T_44 is the reaction of the multiplier
+  holding g_44 fixed, so the equation determines it and constrains nothing
+  else: the full 5D equations, not only their projection, contain GR.
+
+==========================================================================
+ALL ASSERTIONS PASSED
+==========================================================================

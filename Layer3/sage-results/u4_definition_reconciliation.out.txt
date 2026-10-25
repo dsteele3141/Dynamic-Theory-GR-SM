@@ -1,0 +1,37 @@
+==========================================================================
+u4_definition_reconciliation.sage -- dx4/ds vs the continuity residual
+==========================================================================
+
+[A] General identity (3D, arbitrary density and velocity fields)
+  [PASS] residual - D gamma/Dt = gamma div v identically
+    so the two agree only when div v = 0 (incompressible flow)
+
+[B] Mass-conserving compression
+  [PASS] continuity residual = 0 (mass conserved)
+  [PASS] but D gamma/Dt = a gamma != 0: the density of each element rises
+    On the field reading, compression would count as u4 != 0;
+    the source says it must not.
+
+[C] Comoving element: mass per unit reference volume
+  [PASS] the map compresses/expands (J != 1), with shear
+  [PASS] inverse map correct
+  [PASS] d/dt (gamma J)|_X = J * [d_t gamma + div(gamma v)] identically
+  [PASS] reference = current volume at t = 0 (J = 1)
+  [PASS] there x4 = gamma/a0 and a0 dx4/dt = continuity residual (Book Eq 1.36)
+
+[D] Mutation: the field reading
+  [PASS] D gamma/Dt does NOT reproduce the comoving rate (differs by gamma div v)
+
+VERDICT
+  u4 = dx4/ds is the continuity residual, and so vanishes for every
+  mass-conserving process however its density changes, when dx4/ds is the
+  rate of change along a comoving element: the mass it carries per unit
+  (reference) volume, with the reference taken as the current volume.  That
+  is the conservative form the source writes (Book Eq 1.36).  Read as the
+  rate of change of the density field along a path (D gamma/Dt) it is not,
+  and compression would then violate u4 = 0.  For a single body the readings
+  coincide.  Bracket: a stated definition, not a derivation.
+
+==========================================================================
+ALL ASSERTIONS PASSED
+==========================================================================

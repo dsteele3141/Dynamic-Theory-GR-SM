@@ -88,6 +88,7 @@ Assumptions beyond the three laws are tabulated in `ASSUMPTIONS.md`.
 - `Layer3/Lean/T2_10_London.lean` [F4]: the same in Lean, with the scope of each step stated
 - `Layer3/Sage/T2_11_hypersurface_metric.sage` [F6]: decomposition of the 5D metric into a 4D surface metric plus the mass direction
 - `Layer3/Sage/u4_rest_mass_nonconservation.sage` [F5]: size of u4 (rate of failure of mass conservation): about 1e-31 for laboratory matter
+- `Layer3/Sage/u4_definition_reconciliation.sage` [F5]: dx4/ds read along a comoving element equals the continuity residual; the density-field reading does not
 - `Layer3/Sage/weak_field_poisson.sage` [F6]: weak-field limit: Poisson's equation with Newton's sign and coefficient, and the extra relation it needs
 
 ### Recovery of general relativity (manuscript Sec. 3)
@@ -102,6 +103,7 @@ Assumptions beyond the three laws are tabulated in `ASSUMPTIONS.md`.
 - `Layer3/Sage/kk_radion_g44.sage` [G3]: the g_44 (radion) mode: a free g_44 gives PPN gamma = 1/2; Cassini selects g_44 = -1
 - `Layer3/Sage/test_body_motion.sage` [G4]: test bodies move on 4D geodesics; the fifth force vanishes at u4 = 0 (weak equivalence principle)
 - `Layer3/Sage/matter_source_tab.sage` [G5]: the 5D matter tensor reduces to the GR source; the surface Bianchi identity requires u4 = 0
+- `Layer3/Sage/t44_normal_equation.sage` [G3]: the 44 equation: T_44 = Lambda/kappa - T/2 for any matter; dust with Lambda = 0 gives -rho c^2/2
 - `Layer3/Sage/gravitational_radiation.sage` [G6]: two polarisations at speed c; quadrupole power against the binary pulsar PSR B1913+16
 - `Layer3/Sage/exact_ppwave_lift.sage` [G6]: exact pp-waves lift to exact 5D vacuum solutions
 - `Layer3/Sage/black_hole_ringdown.sage` [G6]: strong field: ringdown and EHT select the GR (Kerr) solution over the non-singular metric

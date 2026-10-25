@@ -10,14 +10,11 @@
 # ============================================================================
 # u4_rest_mass_nonconservation.sage              [A]  (assertion-hardened)
 #
-# QUANTIFYING THE GR/QM CROSSOVER.
-# In DT the charge/particle (QM) sector is case 3, P=0, i.e. u4=0 (constant
-# rest mass, pure unitary 4D). The mass/gravity (GR) sector is case 2, P!=0,
-# with the fifth (mass-density) velocity component u4 live. The 4D<->5D divide
-# is thus the SINGLE restrictive assumption u4=0, with the clean-separation
-# limit a0 -> inf playing the exact role of DT's hbar -> 0. There is NO
-# absolute boundary; the question is how BIG the residual crossing is at the
-# real, FINITE, pinned a0 -- and how it is bounded.
+# THE SIZE OF u4.  u4 = 0 is conservation of mass (Book Eq 1.36), the
+# condition under which both GR and the SM are recovered.  (An earlier header
+# read u4 as a GR/QM "dial", u4 = 0 quantum and u4 -> 1 GR; that reading is
+# WITHDRAWN: GR is recovered BY setting u4 = 0.)  The question here is how big
+# the departure is at the real, finite a0, and how it is bounded.
 #
 # DT's 5th coordinate is  q4 = gamma/a0  (gamma = mass density, LENGTH units),
 # and the fifth velocity component is a VELOCITY RATIO (q0 = c t):
@@ -25,10 +22,11 @@
 # Because it is dq4/dq0, DT's absolute velocity c caps it exactly as it caps
 # the spatial velocities: from the (+,-,-,-,-) 5-velocity norm,
 #       beta_space^2 + beta_mass^2 < 1   =>   u4 in [0, 1),
-# and the mass-direction speed TRADES against spatial speed on one shared
-# c-budget. So the GR/QM dial is a c-capped BOOST: u4=0 is the flat quantum
-# sector; u4 -> 1 is the fully mass-dynamical GR limit; the two are ends of one
-# hyperbolic rotation, with QUANTISATION (the London condition) common to both.
+# and the mass-direction speed trades against spatial speed on one shared
+# c-budget.  Here d gamma/dt is the rate along a COMOVING element, i.e. the
+# continuity residual d_t gamma + div(gamma v), not the material derivative
+# of the density field (u4_definition_reconciliation.sage), so compression
+# that conserves mass has u4 = 0.
 #
 # DT's own rate of rest-mass non-conservation is the secular (1 - H0 t)
 # factor (b = H0; the SAME drift that drives the dark-energy candidate), so
