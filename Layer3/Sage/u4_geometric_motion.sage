@@ -34,9 +34,13 @@
 #       bounce ~1e5 OVER the cap.
 #
 #   [D] The weight of an element at rest on the mass axis: with gamma = a0 x4
-#       u4 = 0 needs the reaction a0 (manuscript Sec. 3.4); with the
-#       element's fixed mass m as the weight, u4 = 0 is a free solution.
-#       The 4D path is a geodesic in both cases.
+#       u4 = 0 needs the reaction a0 (manuscript Sec. 3.4).  CONTROL: with a
+#       weight independent of x4 (a fixed mass m, as in space-time-matter
+#       theory) u4 = 0 is a free solution.  DT excludes that weight: it cuts
+#       the link between x4 and mass.  With x4 the comoving mass coordinate,
+#       moving along x4 IS changing the element's mass, so the reaction is
+#       what conservation of mass costs.  The 4D path is a geodesic in both
+#       cases, so the reaction comes from the weight, not the geometry.
 #
 # RESULT: the GR test-body recovery does not need u4 = 0 under either reading.
 # But the geometric reading turns the c-cap into a bound on compression rates
@@ -152,14 +156,14 @@ w0, m = var('w0 m')
 assume(w0 > 0, m > 0)
 curve0 = [A * s, r0, pi / 2, Om * s, w0]
 for name, wt in [("gamma = a0 x4 (weight a function of x4)", lambda q: a0 * q),
-                 ("fixed element mass m", lambda q: m + 0 * q)]:
+                 ("control, fixed element mass m", lambda q: m + 0 * q)]:
     F0, _ = EL_residual(g, curve0, wt)
     F0 = [f.simplify_full() for f in F0]
     check(all(F0[k] == 0 for k in range(4)),
           "%s: 4D path a geodesic" % name)
     print("    %s: x4 residual = %s" % (name, F0[4]))
     if "fixed" in name:
-        check(F0[4] == 0, "fixed mass: u4 = 0 is a free solution, no reaction")
+        check(F0[4] == 0, "control: fixed mass gives u4 = 0 freely (excluded in DT: x4 not tied to mass)")
     else:
         check((F0[4] + a0).simplify_full() == 0,
               "gamma = a0 x4: u4 = 0 needs the reaction gamma f_4 = a0")
@@ -174,9 +178,12 @@ VERDICT
   (order of magnitude, a0 as calibrated).  We therefore take x4 to be the
   comoving mass coordinate (u4_definition_reconciliation), for which u4 is
   the continuity residual and the cap bounds only mass non-conservation;
-  that choice is invisible in 4D because of [A].  At rest on the mass axis
-  the 4D motion is a geodesic for either weight; u4 = 0 needs the reaction
-  a0 if the weight is a0 x4, and none if it is the element's fixed mass.
+  that choice is invisible in 4D because of [A].  With that coordinate,
+  moving along x4 is changing the element's mass, so its weight is a0 x4
+  and u4 = 0 needs the reaction a0: the cost of conservation of mass
+  (Sec. 3.4).  The control (a fixed weight, needing no reaction) shows that
+  the reaction comes from the weight, not the geometry; DT excludes it
+  because it would cut the link between x4 and mass.
 """)
 print("=" * 74)
 print("ALL ASSERTIONS PASSED")

@@ -30,9 +30,9 @@ u4_geometric_motion.sage -- motion along x4 and the compression cap
   [PASS] gamma = a0 x4 (weight a function of x4): 4D path a geodesic
     gamma = a0 x4 (weight a function of x4): x4 residual = -a0
   [PASS] gamma = a0 x4: u4 = 0 needs the reaction gamma f_4 = a0
-  [PASS] fixed element mass m: 4D path a geodesic
-    fixed element mass m: x4 residual = 0
-  [PASS] fixed mass: u4 = 0 is a free solution, no reaction
+  [PASS] control, fixed element mass m: 4D path a geodesic
+    control, fixed element mass m: x4 residual = 0
+  [PASS] control: fixed mass gives u4 = 0 freely (excluded in DT: x4 not tied to mass)
 
 VERDICT
   Motion along x4 leaves the 4D path an exact geodesic on the product metric:
@@ -43,9 +43,12 @@ VERDICT
   (order of magnitude, a0 as calibrated).  We therefore take x4 to be the
   comoving mass coordinate (u4_definition_reconciliation), for which u4 is
   the continuity residual and the cap bounds only mass non-conservation;
-  that choice is invisible in 4D because of [A].  At rest on the mass axis
-  the 4D motion is a geodesic for either weight; u4 = 0 needs the reaction
-  a0 if the weight is a0 x4, and none if it is the element's fixed mass.
+  that choice is invisible in 4D because of [A].  With that coordinate,
+  moving along x4 is changing the element's mass, so its weight is a0 x4
+  and u4 = 0 needs the reaction a0: the cost of conservation of mass
+  (Sec. 3.4).  The control (a fixed weight, needing no reaction) shows that
+  the reaction comes from the weight, not the geometry; DT excludes it
+  because it would cut the link between x4 and mass.
 
 ==========================================================================
 ALL ASSERTIONS PASSED
