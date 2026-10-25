@@ -1,8 +1,8 @@
 ========================================================================
 DYNAMIC THEORY -- SAGE LINTER  (linter.py)
-Run: 2026-10-25 09:23:22
+Run: 2026-10-25 09:56:49
 Scanned: Dynamic-Theory-GR-SM (repository root)
-Sage scripts: 56  (across Layer1, Layer2, Layer3; 0 plot_* skipped)
+Sage scripts: 57  (across Layer1, Layer2, Layer3; 0 plot_* skipped)
 Cadabra cross-checks: 0
 ========================================================================
 
@@ -216,6 +216,10 @@ u4_definition_reconciliation.out.txt
   [OK  ] runtime: no traceback/Error/FAIL in result output.
 u4_definition_reconciliation.sage
   [OK  ] path: stdout-capture convention (no self-managed output path).
+u4_geometric_motion.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+u4_geometric_motion.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
 u4_relaxation_bounds.out.txt
   [OK  ] runtime: no traceback/Error/FAIL in result output.
 u4_relaxation_bounds.sage
@@ -264,6 +268,8 @@ weyl_vector_mass.sage
   [OK  ] signature consistent: all 21 g44 definition(s) spacelike (g44 < 0).
 
 ========================================================================
-SUMMARY    OK: 136    INFO: 0    WARN: 0    FAIL: 0
+SUMMARY    OK: 138    INFO: 0    WARN: 0    FAIL: 0
 RESULT: CLEAN -- no inconsistencies detected.
 ========================================================================
+
+Report written to: /home/dsteele/lean/Dynamic-Theory-GR-SM/linter.out.txt

@@ -30,6 +30,7 @@ its structure supports, plus shared assumptions, fits the data.
 |---|---|---|---|---|---|
 | G1 | Weyl's R-tilde^2 action, adopted by Williams | SHARED-GR | GR assumes the Einstein-Hilbert action | Einstein + Lambda (Ghilencea) | `weyl_ghilencea_comparison.sage` |
 | G2 | u4 = 0 (conservation of mass) | REQUIRED (Bianchi) | GR assumes T conserved | forced by the surface equations | `matter_source_tab.sage`, `gr_projection_audit.sage`, `t44_normal_equation.sage` (44 equation: T_44 = Lambda/kappa - T/2) |
+| G2a | x4 = gamma J/a0 for a continuum (comoving mass coordinate: mass per reference volume) | DEFINITION (ours; consistent with Book Eq 1.36, equals gamma/a0 for a single body) | Lagrangian mass coordinate (stellar structure); label formulation of relativistic fluids | u4 = J x continuity residual identically; invisible in 4D (motion along x4 only reparametrises the 4D geodesic); the density-field reading would cap compression at a0 c (core bounce ~1e5 over) | `u4_definition_reconciliation.sage`, `u4_geometric_motion.sage` |
 | G3 | g44 frozen (conservation of mass as a restriction) | SELECTED (Cassini) | GR has no scalar | PPN gamma = 1 | `kk_radion_g44.sage` |
 | G4 | GR strong-field reading, not e^{-lambda/r} as a metric | SELECTED (ringdown, EHT) | GR's Kerr | matches LIGO/EHT | `black_hole_ringdown.sage` |
 | G5 | Lorentzian signature | DT-SAVES | GR assumes it | forced by the stability Hessian (T1.6) | full repository (Layer 1, `T1_6`) |

@@ -88,7 +88,8 @@ Assumptions beyond the three laws are tabulated in `ASSUMPTIONS.md`.
 - `Layer3/Lean/T2_10_London.lean` [F4]: the same in Lean, with the scope of each step stated
 - `Layer3/Sage/T2_11_hypersurface_metric.sage` [F6]: decomposition of the 5D metric into a 4D surface metric plus the mass direction
 - `Layer3/Sage/u4_rest_mass_nonconservation.sage` [F5]: size of u4 (rate of failure of mass conservation): about 1e-31 for laboratory matter
-- `Layer3/Sage/u4_definition_reconciliation.sage` [F5]: dx4/ds read along a comoving element equals the continuity residual; the density-field reading does not
+- `Layer3/Sage/u4_definition_reconciliation.sage` [F5]: x4 as the comoving mass coordinate gamma J/a0: u4 = J x continuity residual identically; the density-field reading differs by gamma div v
+- `Layer3/Sage/u4_geometric_motion.sage` [F5]: motion along x4 leaves the 4D path a geodesic (K = 0); the field reading would cap compression (core bounce ~1e5 over)
 - `Layer3/Sage/weak_field_poisson.sage` [F6]: weak-field limit: Poisson's equation with Newton's sign and coefficient, and the extra relation it needs
 
 ### Recovery of general relativity (manuscript Sec. 3)
