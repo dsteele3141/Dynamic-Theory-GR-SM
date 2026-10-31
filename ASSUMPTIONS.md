@@ -36,6 +36,8 @@ its structure supports, plus shared assumptions, fits the data.
 | G5 | Lorentzian signature | DT-SAVES | GR assumes it | forced by the stability Hessian (T1.6) | full repository (Layer 1, `T1_6`) |
 | G6 | tau-dot_0 (dark-matter floor) | ORIGINAL TREATMENT REVISED (his tau-dot_0 ~ 5e5 excluded by consistency; tau-dot_0 -> 0, the GR limit, adopted: dark matter then unexplained, as in GR) | none | shape right, size 1e-3..1e-7 (FLAG) | `gr_limit_domain.sage` |
 | G7 | Williams' magnetic moment of a neutral spinning body, mu = (beta/2) L, compared with magnetometer data | ORIGINAL TREATMENT REVISED (magnetometer reading excluded); gravitomagnetic reading SELECTED (= GR frame dragging, recovered) | GR: Lense-Thirring field G J/(2 c^2 r^3) | Blackett's 1947 law with beta_B = 1/sqrt(4 pi). Earth to ~10% only with beta = sqrt(eps0 G) (Eq 10.19 value); the Coulomb->Newton ratio is sqrt(4 pi eps0 G) (Eq 10.53), off by 3.5x: an internal slip. As a magnetometer field: Moon >280x, Mars >1000x (no dynamo to cancel), ms pulsars ~1e7, solar/geomagnetic reversals forbid a fixed spin-aligned part. As the source says (5D gravitational field), with the self-consistent beta it is the gravitomagnetic dipole: recovery, no prediction | `blackett_coupling_bodies.sage` |
+| G8 | Metric independent of the mass axis (d_4 g_ab = 0) | SHARED-GR (GR's metric is 4D), SELECTED by data | GR: a 4D massless spin-2 graviton | the recovered sector linearises to Fierz-Pauli (two helicities, standard propagator). An x4-dependent graviton on the flat half-line has no normalisable massless mode: a continuum, 5D gravity (1/r^3, no stable orbits) below c/H0, excluded by Mercury (> 1e9); DT has no warping to localise it. No KK gravitons | `graviton_linearised.sage`, `graviton_halfline.sage` |
+| G9 | Secular drift rate xi (the (1 - H0 t) factor) as the SN dark-energy signal | ORIGINAL TREATMENT REVISED (xi = 1 and the fitted xi = 0.23 excluded; xi ~ 0 adopted, dark energy carried by DT's own Lambda) | GR + LCDM: Lambda | local clock-read tests and the candle both measure alpha_G, so DT's units cannot hide the drift; helioseismology (stellar structure in the recovered sector, no GR-framework bound) gives |xi| < 0.028: 0.23 excluded 8x, 1 by 35x. The SN valley then needs Lambda ~ -0.5 x Planck at leading order (chi2 unchanged). Defeaters: solar-model dependence (one 1998 study), leading-order Lambda coupling, Lambda sign not re-derived | `gdot_dt_units.sage`, `dt_lambda_joint_fit.sage` |
 
 ## Quantum / weak sector (charge sector)
 
@@ -62,12 +64,12 @@ its structure supports, plus shared assumptions, fits the data.
 
 ## Running count
 
-- SHARED (neutral): G1, Q1, Q2/Q3, Q5, Q6, Q9, Q10, Q12, Q13, Q14, Q15, Q16
-- SELECTED by data: G3, G4, Q3 (the hand only; 8x8 kept as a lepton doublet), Q9, Q10, Q16 (G2 upgraded to required)
+- SHARED (neutral): G1, G8, Q1, Q2/Q3, Q5, Q6, Q9, Q10, Q12, Q13, Q14, Q15, Q16
+- SELECTED by data: G3, G4, G8, Q3 (the hand only; 8x8 kept as a lepton doublet), Q9, Q10, Q16 (G2 upgraded to required)
 - DT-SAVES: G5
 - DT-SPECIFIC (counts against): none (Q4 derived). DT-SPECIFIC but DECOUPLED (no cost to recovery; a free parameter of the unobserved partner sector): Q17. DT-SPECIFIC but NULL (a departure with no 4D effect): Q18
 - DERIVED (was an assumption): Q4
-- ORIGINAL TREATMENT REVISED (noted, data-selected reading adopted): G6, G7, Q7, Q8, Q11 (and the original readings in Q3, Q9, Q10)
+- ORIGINAL TREATMENT REVISED (noted, data-selected reading adopted): G6, G7, G9, Q7, Q8, Q11 (and the original readings in Q3, Q9, Q10)
 
 ## SM inputs: postulated by the SM vs supplied by DT
 

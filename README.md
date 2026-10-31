@@ -138,6 +138,7 @@ Assumptions beyond the three laws are tabulated in `ASSUMPTIONS.md`.
 - `Layer3/Sage/u4_relaxation_bounds.sage` [P4]: departures from u4 = 0: 4D charge conserved exactly; the breathing mode bounded by Cassini
 - `Layer3/Sage/pantheon_dark_energy_fit.sage` [P5]: fit of the secular drift to the Pantheon supernova Hubble diagram
 - `Layer3/Sage/dt_lambda_joint_fit.sage` [P5]: joint fit of the drift and a cosmological constant to the supernova data
+- `Layer3/Sage/gdot_dt_units.sage` [P5]: Gdot/G in DT units: helioseismology bounds the drift; the SN data then need a negative Lambda
 - `Layer3/Sage/pantheon_sys_DS17f.txt` (data): Pantheon DS17f systematic covariance (Scolnic et al. 2018, https://github.com/dscolnic/Pantheon)
 - `Layer3/Sage/hbar_potential_clocks.sage` [P6]: a potential-dependent Planck constant against atomic-clock tests
 

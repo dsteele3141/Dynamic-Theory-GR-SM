@@ -1,8 +1,8 @@
 ========================================================================
 DYNAMIC THEORY -- SAGE LINTER  (linter.py)
-Run: 2026-10-25 10:08:02
+Run: 2026-10-31 08:27:50
 Scanned: Dynamic-Theory-GR-SM (repository root)
-Sage scripts: 57  (across Layer1, Layer2, Layer3; 0 plot_* skipped)
+Sage scripts: 58  (across Layer1, Layer2, Layer3; 0 plot_* skipped)
 Cadabra cross-checks: 0
 ========================================================================
 
@@ -119,6 +119,10 @@ gauge_fields_halfline.out.txt
 gauge_fields_halfline.sage
   [OK  ] path: stdout-capture convention (no self-managed output path).
   [OK  ]:117 signature list [1,-1,-1,-1,-1]: spacelike mass.
+gdot_dt_units.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+gdot_dt_units.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
 gr_limit_domain.out.txt
   [OK  ] runtime: no traceback/Error/FAIL in result output.
 gr_limit_domain.sage
@@ -268,8 +272,6 @@ weyl_vector_mass.sage
   [OK  ] signature consistent: all 21 g44 definition(s) spacelike (g44 < 0).
 
 ========================================================================
-SUMMARY    OK: 138    INFO: 0    WARN: 0    FAIL: 0
+SUMMARY    OK: 140    INFO: 0    WARN: 0    FAIL: 0
 RESULT: CLEAN -- no inconsistencies detected.
 ========================================================================
-
-Report written to: /home/dsteele/lean/Dynamic-Theory-GR-SM/linter.out.txt

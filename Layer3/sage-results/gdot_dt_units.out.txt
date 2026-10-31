@@ -1,0 +1,58 @@
+========================================================================
+gdot_dt_units.sage -- Gdot/G in DT's own units
+========================================================================
+
+[A] Local observables see only alpha_G
+  [PASS] A1: orbital frequency in atomic units: nu^2 = N alpha^3 alpha_G (m_e/m_p) / A^3
+  [PASS] A2: nu^2 is invariant under any rescaling of the units of M, L, T
+  [PASS] A3: alpha_G is invariant too
+      a drift that is only a unit change is invisible to every local
+      dimensionless observable -- and, by [B], to the SN candle as well
+
+[B] The Chandrasekhar candle is the same number
+  [PASS] B1: M_Ch / m_p = alpha_G^(-3/2)
+  [PASS] B2: invariant under unit rescaling
+      so the fit's xi is an alpha_G drift, however DT shares it among
+      G, hbar and m (Williams' hbar(Phi) is a potential effect,
+      hbar_potential_clocks, ~1e-8, and cannot cancel it)
+
+[C] The Sun samples the SN epochs
+      H0 = 7.159e-11 /yr ; H0 t_sun = 0.327 ; DT redshift of the Sun's birth z = 0.387
+  [PASS] C1: the Sun's birth lies inside the Pantheon range (0.01 < z < 2.3)
+      H0 t_lb / ln(1+z) at that z: Milne 0.85, EdS 0.79, LCDM 0.91 (DT 1)
+  [PASS] C2: any standard t(z) changes the inferred rate by < 30%
+
+[D] Helioseismology
+      |Gdot/G| < 1.6e-12 /yr -> |xi| < 0.022 (DT clock), < 0.028 (most generous t(z))
+      xi = 0.229 (fitted, Lambda = 0): excluded by 8.1x; ln alpha_G change over the Sun's life 0.075
+      xi = 1.000 (Williams (1 - H0 t)): excluded by 35.4x; ln alpha_G change over the Sun's life 0.327
+  [PASS] D1: the fitted drift xi = 0.229 is excluded by > 5x
+  [PASS] D2: Williams' xi = 1 is excluded by > 25x
+      (homology L ~ alpha_G^7: the young Sun 1.7x brighter than today,
+       against the standard ~30% fainter)
+  [PASS] D3: the fitted drift would make the young Sun brighter than today
+      the inference uses DT's own recovered sector (GR + SM at u4 = 0 to
+      ~1e-31 in the solar interior); no GR-framework bound is imported
+
+[E] Escapes
+      unit drift only   -> alpha_G fixed -> no candle effect either ([A],[B])
+      density screening -> screens the white dwarf before the Sun
+                           (NO-GO, density_screening_nogo)
+  [PASS] E1: a white dwarf (~1e6 g/cc) is denser than the solar core (150 g/cc) by > 1e3
+      a different clock -> covered by [C] (< 30%)
+
+[F] What the SN data then need (dt_lambda_joint_fit, full covariance)
+      valley xi = 0.229 + 1.49 L: xi < 0.028 -> L < -0.13; at xi = 0, L = -0.158
+      Lambda = -0.49 x Planck; chi2 47.3 vs 47.1 for the drift fit
+  [PASS] F1: with the drift bounded the SN data need a NEGATIVE Lambda
+  [PASS] F2: and fit as well as the drift did (Delta chi2 < 1)
+
+========================================================================
+SUMMARY
+  Local Gdot/G tests read with atomic clocks measure alpha_G, and so
+  does the SN candle: DT's units cannot hide one from the other.
+  Helioseismology, in DT's recovered sector, gives |xi| < 0.028: the
+  fitted drift (0.23) is excluded by ~8x, Williams' (1 - H0 t) by ~35x.
+  The drift is not DT's dark energy.  Without it the SN data need DT's
+  own Lambda, NEGATIVE (~ -0.5 Planck) in DT's distance law.
+========================================================================
