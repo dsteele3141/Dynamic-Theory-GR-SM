@@ -15,8 +15,8 @@ and checks that the manuscript relies on.
   (u4 = 0) and the quantum condition: general relativity, the Standard Model, the
   comparison with data, and the predictions and bounds.
 - The three laws are premises. The code checks the mathematics that follows from
-  them; the physical identifications (the empirical velocity factor, the stability
-  form as a metric, entropy as the time coordinate) are stated as assumptions.
+  them; the physical identifications (the stability form as a metric, entropy as
+  the time coordinate, arc length measured by c) are named where they enter.
 - The Lean files check algebraic steps and the consistency of the adopted ansatz
   (for example, that the 5D Dirac factorisation has a matrix realisation and none
   in a commutative ring). They do not test the physics; comparison with experiment
@@ -52,7 +52,8 @@ Assumptions beyond the three laws are tabulated in `ASSUMPTIONS.md`.
 - `Layer1/Sage/T1_1-3_integrating_factor.sage` [L1, L3]: separable integrating factor phi(qdot) f(sigma); energy ratio; Eq 6 Euler-Lagrange equations are d(dE/phi) = 0
 - `Layer1/Lean/T1_1_IntegratingFactor.lean` [L1]: velocity-independent ratios force the product form phi(qdot) f(sigma)
 - `Layer1/Lean/T1_1_Universality.lean` [L1]: the velocity factor is universal: one phi for all systems
-- `Layer1/Lean/T1_2_AbsoluteVelocity.lean` [L2]: energy ratios depend only on phi; no exchange at the absolute velocity; the empirical phi vanishes at c
+- `Layer1/Lean/T1_2_AbsoluteVelocity.lean` [L2]: energy ratios depend only on phi; no exchange at the absolute velocity; phi = sqrt(1 - v^2/c^2) vanishes at c
+- `Layer1/Sage/velocity_factor_form.sage` [L2]: form of phi derived: Lorentzian metric -> force sqrt(1-b^2) Fhat; exactness of dS with U=U(v) -> phi = sqrt(1-v^2/c^2); control: x-dependent U leaves phi free
 - `Layer1/Lean/T1_3_Entropy.lean` [L3]: dE/phi exact, entropy a state function, entropy increase from the Clausius bound
 - `Layer1/Sage/T1_4_maxwell_relations.sage` [L3]: first law with the mechanical work term; exact differentials of the potentials H, K, G; the four Maxwell relations
 - `Layer1/Lean/T1_4_MaxwellRelations.lean` [L3]: the potentials' differentials, Maxwell relations as Clairaut symmetry, and the energy-capacity relations in Lean

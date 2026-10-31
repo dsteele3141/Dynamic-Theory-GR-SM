@@ -104,6 +104,6 @@ statement that the σ-part `f` returned above is a function of `σ` only — whi
 it is by construction (`f : ℝ → ℝ`). The velocity factor `φ` is common to all
 systems, so `1/φ(q̇)` is the universal integrating factor. The numerical form
 `φ(q̇) = √(1 − q̇²/c²)` and the absolute velocity `q̇₀ = c` (where `φ(q̇₀)=0`)
-are T1.2; they are empirical/definitional inputs, not part of this theorem. -/
+are T1.2 and `velocity_factor_form.sage`, not part of this theorem. -/
 
 end DTWilliams.IntegratingFactor

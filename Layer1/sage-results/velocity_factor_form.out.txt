@@ -1,0 +1,30 @@
+============================================================
+STEP 1: d(sigma)/dt from the flat Lorentzian metric (Eq 5.111)
+============================================================
+  [PASS] (dsigma/dt)^2 = c^2 - v^2 on the metric c^2 dt^2 - dx^2.
+
+============================================================
+STEP 2: coordinate-time force law (Eqs 5.112-5.114)
+============================================================
+  [PASS] c^2 d/dsigma[m0 dx/dsigma] = (1/sqrt(1-b^2)) d/dt[m0 v/sqrt(1-b^2)] (Eq 5.112).
+  => d/dt[m0 v/sqrt(1-b^2)] = Phi(v) Fhat(x), Phi(v) = sqrt(-v^2/c^2 + 1)  (Eq 5.114)
+  [PASS] Newtonian limit: Phi(0) = 1.
+
+============================================================
+STEP 3: exactness of dS fixes phi (Eqs 5.118-5.120)
+============================================================
+  [PASS] With U = U(v), exactness reduces to Fhat(x) d/dv[Phi/phi] = 0.
+  [PASS] phi = Phi/k solves d/dv[Phi/phi] = 0.
+  => phi(v) = sqrt(c^2 - v^2)/c
+  [PASS] phi(0) = 1 fixes k = 1, so phi(v) = sqrt(1 - v^2/c^2).
+  [PASS] Consistency with T1_2: phi vanishes at the absolute velocity c.
+  [PASS] Energy integral: dU/dv = v dp/dv for U = m0 c^2/sqrt(1-b^2) (Eq 5.123).
+
+============================================================
+CONTROL: premise U = U(v) is load-bearing
+============================================================
+  [PASS] With x-dependent U, a different phi (here (1-b^2)^(3/2)) also passes exactness.
+  [PASS] ... so phi = sqrt(1-b^2) needs U = U(v) (the work term carries x).
+
+Audit Complete: velocity_factor_form.sage
+============================================================

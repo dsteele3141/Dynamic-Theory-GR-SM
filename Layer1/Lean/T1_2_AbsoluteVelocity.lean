@@ -46,7 +46,7 @@ theorem no_exchange_at_absolute (q₀ : ℝ) (h : IsAbsoluteVelocity φ q₀) :
   unfold energy; rw [show φ q₀ = 0 from h, zero_mul]
 
 /-- **Uniqueness.** A strictly monotone universal factor has at most one absolute
-    velocity (the empirical φ below is strictly decreasing on the physical range). -/
+    velocity (the factor φ below is strictly decreasing on the physical range). -/
 theorem absolute_velocity_unique (hmono : StrictMono φ ∨ StrictAnti φ)
     {a b : ℝ} (ha : IsAbsoluteVelocity φ a) (hb : IsAbsoluteVelocity φ b) : a = b := by
   have hφ : φ a = φ b := (ha : φ a = 0).trans (hb : φ b = 0).symm
@@ -54,12 +54,16 @@ theorem absolute_velocity_unique (hmono : StrictMono φ ∨ StrictAnti φ)
   · exact h.injective hφ
   · exact h.injective hφ
 
-/-! ## The empirical velocity factor (doc p.64) — NOT derived from the axioms -/
+/-! ## The velocity factor `√(1 − q̇²/c²)`
+The Report (doc p.64) takes this form from mass-spectrometer data; the book
+(Williams 2011, Eqs 5.110–5.120) derives it from the equations of motion on the
+Lorentzian stability metric plus exactness of dS, given U = U(q̇). That step is
+checked in `Layer1/Sage/velocity_factor_form.sage`; here the form is a definition. -/
 
-/-- Empirical form (mass-spectrometer data, doc p.64): `φ(q̇) = √(1 − q̇²/c²)`. -/
+/-- The velocity factor `φ(q̇) = √(1 − q̇²/c²)` (name kept for stability; derived, see above). -/
 noncomputable def φEmp (c q : ℝ) : ℝ := Real.sqrt (1 - q ^ 2 / c ^ 2)
 
-/-- **The absolute velocity of the empirical factor is q̇₀ = c.** -/
+/-- **The absolute velocity of the factor is q̇₀ = c.** -/
 theorem φEmp_absolute (c : ℝ) (hc : c ≠ 0) : IsAbsoluteVelocity (φEmp c) c := by
   show Real.sqrt (1 - c ^ 2 / c ^ 2) = 0
   rw [div_self (pow_ne_zero 2 hc), sub_self, Real.sqrt_zero]
