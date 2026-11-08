@@ -1,8 +1,8 @@
 ========================================================================
 DYNAMIC THEORY -- SAGE LINTER  (linter.py)
-Run: 2026-10-31 15:28:21
+Run: 2026-11-08 20:45:32
 Scanned: Dynamic-Theory-GR-SM (repository root)
-Sage scripts: 59  (across Layer1, Layer2, Layer3; 0 plot_* skipped)
+Sage scripts: 60  (across Layer1, Layer2, Layer3; 0 plot_* skipped)
 Cadabra cross-checks: 0
 ========================================================================
 
@@ -65,6 +65,10 @@ dirac_with_fields.sage
 force_density.out.txt
   [OK  ] runtime: no traceback/Error/FAIL in result output.
 force_density.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+tolman_ehrenfest_recovery.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+tolman_ehrenfest_recovery.sage
   [OK  ] path: stdout-capture convention (no self-managed output path).
 
 ### Layer3
@@ -276,6 +280,6 @@ weyl_vector_mass.sage
   [OK  ] signature consistent: all 21 g44 definition(s) spacelike (g44 < 0).
 
 ========================================================================
-SUMMARY    OK: 142    INFO: 0    WARN: 0    FAIL: 0
+SUMMARY    OK: 144    INFO: 0    WARN: 0    FAIL: 0
 RESULT: CLEAN -- no inconsistencies detected.
 ========================================================================

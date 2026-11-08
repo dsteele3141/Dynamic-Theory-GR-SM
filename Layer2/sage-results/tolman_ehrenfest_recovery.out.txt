@@ -1,0 +1,27 @@
+======================================================================
+tolman_ehrenfest_recovery.sage
+======================================================================
+
+(A) Weak field from the mixed first law dE = dU + P dV - F dq
+  [PASS] heat dQ lifted through h arrives as dQ (1 - g h/c^2)
+  [PASS] reversible transfer dS = 0 gives T_top = T_bot (1 - g h/c^2)
+  [PASS] so T (1 + Phi/c^2) is the same at both heights up to O(c^-4)
+
+(B) Exact: entropy maximum at fixed Killing energy in g00 = e^(2 nu)
+  [PASS] dS/dE_Killing = e^-nu1/T1 - e^-nu2/T2: stationary iff T1 e^nu1 = T2 e^nu2
+  [PASS] second variation = -e^(-2nu1)/(C1 T1^2) - e^(-2nu2)/(C2 T2^2) < 0: a MAXIMUM when C > 0
+
+(C) Consistency with hydrostatic equilibrium (TOV form of Div T = 0)
+  [PASS] T e^nu, mu e^nu const + Gibbs-Duhem give dP/dr = -(rho + P) nu' identically
+
+(D) Weak-field reduction and sizes
+  [PASS] e^nu = sqrt(1 + 2 Phi/c^2) = 1 + Phi/c^2 + O(c^-4): (B) reduces to (A)
+  [PASS] 1 km on Earth: Delta T/T = g h/c^2 = 1.09e-13 (about 1e-13, unmeasurable)
+  [PASS] neutron star, surface redshift z ~ 0.25: local T at the surface vs at infinity, 1/(1+z) = 0.80, a 20% effect (as in cooling models)
+
+(E) CONTROLS
+  [PASS] weightless heat (T1 = T2 = T) with nu1 < nu2: dS/dE = (e^-nu1 - e^-nu2)/T > 0, not a maximum (moving heat down raises S)
+  [PASS] uniform T contradicts hydrostatic equilibrium: residual = -T s nu' != 0 unless s = 0
+  [PASS] wrong sign T e^(-nu) = const: residual 2 (rho + P) nu' != 0
+
+All checks passed.

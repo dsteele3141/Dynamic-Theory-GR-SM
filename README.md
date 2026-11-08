@@ -110,6 +110,7 @@ Assumptions beyond the three laws are tabulated in `ASSUMPTIONS.md`.
 - `Layer3/Sage/exact_ppwave_lift.sage` [G6]: exact pp-waves lift to exact 5D vacuum solutions
 - `Layer3/Sage/black_hole_ringdown.sage` [G6]: strong field: ringdown and EHT select the GR (Kerr) solution over the non-singular metric
 - `Layer3/Sage/gr_limit_domain.sage` [G7]: where the Newtonian/GR limit holds; the rotation-curve term has the right shape but is far too small
+- `Layer2/Sage/tolman_ehrenfest_recovery.sage` [G8]: thermal equilibrium in a static field: T sqrt(g00) and mu sqrt(g00) constant (Tolman-Ehrenfest, Klein); the TOV equation follows
 
 ### Recovery of the Standard Model (manuscript Sec. 4)
 
