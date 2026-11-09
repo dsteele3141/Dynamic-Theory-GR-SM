@@ -6,7 +6,9 @@
   Supplementary Materials: step [F3], Sec. S2 (code index: Sec. S6).
 -/
 
-import Mathlib
+import Mathlib.Algebra.Order.Archimedean.Real.Basic
+import Mathlib.Algebra.Order.BigOperators.Group.Finset
+import Mathlib.Basic.Complex.Basic
 
 namespace DTWilliams.PositivityRoute
 

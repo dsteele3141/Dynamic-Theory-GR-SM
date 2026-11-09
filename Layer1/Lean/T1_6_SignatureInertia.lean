@@ -4,7 +4,8 @@
   Source: P. E. Williams, LA-8370-MS (LASL, 1980), §II, eqs (16)–(19).
   Supplementary Materials: step [L5], Sec. S2 (code index: Sec. S6).
 -/
-import Mathlib
+import Mathlib.Analysis.RCLike.Lemmas
+import Mathlib.RingTheory.TotallySplit
 
 namespace DTWilliams.SignatureInertia
 
