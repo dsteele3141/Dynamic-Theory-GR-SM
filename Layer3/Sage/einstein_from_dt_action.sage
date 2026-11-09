@@ -424,6 +424,66 @@ ok("m^2 = 2k/a with a = alpha/lambda gives m^2 = 24 lambda/alpha in 5D",
    z(2 * 12 / (al / lamp) - 24 * lamp / al))
 
 # ==========================================================================
+# [6] Overall sign of the action, and the four-dimensional source
+# ==========================================================================
+print("\n[6] Overall sign, and the map from the 5D to the 4D source")
+hs = list(var('h0 h1 h2 h3 h4'))
+sq5 = sqrt(hs[0] * (-hs[1]) * (-hs[2]) * (-hs[3]) * (-hs[4]))
+at_eta5 = {hs[0]: 1, hs[1]: -1, hs[2]: -1, hs[3]: -1, hs[4]: -1}
+Ee, kap5, av6 = var('Ee kap5 av6', domain='positive')
+LMax = -(2 * Ee**2 / (hs[0] * hs[1])) / 4          # standard Maxwell -F^2/4
+dM = (diff(sq5 * LMax, hs[0]) / sq5).subs(at_eta5)
+# S = s/(2 kappa_5) INT sqrt|g| R + S_m and [2] (d sqrt|g|R/dg_ab = -sqrt|g| G^ab):
+#   -(s/(2 kappa_5)) G^00 + dM = 0  =>  G^00 = 2 kappa_5 dM / s
+ok("prefactor -1/(2 kappa_5): standard Maxwell matter (-F^2/4, energy "
+   "E^2/2 > 0) gives G^00 = +kappa_5 E^2/2, attractive (Landau-Lifshitz sign)",
+   z(2 * kap5 * dM / (-1) - kap5 * Ee**2 / 2))
+ok("mutation: prefactor +1/(2 kappa_5) gives G^00 = -kappa_5 E^2/2",
+   z(2 * kap5 * dM / 1 + kap5 * Ee**2 / 2))
+FFs, PPs = var('FFs PPs')
+# vector part of -(1/(2 kappa_5)) [ (1/4) a F^2 - 12 phi.phi ], a = alpha/lambda;
+# canonical field A = sqrt(a/(2 kappa_5)) phi  =>  -(1/4) F_A^2 + (1/2) m^2 A.A
+Lvec = -(av6 * FFs / 4 - 12 * PPs) / (2 * kap5)
+cn = av6 / (2 * kap5)
+ok("canonical form: -(1/4) F_A^2 + (1/2)(24/a) A.A, the standard Maxwell and "
+   "Proca signs in (+,-,-,-,-) iff a = alpha/lambda > 0; m^2 = 24 lambda/alpha",
+   z(Lvec - (-FFs * cn / 4 + (24 / av6) * PPs * cn / 2)))
+
+# product metric: 4D surface metric of t, x times a fixed g_44 = -1
+A6 = [function('B%d' % i)(t, x) for i in range(4)]
+g5 = [[0] * 5 for _ in range(5)]
+g5[0][0] = exp(2 * A6[0])
+for i in range(1, 4):
+    g5[i][i] = -exp(2 * A6[i])
+g5[4][4] = -1
+X5 = XALL[:5]
+gi5 = inverse(g5)
+Ric5 = ricci(levi_civita(g5, gi5, X5), X5)
+R5 = scalar(gi5, Ric5)
+g4 = [r_[:4] for r_ in g5[:4]]
+gi4 = inverse(g4)
+Ric4 = ricci(levi_civita(g4, gi4, XALL[:4]), XALL[:4])
+R4 = scalar(gi4, Ric4)
+G5 = [[Ric5[a_][b_] - R5 * g5[a_][b_] / 2 for b_ in range(5)] for a_ in range(5)]
+G4 = [[Ric4[a_][b_] - R4 * g4[a_][b_] / 2 for b_ in range(4)] for a_ in range(4)]
+ok("x4-independent metric, g_44 = -1: G^(5)_ab = G^(4)_ab, G^(5)_a4 = 0, "
+   "G^(5)_44 = R^(4)/2",
+   all(z(G5[a_][b_] - G4[a_][b_]) for a_ in range(4) for b_ in range(4))
+   and all(z(G5[a_][4]) for a_ in range(4)) and z(G5[4][4] - R4 / 2))
+ok("4D trace: g^ab G_ab = -R", z(sum(gi4[a_][b_] * G4[a_][b_]
+                                       for a_ in range(4) for b_ in range(4)) + R4))
+print("""    So G - Lambda g = kappa_5 T^(5) has x4-independent left side: the
+    source must be uniform along x4, T^(5)_ab = T_ab/ell, with T_ab the
+    observed 4D stress and ell a length (S_m = ell^-1 INT dx4 S_m^(4)).
+    The surface equation is then G - Lambda g = kappa T with kappa = kappa_5/ell.""")
+kp, ell, Lm6, Tr6, R4s = var('kp ell Lm6 Tr6 R4s')
+R4sol = solve(-R4s - 4 * Lm6 == kp * Tr6, R4s)[0].rhs()   # trace of 4D equation
+T44_5 = (R4sol / 2 + Lm6) / kap5                          # 44 eq: G_44 + Lambda = kappa_5 T44
+ok("44 equation with the same normalisation: ell T^(5)_44 = -Lambda/kappa "
+   "- T/2 (kappa = kappa_5/ell)",
+   z((ell * T44_5).subs(kp=kap5 / ell) - (-Lm6 / (kap5 / ell) - Tr6 / 2)))
+
+# ==========================================================================
 # [4] Assembly
 # ==========================================================================
 print("\n[4] Assembly")

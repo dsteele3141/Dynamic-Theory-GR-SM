@@ -260,6 +260,67 @@ ok("mutation: a real NON-integrable vector is a healthy Proca field, "
    "m^2 = +k mu0 q^2/kappa > 0 (q unfixed: Weyl 1918)",
    z(mR - kk * mu0 * q**2 / kap))
 
+# ==========================================================================
+# [6] Stability of the real vector in the adopted action, any sign of lambda
+# ==========================================================================
+print("\n[6] Stability of the real Weyl vector (5D, signature +,-,-,-,-)")
+print("""    Un-hatted form of the adopted action (phi^ = phi/sqrt(lambda) is not
+    used, so nothing needs sqrt(lambda) real):
+        L = R + (1/4) a F^2 - 12 phi.phi + lambda/2,   a = alpha/lambda.""")
+# metric variation on a diagonal metric, evaluated at eta(5):
+# M^ab = (1/sqrt|g|) d(sqrt|g| Lterm)/dg_ab, the convention of [3] (G^ab = sum M^ab)
+gs = list(var('g0 g1 g2 g3 g4'))
+f0, f1, f2, f3, f4, Ex = var('f0 f1 f2 f3 f4 Ex', domain='real')
+ph5 = [f0, f1, f2, f3, f4]
+sq = sqrt(gs[0] * (-gs[1]) * (-gs[2]) * (-gs[3]) * (-gs[4]))
+at_eta = {gs[0]: 1, gs[1]: -1, gs[2]: -1, gs[3]: -1, gs[4]: -1}
+kk5 = 12
+
+
+def M00(Lterm):
+    return (diff(sq * Lterm, gs[0]) / sq).subs(at_eta)
+
+
+Lmass = -kk5 * sum(ph5[i]**2 / gs[i] for i in range(5))
+Lmass_rep = +kk5 * sum(ph5[i]**2 / gs[i] for i in range(5))
+LF = 2 * Ex**2 / (gs[0] * gs[1]) / 4          # F^2/4 with F_01 = E
+ok("F-stress: M^00[F^2/4] = +E^2/4 (agrees with S00 of [3])",
+   z(M00(LF) - Ex**2 / 4))
+ok("mass-term energy M^00[-12 phi.phi] = 6 (phi_0^2 + sum phi_i^2) >= 0 "
+   "for a REAL vector, independent of a and of lambda",
+   z(M00(Lmass) - 6 * sum(p**2 for p in ph5)))
+av, lv, alv = var('av lv alv')
+print("    Energy density G^00 = a E^2/4 + 6 sum phi^2: positive for every")
+print("    field iff a = alpha/lambda > 0; then m^2 = 2k/a = 24 lambda/alpha > 0.")
+ok("a > 0  <=>  m^2 = 24/a > 0 (no ghost <=> no tachyon, same condition)",
+   bool((2 * kk5 / av).subs(av=1) > 0) and bool((2 * kk5 / av).subs(av=-1) < 0))
+ok("lambda < 0 is allowed: alpha < 0 gives a = alpha/lambda > 0 "
+   "(lambda = -1, alpha = -2: a = 2, m^2 = 12)",
+   (alv / lv).subs({alv: -2, lv: -1}) == 2
+   and (24 * lv / alv).subs({alv: -2, lv: -1}) == 12)
+ok("mutation: the opposite mass sign (+12 phi.phi, real vector) gives "
+   "M^00 = -6 sum phi^2 < 0, and m^2 = -24/a: ghost or tachyon for every a",
+   z(M00(Lmass_rep) + 6 * sum(p**2 for p in ph5)))
+
+print("\n    Term-by-term map from Report Eq 67 to the adopted action")
+Rv, FF, pp_, lam6 = var('Rv FF pp_ lam6')
+# Report: L_rep = R_rep + (1/4) alpha F^F^ - lambda (1/2 - 12 phi^.phi^),
+# with lambda phi^.phi^ = phi.phi, alpha F^F^ = (alpha/lambda) F^2 = a F^2.
+# Step 1, signature (-,+,+,+,+) -> (+,-,-,-,-): R -> -R, phi.phi -> -phi.phi,
+#   F^2 unchanged (two inverse metrics).
+# Step 2, the report's phi is i x (a real vector psi): phi.phi -> -psi.psi,
+#   F^2 -> -F_psi^2.
+# Step 3, overall sign fixed by the Newtonian limit (G = +kappa T).
+L_rep = Rv + av * FF / 4 - lam6 / 2 + 12 * pp_
+L1 = L_rep.subs({Rv: -Rv, pp_: -pp_})
+L2 = L1.subs({pp_: -pp_, FF: -FF})
+L3 = -L2
+ok("Eq 67 -> R + (1/4) a F^2 - 12 psi.psi + lambda/2 exactly "
+   "(signature flip, real vector psi = -i phi, overall sign)",
+   z(L3 - (Rv + av * FF / 4 - 12 * pp_ + lam6 / 2)))
+print("    The constant keeps its sign relative to R, so Lambda = lambda/4 in")
+print("    both conventions (einstein_from_dt_action [5]).")
+
 print("""
   NET: the gauge vector of Eqs 39/67 is Planck-heavy whatever lambda is.
   Gravity: the real integrable vector vanishes on shell, so the u4 = 0

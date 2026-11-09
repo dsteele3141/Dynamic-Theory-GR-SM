@@ -60,6 +60,18 @@ einstein_from_dt_action: varying the Report's Eq 67 action
     (weyl_vector_mass [5]), so the value plays no part in the recovery.
   [PASS] m^2 = 2k/a with a = alpha/lambda gives m^2 = 24 lambda/alpha in 5D
 
+[6] Overall sign, and the map from the 5D to the 4D source
+  [PASS] prefactor -1/(2 kappa_5): standard Maxwell matter (-F^2/4, energy E^2/2 > 0) gives G^00 = +kappa_5 E^2/2, attractive (Landau-Lifshitz sign)
+  [PASS] mutation: prefactor +1/(2 kappa_5) gives G^00 = -kappa_5 E^2/2
+  [PASS] canonical form: -(1/4) F_A^2 + (1/2)(24/a) A.A, the standard Maxwell and Proca signs in (+,-,-,-,-) iff a = alpha/lambda > 0; m^2 = 24 lambda/alpha
+  [PASS] x4-independent metric, g_44 = -1: G^(5)_ab = G^(4)_ab, G^(5)_a4 = 0, G^(5)_44 = R^(4)/2
+  [PASS] 4D trace: g^ab G_ab = -R
+    So G - Lambda g = kappa_5 T^(5) has x4-independent left side: the
+    source must be uniform along x4, T^(5)_ab = T_ab/ell, with T_ab the
+    observed 4D stress and ell a length (S_m = ell^-1 INT dx4 S_m^(4)).
+    The surface equation is then G - Lambda g = kappa T with kappa = kappa_5/ell.
+  [PASS] 44 equation with the same normalisation: ell T^(5)_44 = -Lambda/kappa - T/2 (kappa = kappa_5/ell)
+
 [4] Assembly
     Eq 67, varied in the metric:
         G_ab = T^F_ab + T^lambda_ab        (5D, local, second order;

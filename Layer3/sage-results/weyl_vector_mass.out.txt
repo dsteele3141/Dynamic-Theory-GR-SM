@@ -37,6 +37,23 @@ weyl_vector_mass: the gauge-vector mass in Eqs 39 / 67
     u4 = 0 restriction).
   [PASS] mutation: a real NON-integrable vector is a healthy Proca field, m^2 = +k mu0 q^2/kappa > 0 (q unfixed: Weyl 1918)
 
+[6] Stability of the real Weyl vector (5D, signature +,-,-,-,-)
+    Un-hatted form of the adopted action (phi^ = phi/sqrt(lambda) is not
+    used, so nothing needs sqrt(lambda) real):
+        L = R + (1/4) a F^2 - 12 phi.phi + lambda/2,   a = alpha/lambda.
+  [PASS] F-stress: M^00[F^2/4] = +E^2/4 (agrees with S00 of [3])
+  [PASS] mass-term energy M^00[-12 phi.phi] = 6 (phi_0^2 + sum phi_i^2) >= 0 for a REAL vector, independent of a and of lambda
+    Energy density G^00 = a E^2/4 + 6 sum phi^2: positive for every
+    field iff a = alpha/lambda > 0; then m^2 = 2k/a = 24 lambda/alpha > 0.
+  [PASS] a > 0  <=>  m^2 = 24/a > 0 (no ghost <=> no tachyon, same condition)
+  [PASS] lambda < 0 is allowed: alpha < 0 gives a = alpha/lambda > 0 (lambda = -1, alpha = -2: a = 2, m^2 = 12)
+  [PASS] mutation: the opposite mass sign (+12 phi.phi, real vector) gives M^00 = -6 sum phi^2 < 0, and m^2 = -24/a: ghost or tachyon for every a
+
+    Term-by-term map from Report Eq 67 to the adopted action
+  [PASS] Eq 67 -> R + (1/4) a F^2 - 12 psi.psi + lambda/2 exactly (signature flip, real vector psi = -i phi, overall sign)
+    The constant keeps its sign relative to R, so Lambda = lambda/4 in
+    both conventions (einstein_from_dt_action [5]).
+
   NET: the gauge vector of Eqs 39/67 is Planck-heavy whatever lambda is.
   Gravity: the real integrable vector vanishes on shell, so the u4 = 0
   surface carries exactly G - Lambda g = kappa T -- Weyl's structure drops
