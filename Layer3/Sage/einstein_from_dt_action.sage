@@ -358,6 +358,72 @@ print("    The Report does not say which reading is meant; the Layer-1 check")
 print("    takes lambda as a multiplier (EL(lambda) => phi.phi = const).")
 
 # ==========================================================================
+# [5] Signature, the sign of Lambda, de Sitter, and the vector mass
+# ==========================================================================
+print("\n[5] Signature and the sign of Lambda")
+print("""    The Report writes Eq 67 with x0 = i c t, i.e. effectively signature
+    (-,+,+,+,+).  Reversing the metric reverses R but not the constant term,
+    so in the signature used here (+,-,-,-,-) Weyl's natural-gauge form is
+        L = R + (1/4) alpha F^_ij F^^ij + lambda (1/2 - 12 phi^.phi^)
+    (weyl_lambda_reading [2] checks R~ + lambda/2 = this, up to a divergence;
+    the phi^.phi^ sign is that of R~ for a REAL Weyl vector).  The literal
+    transcription -lambda(...) used in [3] is the same Lagrangian with
+    lambda -> -lambda.""")
+lamp = var('lamp')
+# constant term +lamp/2 (in [3] the constant term is -lam/2 with g^ab part -lam/4)
+coef_cos = (coef_g.subs({a_: 0 for a_ in A})).subs(lam=-lamp)
+ok("the constant term +lambda/2 gives +(lambda/4) g^ab in dL/dg_ab",
+   z(coef_cos - lamp / 4))
+print("    EL in g_ab:  -G^ab + (lambda/4) g^ab + (matter) = 0, i.e.")
+print("        G_ab - Lambda g_ab = kappa T_ab,   Lambda = lambda/4.")
+
+H = var('H')
+for n, cn in [(4, 3), (5, 6)]:
+    X = XALL[:n]
+    g = [[0] * n for _ in range(n)]
+    g[0][0] = 1
+    for i in range(1, n):
+        g[i][i] = -exp(2 * H * t)
+    gi = inverse(g)
+    Ric = ricci(levi_civita(g, gi, X), X)
+    R = scalar(gi, Ric)
+    ok("%dD de Sitter (scale factor e^(Ht)): G_ab = %d H^2 g_ab" % (n, cn),
+       all(z(Ric[a][b] - R * g[a][b] / 2 - cn * H**2 * g[a][b])
+           for a in range(n) for b in range(n)))
+    ok("%dD: hence de Sitter has Lambda = %d H^2 > 0, lambda = %d H^2 > 0"
+       % (n, cn, 4 * cn), bool(cn > 0))
+    ok("%dD mutation: in the form G + Lambda g = kappa T de Sitter would need "
+       "Lambda < 0" % n, bool(-cn < 0))
+
+# weak field fixes the sign of kappa (attractive gravity, G = +kappa T)
+Phi = function('Phi')(x, y, w)
+e = var('e')
+X = XALL[:4]
+g = [[0] * 4 for _ in range(4)]
+g[0][0] = 1 + 2 * e * Phi
+for i in range(1, 4):
+    g[i][i] = -(1 - 2 * e * Phi)
+gi = inverse(g)
+Ric = ricci(levi_civita(g, gi, X), X)
+R = scalar(gi, Ric)
+G00 = taylor(Ric[0][0] - R * g[0][0] / 2, e, 0, 1)
+ok("weak field: G_00 = 2 lap(Phi), so attractive gravity is G = +kappa T "
+   "(same convention as the static metric g_tt = 1 - Lambda r^2/3)",
+   z(G00 - 2 * e * (diff(Phi, x, 2) + diff(Phi, y, 2) + diff(Phi, w, 2))))
+print("    The action leaves the sign of lambda free: Weyl's procedure needs")
+print("    only lambda != 0.  The sign of Lambda is the sign of lambda.")
+
+al = var('al')
+print("\n    Vector mass (weyl_vector_mass [2]): with phi^ = phi/sqrt(lambda),")
+print("    L = R - 12 phi.phi + (1/4)(alpha/lambda) F^2 + lambda/2, so")
+print("    m^2 = 2k lambda/alpha, k = 12 (5D), 6 (4D): set by the free ratio")
+print("    lambda/alpha, a Planck mass only for a charge q of order one in")
+print("    Ghilencea's normalisation.  The integrable vector vanishes on shell")
+print("    (weyl_vector_mass [5]), so the value plays no part in the recovery.")
+ok("m^2 = 2k/a with a = alpha/lambda gives m^2 = 24 lambda/alpha in 5D",
+   z(2 * 12 / (al / lamp) - 24 * lamp / al))
+
+# ==========================================================================
 # [4] Assembly
 # ==========================================================================
 print("\n[4] Assembly")
@@ -366,10 +432,10 @@ print("""    Eq 67, varied in the metric:
                                              R the only metric term)
     + u4 = 0  =>  K = 0  =>  exact restriction to the 4D surface
                                              (gr_on_4d_surface)
-    + Newtonian limit  =>  kappa = 8 pi G / c^4
+    + Newtonian limit calibrates kappa = 8 pi G / c^4
                                              (einstein_equations_recovery [4])
-    =>  G_ab + Lambda g_ab = (8 pi G/c^4) T_ab on the surface, with
-        Lambda = 0 on the multiplier reading of lambda.
+    =>  G_ab - Lambda g_ab = (8 pi G/c^4) T_ab on the surface, with
+        Lambda = lambda/4 ([5]; Lambda = 0 on the multiplier reading).
 
   NET: the premise 'the surface metric is dynamical, with local second-order
   equations' is DT's own -- the Report's action Eq 67, whose metric variation

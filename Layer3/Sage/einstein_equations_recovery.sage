@@ -48,7 +48,7 @@
 # VERDICT.  Given u4 = 0 (=> K = 0 and J^4 = 0), DT's force
 # law, and the Lovelock premises -- field equations LOCAL, SECOND ORDER, with
 # the metric as the only gravitational field -- the surface field equations
-# are G_ab + Lambda g_ab = (8 pi G/c^4) T_ab.  Imported, not re-proven:
+# are G_ab - Lambda g_ab = (8 pi G/c^4) T_ab.  Imported, not re-proven:
 # Lovelock's theorem (only its restricted form is checked here).  Not fixed:
 # Lambda (DT's cosmic acceleration comes from its (1 - H0 t) time-dependence,
 # so DT would set Lambda = 0).  Part [1] is a local flat-frame check; the
@@ -299,10 +299,11 @@ print("    convention, the magnitude 8 pi G (per c^4 in SI) is what is checked."
 print("""
   NET: given u4 = 0 (=> K = 0, J^4 = 0), DT's force law, and Lovelock's
   premises (local, second order, metric-only), the surface field equations are
-        G_ab + Lambda g_ab = (8 pi G / c^4) T_ab ,
+        G_ab - Lambda g_ab = (8 pi G / c^4) T_ab ,
   with T_ab conserved, Psi = Phi derived, and any 5D Gauss-Bonnet term
   confined to the 44 constraint.  Imported: Lovelock's theorem (restricted
-  form checked).  Open: Lambda (DT would set it to 0).""")
+  form checked).  Lambda = lambda/4, de Sitter iff lambda > 0, magnitude
+  free (einstein_from_dt_action [5]).""")
 print("=" * 72)
 print("einstein_equations_recovery COMPLETE.")
 print("=" * 72)

@@ -44,10 +44,11 @@ RECOVERING THE EINSTEIN EQUATIONS on the mass hypersurface (u4 = 0)
 
   NET: given u4 = 0 (=> K = 0, J^4 = 0), DT's force law, and Lovelock's
   premises (local, second order, metric-only), the surface field equations are
-        G_ab + Lambda g_ab = (8 pi G / c^4) T_ab ,
+        G_ab - Lambda g_ab = (8 pi G / c^4) T_ab ,
   with T_ab conserved, Psi = Phi derived, and any 5D Gauss-Bonnet term
   confined to the 44 constraint.  Imported: Lovelock's theorem (restricted
-  form checked).  Open: Lambda (DT would set it to 0).
+  form checked).  Lambda = lambda/4, de Sitter iff lambda > 0, magnitude
+  free (einstein_from_dt_action [5]).
 ========================================================================
 einstein_equations_recovery COMPLETE.
 ========================================================================

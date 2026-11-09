@@ -1,6 +1,6 @@
 ========================================================================
 DYNAMIC THEORY -- SAGE LINTER  (linter.py)
-Run: 2026-11-08 20:45:32
+Run: 2026-11-09 14:09:49
 Scanned: Dynamic-Theory-GR-SM (repository root)
 Sage scripts: 60  (across Layer1, Layer2, Layer3; 0 plot_* skipped)
 Cadabra cross-checks: 0
@@ -219,7 +219,7 @@ t44_normal_equation.out.txt
   [OK  ] runtime: no traceback/Error/FAIL in result output.
 t44_normal_equation.sage
   [OK  ] path: stdout-capture convention (no self-managed output path).
-  [OK  ]:56 signature: g44 = -1 (spacelike mass).
+  [OK  ]:57 signature: g44 = -1 (spacelike mass).
 test_body_motion.out.txt
   [OK  ] runtime: no traceback/Error/FAIL in result output.
 test_body_motion.sage

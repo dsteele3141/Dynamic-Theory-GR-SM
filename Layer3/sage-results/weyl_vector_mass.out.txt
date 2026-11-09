@@ -32,14 +32,14 @@ weyl_vector_mass: the gauge-vector mass in Eqs 39 / 67
   [PASS] phi = d ln f^(1/2) (Report Eq 65) has F = 0
   [PASS] with F = 0 the phi equation reads 2k phi = 0, so phi = 0 for k != 0: Weyl geometry collapses to Riemannian
     With phi = 0 the metric equations of Eq 39/67 are exactly
-    G_ab + Lambda g_ab = kappa T_ab (weyl_lambda_reading: Lambda != 0,
+    G_ab - Lambda g_ab = kappa T_ab (weyl_lambda_reading: Lambda != 0,
     free; einstein_from_dt_action: the operator; gr_on_4d_surface: the
     u4 = 0 restriction).
   [PASS] mutation: a real NON-integrable vector is a healthy Proca field, m^2 = +k mu0 q^2/kappa > 0 (q unfixed: Weyl 1918)
 
   NET: the gauge vector of Eqs 39/67 is Planck-heavy whatever lambda is.
   Gravity: the real integrable vector vanishes on shell, so the u4 = 0
-  surface carries exactly G + Lambda g = kappa T -- Weyl's structure drops
+  surface carries exactly G - Lambda g = kappa T -- Weyl's structure drops
   out dynamically.  EM: the London phase i(e/hbar)A cannot be the same phi
   (complex R~, Planck-mass tachyonic photon); it must be Weyl-1929's phase
   on matter, with Maxwell's F^2 separate.

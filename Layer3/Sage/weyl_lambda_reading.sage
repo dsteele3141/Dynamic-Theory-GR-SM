@@ -224,6 +224,10 @@ for pp in (2, Integer(5) / 2):
 # -c lambda / 2, i.e. |Lambda| = lambda / 4 for c = 1/2.
 c = Integer(1) / 2
 Lam = -c * lam / 2
+# Sign convention: with the constant written +lambda/2 in (+,-,-,-,-) the
+# field equations are G - Lambda g = kappa T with Lambda = +lambda/4, and
+# de Sitter needs lambda > 0 (einstein_from_dt_action [5]).  Only |Lambda|
+# is used here.
 ok("Eq 39/67 (c = 1/2): |Lambda| = lambda/4 != 0 for lambda != 0",
    z(abs(Lam) - lam / 4) and bool(Lam != 0))
 print("    The same lambda multiplies the phi^.phi^ (Proca-type mass) term:")
@@ -235,7 +239,7 @@ print("""
   multiplier, and it cannot be zero.  DT's variational principle therefore
   carries a non-zero cosmological constant, |Lambda| = lambda/4 (Eq 39/67 as
   written; c lambda/2 in general), of UNFIXED magnitude.  Lambda = 0 is not
-  available.  The surface equations are G_ab + Lambda g_ab = (8 pi G/c^4) T_ab
+  available.  The surface equations are G_ab - Lambda g_ab = (8 pi G/c^4) T_ab
   with Lambda small but free.  Open: the Weyl-vector mass scale (needs the
   F^2 normalisation alpha) and the effect of the imaginary London gauge.""")
 print("=" * 72)

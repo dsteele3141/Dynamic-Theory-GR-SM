@@ -15,7 +15,7 @@ einstein_from_dt_action: varying the Report's Eq 67 action
   [PASS] 4D diagonal family (4 free functions of t, x): dL/du = -sqrt|g| G^ab dg_ab/du for every u
   [PASS] mutation: Ricci in place of Einstein (R^ab) fails
   [PASS] 5D diagonal family (5 free functions of t, x): dL/du = -sqrt|g| G^ab dg_ab/du for every u
-    off-diagonal instance: max residual 9.4e-89 against terms of size 14.8
+    off-diagonal instance: max residual 7.1e-89 against terms of size 14.8
   [PASS] 4D with off-diagonal g_tx: identity holds for all five metric functions (explicit instance, 300-bit, 3 points)
     The raw Euler-Lagrange expression contains third and fourth
     derivatives; the identity shows they cancel: the field equations
@@ -30,16 +30,46 @@ einstein_from_dt_action: varying the Report's Eq 67 action
     The Report does not say which reading is meant; the Layer-1 check
     takes lambda as a multiplier (EL(lambda) => phi.phi = const).
 
+[5] Signature and the sign of Lambda
+    The Report writes Eq 67 with x0 = i c t, i.e. effectively signature
+    (-,+,+,+,+).  Reversing the metric reverses R but not the constant term,
+    so in the signature used here (+,-,-,-,-) Weyl's natural-gauge form is
+        L = R + (1/4) alpha F^_ij F^^ij + lambda (1/2 - 12 phi^.phi^)
+    (weyl_lambda_reading [2] checks R~ + lambda/2 = this, up to a divergence;
+    the phi^.phi^ sign is that of R~ for a REAL Weyl vector).  The literal
+    transcription -lambda(...) used in [3] is the same Lagrangian with
+    lambda -> -lambda.
+  [PASS] the constant term +lambda/2 gives +(lambda/4) g^ab in dL/dg_ab
+    EL in g_ab:  -G^ab + (lambda/4) g^ab + (matter) = 0, i.e.
+        G_ab - Lambda g_ab = kappa T_ab,   Lambda = lambda/4.
+  [PASS] 4D de Sitter (scale factor e^(Ht)): G_ab = 3 H^2 g_ab
+  [PASS] 4D: hence de Sitter has Lambda = 3 H^2 > 0, lambda = 12 H^2 > 0
+  [PASS] 4D mutation: in the form G + Lambda g = kappa T de Sitter would need Lambda < 0
+  [PASS] 5D de Sitter (scale factor e^(Ht)): G_ab = 6 H^2 g_ab
+  [PASS] 5D: hence de Sitter has Lambda = 6 H^2 > 0, lambda = 24 H^2 > 0
+  [PASS] 5D mutation: in the form G + Lambda g = kappa T de Sitter would need Lambda < 0
+  [PASS] weak field: G_00 = 2 lap(Phi), so attractive gravity is G = +kappa T (same convention as the static metric g_tt = 1 - Lambda r^2/3)
+    The action leaves the sign of lambda free: Weyl's procedure needs
+    only lambda != 0.  The sign of Lambda is the sign of lambda.
+
+    Vector mass (weyl_vector_mass [2]): with phi^ = phi/sqrt(lambda),
+    L = R - 12 phi.phi + (1/4)(alpha/lambda) F^2 + lambda/2, so
+    m^2 = 2k lambda/alpha, k = 12 (5D), 6 (4D): set by the free ratio
+    lambda/alpha, a Planck mass only for a charge q of order one in
+    Ghilencea's normalisation.  The integrable vector vanishes on shell
+    (weyl_vector_mass [5]), so the value plays no part in the recovery.
+  [PASS] m^2 = 2k/a with a = alpha/lambda gives m^2 = 24 lambda/alpha in 5D
+
 [4] Assembly
     Eq 67, varied in the metric:
         G_ab = T^F_ab + T^lambda_ab        (5D, local, second order;
                                              R the only metric term)
     + u4 = 0  =>  K = 0  =>  exact restriction to the 4D surface
                                              (gr_on_4d_surface)
-    + Newtonian limit  =>  kappa = 8 pi G / c^4
+    + Newtonian limit calibrates kappa = 8 pi G / c^4
                                              (einstein_equations_recovery [4])
-    =>  G_ab + Lambda g_ab = (8 pi G/c^4) T_ab on the surface, with
-        Lambda = 0 on the multiplier reading of lambda.
+    =>  G_ab - Lambda g_ab = (8 pi G/c^4) T_ab on the surface, with
+        Lambda = lambda/4 ([5]; Lambda = 0 on the multiplier reading).
 
   NET: the premise 'the surface metric is dynamical, with local second-order
   equations' is DT's own -- the Report's action Eq 67, whose metric variation

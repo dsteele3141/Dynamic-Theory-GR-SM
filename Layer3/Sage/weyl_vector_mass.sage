@@ -41,7 +41,7 @@
 #       ln f, F = 0 (T1.8 part A; Report Eq 65) -- is forced to phi = 0 on
 #       shell by its own field equation (2k phi = 0), so Weyl geometry
 #       collapses to Riemannian and the metric equations are EXACTLY
-#       G_ab + Lambda g_ab = kappa T_ab.  Mutation: a real NON-integrable
+#       G_ab - Lambda g_ab = kappa T_ab.  Mutation: a real NON-integrable
 #       vector (F != 0) is a healthy Proca field with m^2 = +k mu0 q^2/kappa,
 #       q unfixed -- Weyl's 1918 situation.
 #
@@ -252,7 +252,7 @@ ok("phi = d ln f^(1/2) (Report Eq 65) has F = 0", all(z(Fij) for r_ in FR for Fi
 ok("with F = 0 the phi equation reads 2k phi = 0, so phi = 0 for k != 0: "
    "Weyl geometry collapses to Riemannian", z(diff(Lphi, P).subs({Pt: 0, Px: 0}) - 2 * kk * P))
 print("    With phi = 0 the metric equations of Eq 39/67 are exactly")
-print("    G_ab + Lambda g_ab = kappa T_ab (weyl_lambda_reading: Lambda != 0,")
+print("    G_ab - Lambda g_ab = kappa T_ab (weyl_lambda_reading: Lambda != 0,")
 print("    free; einstein_from_dt_action: the operator; gr_on_4d_surface: the")
 print("    u4 = 0 restriction).")
 mR = 2 * kk / (2 * kap / (mu0 * q**2))
@@ -263,7 +263,7 @@ ok("mutation: a real NON-integrable vector is a healthy Proca field, "
 print("""
   NET: the gauge vector of Eqs 39/67 is Planck-heavy whatever lambda is.
   Gravity: the real integrable vector vanishes on shell, so the u4 = 0
-  surface carries exactly G + Lambda g = kappa T -- Weyl's structure drops
+  surface carries exactly G - Lambda g = kappa T -- Weyl's structure drops
   out dynamically.  EM: the London phase i(e/hbar)A cannot be the same phi
   (complex R~, Planck-mass tachyonic photon); it must be Weyl-1929's phase
   on matter, with Maxwell's F^2 separate.""")
